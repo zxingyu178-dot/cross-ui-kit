@@ -71,10 +71,12 @@ src/DataList/
 - native：Tamagui styled/style props，token 化；
 - 必须实现暗色（随 token 暗色映射自动生效的，验证；组件内写死的颜色一律不允许）。
 
-### 5.1 web 栈两条强制约定（P1 实测踩坑）
+### 5.1 web 栈强制约定（P1 实测踩坑）
 
-1. **暗色类必须挂 `document.documentElement`（`<html class="dark">`）**，不允许挂在内层容器 div 上。原因：`body` 的背景/基础文字色在包裹容器之外，挂内层会导致 body 与容器外区域取不到暗色变量，出现"卡片变暗、页面底色仍是亮色"和按钮文字沿继承链取到亮色值而隐形。统一用 `useEffect` 切换 `document.documentElement.classList.toggle('dark')`。
+1. **暗色类必须挂 `document.documentElement`（`<html class="dark">`）**，不允许挂在内层容器 div 上。原因：`body` 的背景/基础文字色在包裹容器之外，挂内层会导致 body 与容器外区域取不到暗色变量，出现"卡片变暗、页面底色仍是亮色"和按钮文字沿继承链取到亮色值而隐形。统一切换 `document.documentElement.classList.toggle('dark')`。
 2. **新增 Tailwind 自定义 token 主题类，必须同步登记到 `packages/core/src/utils/cn.ts` 的 tailwind-merge `classGroups`**。原因：字号类（`text-body-md`，来自 `@theme --text-*`）与文字颜色类（`text-primary-text` / `text-text-primary`，来自 `@theme --color-*`）共享 `text-` 前缀，tailwind-merge 不认识自定义值时会把两者误判为同一冲突组，后出现的字号类会把颜色类静默删除，导致按钮/文字颜色丢失。新增字号登记到 `font-size` 组、新增文字色登记到 `text-color` 组；其他前缀（`h-/w-/p-/gap-` 等 spacing 自定义值）出现同类合并问题时同理登记对应组。
+3. **组件视觉一律用 `@theme inline` 映射出的语义类（如 `bg-bg-card`、`border-border-default`、`rounded-sm`、`text-primary-text`），禁止写 `bg-[var(--kit-color-bg-card)]` 这类裸 CSS 变量任意值类**。原因：裸 `var()` 任意值类在 Tailwind v4 下不稳定编译（dev 按需编译时可能整类缺失），而语义类由 `@theme inline` 统一生成、随暗色变量正确切换。新组件用到的 token 必须先确认在 `apps/play-web/src/index.css` 的 `@theme inline` 块里有映射。
+4. **主题切换必须在绘制前临时禁用颜色过渡（否则暗色切换会卡在旧色值）**。原因：颜色 token 是未用 `@property` 注册类型的 CSS 自定义属性，`.dark` 整体切换时，引用变量且带 `transition`/`transition-colors` 的 `background-color`、`border-color`、`color` 在 Chromium 下会定格在旧主题色（变量值已更新、视觉不跟随）。标准实现见 `apps/play-web/src/App.tsx`：在 `useLayoutEffect`（paint 前）里先给 `<html>` 挂 `data-theme-switching`，再切 `.dark`，读一次 `document.body.offsetHeight` 强制同步 reflow 让新主题终值落地，`setTimeout(60ms)` 后移除属性；配套 CSS 在 `index.css`：`html[data-theme-switching] *{transition:none!important}`。这样主题瞬时正确切换，平时 hover/press 的颜色过渡不受影响。
 
 ## 6. 交互与反馈（与 07-interaction-spec.md 配套）
 

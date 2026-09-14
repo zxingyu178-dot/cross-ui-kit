@@ -1,9 +1,10 @@
-import { useEffect, useState } from 'react'
+import { useLayoutEffect, useState } from 'react'
 import { Button } from '@kit/ui-web'
 // 直接引用库内示例（与 hub/Storybook 同源，保证演示即真实资产）
 import { Variants } from '@kit/ui-web/src/Button/__examples__/Variants'
 import { States } from '@kit/ui-web/src/Button/__examples__/States'
 import { States as InputStates } from '@kit/ui-web/src/Input/__examples__/States'
+import { States as CheckboxStates } from '@kit/ui-web/src/Checkbox/__examples__/States'
 
 /**
  * play-web 演示壳入口。
@@ -14,8 +15,19 @@ export default function App() {
   const [dark, setDark] = useState(false)
   const [loading, setLoading] = useState(false)
 
-  useEffect(() => {
-    document.documentElement.classList.toggle('dark', dark)
+  // 主题切换：未用 @property 注册类型的颜色 CSS 变量，在 .dark 整体切换时会让带 transition
+  // 的颜色属性卡在旧值（Chromium）。这里在绘制前同步挂 data-theme-switching 全局抑制过渡，
+  // 浏览器按无过渡绘制新主题后，于下一帧恢复（hover/press 等交互过渡不受影响）。
+  useLayoutEffect(() => {
+    const root = document.documentElement
+    root.setAttribute('data-theme-switching', '')
+    root.classList.toggle('dark', dark)
+    // 强制同步 reflow：在过渡被抑制的状态下让新主题颜色终值立即提交落地，
+    // 否则恢复过渡的瞬间浏览器会重建颜色过渡并回退/卡在旧值。
+    void document.body.offsetHeight
+    // 用 setTimeout 解除（rAF 在后台标签/无头环境可能被节流不触发）
+    const timer = window.setTimeout(() => root.removeAttribute('data-theme-switching'), 60)
+    return () => window.clearTimeout(timer)
   }, [dark])
 
   const mockSubmit = () => {
@@ -51,6 +63,11 @@ export default function App() {
       <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
         <h2 className="text-title-sm font-medium text-text-primary">Input · 输入框</h2>
         <InputStates />
+      </section>
+
+      <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
+        <h2 className="text-title-sm font-medium text-text-primary">Checkbox · 复选框</h2>
+        <CheckboxStates />
       </section>
 
       <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">

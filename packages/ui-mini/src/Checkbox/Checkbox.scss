@@ -1,0 +1,37 @@
+/* Checkbox（mini）样式：只引用 @kit/tokens CSS 变量，禁止裸颜色/rpx 硬编码 */
+.kit-checkbox {
+  display: inline-flex;
+  align-items: center;
+}
+
+.kit-checkbox__box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: var(--kit-icon-size-md);
+  height: var(--kit-icon-size-md);
+  background: var(--kit-color-bg-card);
+  border: 1px solid var(--kit-color-border-default);
+  border-radius: var(--kit-radius-sm);
+}
+
+.kit-checkbox__box--error {
+  border-color: var(--kit-color-border-danger);
+}
+
+.kit-checkbox__box--checked {
+  background: var(--kit-color-primary-default);
+  border-color: var(--kit-color-primary-default);
+}
+
+.kit-checkbox__mark {
+  color: var(--kit-color-primary-text);
+  font-size: var(--kit-font-size-caption);
+  line-height: 1;
+}
+
+/* 禁用态：NutUI 会给根节点加禁用类，此处覆盖未选框底色 */
+.kit-checkbox.nut-checkbox--disabled .kit-checkbox__box {
+  background: var(--kit-color-bg-hover);
+}

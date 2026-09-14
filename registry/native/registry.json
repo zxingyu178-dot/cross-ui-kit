@@ -195,6 +195,87 @@
       },
       "docs": "packages/ui-native/src/Input/README.md",
       "examples": ["packages/ui-native/src/Input/__examples__/States.tsx"]
+    },
+    {
+      "name": "checkbox",
+      "type": "registry:component",
+      "title": "复选框 Checkbox",
+      "description": "Tamagui Checkbox 封装，选中底色由 Indicator 承担，支持选中/半选/禁用/错误/label，onChange 归一为 boolean",
+      "canonical": "Checkbox",
+      "status": "beta",
+      "stack": "native",
+      "dependencies": ["tamagui", "react-native"],
+      "registryDependencies": [],
+      "files": [
+        { "path": "packages/ui-native/src/Checkbox/Checkbox.tsx", "type": "registry:component" },
+        { "path": "packages/ui-native/src/Checkbox/Checkbox.types.ts", "type": "registry:ui" },
+        { "path": "packages/ui-native/src/Checkbox/index.ts", "type": "registry:ui" }
+      ],
+      "props": [
+        { "name": "checked", "type": "boolean", "required": false, "desc": "受控选中态" },
+        {
+          "name": "defaultChecked",
+          "type": "boolean",
+          "required": false,
+          "desc": "非受控初值（文字点击切换仅受控可用）"
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "default": "false",
+          "required": false,
+          "desc": "禁用"
+        },
+        {
+          "name": "indeterminate",
+          "type": "boolean",
+          "default": "false",
+          "required": false,
+          "desc": "半选"
+        },
+        { "name": "label", "type": "ReactNode", "required": false, "desc": "文本" },
+        {
+          "name": "error",
+          "type": "boolean",
+          "default": "false",
+          "required": false,
+          "desc": "未选框红边"
+        },
+        {
+          "name": "accessibilityLabel",
+          "type": "string",
+          "required": false,
+          "desc": "字符串 label 自动取用"
+        }
+      ],
+      "events": [
+        {
+          "name": "onChange",
+          "type": "(checked: boolean) => void",
+          "desc": "选中态变化（onCheckedChange 归一）"
+        }
+      ],
+      "slots": ["label"],
+      "tokens": [
+        "color-bg-card",
+        "color-bg-hover",
+        "color-border-default",
+        "color-border-danger",
+        "color-primary-default",
+        "color-primary-text",
+        "color-text-primary",
+        "color-text-disabled",
+        "radius-sm",
+        "font-size-body-md"
+      ],
+      "states": ["unchecked", "checked", "indeterminate", "disabled", "error"],
+      "a11y": "Tamagui Checkbox 自带 checkbox role 与选中态；字符串 label 自动作为 accessibilityLabel",
+      "usage": {
+        "do": ["选中底色交给 Indicator", "父子全选用 indeterminate", "样式只用 token"],
+        "dont": ["引 SVG 图标库画勾（用字符）", "外泄 indeterminate 字符串"]
+      },
+      "docs": "packages/ui-native/src/Checkbox/README.md",
+      "examples": ["packages/ui-native/src/Checkbox/__examples__/States.tsx"]
     }
   ]
 }

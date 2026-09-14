@@ -175,6 +175,76 @@
       },
       "docs": "packages/ui-mini/src/Input/README.md",
       "examples": ["packages/ui-mini/src/Input/__examples__/States.tsx"]
+    },
+    {
+      "name": "checkbox",
+      "type": "registry:component",
+      "title": "复选框 Checkbox",
+      "description": "NutUI Checkbox 封装，自定义图标接管视觉（token 配色），支持选中/半选/禁用/错误/label，onChange 为 boolean 回调",
+      "canonical": "Checkbox",
+      "status": "beta",
+      "stack": "mini",
+      "dependencies": ["@nutui/nutui-react-taro", "@tarojs/components", "@tarojs/taro"],
+      "registryDependencies": [],
+      "files": [
+        { "path": "packages/ui-mini/src/Checkbox/Checkbox.tsx", "type": "registry:component" },
+        { "path": "packages/ui-mini/src/Checkbox/Checkbox.types.ts", "type": "registry:ui" },
+        { "path": "packages/ui-mini/src/Checkbox/Checkbox.scss", "type": "registry:ui" },
+        { "path": "packages/ui-mini/src/Checkbox/index.ts", "type": "registry:ui" }
+      ],
+      "props": [
+        { "name": "checked", "type": "boolean", "required": false, "desc": "受控选中态" },
+        { "name": "defaultChecked", "type": "boolean", "required": false, "desc": "非受控初值" },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "default": "false",
+          "required": false,
+          "desc": "禁用"
+        },
+        {
+          "name": "indeterminate",
+          "type": "boolean",
+          "default": "false",
+          "required": false,
+          "desc": "半选"
+        },
+        { "name": "label", "type": "ReactNode", "required": false, "desc": "文本" },
+        {
+          "name": "error",
+          "type": "boolean",
+          "default": "false",
+          "required": false,
+          "desc": "未选框红边"
+        }
+      ],
+      "events": [
+        {
+          "name": "onChange",
+          "type": "(checked: boolean) => void",
+          "desc": "选中态变化（NutUI 已是 boolean 回调）"
+        }
+      ],
+      "slots": ["label", "icon", "activeIcon", "indeterminateIcon"],
+      "tokens": [
+        "color-bg-card",
+        "color-bg-hover",
+        "color-border-default",
+        "color-border-danger",
+        "color-primary-default",
+        "color-primary-text",
+        "radius-sm",
+        "icon-size-md",
+        "font-size-caption"
+      ],
+      "states": ["unchecked", "checked", "indeterminate", "disabled", "error"],
+      "a11y": "基于 Taro Checkbox 原生语义；表单项须有可见 label",
+      "usage": {
+        "do": ["用自定义图标保持 token 配色", "onChange 接收 boolean"],
+        "dont": ["依赖 NutUI 默认主题色", "硬编码颜色/rpx"]
+      },
+      "docs": "packages/ui-mini/src/Checkbox/README.md",
+      "examples": ["packages/ui-mini/src/Checkbox/__examples__/States.tsx"]
     }
   ]
 }

@@ -99,3 +99,15 @@ body {
     background-color var(--kit-motion-duration-base) var(--kit-motion-easing-standard),
     color var(--kit-motion-duration-base) var(--kit-motion-easing-standard);
 }
+
+/*
+ * 主题切换正确性兜底：颜色 CSS 变量未通过 @property 注册为 <color> 类型时，
+ * .dark 整体切换会让引用变量且带 transition 的颜色属性卡在旧值（Chromium 实测）。
+ * 切换由 React 在绘制前给 <html> 挂 data-theme-switching，此期间全局禁用过渡，
+ * 保证主题瞬时、正确切换；下一帧移除后，hover/press 等交互过渡照常生效。
+ */
+html[data-theme-switching] *,
+html[data-theme-switching] *::before,
+html[data-theme-switching] *::after {
+  transition: none !important;
+}

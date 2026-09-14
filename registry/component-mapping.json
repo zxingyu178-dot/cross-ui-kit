@@ -48,6 +48,28 @@
       }
     },
     {
+      "canonical": "Checkbox",
+      "category": "form",
+      "sharedProps": {
+        "checked": "boolean",
+        "defaultChecked": "boolean",
+        "disabled": "boolean",
+        "indeterminate": "boolean",
+        "label": "ReactNode",
+        "error": "boolean"
+      },
+      "eventMap": {
+        "web": "onCheckedChange->onChange(boolean)",
+        "mini": "onChange(boolean)",
+        "native": "onCheckedChange->onChange(boolean)"
+      },
+      "stacks": {
+        "web": { "item": "@kit/web-checkbox", "status": "beta" },
+        "mini": { "item": "@kit/mini-checkbox", "status": "beta" },
+        "native": { "item": "@kit/native-checkbox", "status": "beta" }
+      }
+    },
+    {
       "canonical": "DataTable",
       "category": "data",
       "sharedProps": {

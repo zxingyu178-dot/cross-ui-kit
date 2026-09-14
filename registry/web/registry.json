@@ -190,6 +190,83 @@
       },
       "docs": "packages/ui-web/src/Input/README.md",
       "examples": ["packages/ui-web/src/Input/__examples__/States.tsx"]
+    },
+    {
+      "name": "checkbox",
+      "type": "registry:component",
+      "title": "复选框 Checkbox",
+      "description": "Radix Checkbox 封装，支持选中/半选/禁用/错误/label，onChange 统一为 boolean 值回调",
+      "canonical": "Checkbox",
+      "status": "beta",
+      "stack": "web",
+      "dependencies": ["@radix-ui/react-checkbox", "@kit/core"],
+      "registryDependencies": [],
+      "files": [
+        { "path": "packages/ui-web/src/Checkbox/Checkbox.tsx", "type": "registry:component" },
+        { "path": "packages/ui-web/src/Checkbox/Checkbox.types.ts", "type": "registry:ui" },
+        { "path": "packages/ui-web/src/Checkbox/index.ts", "type": "registry:ui" }
+      ],
+      "props": [
+        { "name": "checked", "type": "boolean", "required": false, "desc": "受控选中态" },
+        { "name": "defaultChecked", "type": "boolean", "required": false, "desc": "非受控初值" },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "default": "false",
+          "required": false,
+          "desc": "禁用"
+        },
+        {
+          "name": "indeterminate",
+          "type": "boolean",
+          "default": "false",
+          "required": false,
+          "desc": "半选（父级全选场景）"
+        },
+        {
+          "name": "label",
+          "type": "ReactNode",
+          "required": false,
+          "desc": "文本，传入后点文本可切换"
+        },
+        {
+          "name": "error",
+          "type": "boolean",
+          "default": "false",
+          "required": false,
+          "desc": "错误态红框 + aria-invalid"
+        }
+      ],
+      "events": [
+        {
+          "name": "onChange",
+          "type": "(checked: boolean) => void",
+          "desc": "选中态变化（值回调，indeterminate 已归一）"
+        }
+      ],
+      "slots": ["label"],
+      "tokens": [
+        "color-bg-card",
+        "color-bg-hover",
+        "color-border-default",
+        "color-border-focus",
+        "color-border-danger",
+        "color-primary-default",
+        "color-primary-disabled",
+        "color-primary-text",
+        "color-text-primary",
+        "color-text-disabled",
+        "radius-sm",
+        "icon-size-md"
+      ],
+      "states": ["unchecked", "checked", "indeterminate", "disabled", "error"],
+      "a11y": "Radix 自带 role=checkbox 与 aria-checked（含 mixed）；错误补 aria-invalid；label 用 id 关联",
+      "usage": {
+        "do": ["父子全选用 indeterminate", "onChange 接收 boolean", "label 传文本获得可点区域"],
+        "dont": ["外泄 Radix 的 indeterminate 字符串", "硬编码选中色"]
+      },
+      "docs": "packages/ui-web/src/Checkbox/README.md",
+      "examples": ["packages/ui-web/src/Checkbox/__examples__/States.tsx"]
     }
   ]
 }
