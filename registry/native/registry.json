@@ -99,6 +99,102 @@
       },
       "docs": "packages/ui-native/src/Button/README.md",
       "examples": ["packages/ui-native/src/Button/__examples__/Variants.tsx"]
+    },
+    {
+      "name": "input",
+      "type": "registry:component",
+      "title": "输入框 Input",
+      "description": "Tamagui Input 封装：尺寸/错误态/图标槽/禁用只读；type 映射 keyboardType/secureTextEntry，onChange 接 onChangeText",
+      "canonical": "Input",
+      "status": "beta",
+      "stack": "native",
+      "dependencies": ["tamagui", "react-native"],
+      "registryDependencies": [],
+      "files": [
+        { "path": "packages/ui-native/src/Input/Input.tsx", "type": "registry:component" },
+        { "path": "packages/ui-native/src/Input/Input.types.ts", "type": "registry:ui" },
+        { "path": "packages/ui-native/src/Input/index.ts", "type": "registry:ui" }
+      ],
+      "props": [
+        { "name": "value", "type": "string", "required": false, "desc": "受控值" },
+        { "name": "defaultValue", "type": "string", "required": false, "desc": "非受控初值" },
+        {
+          "name": "type",
+          "type": "'text'|'password'|'number'|'tel'|'email'|'search'",
+          "default": "'text'",
+          "required": false,
+          "desc": "password 映射 secureTextEntry；number/tel/email 映射 keyboardType"
+        },
+        {
+          "name": "size",
+          "type": "'sm'|'md'|'lg'",
+          "default": "'md'",
+          "required": false,
+          "desc": "高度与字号 token"
+        },
+        {
+          "name": "error",
+          "type": "boolean|string",
+          "default": "false",
+          "required": false,
+          "desc": "danger 边框 + 错误文本（accessibilityHint）"
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "default": "false",
+          "required": false,
+          "desc": "editable=false 并置灰"
+        },
+        {
+          "name": "readOnly",
+          "type": "boolean",
+          "default": "false",
+          "required": false,
+          "desc": "editable=false 不置灰"
+        },
+        { "name": "prefixIcon", "type": "ReactNode", "required": false, "desc": "前置图标槽" },
+        { "name": "suffixIcon", "type": "ReactNode", "required": false, "desc": "后置图标槽" },
+        { "name": "maxLength", "type": "number", "required": false, "desc": "最大长度" },
+        {
+          "name": "accessibilityLabel",
+          "type": "string",
+          "required": false,
+          "desc": "无障碍标签，必填语义"
+        }
+      ],
+      "events": [
+        {
+          "name": "onChange",
+          "type": "(value: string) => void",
+          "desc": "值变化（内部接 RN onChangeText）"
+        }
+      ],
+      "slots": ["prefixIcon", "suffixIcon"],
+      "tokens": [
+        "color-bg-card",
+        "color-bg-hover",
+        "color-border-default",
+        "color-border-danger",
+        "color-text-primary",
+        "color-text-tertiary",
+        "color-text-danger",
+        "radius-md",
+        "control-height-sm",
+        "control-height-md",
+        "control-height-lg",
+        "font-size-body-sm",
+        "font-size-body-md",
+        "font-size-body-lg"
+      ],
+      "states": ["default", "focus", "error", "disabled", "readonly"],
+      "a11y": "必须传 accessibilityLabel；错误经 accessibilityHint 关联，错误文本 accessibilityRole=alert",
+      "usage": {
+        "do": ["样式只引用 Tamagui token", "onChange 用值回调", "补齐 accessibilityLabel"],
+        "dont": ["写裸样式对象颜色", "直接把 RN keyboardType 暴露给业务"]
+      },
+      "docs": "packages/ui-native/src/Input/README.md",
+      "examples": ["packages/ui-native/src/Input/__examples__/States.tsx"]
     }
   ]
 }

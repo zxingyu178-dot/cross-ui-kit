@@ -25,15 +25,26 @@
       "category": "form",
       "sharedProps": {
         "value": "string",
+        "defaultValue": "string",
         "placeholder": "string",
+        "type": "text|password|number|tel|email|search",
+        "size": "sm|md|lg",
         "disabled": "boolean",
-        "error": "boolean|string"
+        "readOnly": "boolean",
+        "error": "boolean|string",
+        "maxLength": "number",
+        "prefixIcon": "ReactNode",
+        "suffixIcon": "ReactNode"
       },
-      "eventMap": { "web": "onChange", "mini": "onChange", "native": "onChangeText" },
+      "eventMap": {
+        "web": "onChange(value)",
+        "mini": "onChange(value)",
+        "native": "onChangeText->onChange(value)"
+      },
       "stacks": {
-        "web": { "item": "@kit/web-input", "status": "planned" },
-        "mini": { "item": "@kit/mini-input", "status": "planned" },
-        "native": { "item": "@kit/native-input", "status": "planned" }
+        "web": { "item": "@kit/web-input", "status": "beta" },
+        "mini": { "item": "@kit/mini-input", "status": "beta" },
+        "native": { "item": "@kit/native-input", "status": "beta" }
       }
     },
     {

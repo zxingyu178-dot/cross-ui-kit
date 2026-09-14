@@ -82,6 +82,99 @@
       },
       "docs": "packages/ui-mini/src/Button/README.md",
       "examples": ["packages/ui-mini/src/Button/__examples__/Variants.tsx"]
+    },
+    {
+      "name": "input",
+      "type": "registry:component",
+      "title": "输入框 Input",
+      "description": "NutUI Input 统一封装：尺寸/错误态/图标槽/禁用只读，onChange 值回调；错误态与图标槽由封装容器提供",
+      "canonical": "Input",
+      "status": "beta",
+      "stack": "mini",
+      "dependencies": ["@nutui/nutui-react-taro", "@tarojs/components", "@tarojs/taro"],
+      "registryDependencies": [],
+      "files": [
+        { "path": "packages/ui-mini/src/Input/Input.tsx", "type": "registry:component" },
+        { "path": "packages/ui-mini/src/Input/Input.types.ts", "type": "registry:ui" },
+        { "path": "packages/ui-mini/src/Input/Input.scss", "type": "registry:ui" },
+        { "path": "packages/ui-mini/src/Input/index.ts", "type": "registry:ui" }
+      ],
+      "props": [
+        { "name": "value", "type": "string", "required": false, "desc": "受控值" },
+        { "name": "defaultValue", "type": "string", "required": false, "desc": "非受控初值" },
+        {
+          "name": "type",
+          "type": "'text'|'password'|'number'|'tel'|'email'|'search'",
+          "default": "'text'",
+          "required": false,
+          "desc": "number 映射 digit 数字键盘；tel/email/search 降级 text"
+        },
+        {
+          "name": "size",
+          "type": "'sm'|'md'|'lg'",
+          "default": "'md'",
+          "required": false,
+          "desc": "容器高度 token"
+        },
+        {
+          "name": "error",
+          "type": "boolean|string",
+          "default": "false",
+          "required": false,
+          "desc": "红色边框 + 错误文案"
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "default": "false",
+          "required": false,
+          "desc": "禁用"
+        },
+        {
+          "name": "readOnly",
+          "type": "boolean",
+          "default": "false",
+          "required": false,
+          "desc": "只读"
+        },
+        { "name": "prefixIcon", "type": "ReactNode", "required": false, "desc": "前置图标槽" },
+        { "name": "suffixIcon", "type": "ReactNode", "required": false, "desc": "后置图标槽" },
+        { "name": "maxLength", "type": "number", "required": false, "desc": "最大长度" }
+      ],
+      "events": [
+        {
+          "name": "onChange",
+          "type": "(value: string) => void",
+          "desc": "值变化（NutUI 已为值回调）"
+        }
+      ],
+      "slots": ["prefixIcon", "suffixIcon"],
+      "tokens": [
+        "color-bg-card",
+        "color-bg-hover",
+        "color-border-default",
+        "color-border-danger",
+        "color-text-primary",
+        "color-text-tertiary",
+        "color-text-danger",
+        "radius-md",
+        "control-height-sm",
+        "control-height-md",
+        "control-height-lg",
+        "spacing-1",
+        "spacing-2",
+        "spacing-3",
+        "font-size-body-sm",
+        "font-size-body-md"
+      ],
+      "states": ["default", "focus", "error", "disabled", "readonly"],
+      "a11y": "错误文案语义化展示；输入项须有可见 label 或无障碍标签",
+      "usage": {
+        "do": ["用封装容器的 error 属性", "样式只引用 var(--kit-*)", "onChange 接收值字符串"],
+        "dont": ["直接依赖 NutUI 私有 props 写业务", "硬编码颜色/rpx"]
+      },
+      "docs": "packages/ui-mini/src/Input/README.md",
+      "examples": ["packages/ui-mini/src/Input/__examples__/States.tsx"]
     }
   ]
 }

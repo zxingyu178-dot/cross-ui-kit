@@ -100,6 +100,96 @@
         "packages/ui-web/src/Button/__examples__/Variants.tsx",
         "packages/ui-web/src/Button/__examples__/States.tsx"
       ]
+    },
+    {
+      "name": "input",
+      "type": "registry:component",
+      "title": "输入框 Input",
+      "description": "单行文本输入，支持尺寸/错误态/图标槽/禁用只读，onChange 统一为值回调",
+      "canonical": "Input",
+      "status": "beta",
+      "stack": "web",
+      "dependencies": ["class-variance-authority", "@kit/core"],
+      "registryDependencies": [],
+      "files": [
+        { "path": "packages/ui-web/src/Input/Input.tsx", "type": "registry:component" },
+        { "path": "packages/ui-web/src/Input/Input.types.ts", "type": "registry:ui" },
+        { "path": "packages/ui-web/src/Input/index.ts", "type": "registry:ui" }
+      ],
+      "props": [
+        { "name": "value", "type": "string", "required": false, "desc": "受控值" },
+        { "name": "defaultValue", "type": "string", "required": false, "desc": "非受控初值" },
+        {
+          "name": "type",
+          "type": "'text'|'password'|'number'|'tel'|'email'|'search'",
+          "default": "'text'",
+          "required": false,
+          "desc": "输入类型"
+        },
+        {
+          "name": "size",
+          "type": "'sm'|'md'|'lg'",
+          "default": "'md'",
+          "required": false,
+          "desc": "高度取 control-height token"
+        },
+        {
+          "name": "error",
+          "type": "boolean|string",
+          "default": "false",
+          "required": false,
+          "desc": "true 仅红色高亮；字符串同时显示错误文案"
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "default": "false",
+          "required": false,
+          "desc": "禁用"
+        },
+        {
+          "name": "readOnly",
+          "type": "boolean",
+          "default": "false",
+          "required": false,
+          "desc": "只读"
+        },
+        { "name": "prefixIcon", "type": "ReactNode", "required": false, "desc": "前置图标槽" },
+        { "name": "suffixIcon", "type": "ReactNode", "required": false, "desc": "后置图标槽" },
+        { "name": "maxLength", "type": "number", "required": false, "desc": "最大长度" }
+      ],
+      "events": [
+        {
+          "name": "onChange",
+          "type": "(value: string) => void",
+          "desc": "值变化（已归一为值回调）"
+        }
+      ],
+      "slots": ["prefixIcon", "suffixIcon"],
+      "tokens": [
+        "color-bg-card",
+        "color-bg-hover",
+        "color-border-default",
+        "color-border-focus",
+        "color-border-danger",
+        "color-text-primary",
+        "color-text-tertiary",
+        "color-text-disabled",
+        "color-text-danger",
+        "radius-md",
+        "control-height-sm",
+        "control-height-md",
+        "control-height-lg",
+        "icon-size-md"
+      ],
+      "states": ["default", "focus", "error", "disabled", "readonly"],
+      "a11y": "错误时 aria-invalid 并以 aria-describedby 关联 role=alert 错误文案；须有 label 或 aria-label",
+      "usage": {
+        "do": ["受控配合 react-hook-form+zod", "错误用 error 属性统一展示", "图标槽只放装饰图标"],
+        "dont": ["自行拼边框样式", "直接用原生 event 而非值回调", "硬编码颜色"]
+      },
+      "docs": "packages/ui-web/src/Input/README.md",
+      "examples": ["packages/ui-web/src/Input/__examples__/States.tsx"]
     }
   ]
 }

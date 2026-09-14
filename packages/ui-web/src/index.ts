@@ -6,3 +6,4 @@
  *           在此统一导出，并登记 registry/web/registry.json。
  */
 export * from './Button'
+export * from './Input'

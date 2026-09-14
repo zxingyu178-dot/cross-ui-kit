@@ -3,6 +3,7 @@ import { Button } from '@kit/ui-web'
 // 直接引用库内示例（与 hub/Storybook 同源，保证演示即真实资产）
 import { Variants } from '@kit/ui-web/src/Button/__examples__/Variants'
 import { States } from '@kit/ui-web/src/Button/__examples__/States'
+import { States as InputStates } from '@kit/ui-web/src/Input/__examples__/States'
 
 /**
  * play-web 演示壳入口。
@@ -45,6 +46,11 @@ export default function App() {
       <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
         <h2 className="text-title-sm font-medium text-text-primary">Button · 尺寸与状态</h2>
         <States />
+      </section>
+
+      <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
+        <h2 className="text-title-sm font-medium text-text-primary">Input · 输入框</h2>
+        <InputStates />
       </section>
 
       <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">

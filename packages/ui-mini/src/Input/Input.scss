@@ -1,0 +1,61 @@
+/* Input（mini）样式：只引用 @kit/tokens CSS 变量，禁止裸颜色/rpx 硬编码 */
+.kit-input {
+  display: flex;
+  flex-direction: column;
+  gap: var(--kit-spacing-1);
+  width: 100%;
+}
+
+.kit-input__row {
+  display: flex;
+  align-items: center;
+  gap: var(--kit-spacing-2);
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 var(--kit-spacing-3);
+  background: var(--kit-color-bg-card);
+  border: 1px solid var(--kit-color-border-default);
+  border-radius: var(--kit-radius-md);
+}
+
+.kit-input__row--sm {
+  min-height: var(--kit-control-height-sm);
+}
+.kit-input__row--md {
+  min-height: var(--kit-control-height-md);
+}
+.kit-input__row--lg {
+  min-height: var(--kit-control-height-lg);
+}
+
+.kit-input__row--error {
+  border-color: var(--kit-color-border-danger);
+}
+
+.kit-input__row--disabled {
+  background: var(--kit-color-bg-hover);
+}
+
+.kit-input__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--kit-color-text-tertiary);
+}
+
+.kit-input__error {
+  color: var(--kit-color-text-danger);
+  font-size: var(--kit-font-size-body-sm);
+  line-height: var(--kit-line-height-normal);
+}
+
+/* NutUI 输入区文本颜色（NutUI plain 模式下覆盖内部默认色） */
+.kit-input__field,
+.kit-input__field .nut-input {
+  color: var(--kit-color-text-primary);
+  font-size: var(--kit-font-size-body-md);
+}
+
+.kit-input__placeholder {
+  color: var(--kit-color-text-tertiary);
+}
