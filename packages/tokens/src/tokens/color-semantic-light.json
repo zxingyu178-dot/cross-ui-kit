@@ -4,7 +4,7 @@
       "primary": { "$type": "color", "$value": "{gray.900}" },
       "secondary": { "$type": "color", "$value": "{gray.600}" },
       "tertiary": { "$type": "color", "$value": "{gray.400}" },
-      "disabled": { "$type": "color", "$value": "{gray.300}" },
+      "disabled": { "$type": "color", "$value": "{gray.500}" },
       "inverse": { "$type": "color", "$value": "{gray.50}" },
       "link": { "$type": "color", "$value": "{brand.600}" },
       "danger": { "$type": "color", "$value": "{danger.600}" },

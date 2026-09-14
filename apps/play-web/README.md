@@ -23,7 +23,7 @@ pnpm --filter play-web typecheck  # tsc 严格类型检查
 
 - **源码直引**：vite alias 把 `@kit/ui-web` / `@kit/core` / `@kit/icons` 指向 `packages/*/src`（含 `@kit/ui-web/src/**` 深层示例路径），dev/build 始终消费最新源码；`@kit/tokens` 的 CSS 走包 exports 消费 `dist/` 产物（改 token 后先 `pnpm tokens:build`）。
 - **Tailwind 扫描**：`src/index.css` 中 `@source '../../../packages/ui-web/src/**/*.{ts,tsx}'`（相对 CSS 文件三级回到仓库根），组件库内的工具类才会被编译——新增组件包目录时同步扩展。
-- **暗色**：根节点挂 `.dark` 类（`@custom-variant dark`），同时驱动 tokens.dark.css 与 Tailwind dark 变体，不跟随系统。
+- **暗色**：必须给 `document.documentElement`（`<html>`）切换 `.dark` 类（App.tsx 用 useEffect 实现，`@custom-variant dark`），同时驱动 tokens.dark.css 与 Tailwind dark 变体；禁止挂内层容器（body 在容器外会漏切换），不跟随系统。
 - **演示即资产**：演示分节直接引用组件目录下的 `__examples__/*`（与 hub / Storybook 同源），不在演示工程里另写一次性 demo。
 
 ## 当前演示内容

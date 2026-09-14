@@ -50,7 +50,9 @@ Token 是全库视觉的**唯一事实来源**。任何组件、页面、应用�
 - 边框：`color-border-default / strong / focus / danger`
 - 品牌：`color-primary-default / hover / active / disabled / bg / bg-hover`
 - 状态：`color-success / warning / danger / info`（各带 `-default/-bg/-border`）
-- 暗色：每个语义色在 `color-semantic.dark.json`（或同文件 dark 条件组）给出暗色映射，对比度满足 WCAG AA（正文 4.5:1）。
+- 暗色：每个语义色在 `color-semantic-dark.json` 给出暗色映射，对比度满足 WCAG AA（正文 4.5:1）。
+- **暗色实心填充阶梯（P1 实测修正）**：暗色主题下，实心按钮的 `*-default / hover / active` 底色保持与亮色一致的 600 / 500 / 700 色阶（配白字对比度达标），**不要**用 300/400 浅阶做底色（白字压浅底对比不足，如 danger.400 #f87171 上白字仅约 2.4:1）；300/400 浅阶在暗色下只用于文字、链接、边框、图表与浅底场景（`text-link=brand.400`、`text-danger=danger.400`、`chart-*`）。
+- **禁用文字色**：`color-text-disabled` 两端统一取 gray.500（亮底/暗底均可辨）；暗色 `primary-disabled` 底色取 gray.800。
 
 ## 5. 数值与步进标准
 

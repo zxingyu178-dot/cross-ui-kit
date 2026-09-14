@@ -71,6 +71,11 @@ src/DataList/
 - native：Tamagui styled/style props，token 化；
 - 必须实现暗色（随 token 暗色映射自动生效的，验证；组件内写死的颜色一律不允许）。
 
+### 5.1 web 栈两条强制约定（P1 实测踩坑）
+
+1. **暗色类必须挂 `document.documentElement`（`<html class="dark">`）**，不允许挂在内层容器 div 上。原因：`body` 的背景/基础文字色在包裹容器之外，挂内层会导致 body 与容器外区域取不到暗色变量，出现"卡片变暗、页面底色仍是亮色"和按钮文字沿继承链取到亮色值而隐形。统一用 `useEffect` 切换 `document.documentElement.classList.toggle('dark')`。
+2. **新增 Tailwind 自定义 token 主题类，必须同步登记到 `packages/core/src/utils/cn.ts` 的 tailwind-merge `classGroups`**。原因：字号类（`text-body-md`，来自 `@theme --text-*`）与文字颜色类（`text-primary-text` / `text-text-primary`，来自 `@theme --color-*`）共享 `text-` 前缀，tailwind-merge 不认识自定义值时会把两者误判为同一冲突组，后出现的字号类会把颜色类静默删除，导致按钮/文字颜色丢失。新增字号登记到 `font-size` 组、新增文字色登记到 `text-color` 组；其他前缀（`h-/w-/p-/gap-` 等 spacing 自定义值）出现同类合并问题时同理登记对应组。
+
 ## 6. 交互与反馈（与 07-interaction-spec.md 配套）
 
 - 操作必须有反馈：点击态（hover/active/pressed）、提交 loading、结果 Toast；
