@@ -10,9 +10,9 @@
       "title": "按钮 Button",
       "description": "触发即时操作；每个主视觉区域只允许一个 primary 按钮；loading 时自动禁用防重复提交",
       "canonical": "Button",
-      "status": "planned",
+      "status": "beta",
       "stack": "web",
-      "dependencies": ["clsx", "tailwind-merge"],
+      "dependencies": ["@radix-ui/react-slot", "class-variance-authority", "@kit/core"],
       "registryDependencies": [],
       "files": [
         { "path": "packages/ui-web/src/Button/Button.tsx", "type": "registry:component" },
@@ -67,8 +67,22 @@
       "tokens": [
         "color-primary-default",
         "color-primary-hover",
+        "color-primary-active",
+        "color-primary-disabled",
+        "color-primary-text",
+        "color-danger-default",
+        "color-danger-hover",
+        "color-text-link",
+        "color-border-default",
+        "color-border-focus",
+        "color-bg-card",
+        "color-bg-hover",
+        "color-bg-active",
         "radius-md",
-        "controlHeight-md",
+        "control-height-sm",
+        "control-height-md",
+        "control-height-lg",
+        "icon-size-md",
         "motion-duration-fast"
       ],
       "states": ["default", "hover", "active", "disabled", "loading"],
@@ -82,7 +96,10 @@
         "dont": ["用 danger 表达普通取消", "内联颜色或间距", "在按钮内写业务请求"]
       },
       "docs": "packages/ui-web/src/Button/README.md",
-      "examples": ["packages/ui-web/src/Button/__examples__/Variants.tsx"]
+      "examples": [
+        "packages/ui-web/src/Button/__examples__/Variants.tsx",
+        "packages/ui-web/src/Button/__examples__/States.tsx"
+      ]
     }
   ]
 }

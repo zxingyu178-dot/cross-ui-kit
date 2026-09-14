@@ -1,32 +1,32 @@
-# play-web · 网页演示壳（React 18.3 + Vite + shadcn/ui）
+# React + TypeScript + Vite
 
-用途：验证 `@kit/ui-web` 组件在真实网页工程可用，作为 hub 的大端预览来源之一。**只做演示，不沉淀通用能力。**
+This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
 
-## 初始化（P1 执行，一次）
+Currently, two official plugins are available:
 
-```bash
-# 在 apps/ 目录下
-pnpm create vite@latest play-web --template react-ts
-cd play-web
-pnpm install
-# Tailwind v4
-pnpm add tailwindcss @tailwindcss/vite
-# shadcn 初始化（registries 指向仓库 registry/web，见 docs/06）
-pnpm dlx shadcn@latest init
-# 工作区依赖
-pnpm add @kit/tokens @kit/core @kit/icons @kit/ui-web
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+
+## React Compiler
+
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+
+## Expanding the Oxlint configuration
+
+If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+
+```json
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": ["react", "typescript", "oxc"],
+  "options": {
+    "typeAware": true
+  },
+  "rules": {
+    "react/rules-of-hooks": "error",
+    "react/only-export-components": ["warn", { "allowConstantExport": true }]
+  }
+}
 ```
 
-## 接入要求
-
-- 入口引入 `@kit/tokens` 产物 `tokens.light.css`，暗色在根节点切换 `.dark` class；
-- 路径别名 `@kit/*` 走 workspace 源码；
-- 组件只从 `@kit/ui-web` 引用，不在演示工程内自造通用组件；
-- 每个组件在 `src/pages/` 有一页演示（与 Storybook 互补）。
-
-## 启动
-
-```bash
-pnpm dev        # Vite dev server
-pnpm build      # 生产构建（CI 冒烟）
-```
+See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.

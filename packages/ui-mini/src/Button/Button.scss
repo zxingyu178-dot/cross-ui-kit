@@ -1,0 +1,21 @@
+/* Button（mini）样式补充：只引用 @kit/tokens 的 CSS 变量（var(--kit-*)），禁止裸颜色/rpx 硬编码 */
+.kit-button {
+  /* 小端触控热区不小于 44px */
+  min-height: var(--kit-touch-min);
+}
+
+/* link 变体：去背景边框，使用链接语义色 */
+.kit-button--link {
+  min-height: var(--kit-touch-min);
+  padding-left: 0;
+  padding-right: 0;
+  background: transparent;
+  border: 0;
+  color: var(--kit-color-text-link);
+  font-weight: var(--kit-font-weight-regular);
+  line-height: var(--kit-line-height-normal);
+
+  &:active {
+    opacity: 0.7;
+  }
+}

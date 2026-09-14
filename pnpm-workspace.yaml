@@ -46,10 +46,14 @@ catalogs:
   web:
     vite: ^6.0.0
     tailwindcss: ^4.0.0
+    '@tailwindcss/vite': ^4.0.0
     '@vitejs/plugin-react': ^4.3.4
+    '@radix-ui/react-slot': ^1.1.0
+    class-variance-authority: ^0.7.0
   # 小端栈：Taro + NutUI
   mini:
     '@tarojs/taro': ^4.0.0
+    '@tarojs/components': ^4.0.0
     '@tarojs/cli': ^4.0.0
     '@nutui/nutui-react-taro': ^3.0.0
   # 原生栈：Expo SDK 52（RN 0.76 + React 18.3，是唯一 React 18.3 的 SDK；

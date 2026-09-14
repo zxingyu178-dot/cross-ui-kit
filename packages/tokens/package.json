@@ -4,6 +4,19 @@
   "private": true,
   "description": "Design Token 唯一源：Style Dictionary 一份 JSON 导出 web/mini/native 三栈变量",
   "type": "module",
+  "exports": {
+    "./web-light.css": "./dist/web/tokens.light.css",
+    "./web-dark.css": "./dist/web/tokens.dark.css",
+    "./mini-light.css": "./dist/mini/tokens.light.css",
+    "./mini-dark.css": "./dist/mini/tokens.dark.css",
+    "./mini-light.scss": "./dist/mini/tokens.light.scss",
+    "./mini-dark.scss": "./dist/mini/tokens.dark.scss",
+    "./mini-light": "./dist/mini/tokens.light.ts",
+    "./mini-dark": "./dist/mini/tokens.dark.ts",
+    "./native-light": "./dist/native/tamagui.light.ts",
+    "./native-dark": "./dist/native/tamagui.dark.ts",
+    "./tokens-table": "./dist/docs/tokens-table.md"
+  },
   "scripts": {
     "build": "node sd.config.mjs",
     "watch": "node sd.config.mjs --watch",

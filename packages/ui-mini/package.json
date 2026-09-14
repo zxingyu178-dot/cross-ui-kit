@@ -17,6 +17,7 @@
     "@kit/icons": "workspace:*",
     "@kit/tokens": "workspace:*",
     "@nutui/nutui-react-taro": "catalog:mini",
+    "@tarojs/components": "catalog:mini",
     "@tarojs/taro": "catalog:mini",
     "clsx": "catalog:",
     "react": "catalog:"

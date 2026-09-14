@@ -10,13 +10,14 @@
       "title": "按钮 Button",
       "description": "小端按钮，NutUI Button 的统一封装；触控热区不小于 44px；loading 防重复提交",
       "canonical": "Button",
-      "status": "planned",
+      "status": "beta",
       "stack": "mini",
-      "dependencies": ["@nutui/nutui-react-taro"],
+      "dependencies": ["@nutui/nutui-react-taro", "@tarojs/components", "@tarojs/taro"],
       "registryDependencies": [],
       "files": [
         { "path": "packages/ui-mini/src/Button/Button.tsx", "type": "registry:component" },
         { "path": "packages/ui-mini/src/Button/Button.types.ts", "type": "registry:ui" },
+        { "path": "packages/ui-mini/src/Button/Button.scss", "type": "registry:ui" },
         { "path": "packages/ui-mini/src/Button/index.ts", "type": "registry:ui" }
       ],
       "props": [
@@ -64,7 +65,15 @@
         }
       ],
       "slots": ["children", "icon"],
-      "tokens": ["color-primary-default", "radius-md", "touch-min", "motion-duration-fast"],
+      "tokens": [
+        "color-primary-default",
+        "color-text-link",
+        "radius-md",
+        "touch-min",
+        "font-weight-regular",
+        "line-height-normal",
+        "motion-duration-fast"
+      ],
       "states": ["default", "pressed", "disabled", "loading"],
       "a11y": "提供可读标签；图标按钮必须传文字或 aria 标注",
       "usage": {

@@ -9,13 +9,15 @@
         "variant": "primary|secondary|ghost|danger|link",
         "size": "sm|md|lg",
         "disabled": "boolean",
-        "loading": "boolean"
+        "loading": "boolean",
+        "block": "boolean",
+        "icon": "ReactNode"
       },
       "eventMap": { "web": "onClick", "mini": "onPress", "native": "onPress" },
       "stacks": {
-        "web": { "item": "@kit/web-button", "status": "planned" },
-        "mini": { "item": "@kit/mini-button", "status": "planned" },
-        "native": { "item": "@kit/native-button", "status": "planned" }
+        "web": { "item": "@kit/web-button", "status": "beta" },
+        "mini": { "item": "@kit/mini-button", "status": "beta" },
+        "native": { "item": "@kit/native-button", "status": "beta" }
       }
     },
     {

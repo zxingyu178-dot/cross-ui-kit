@@ -10,9 +10,9 @@
       "title": "按钮 Button",
       "description": "原生按钮，Tamagui Button 的统一封装；触控热区不小于 44px；loading 防重复提交",
       "canonical": "Button",
-      "status": "planned",
+      "status": "beta",
       "stack": "native",
-      "dependencies": ["tamagui"],
+      "dependencies": ["tamagui", "react-native"],
       "registryDependencies": [],
       "files": [
         { "path": "packages/ui-native/src/Button/Button.tsx", "type": "registry:component" },
@@ -47,13 +47,50 @@
           "default": "false",
           "required": false,
           "desc": "加载中，自动禁用并显示 ActivityIndicator"
+        },
+        {
+          "name": "block",
+          "type": "boolean",
+          "default": "false",
+          "required": false,
+          "desc": "是否撑满父容器宽度"
+        },
+        {
+          "name": "icon",
+          "type": "ReactNode",
+          "required": false,
+          "desc": "前置图标，loading 时被替换"
+        },
+        {
+          "name": "accessibilityLabel",
+          "type": "string",
+          "required": false,
+          "desc": "无障碍标签，图标按钮必填"
         }
       ],
       "events": [
         { "name": "onPress", "type": "(e) => void", "desc": "按压点击（web 对应 onClick）" }
       ],
       "slots": ["children", "icon"],
-      "tokens": ["color-primary-default", "radius-md", "touch-min", "motion-duration-fast"],
+      "tokens": [
+        "color-primary-default",
+        "color-primary-active",
+        "color-primary-text",
+        "color-danger-default",
+        "color-danger-hover",
+        "color-text-link",
+        "color-bg-card",
+        "color-bg-hover",
+        "color-border-default",
+        "radius-md",
+        "control-height-sm",
+        "control-height-md",
+        "control-height-lg",
+        "touch-min",
+        "font-size-body-sm",
+        "font-size-body-md",
+        "font-size-body-lg"
+      ],
       "states": ["default", "pressed", "disabled", "loading"],
       "a11y": "必须设置 accessibilityLabel 与 accessibilityRole='button'",
       "usage": {

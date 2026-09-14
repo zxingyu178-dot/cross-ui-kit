@@ -129,6 +129,19 @@ const basePlatforms = (theme) => {
       prefix: 'kit',
       files: [withFilter({ destination: `mini/tokens.${theme}.scss`, format: 'scss/variables' })],
     },
+    // mini CSS custom properties: 小程序(wxss 支持 CSS 变量)运行时换肤用；
+    // light 挂 page 根节点，dark 挂 .dark 类（页面根 View 切换）；H5 形态直接复用 web 产物(:root/.dark)
+    [`mini-css-${theme}`]: {
+      transforms: cssTransforms,
+      prefix: 'kit',
+      files: [
+        withFilter({
+          destination: `mini/tokens.${theme}.css`,
+          format: 'css/variables',
+          options: { selector: isDark ? '.dark' : 'page' },
+        }),
+      ],
+    },
     [`mini-ts-${theme}`]: {
       transforms: ['attribute/cti', 'name/camel', 'size/px', 'color/css'],
       files: [
@@ -182,6 +195,8 @@ const run = async () => {
     'web/tokens.dark.css',
     'mini/tokens.light.scss',
     'mini/tokens.dark.scss',
+    'mini/tokens.light.css',
+    'mini/tokens.dark.css',
     'mini/tokens.light.ts',
     'mini/tokens.dark.ts',
     'native/tamagui.light.ts',

@@ -1,0 +1,101 @@
+@import 'tailwindcss';
+
+/* 暗色策略：根节点挂 .dark 类（与 tokens.dark.css 的 .dark 选择器一致），而非跟随系统 */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* 让 Tailwind 扫描库包源码（相对本文件：src -> play-web -> apps -> 仓库根），@kit/ui-web 组件内的工具类才会被编译 */
+@source '../../../packages/ui-web/src/**/*.{ts,tsx}';
+
+/*
+ * Tailwind 主题 → @kit/tokens CSS 变量映射
+ * 使用 @theme inline：工具类（如 bg-primary-default）编译为 var(--kit-*)，
+ * 暗色模式下根节点切换 .dark 即整站换肤，无需重新编译。
+ * 视觉值只允许引用 token 变量，禁止写死颜色。
+ */
+@theme inline {
+  /* 文本色 */
+  --color-text-primary: var(--kit-color-text-primary);
+  --color-text-secondary: var(--kit-color-text-secondary);
+  --color-text-tertiary: var(--kit-color-text-tertiary);
+  --color-text-disabled: var(--kit-color-text-disabled);
+  --color-text-inverse: var(--kit-color-text-inverse);
+  --color-text-link: var(--kit-color-text-link);
+  --color-text-danger: var(--kit-color-text-danger);
+  --color-text-success: var(--kit-color-text-success);
+  --color-text-warning: var(--kit-color-text-warning);
+
+  /* 背景色 */
+  --color-bg-page: var(--kit-color-bg-page);
+  --color-bg-card: var(--kit-color-bg-card);
+  --color-bg-elevated: var(--kit-color-bg-elevated);
+  --color-bg-hover: var(--kit-color-bg-hover);
+  --color-bg-active: var(--kit-color-bg-active);
+
+  /* 边框色 */
+  --color-border-default: var(--kit-color-border-default);
+  --color-border-strong: var(--kit-color-border-strong);
+  --color-border-focus: var(--kit-color-border-focus);
+  --color-border-danger: var(--kit-color-border-danger);
+
+  /* 主色（primary 按钮等） */
+  --color-primary-default: var(--kit-color-primary-default);
+  --color-primary-hover: var(--kit-color-primary-hover);
+  --color-primary-active: var(--kit-color-primary-active);
+  --color-primary-disabled: var(--kit-color-primary-disabled);
+  --color-primary-bg: var(--kit-color-primary-bg);
+  --color-primary-text: var(--kit-color-primary-text);
+
+  /* 语义色 */
+  --color-danger-default: var(--kit-color-danger-default);
+  --color-danger-hover: var(--kit-color-danger-hover);
+  --color-danger-bg: var(--kit-color-danger-bg);
+  --color-success-default: var(--kit-color-success-default);
+  --color-warning-default: var(--kit-color-warning-default);
+
+  /* 圆角 */
+  --radius-sm: var(--kit-radius-sm);
+  --radius-md: var(--kit-radius-md);
+  --radius-lg: var(--kit-radius-lg);
+  --radius-xl: var(--kit-radius-xl);
+
+  /* 控件高度 */
+  --spacing-control-sm: var(--kit-control-height-sm);
+  --spacing-control-md: var(--kit-control-height-md);
+  --spacing-control-lg: var(--kit-control-height-lg);
+  --spacing-touch-min: var(--kit-touch-min);
+
+  /* 字号 */
+  --text-caption: var(--kit-font-size-caption);
+  --text-body-sm: var(--kit-font-size-body-sm);
+  --text-body-md: var(--kit-font-size-body-md);
+  --text-body-lg: var(--kit-font-size-body-lg);
+  --text-title-sm: var(--kit-font-size-title-sm);
+  --text-title-md: var(--kit-font-size-title-md);
+
+  /* 动效 */
+  --ease-standard: var(--kit-motion-easing-standard);
+  --duration-fast: var(--kit-motion-duration-fast);
+  --duration-base: var(--kit-motion-duration-base);
+
+  /* 阴影 */
+  --shadow-card: var(--kit-shadow-card);
+  --shadow-popover: var(--kit-shadow-popover);
+}
+
+/* 页面基础样式（只用 token） */
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  background-color: var(--kit-color-bg-page);
+  color: var(--kit-color-text-primary);
+  font-family: var(--kit-font-family-sans);
+  font-size: var(--kit-font-size-body-md);
+  line-height: var(--kit-line-height-normal);
+  transition:
+    background-color var(--kit-motion-duration-base) var(--kit-motion-easing-standard),
+    color var(--kit-motion-duration-base) var(--kit-motion-easing-standard);
+}
