@@ -8,6 +8,7 @@ import { States as CheckboxStates } from '@kit/ui-web/src/Checkbox/__examples__/
 import { States as SelectStates } from '@kit/ui-web/src/Select/__examples__/States'
 import { States as DialogStates } from '@kit/ui-web/src/Dialog/__examples__/States'
 import { States as ToastStates } from '@kit/ui-web/src/Toast/__examples__/States'
+import { States as SwitchStates } from '@kit/ui-web/src/Switch/__examples__/States'
 
 /**
  * play-web 演示壳入口。
@@ -86,6 +87,11 @@ export default function App() {
       <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
         <h2 className="text-title-sm font-medium text-text-primary">Toast · 轻提示</h2>
         <ToastStates />
+      </section>
+
+      <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
+        <h2 className="text-title-sm font-medium text-text-primary">Switch · 开关</h2>
+        <SwitchStates />
       </section>
 
       <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">

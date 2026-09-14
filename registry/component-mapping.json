@@ -140,6 +140,28 @@
       }
     },
     {
+      "canonical": "Switch",
+      "category": "form",
+      "sharedProps": {
+        "checked": "boolean",
+        "defaultChecked": "boolean",
+        "disabled": "boolean",
+        "loading": "boolean",
+        "size": "sm|md",
+        "label": "ReactNode"
+      },
+      "eventMap": {
+        "web": "Radix onCheckedChange(boolean)",
+        "mini": "NutUI onChange(boolean) -> onCheckedChange",
+        "native": "Tamagui onCheckedChange(boolean)"
+      },
+      "stacks": {
+        "web": { "item": "@kit/web-switch", "status": "beta" },
+        "mini": { "item": "@kit/mini-switch", "status": "beta" },
+        "native": { "item": "@kit/native-switch", "status": "beta" }
+      }
+    },
+    {
       "canonical": "DataTable",
       "category": "data",
       "sharedProps": {

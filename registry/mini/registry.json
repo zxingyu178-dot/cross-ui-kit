@@ -549,6 +549,84 @@
       },
       "docs": "packages/ui-mini/src/Toast/README.md",
       "examples": ["packages/ui-mini/src/Toast/__examples__/States.tsx"]
+    },
+    {
+      "name": "switch",
+      "type": "registry:component",
+      "title": "开关 Switch",
+      "description": "NutUI Switch 受控开关，scss 全量覆盖为 token（轨道主色/中性灰、滑块白），sm/md 尺寸与 web 对齐，loading 异步切换",
+      "canonical": "Switch",
+      "status": "beta",
+      "stack": "mini",
+      "dependencies": ["@nutui/nutui-react-taro", "@tarojs/components"],
+      "registryDependencies": [],
+      "files": [
+        { "path": "packages/ui-mini/src/Switch/Switch.tsx", "type": "registry:component" },
+        { "path": "packages/ui-mini/src/Switch/Switch.types.ts", "type": "registry:ui" },
+        { "path": "packages/ui-mini/src/Switch/Switch.scss", "type": "registry:ui" },
+        { "path": "packages/ui-mini/src/Switch/index.ts", "type": "registry:ui" }
+      ],
+      "props": [
+        { "name": "checked", "type": "boolean", "required": false, "desc": "受控开关态" },
+        { "name": "defaultChecked", "type": "boolean", "required": false, "desc": "非受控初值" },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "default": "false",
+          "required": false,
+          "desc": "禁用"
+        },
+        {
+          "name": "loading",
+          "type": "boolean",
+          "default": "false",
+          "required": false,
+          "desc": "异步切换中，拦截 onChange 并显示 loading"
+        },
+        {
+          "name": "size",
+          "type": "'sm'|'md'",
+          "default": "'md'",
+          "required": false,
+          "desc": "尺寸（md 44×24 / sm 36×20）"
+        },
+        {
+          "name": "label",
+          "type": "ReactNode",
+          "required": false,
+          "desc": "右侧文本（受控时可点文字切换）"
+        }
+      ],
+      "events": [
+        {
+          "name": "onCheckedChange",
+          "type": "(checked: boolean) => void",
+          "desc": "开关态变化（NutUI onChange 适配为 boolean 值回调）"
+        }
+      ],
+      "slots": ["label"],
+      "tokens": [
+        "color-primary-default",
+        "color-primary-disabled",
+        "color-bg-hover",
+        "color-primary-text",
+        "color-text-primary",
+        "color-text-disabled",
+        "font-size-body-md",
+        "spacing-2"
+      ],
+      "states": ["off", "on", "disabled", "loading"],
+      "a11y": "字符串 label 透传 NutUI ariaLabel；视觉高度小于 44px 时由布局补足触控热区",
+      "usage": {
+        "do": [
+          "受控 checked/onCheckedChange，异步用 loading 成功后再改态",
+          "scss 只用 var(--kit-*)，结构尺寸与 web 档对齐",
+          "即时设置用 Switch、需提交多选用 Checkbox"
+        ],
+        "dont": ["保留 NutUI 默认主题红或关态横线", "loading 期间自行改态", "硬编码颜色/rpx"]
+      },
+      "docs": "packages/ui-mini/src/Switch/README.md",
+      "examples": ["packages/ui-mini/src/Switch/__examples__/States.tsx"]
     }
   ]
 }

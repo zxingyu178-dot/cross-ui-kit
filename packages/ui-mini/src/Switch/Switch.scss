@@ -1,0 +1,78 @@
+/* Switch（mini）样式：颜色/圆角/文字走 --kit-* token；轨道与滑块结构尺寸与 web 档对齐
+   （md 44×24、滑块 20；sm 36×20、滑块 16）。双类/三类选择器用于覆盖 NutUI 默认主题。 */
+
+.kit-switch-row {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--kit-spacing-2);
+}
+
+.kit-switch__label {
+  font-size: var(--kit-font-size-body-md);
+  line-height: 1.5;
+  color: var(--kit-color-text-primary);
+}
+.kit-switch__label--disabled {
+  color: var(--kit-color-text-disabled);
+}
+
+/* 轨道（md 默认）：开态主色、关态中性灰，胶囊圆角 */
+.kit-switch.nut-switch {
+  min-width: 44px;
+  height: 24px;
+  line-height: 24px;
+  border-radius: 999px;
+  background-color: var(--kit-color-primary-default);
+}
+.kit-switch.nut-switch-close {
+  background-color: var(--kit-color-bg-hover);
+}
+.kit-switch.nut-switch-disabled {
+  background-color: var(--kit-color-primary-disabled);
+}
+.kit-switch.nut-switch-disabled.nut-switch-close {
+  background-color: var(--kit-color-bg-hover);
+}
+
+/* 关态不展示 NutUI 的中间横线装饰，保持纯轨道 + 滑块 */
+.kit-switch .nut-switch-close-line {
+  display: none;
+}
+
+/* 滑块（md）：中性白、圆形、2px 边距 */
+.kit-switch .nut-switch-button {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--kit-color-primary-text);
+}
+.kit-switch.nut-switch-disabled .nut-switch-button {
+  background: var(--kit-color-primary-text);
+}
+.kit-switch .nut-switch-button.nut-switch-button-open {
+  left: calc(100% - 20px - 2px);
+}
+.kit-switch .nut-switch-button.nut-switch-button-close {
+  left: 2px;
+}
+/* loading 图标在白滑块上染主色 */
+.kit-switch .nut-switch-button .nut-icon {
+  color: var(--kit-color-primary-default);
+}
+
+/* 小号 sm：36×20、滑块 16 */
+.kit-switch--sm.nut-switch {
+  min-width: 36px;
+  height: 20px;
+  line-height: 20px;
+}
+.kit-switch--sm .nut-switch-button {
+  width: 16px;
+  height: 16px;
+}
+.kit-switch--sm .nut-switch-button.nut-switch-button-open {
+  left: calc(100% - 16px - 2px);
+}
+.kit-switch--sm .nut-switch-button.nut-switch-button-close {
+  left: 2px;
+}

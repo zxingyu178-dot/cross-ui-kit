@@ -596,6 +596,94 @@
       },
       "docs": "packages/ui-native/src/Toast/README.md",
       "examples": ["packages/ui-native/src/Toast/__examples__/States.tsx"]
+    },
+    {
+      "name": "switch",
+      "type": "registry:component",
+      "title": "开关 Switch",
+      "description": "Tamagui Switch+SwitchThumb 受控开关（非 RN 原生 Switch，保证 token 视觉），轨道色随态切换，sm/md 尺寸，Spinner loading",
+      "canonical": "Switch",
+      "status": "beta",
+      "stack": "native",
+      "dependencies": ["tamagui", "react-native"],
+      "registryDependencies": [],
+      "files": [
+        { "path": "packages/ui-native/src/Switch/Switch.tsx", "type": "registry:component" },
+        { "path": "packages/ui-native/src/Switch/Switch.types.ts", "type": "registry:ui" },
+        { "path": "packages/ui-native/src/Switch/index.ts", "type": "registry:ui" }
+      ],
+      "props": [
+        { "name": "checked", "type": "boolean", "required": false, "desc": "受控开关态" },
+        {
+          "name": "defaultChecked",
+          "type": "boolean",
+          "default": "false",
+          "required": false,
+          "desc": "非受控初值"
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "default": "false",
+          "required": false,
+          "desc": "禁用（轨道半透明）"
+        },
+        {
+          "name": "loading",
+          "type": "boolean",
+          "default": "false",
+          "required": false,
+          "desc": "异步切换中，拦截切换并在滑块内显示 Spinner"
+        },
+        {
+          "name": "size",
+          "type": "'sm'|'md'",
+          "default": "'md'",
+          "required": false,
+          "desc": "尺寸（映射 Tamagui size token $3/$4）"
+        },
+        {
+          "name": "label",
+          "type": "ReactNode",
+          "required": false,
+          "desc": "右侧文本（受控时可点文字切换）"
+        },
+        {
+          "name": "accessibilityLabel",
+          "type": "string",
+          "required": false,
+          "desc": "无障碍标签（默认取字符串 label）"
+        }
+      ],
+      "events": [
+        {
+          "name": "onCheckedChange",
+          "type": "(checked: boolean) => void",
+          "desc": "开关态变化（boolean 值回调）"
+        }
+      ],
+      "slots": ["label"],
+      "tokens": [
+        "color-primary-default",
+        "color-bg-hover",
+        "color-primary-text",
+        "color-text-primary",
+        "color-text-disabled",
+        "font-size-body-md",
+        "spacing-2"
+      ],
+      "states": ["off", "on", "disabled", "loading"],
+      "a11y": "accessibilityRole=switch，accessibilityState 暴露 checked/disabled/busy；字符串 label 作为无障碍标签",
+      "usage": {
+        "do": [
+          "受控/非受控均由内部 isOn 驱动轨道色",
+          "异步用 loading 成功后再改态",
+          "Tamagui props 上用 token"
+        ],
+        "dont": ["用 RN 原生 Switch 失去 token 视觉", "loading 期间自行改态", "硬编码轨道/滑块颜色"]
+      },
+      "docs": "packages/ui-native/src/Switch/README.md",
+      "examples": ["packages/ui-native/src/Switch/__examples__/States.tsx"]
     }
   ]
 }

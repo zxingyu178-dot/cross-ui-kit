@@ -563,6 +563,78 @@
       },
       "docs": "packages/ui-web/src/Toast/README.md",
       "examples": ["packages/ui-web/src/Toast/__examples__/States.tsx"]
+    },
+    {
+      "name": "switch",
+      "type": "registry:component",
+      "title": "开关 Switch",
+      "description": "Radix Switch 受控开关（即时生效的二元设置），sm/md 尺寸、loading 异步切换、label、暗色",
+      "canonical": "Switch",
+      "status": "beta",
+      "stack": "web",
+      "dependencies": ["@radix-ui/react-switch", "@kit/core"],
+      "registryDependencies": [],
+      "files": [
+        { "path": "packages/ui-web/src/Switch/Switch.tsx", "type": "registry:component" },
+        { "path": "packages/ui-web/src/Switch/Switch.types.ts", "type": "registry:ui" },
+        { "path": "packages/ui-web/src/Switch/index.ts", "type": "registry:ui" }
+      ],
+      "props": [
+        { "name": "checked", "type": "boolean", "required": false, "desc": "受控开关态" },
+        { "name": "defaultChecked", "type": "boolean", "required": false, "desc": "非受控初值" },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "default": "false",
+          "required": false,
+          "desc": "禁用"
+        },
+        {
+          "name": "loading",
+          "type": "boolean",
+          "default": "false",
+          "required": false,
+          "desc": "异步切换中，拦截操作并显示 spinner"
+        },
+        {
+          "name": "size",
+          "type": "'sm'|'md'",
+          "default": "'md'",
+          "required": false,
+          "desc": "尺寸"
+        },
+        { "name": "label", "type": "ReactNode", "required": false, "desc": "右侧文本" }
+      ],
+      "events": [
+        {
+          "name": "onCheckedChange",
+          "type": "(checked: boolean) => void",
+          "desc": "开关态变化（boolean 值回调）"
+        }
+      ],
+      "slots": ["label"],
+      "tokens": [
+        "color-primary-default",
+        "color-primary-disabled",
+        "color-bg-hover",
+        "color-primary-text",
+        "color-border-focus",
+        "color-text-primary",
+        "color-text-disabled",
+        "font-size-body-md"
+      ],
+      "states": ["off", "on", "disabled", "loading"],
+      "a11y": "Radix 自带 role=switch、aria-checked、键盘空格切换与 focus 环；loading 时 aria-busy；label 用原生 label 关联",
+      "usage": {
+        "do": [
+          "受控 checked/onCheckedChange，异步用 loading 成功后再改态",
+          "即时生效设置用 Switch、需提交多选用 Checkbox",
+          "轨道/滑块颜色只用 token"
+        ],
+        "dont": ["loading 期间自行改态或置灰", "硬编码轨道/滑块颜色", "用 Switch 承载需确认的操作"]
+      },
+      "docs": "packages/ui-web/src/Switch/README.md",
+      "examples": ["packages/ui-web/src/Switch/__examples__/States.tsx"]
     }
   ]
 }
