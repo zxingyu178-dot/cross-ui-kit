@@ -100,8 +100,17 @@ pnpm dev
 - [x] Token 单一事实源三栈联动：改 `packages/tokens/src` 后 `pnpm tokens:build`，一次产出 web CSS 变量（亮/暗）、mini SCSS、TS 常量、native Tamagui themes、文档表共 9 个产物，语义别名自动解析、暗色仅输出语义色（已实测）
 - [x] `pnpm quality` 全绿（registry 校验 + 格式 + ESLint + 严格 tsc + 测试，16/16 任务通过，peer 依赖零冲突）
 - [x] 工具链版本矩阵锁定并可安装（React 18.3.1 / Taro 4 / NutUI 3 / Tamagui 1.121 / Expo SDK 52 / Vite 6，见 docs/01 §3）
-- [ ] 三端 hello 壳工程初始化（play-web / play-miniapp / play-native / play-desktop）——P1，各 app README 已备好标准初始化命令（Tauri 需先装 Rust 工具链）
-- [ ] 一个示例组件三栈落地、登记 registry 并实测 CLI 拉取安装——P1（模板与 SOP 已在 templates/、docs/02、docs/06 备好）
+- [x] play-web 演示壳初始化（Vite 6 + Tailwind v4 + token CSS 接入，build 冒烟通过，含 Button 演示与暗色切换）；play-miniapp / play-native / play-desktop 待初始化（各 app README 已备好标准初始化命令，Tauri 需先装 Rust 工具链）
+- [x] 首个组件 Button 三栈落地并 registry 转正（beta）：ui-web（cva + Radix Slot）、ui-mini（NutUI 封装）、ui-native（Tamagui），统一 variant/size/loading/onPress 契约，`pnpm registry:validate` 与全量质量门通过
+- [ ] shadcn CLI 从本地 registry 拉取安装实测——P1 遗留（components.json 配置与 `pnpm dlx shadcn add` 指向 registry/web）
+- [ ] Storybook 8 接入 ui-web（Button.stories.tsx 已就位，依赖未装；接入后移除 ui-web tsconfig 的 stories exclude 并验证 MCP）
+
+## 6.1 P1 进展（2026-09-14）
+
+- 版本矩阵经实测锁定 React 18.3.1（Taro 4 / NutUI 3 peer 上限 React 18，Tamagui 锁 ~1.121 配 Expo SDK 52 / RN 0.76，依据见 docs/01 §3）
+- tokens 产物从 9 个增至 11 个：新增 mini CSS 变量产物（`page` / `.dark` 选择器）支持小程序运行时换肤
+- core 落地首个工具 `cn()`（clsx + tailwind-merge）
+- 提交：`dc3b011`（P0 骨架）、`a1a724d`（Button 三栈 + play-web 演示）
 
 ## 7. 版本与提交
 
