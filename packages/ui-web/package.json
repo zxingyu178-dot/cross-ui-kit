@@ -19,6 +19,7 @@
     "@kit/tokens": "workspace:*",
     "@radix-ui/react-checkbox": "catalog:web",
     "@radix-ui/react-select": "catalog:web",
+    "@radix-ui/react-dialog": "catalog:web",
     "@radix-ui/react-slot": "catalog:web",
     "class-variance-authority": "catalog:web",
     "clsx": "catalog:",

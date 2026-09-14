@@ -68,7 +68,7 @@ export const Checkbox = forwardRef<HTMLButtonElement, CheckboxProps>(function Ch
       aria-invalid={error || undefined}
       onCheckedChange={(v) => onChange?.(v === true)}
       className={cn(
-        // 视觉一律用 @theme 语义类（映射自 @kit/tokens），禁止 bg-[var(--kit-*)] 裸变量任意值类
+        // 视觉一律用 @theme 语义类（映射自 @kit/tokens），禁止用方括号任意值语法裸引 --kit-* 变量
         // （裸 var 任意值类不被 Tailwind 稳定编译，且不随暗色语义切换，见 docs/05 §5.1）
         'peer inline-flex size-5 shrink-0 items-center justify-center rounded-sm border border-border-default bg-bg-card transition-colors',
         'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-border-focus',

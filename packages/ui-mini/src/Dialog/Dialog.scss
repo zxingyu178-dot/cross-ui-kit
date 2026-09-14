@@ -1,0 +1,66 @@
+/* Dialog（mini）：视觉值全部引用 --kit-* token；遮罩为通用中性黑半透明（scrim）。 */
+
+.kit-dialog-popup {
+  width: 86%;
+  padding: 0;
+  background: transparent;
+  overflow: visible;
+}
+
+.kit-dialog {
+  box-sizing: border-box;
+  width: 100%;
+  padding: var(--kit-spacing-4);
+  background: var(--kit-color-bg-card);
+  border: 1px solid var(--kit-color-border-default);
+  border-radius: var(--kit-radius-lg);
+  box-shadow: var(--kit-shadow-popover);
+}
+
+.kit-dialog__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--kit-spacing-3);
+}
+
+.kit-dialog__title,
+.kit-dialog__header-spacer {
+  flex: 1;
+}
+
+.kit-dialog__title {
+  font-size: var(--kit-font-size-title-sm);
+  font-weight: var(--kit-font-weight-medium);
+  color: var(--kit-color-text-primary);
+}
+
+/* 关闭钮：最小热区 touch-min，视觉图标居中 */
+.kit-dialog__close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--kit-touch-min);
+  height: var(--kit-touch-min);
+  margin-right: calc(var(--kit-touch-min) / -4);
+}
+
+.kit-dialog__close-icon {
+  font-size: var(--kit-icon-size-md);
+  color: var(--kit-color-text-tertiary);
+}
+
+.kit-dialog__body {
+  margin-bottom: var(--kit-spacing-4);
+}
+
+.kit-dialog__desc {
+  font-size: var(--kit-font-size-body-md);
+  line-height: 1.6;
+  color: var(--kit-color-text-tertiary);
+}
+
+.kit-dialog__footer {
+  display: flex;
+  gap: var(--kit-spacing-3);
+}

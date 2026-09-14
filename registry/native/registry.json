@@ -375,6 +375,136 @@
       },
       "docs": "packages/ui-native/src/Select/README.md",
       "examples": ["packages/ui-native/src/Select/__examples__/States.tsx"]
+    },
+    {
+      "name": "dialog",
+      "type": "registry:component",
+      "title": "对话框 Dialog",
+      "description": "RN Modal(透明/fade) + Tamagui 居中卡片，用于确认/二次决策/表单；纯受控 open/onOpenChange，遮罩与系统返回键可配置，默认取消/确定底部按钮",
+      "canonical": "Dialog",
+      "status": "beta",
+      "stack": "native",
+      "dependencies": ["tamagui", "react-native"],
+      "registryDependencies": [],
+      "files": [
+        { "path": "packages/ui-native/src/Dialog/Dialog.tsx", "type": "registry:component" },
+        { "path": "packages/ui-native/src/Dialog/Dialog.types.ts", "type": "registry:ui" },
+        { "path": "packages/ui-native/src/Dialog/index.ts", "type": "registry:ui" }
+      ],
+      "props": [
+        { "name": "open", "type": "boolean", "required": true, "desc": "受控可见" },
+        {
+          "name": "onOpenChange",
+          "type": "(open:boolean)=>void",
+          "required": false,
+          "desc": "关闭请求（遮罩/返回键/关闭钮/取消/确认统一以 false 回调）"
+        },
+        {
+          "name": "title",
+          "type": "ReactNode",
+          "required": false,
+          "desc": "标题，同时作为无障碍名称"
+        },
+        {
+          "name": "description",
+          "type": "ReactNode",
+          "required": false,
+          "desc": "描述文本（无 children 时作为正文）"
+        },
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "required": false,
+          "desc": "自定义正文，优先于 description"
+        },
+        {
+          "name": "footer",
+          "type": "ReactNode",
+          "required": false,
+          "desc": "自定义底部；不传则用默认取消/确定"
+        },
+        {
+          "name": "showCancel",
+          "type": "boolean",
+          "default": "true",
+          "required": false,
+          "desc": "是否显示取消按钮"
+        },
+        {
+          "name": "confirmText",
+          "type": "string",
+          "default": "'确定'",
+          "required": false,
+          "desc": "确定按钮文案"
+        },
+        {
+          "name": "cancelText",
+          "type": "string",
+          "default": "'取消'",
+          "required": false,
+          "desc": "取消按钮文案"
+        },
+        {
+          "name": "confirmLoading",
+          "type": "boolean",
+          "default": "false",
+          "required": false,
+          "desc": "确定按钮 loading（异步提交防重复）"
+        },
+        {
+          "name": "closeOnOverlayClick",
+          "type": "boolean",
+          "default": "true",
+          "required": false,
+          "desc": "点遮罩 / Android 返回键是否请求关闭"
+        },
+        {
+          "name": "accessibilityLabel",
+          "type": "string",
+          "required": false,
+          "desc": "卡片无障碍标签（无标题时建议提供）"
+        }
+      ],
+      "events": [
+        { "name": "onOpenChange", "type": "(open: boolean) => void", "desc": "开关请求" },
+        {
+          "name": "onConfirm",
+          "type": "() => void | false",
+          "desc": "点击确定；返回 false 阻止自动关闭（异步提交场景）"
+        },
+        { "name": "onCancel", "type": "() => void", "desc": "点击取消/关闭（随后请求关闭）" }
+      ],
+      "slots": ["title", "description", "children", "footer"],
+      "tokens": [
+        "color-bg-card",
+        "color-border-default",
+        "color-text-primary",
+        "color-text-tertiary",
+        "radius-lg",
+        "font-size-title-sm",
+        "font-size-body-md",
+        "font-size-body-lg",
+        "font-weight-medium",
+        "touch-min",
+        "spacing-3",
+        "spacing-4"
+      ],
+      "states": ["closed", "open", "confirm-loading", "persistent"],
+      "a11y": "Modal 自带模态焦点隔离；卡片 role=alert；关闭钮 role=button + aria-label 且热区 touch-min",
+      "usage": {
+        "do": [
+          "受控 open/onOpenChange，异步提交用 confirmLoading",
+          "遮罩用 RN Pressable、卡片内层 Pressable 拦截冒泡",
+          "Tamagui 组件 props 上用 token（RN 原生 style 不解析 token）"
+        ],
+        "dont": [
+          "在 RN Pressable style 里写 token 字符串",
+          "硬编码遮罩色",
+          "在弹窗内写业务请求（下沉 core）"
+        ]
+      },
+      "docs": "packages/ui-native/src/Dialog/README.md",
+      "examples": ["packages/ui-native/src/Dialog/__examples__/States.tsx"]
     }
   ]
 }

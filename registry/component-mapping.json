@@ -93,6 +93,32 @@
       }
     },
     {
+      "canonical": "Dialog",
+      "category": "overlay",
+      "sharedProps": {
+        "open": "boolean",
+        "title": "ReactNode",
+        "description": "ReactNode",
+        "children": "ReactNode",
+        "footer": "ReactNode",
+        "showCancel": "boolean",
+        "confirmText": "string",
+        "cancelText": "string",
+        "confirmLoading": "boolean",
+        "closeOnOverlayClick": "boolean"
+      },
+      "eventMap": {
+        "web": "onOpenChange(open) / onConfirm / onCancel（Esc 受 closeOnEsc 控制）",
+        "mini": "Popup.onClose/onOverlayClick->onOpenChange(open) / onConfirm / onCancel",
+        "native": "Modal.onRequestClose/遮罩 onPress->onOpenChange(open) / onConfirm / onCancel"
+      },
+      "stacks": {
+        "web": { "item": "@kit/web-dialog", "status": "beta" },
+        "mini": { "item": "@kit/mini-dialog", "status": "beta" },
+        "native": { "item": "@kit/native-dialog", "status": "beta" }
+      }
+    },
+    {
       "canonical": "DataTable",
       "category": "data",
       "sharedProps": {
