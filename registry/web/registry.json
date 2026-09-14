@@ -486,6 +486,83 @@
       },
       "docs": "packages/ui-web/src/Dialog/README.md",
       "examples": ["packages/ui-web/src/Dialog/__examples__/States.tsx"]
+    },
+    {
+      "name": "toast",
+      "type": "registry:component",
+      "title": "轻提示 Toast",
+      "description": "Radix Toast 受控轻提示（不阻断交互），五种语义类型、三种位置、duration 自动消失、loading 常驻",
+      "canonical": "Toast",
+      "status": "beta",
+      "stack": "web",
+      "dependencies": ["@radix-ui/react-toast", "@kit/core"],
+      "registryDependencies": [],
+      "files": [
+        { "path": "packages/ui-web/src/Toast/Toast.tsx", "type": "registry:component" },
+        { "path": "packages/ui-web/src/Toast/Toast.types.ts", "type": "registry:ui" },
+        { "path": "packages/ui-web/src/Toast/index.ts", "type": "registry:ui" }
+      ],
+      "props": [
+        { "name": "open", "type": "boolean", "required": true, "desc": "受控可见" },
+        {
+          "name": "onOpenChange",
+          "type": "(open:boolean)=>void",
+          "required": false,
+          "desc": "自动消失/滑动关闭时以 false 回调"
+        },
+        { "name": "message", "type": "ReactNode", "required": true, "desc": "提示文本" },
+        {
+          "name": "type",
+          "type": "'info'|'success'|'warning'|'error'|'loading'",
+          "default": "'info'",
+          "required": false,
+          "desc": "语义类型，决定图标与语义色"
+        },
+        {
+          "name": "duration",
+          "type": "number",
+          "default": "2400",
+          "required": false,
+          "desc": "自动关闭毫秒；0 表示常驻不自动关"
+        },
+        {
+          "name": "position",
+          "type": "'top'|'center'|'bottom'",
+          "default": "'center'",
+          "required": false,
+          "desc": "展示位置"
+        }
+      ],
+      "events": [
+        { "name": "onOpenChange", "type": "(open: boolean) => void", "desc": "开关请求" },
+        { "name": "onClose", "type": "() => void", "desc": "完全关闭后回调" }
+      ],
+      "slots": ["message"],
+      "tokens": [
+        "color-bg-card",
+        "color-border-default",
+        "color-text-primary",
+        "color-primary-default",
+        "color-success-default",
+        "color-warning-default",
+        "color-danger-default",
+        "radius-md",
+        "shadow-popover",
+        "font-size-body-md",
+        "icon-size-sm"
+      ],
+      "states": ["hidden", "shown", "auto-dismiss", "loading"],
+      "a11y": "Radix 自带 role=status/alert、aria-live 播报、滑动/Esc 关闭；居中视口 pointer-events-none 不阻断交互",
+      "usage": {
+        "do": [
+          "受控 open/onOpenChange，loading 用 duration=0 由外部关闭",
+          "短反馈用 Toast、需要用户决策用 Dialog",
+          "图标语义色只用 token"
+        ],
+        "dont": ["用 Toast 承载需用户确认的关键操作", "硬编码语义色/层级", "在提示内写业务请求"]
+      },
+      "docs": "packages/ui-web/src/Toast/README.md",
+      "examples": ["packages/ui-web/src/Toast/__examples__/States.tsx"]
     }
   ]
 }

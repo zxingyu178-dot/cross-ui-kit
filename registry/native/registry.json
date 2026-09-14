@@ -505,6 +505,97 @@
       },
       "docs": "packages/ui-native/src/Dialog/README.md",
       "examples": ["packages/ui-native/src/Dialog/__examples__/States.tsx"]
+    },
+    {
+      "name": "toast",
+      "type": "registry:component",
+      "title": "轻提示 Toast",
+      "description": "RN 绝对定位轻提示（不用 Modal、不阻断交互）+ Tamagui 卡片，五种语义类型、三位置、duration 计时、Spinner loading",
+      "canonical": "Toast",
+      "status": "beta",
+      "stack": "native",
+      "dependencies": ["tamagui", "react-native"],
+      "registryDependencies": [],
+      "files": [
+        { "path": "packages/ui-native/src/Toast/Toast.tsx", "type": "registry:component" },
+        { "path": "packages/ui-native/src/Toast/Toast.types.ts", "type": "registry:ui" },
+        { "path": "packages/ui-native/src/Toast/index.ts", "type": "registry:ui" }
+      ],
+      "props": [
+        { "name": "open", "type": "boolean", "required": true, "desc": "受控可见" },
+        {
+          "name": "onOpenChange",
+          "type": "(open:boolean)=>void",
+          "required": false,
+          "desc": "自动消失时以 false 回调"
+        },
+        {
+          "name": "message",
+          "type": "ReactNode",
+          "required": true,
+          "desc": "提示文本（建议字符串）"
+        },
+        {
+          "name": "type",
+          "type": "'info'|'success'|'warning'|'error'|'loading'",
+          "default": "'info'",
+          "required": false,
+          "desc": "语义类型，决定图标与语义色"
+        },
+        {
+          "name": "duration",
+          "type": "number",
+          "default": "2400",
+          "required": false,
+          "desc": "自动关闭毫秒；0 常驻（loading 外部关闭）"
+        },
+        {
+          "name": "position",
+          "type": "'top'|'center'|'bottom'",
+          "default": "'center'",
+          "required": false,
+          "desc": "绝对定位位置（挂页面根容器内）"
+        },
+        {
+          "name": "accessibilityLabel",
+          "type": "string",
+          "required": false,
+          "desc": "无障碍标签（默认朗读 message）"
+        }
+      ],
+      "events": [
+        { "name": "onOpenChange", "type": "(open: boolean) => void", "desc": "开关请求" },
+        { "name": "onClose", "type": "() => void", "desc": "完全关闭后回调" }
+      ],
+      "slots": ["message"],
+      "tokens": [
+        "color-bg-card",
+        "color-border-default",
+        "color-text-primary",
+        "color-primary-default",
+        "color-success-default",
+        "color-warning-default",
+        "color-danger-default",
+        "radius-md",
+        "font-size-body-md",
+        "icon-size-md",
+        "spacing-1",
+        "spacing-2",
+        "spacing-3",
+        "spacing-4"
+      ],
+      "states": ["hidden", "shown", "auto-dismiss", "loading"],
+      "a11y": "卡片 role=alert 自动朗读；外层与卡片 pointerEvents=none 不阻断触摸；loading 用 Spinner 表进行态",
+      "usage": {
+        "do": [
+          "受控 open/onOpenChange，loading 用 duration=0 外部关闭",
+          "挂在页面根定位容器内，短反馈用 Toast、需决策用 Dialog",
+          "Tamagui 组件 props 上用 token（RN 原生 style 不解析 token）"
+        ],
+        "dont": ["用 Modal 阻断下层交互", "硬编码语义色/层级", "用 Toast 承载需确认操作"]
+      },
+      "docs": "packages/ui-native/src/Toast/README.md",
+      "examples": ["packages/ui-native/src/Toast/__examples__/States.tsx"]
     }
   ]
 }

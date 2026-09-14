@@ -119,6 +119,27 @@
       }
     },
     {
+      "canonical": "Toast",
+      "category": "overlay",
+      "sharedProps": {
+        "open": "boolean",
+        "message": "ReactNode",
+        "type": "info|success|warning|error|loading",
+        "duration": "number",
+        "position": "top|center|bottom"
+      },
+      "eventMap": {
+        "web": "Radix duration/swipe->onOpenChange(open) / onClose",
+        "mini": "NutUI duration/onClose->onOpenChange(open) / onClose",
+        "native": "内部 setTimeout->onOpenChange(open) / onClose"
+      },
+      "stacks": {
+        "web": { "item": "@kit/web-toast", "status": "beta" },
+        "mini": { "item": "@kit/mini-toast", "status": "beta" },
+        "native": { "item": "@kit/native-toast", "status": "beta" }
+      }
+    },
+    {
       "canonical": "DataTable",
       "category": "data",
       "sharedProps": {

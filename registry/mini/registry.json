@@ -464,6 +464,91 @@
       },
       "docs": "packages/ui-mini/src/Dialog/README.md",
       "examples": ["packages/ui-mini/src/Dialog/__examples__/States.tsx"]
+    },
+    {
+      "name": "toast",
+      "type": "registry:component",
+      "title": "轻提示 Toast",
+      "description": "NutUI Toast 受控轻提示（visible/duration 计时，不阻断交互），五种语义类型、三位置、loading 常驻，卡片与图标 token 化",
+      "canonical": "Toast",
+      "status": "beta",
+      "stack": "mini",
+      "dependencies": ["@nutui/nutui-react-taro", "@tarojs/components"],
+      "registryDependencies": [],
+      "files": [
+        { "path": "packages/ui-mini/src/Toast/Toast.tsx", "type": "registry:component" },
+        { "path": "packages/ui-mini/src/Toast/Toast.types.ts", "type": "registry:ui" },
+        { "path": "packages/ui-mini/src/Toast/Toast.scss", "type": "registry:ui" },
+        { "path": "packages/ui-mini/src/Toast/index.ts", "type": "registry:ui" }
+      ],
+      "props": [
+        { "name": "open", "type": "boolean", "required": true, "desc": "受控可见" },
+        {
+          "name": "onOpenChange",
+          "type": "(open:boolean)=>void",
+          "required": false,
+          "desc": "自动消失时以 false 回调"
+        },
+        { "name": "message", "type": "ReactNode", "required": true, "desc": "提示文本" },
+        {
+          "name": "type",
+          "type": "'info'|'success'|'warning'|'error'|'loading'",
+          "default": "'info'",
+          "required": false,
+          "desc": "语义类型，决定图标与语义色"
+        },
+        {
+          "name": "duration",
+          "type": "number",
+          "default": "2400",
+          "required": false,
+          "desc": "自动关闭毫秒；0 常驻（内部转极大值，外部 visible 关闭）"
+        },
+        {
+          "name": "position",
+          "type": "'top'|'center'|'bottom'",
+          "default": "'center'",
+          "required": false,
+          "desc": "展示位置（映射 NutUI top/middle/bottom）"
+        }
+      ],
+      "events": [
+        { "name": "onOpenChange", "type": "(open: boolean) => void", "desc": "开关请求" },
+        { "name": "onClose", "type": "() => void", "desc": "完全关闭后回调" }
+      ],
+      "slots": ["message"],
+      "tokens": [
+        "color-bg-card",
+        "color-border-default",
+        "color-text-primary",
+        "color-primary-default",
+        "color-success-default",
+        "color-warning-default",
+        "color-danger-default",
+        "radius-md",
+        "shadow-popover",
+        "font-size-body-md",
+        "icon-size-md",
+        "spacing-2",
+        "spacing-3",
+        "spacing-4"
+      ],
+      "states": ["hidden", "shown", "auto-dismiss", "loading"],
+      "a11y": "轻提示由 NutUI 弹层播报；图标语义色区分类型，loading 用内置转圈",
+      "usage": {
+        "do": [
+          "受控 open/onOpenChange，loading 用 duration=0 外部关闭",
+          "短反馈用 Toast、需要决策用 Dialog",
+          "卡片与图标只用 var(--kit-*)"
+        ],
+        "dont": [
+          "用命令式 NutUI Toast.show 绕过受控契约",
+          "硬编码语义色/rpx",
+          "用 Toast 承载需确认操作"
+        ]
+      },
+      "docs": "packages/ui-mini/src/Toast/README.md",
+      "examples": ["packages/ui-mini/src/Toast/__examples__/States.tsx"]
     }
   ]
 }

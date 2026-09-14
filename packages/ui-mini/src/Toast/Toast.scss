@@ -1,0 +1,52 @@
+/* Toast（mini）：视觉值全部引用 --kit-* token；轻提示不阻断交互。 */
+
+.kit-toast {
+  display: flex;
+  align-items: center;
+  gap: var(--kit-spacing-2);
+  padding: var(--kit-spacing-3) var(--kit-spacing-4);
+  background: var(--kit-color-bg-card) !important;
+  border: 1px solid var(--kit-color-border-default);
+  border-radius: var(--kit-radius-md);
+  box-shadow: var(--kit-shadow-popover);
+  max-width: 80vw;
+  box-sizing: border-box;
+}
+
+.kit-toast__content {
+  color: var(--kit-color-text-primary);
+  font-size: var(--kit-font-size-body-md);
+  line-height: 1.5;
+  word-break: break-word;
+}
+
+/* 自建语义图标：固定尺寸、居中、语义色 */
+.kit-toast__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--kit-icon-size-md);
+  height: var(--kit-icon-size-md);
+  font-size: var(--kit-icon-size-md);
+  font-weight: var(--kit-font-weight-bold);
+  flex-shrink: 0;
+}
+
+.kit-toast__icon--success {
+  color: var(--kit-color-success-default);
+}
+.kit-toast__icon--error {
+  color: var(--kit-color-danger-default);
+}
+.kit-toast__icon--warning {
+  color: var(--kit-color-warning-default);
+}
+.kit-toast__icon--info {
+  color: var(--kit-color-primary-default);
+}
+
+/* NutUI 内置 loading 图标颜色跟随主色 */
+.kit-toast--loading .nut-toast-icon,
+.kit-toast .nut-toast-icon {
+  color: var(--kit-color-primary-default);
+}
