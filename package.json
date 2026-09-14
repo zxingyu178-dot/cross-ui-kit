@@ -10,7 +10,10 @@
     "pnpm": ">=10.0.0"
   },
   "scripts": {
-    "prepare": "husky",
+    "prepare": "node scripts/prepare.mjs",
+    "setup": "node scripts/setup.mjs",
+    "doctor": "node scripts/doctor.mjs",
+    "pack:portable": "node scripts/pack-portable.mjs",
     "dev": "turbo run dev",
     "build": "turbo run build",
     "lint": "turbo run lint",

@@ -93,8 +93,11 @@ cross-ui-kit 是一个**跨端 UI/交互模板库**（不是单一业务应用�
 ## 8. 常用命令
 
 ```bash
+pnpm setup              # 新机器/新环境一键引导：环境检查→install→tokens:build→registry 校验（--check 追加质量门）
+pnpm doctor             # 只读环境体检（Node/pnpm/git/依赖/token 产物/registry + 各端可选工具链）
+pnpm pack:portable      # 打包可发送到其他电脑的源码 zip（排除 node_modules/dist/.git）到 releases/
 pnpm install            # 安装依赖
-pnpm tokens:build       # 由 token 源导出三栈变量（改视觉值后必跑）
+pnpm tokens:build       # 由 token 源导出三栈变量（改视觉值后必跑；dist 不入库，新环境必须先构建）
 pnpm registry:validate  # 校验 registry 与映射表
 pnpm dev                # 并行启动全部 dev 任务
 pnpm build              # 全仓构建
@@ -104,6 +107,8 @@ pnpm test               # 测试
 pnpm format             # Prettier 写回
 pnpm quality            # 提交前全量质量门
 ```
+
+> 可移植性约定：仓库路径无关（构建脚本一律用 `import.meta.url` 相对定位，禁止写盘符/绝对路径）；分发包不含 `node_modules`/`dist`/`.git`，目标机用 `pnpm setup` 重建；`prepare` 钩子（`scripts/prepare.mjs`）在无 `.git` 时自动跳过 husky；跨平台换行由 `.gitattributes` 统一。详见 `docs/11-portability.md`。
 
 ## 9. 给 AI 的工具接入（MCP）
 

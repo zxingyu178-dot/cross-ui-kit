@@ -49,6 +49,7 @@ cross-ui-kit/
 | [08-ai-contract.md](docs/08-ai-contract.md) | AI 契约：AGENTS 规则、MCP 配置、AI 产出检查清单 |
 | [09-quality-gate.md](docs/09-quality-gate.md) | 质量门：lint/typecheck/test/校验/发布流程 |
 | [10-stacks.md](docs/10-stacks.md) | 三栈技术架构、共享边界与组件映射总表 |
+| [11-portability.md](docs/11-portability.md) | 可移植性与分发：一键引导 `setup`、环境体检 `doctor`、可发送打包 `pack:portable`、新电脑上手与故障排查 |
 
 > AI 工具（Cursor / Claude Code / Copilot / Windsurf）进入本仓库**首先读 [AGENTS.md](AGENTS.md)**。
 
@@ -65,27 +66,42 @@ cross-ui-kit/
 
 ## 4. 快速开始
 
+新机器拿到源码后，**只需一条命令**即可就绪（自动检查环境、装依赖、构建 token、校验 registry；没有 pnpm 会经 corepack 自动激活）：
+
 ```bash
-# 1. 安装依赖（仓库根目录）
-pnpm install
-
-# 2. 构建 Design Token（三栈变量产物）
-pnpm tokens:build
-
-# 3. 校验 registry 合法性
-pnpm registry:validate
-
-# 4. 全量质量门
-pnpm quality
-
-# 5. 启动各端演示（apps 初始化后，见各 app 的 README）
-pnpm dev
+pnpm setup            # = 环境检查 → pnpm install → pnpm tokens:build → pnpm registry:validate
+pnpm doctor           # 可选：环境体检，逐项报告缺什么、怎么修
+pnpm --filter play-web dev   # 启动网页预览 → http://localhost:5173/
 ```
+
+> `pnpm setup --check` 会在末尾追加全量质量门；`pnpm setup --skip-install` 仅重建 token 并校验。
+
+手动分步（等价于 setup 内部步骤，排查时使用）：
+
+```bash
+pnpm install          # 安装依赖（仓库根目录）
+pnpm tokens:build     # 构建 Design Token（三栈变量产物，dist 不入库，必须生成）
+pnpm registry:validate# 校验 registry 合法性
+pnpm quality          # 全量质量门
+pnpm dev              # 启动各端演示（apps 初始化后，见各 app 的 README）
+```
+
+### 4.1 发送到其他电脑（可移植打包）
+
+```bash
+pnpm pack:portable            # 生成不含 node_modules/dist/.git 的干净源码 zip → releases/
+pnpm pack:portable --with-git # 连同提交历史一起（团队内传递）
+```
+
+对方解压（建议放到**纯英文、无空格**路径）后执行 `pnpm setup` 即可。完整说明（各端前置工具、中文路径注意、故障排查）见 [docs/11-portability.md](docs/11-portability.md)。
 
 ## 5. 常用命令
 
 | 命令 | 作用 |
 |---|---|
+| `pnpm setup` | 一键冷启动引导（环境检查 + install + tokens:build + registry 校验），新机器只跑这一条 |
+| `pnpm doctor` | 只读环境体检（必需项 + 各端可选工具链），输出修复建议 |
+| `pnpm pack:portable` | 打包可发送的源码 zip 到 `releases/`（排除依赖与构建产物） |
 | `pnpm tokens:build` | 由 token 源 JSON 生成三栈变量（CSS/SCSS/TS/Tamagui config） |
 | `pnpm tokens:watch` | token 源改动时自动重新导出 |
 | `pnpm registry:validate` | 校验三份 registry.json 与映射表结构、引用完整性 |

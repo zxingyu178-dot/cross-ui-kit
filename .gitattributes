@@ -1,0 +1,49 @@
+# 跨平台换行与二进制统一（保证源码在 Windows / macOS / Linux 间一致检出）
+# 默认：文本由 git 自动识别，仓库内统一存 LF
+* text=auto eol=lf
+
+# Windows 专用脚本保留 CRLF
+*.cmd text eol=crlf
+*.bat text eol=crlf
+*.ps1 text eol=crlf
+
+# Shell / 类 Unix 脚本强制 LF
+*.sh text eol=lf
+*.mjs text eol=lf
+*.cjs text eol=lf
+*.js text eol=lf
+*.ts text eol=lf
+*.tsx text eol=lf
+*.json text eol=lf
+*.scss text eol=lf
+*.css text eol=lf
+*.md text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+
+# 二进制资源（不做换行/文本转换）
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webp binary
+*.ico binary
+*.icns binary
+*.bmp binary
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.otf binary
+*.eot binary
+*.zip binary
+*.tar binary
+*.gz binary
+*.tgz binary
+*.7z binary
+*.rar binary
+*.pdf binary
+*.jks binary
+*.p12 binary
+*.p8 binary
+*.key binary
+*.mobileprovision binary

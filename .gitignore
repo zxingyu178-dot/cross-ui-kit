@@ -48,3 +48,6 @@ coverage/
 
 # --- tokens 自动产物（由源 JSON 构建，不入库） ---
 packages/tokens/dist/
+
+# --- 可移植分发包（pack:portable 产物，不入库） ---
+releases/
