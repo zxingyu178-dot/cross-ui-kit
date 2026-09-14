@@ -5,6 +5,7 @@ import { Variants } from '@kit/ui-web/src/Button/__examples__/Variants'
 import { States } from '@kit/ui-web/src/Button/__examples__/States'
 import { States as InputStates } from '@kit/ui-web/src/Input/__examples__/States'
 import { States as CheckboxStates } from '@kit/ui-web/src/Checkbox/__examples__/States'
+import { States as SelectStates } from '@kit/ui-web/src/Select/__examples__/States'
 
 /**
  * play-web 演示壳入口。
@@ -68,6 +69,11 @@ export default function App() {
       <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
         <h2 className="text-title-sm font-medium text-text-primary">Checkbox · 复选框</h2>
         <CheckboxStates />
+      </section>
+
+      <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
+        <h2 className="text-title-sm font-medium text-text-primary">Select · 选择器</h2>
+        <SelectStates />
       </section>
 
       <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">

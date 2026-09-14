@@ -70,6 +70,29 @@
       }
     },
     {
+      "canonical": "Select",
+      "category": "form",
+      "sharedProps": {
+        "options": "{label: ReactNode; value: string; disabled?: boolean}[]",
+        "value": "string",
+        "defaultValue": "string",
+        "placeholder": "string",
+        "size": "sm|md|lg",
+        "disabled": "boolean",
+        "error": "boolean|string"
+      },
+      "eventMap": {
+        "web": "onValueChange->onChange(value)",
+        "mini": "Picker.onChange(index)->onChange(value)",
+        "native": "Modal option press->onChange(value)"
+      },
+      "stacks": {
+        "web": { "item": "@kit/web-select", "status": "beta" },
+        "mini": { "item": "@kit/mini-select", "status": "beta" },
+        "native": { "item": "@kit/native-select", "status": "beta" }
+      }
+    },
+    {
       "canonical": "DataTable",
       "category": "data",
       "sharedProps": {

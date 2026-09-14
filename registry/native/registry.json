@@ -276,6 +276,105 @@
       },
       "docs": "packages/ui-native/src/Checkbox/README.md",
       "examples": ["packages/ui-native/src/Checkbox/__examples__/States.tsx"]
+    },
+    {
+      "name": "select",
+      "type": "registry:component",
+      "title": "选择器 Select",
+      "description": "Tamagui 触发框 + RN Modal 底部 action sheet 选项列表，onChange 为值回调，token 样式与完整 a11y",
+      "canonical": "Select",
+      "status": "beta",
+      "stack": "native",
+      "dependencies": ["tamagui", "react-native"],
+      "registryDependencies": [],
+      "files": [
+        { "path": "packages/ui-native/src/Select/Select.tsx", "type": "registry:component" },
+        { "path": "packages/ui-native/src/Select/Select.types.ts", "type": "registry:ui" },
+        { "path": "packages/ui-native/src/Select/index.ts", "type": "registry:ui" }
+      ],
+      "props": [
+        {
+          "name": "options",
+          "type": "{label;value;disabled?}[]",
+          "required": true,
+          "desc": "选项列表（label 用字符串）"
+        },
+        { "name": "value", "type": "string", "required": false, "desc": "受控值" },
+        { "name": "defaultValue", "type": "string", "required": false, "desc": "非受控初值" },
+        {
+          "name": "placeholder",
+          "type": "string",
+          "default": "'请选择'",
+          "required": false,
+          "desc": "占位文本"
+        },
+        {
+          "name": "size",
+          "type": "'sm'|'md'|'lg'",
+          "default": "'md'",
+          "required": false,
+          "desc": "触发框高度/字号 token"
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "default": "false",
+          "required": false,
+          "desc": "禁用"
+        },
+        {
+          "name": "error",
+          "type": "boolean|string",
+          "default": "false",
+          "required": false,
+          "desc": "红框 + 错误文本"
+        },
+        {
+          "name": "accessibilityLabel",
+          "type": "string",
+          "required": false,
+          "desc": "触发框无障碍标签"
+        }
+      ],
+      "events": [
+        {
+          "name": "onChange",
+          "type": "(value: string) => void",
+          "desc": "选中选项后回调并关闭弹层"
+        }
+      ],
+      "slots": [],
+      "tokens": [
+        "color-bg-card",
+        "color-bg-hover",
+        "color-border-default",
+        "color-border-danger",
+        "color-text-primary",
+        "color-text-tertiary",
+        "color-text-disabled",
+        "color-text-danger",
+        "color-primary-default",
+        "radius-md",
+        "radius-lg",
+        "control-height-sm",
+        "control-height-md",
+        "control-height-lg",
+        "font-size-body-sm",
+        "font-size-body-md",
+        "font-size-body-lg"
+      ],
+      "states": ["closed", "open", "selected", "disabled", "error"],
+      "a11y": "触发 role=button + state{disabled,expanded}；选项 role=menuitem + state{selected,disabled}；遮罩可关闭；错误文本 alert",
+      "usage": {
+        "do": [
+          "弹层用 RN Modal 底部 action sheet",
+          "Tamagui 组件 props 上用 token（RN 原生 style 不解析 token）",
+          "label 传字符串"
+        ],
+        "dont": ["在 RN Pressable style 函数里写 token 字符串", "硬编码颜色"]
+      },
+      "docs": "packages/ui-native/src/Select/README.md",
+      "examples": ["packages/ui-native/src/Select/__examples__/States.tsx"]
     }
   ]
 }

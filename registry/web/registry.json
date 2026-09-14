@@ -267,6 +267,97 @@
       },
       "docs": "packages/ui-web/src/Checkbox/README.md",
       "examples": ["packages/ui-web/src/Checkbox/__examples__/States.tsx"]
+    },
+    {
+      "name": "select",
+      "type": "registry:component",
+      "title": "选择器 Select",
+      "description": "Radix Select 下拉单选，触发框与 Input 对齐，弹层同宽，支持尺寸/禁用项/错误态，onChange 为值回调",
+      "canonical": "Select",
+      "status": "beta",
+      "stack": "web",
+      "dependencies": ["@radix-ui/react-select", "class-variance-authority", "@kit/core"],
+      "registryDependencies": [],
+      "files": [
+        { "path": "packages/ui-web/src/Select/Select.tsx", "type": "registry:component" },
+        { "path": "packages/ui-web/src/Select/Select.types.ts", "type": "registry:ui" },
+        { "path": "packages/ui-web/src/Select/index.ts", "type": "registry:ui" }
+      ],
+      "props": [
+        {
+          "name": "options",
+          "type": "{label:ReactNode;value:string;disabled?:boolean}[]",
+          "required": true,
+          "desc": "选项列表"
+        },
+        { "name": "value", "type": "string", "required": false, "desc": "受控值" },
+        { "name": "defaultValue", "type": "string", "required": false, "desc": "非受控初值" },
+        {
+          "name": "placeholder",
+          "type": "string",
+          "default": "'请选择'",
+          "required": false,
+          "desc": "占位文本"
+        },
+        {
+          "name": "size",
+          "type": "'sm'|'md'|'lg'",
+          "default": "'md'",
+          "required": false,
+          "desc": "触发框高度 token"
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "default": "false",
+          "required": false,
+          "desc": "禁用整个选择器"
+        },
+        {
+          "name": "error",
+          "type": "boolean|string",
+          "default": "false",
+          "required": false,
+          "desc": "红框 + 错误文案"
+        }
+      ],
+      "events": [
+        {
+          "name": "onChange",
+          "type": "(value: string) => void",
+          "desc": "值变化（Radix onValueChange 透传）"
+        }
+      ],
+      "slots": [],
+      "tokens": [
+        "color-bg-card",
+        "color-bg-hover",
+        "color-border-default",
+        "color-border-focus",
+        "color-border-danger",
+        "color-text-primary",
+        "color-text-tertiary",
+        "color-text-disabled",
+        "color-text-danger",
+        "color-primary-default",
+        "radius-md",
+        "shadow-popover",
+        "control-height-sm",
+        "control-height-md",
+        "control-height-lg"
+      ],
+      "states": ["closed", "open", "selected", "disabled", "error"],
+      "a11y": "Radix 自带 listbox/option 角色、aria-expanded/activedescendant、方向键/Esc/Enter；错误 aria-invalid + aria-describedby 关联 role=alert",
+      "usage": {
+        "do": [
+          "选项数据驱动 options",
+          "触发框视觉与 Input 保持一致",
+          "弹层宽度用 radix-trigger-width 变量"
+        ],
+        "dont": ["自建键盘导航", "硬编码弹层颜色", "把索引当 value"]
+      },
+      "docs": "packages/ui-web/src/Select/README.md",
+      "examples": ["packages/ui-web/src/Select/__examples__/States.tsx"]
     }
   ]
 }

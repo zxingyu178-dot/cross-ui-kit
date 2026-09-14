@@ -1,0 +1,65 @@
+/* Select（mini）样式：只引用 @kit/tokens CSS 变量，禁止裸颜色/rpx 硬编码 */
+.kit-select {
+  display: flex;
+  flex-direction: column;
+  gap: var(--kit-spacing-1);
+  width: 100%;
+}
+
+.kit-select__trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--kit-spacing-2);
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 var(--kit-spacing-3);
+  background: var(--kit-color-bg-card);
+  border: 1px solid var(--kit-color-border-default);
+  border-radius: var(--kit-radius-md);
+}
+
+.kit-select__trigger--sm {
+  min-height: var(--kit-control-height-sm);
+}
+.kit-select__trigger--md {
+  min-height: var(--kit-control-height-md);
+}
+.kit-select__trigger--lg {
+  min-height: var(--kit-control-height-lg);
+}
+
+.kit-select__trigger--error {
+  border-color: var(--kit-color-border-danger);
+}
+
+.kit-select__trigger--disabled {
+  background: var(--kit-color-bg-hover);
+}
+
+.kit-select__value {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  color: var(--kit-color-text-primary);
+  font-size: var(--kit-font-size-body-md);
+}
+
+.kit-select__placeholder {
+  flex: 1;
+  min-width: 0;
+  color: var(--kit-color-text-tertiary);
+  font-size: var(--kit-font-size-body-md);
+}
+
+.kit-select__arrow {
+  color: var(--kit-color-text-tertiary);
+  font-size: var(--kit-font-size-body-md);
+}
+
+.kit-select__error {
+  color: var(--kit-color-text-danger);
+  font-size: var(--kit-font-size-body-sm);
+  line-height: var(--kit-line-height-normal);
+}

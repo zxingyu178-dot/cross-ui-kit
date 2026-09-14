@@ -245,6 +245,99 @@
       },
       "docs": "packages/ui-mini/src/Checkbox/README.md",
       "examples": ["packages/ui-mini/src/Checkbox/__examples__/States.tsx"]
+    },
+    {
+      "name": "select",
+      "type": "registry:component",
+      "title": "选择器 Select",
+      "description": "Taro Picker(selector) 底部滚轮选择 + 自建 token 风格触发框，onChange 归一为 value 字符串",
+      "canonical": "Select",
+      "status": "beta",
+      "stack": "mini",
+      "dependencies": ["@tarojs/components", "@tarojs/taro"],
+      "registryDependencies": [],
+      "files": [
+        { "path": "packages/ui-mini/src/Select/Select.tsx", "type": "registry:component" },
+        { "path": "packages/ui-mini/src/Select/Select.types.ts", "type": "registry:ui" },
+        { "path": "packages/ui-mini/src/Select/Select.scss", "type": "registry:ui" },
+        { "path": "packages/ui-mini/src/Select/index.ts", "type": "registry:ui" }
+      ],
+      "props": [
+        {
+          "name": "options",
+          "type": "{label;value;disabled?}[]",
+          "required": true,
+          "desc": "选项列表（label 用字符串）"
+        },
+        { "name": "value", "type": "string", "required": false, "desc": "受控值" },
+        { "name": "defaultValue", "type": "string", "required": false, "desc": "非受控初值" },
+        {
+          "name": "placeholder",
+          "type": "string",
+          "default": "'请选择'",
+          "required": false,
+          "desc": "占位文本"
+        },
+        {
+          "name": "size",
+          "type": "'sm'|'md'|'lg'",
+          "default": "'md'",
+          "required": false,
+          "desc": "触发框高度 token"
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "default": "false",
+          "required": false,
+          "desc": "禁用"
+        },
+        {
+          "name": "error",
+          "type": "boolean|string",
+          "default": "false",
+          "required": false,
+          "desc": "红框 + 错误文案"
+        }
+      ],
+      "events": [
+        {
+          "name": "onChange",
+          "type": "(value: string) => void",
+          "desc": "Picker 索引反查 value 后回调"
+        }
+      ],
+      "slots": [],
+      "tokens": [
+        "color-bg-card",
+        "color-bg-hover",
+        "color-border-default",
+        "color-border-danger",
+        "color-text-primary",
+        "color-text-tertiary",
+        "color-text-danger",
+        "radius-md",
+        "control-height-sm",
+        "control-height-md",
+        "control-height-lg",
+        "spacing-1",
+        "spacing-2",
+        "spacing-3",
+        "font-size-body-sm",
+        "font-size-body-md"
+      ],
+      "states": ["closed", "open", "selected", "disabled", "error"],
+      "a11y": "基于系统 Picker 原生无障碍；触发项须有语义，错误文案语义化展示",
+      "usage": {
+        "do": [
+          "label 传字符串",
+          "禁用项尽量不下发（系统 Picker 不灰显）",
+          "触发框样式只用 var(--kit-*)"
+        ],
+        "dont": ["把 Picker 索引当业务值", "硬编码颜色/rpx"]
+      },
+      "docs": "packages/ui-mini/src/Select/README.md",
+      "examples": ["packages/ui-mini/src/Select/__examples__/States.tsx"]
     }
   ]
 }
