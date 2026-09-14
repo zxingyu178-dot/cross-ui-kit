@@ -1,0 +1,31 @@
+{
+  "name": "@kit/ui-native",
+  "version": "0.0.1",
+  "private": true,
+  "description": "原生组件栈（Expo + Tamagui 封装），用于 iOS/Android 原生 App",
+  "type": "module",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "scripts": {
+    "build": "echo \"[ui-native] source-only package, no build step\" && exit 0",
+    "lint": "eslint src",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run --passWithNoTests"
+  },
+  "dependencies": {
+    "@kit/core": "workspace:*",
+    "@kit/icons": "workspace:*",
+    "@kit/tokens": "workspace:*",
+    "react": "catalog:",
+    "tamagui": "catalog:native"
+  },
+  "devDependencies": {
+    "@types/node": "catalog:",
+    "@types/react": "catalog:",
+    "@types/react-dom": "catalog:",
+    "react-dom": "catalog:",
+    "react-native": "catalog:native",
+    "typescript": "catalog:",
+    "vitest": "^3.0.0"
+  }
+}

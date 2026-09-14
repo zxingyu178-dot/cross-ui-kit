@@ -1,0 +1,16 @@
+/**
+ * 原生页面模板骨架（native：Expo Router）
+ * 复制到 packages/patterns-native/src/<scene-page>/index.tsx（或 app 路由目录）
+ * 长列表用 FlashList；安全区由 ScreenContainer 处理。
+ */
+import { YStack } from 'tamagui'
+import { ScreenContainer } from '@kit/ui-native'
+
+export function __ScenePage__() {
+  // const { data, loading, error, refresh } = useRequest(...)
+  return (
+    <ScreenContainer title="__页面标题__" loading={false} empty={false} error={null} onRetry={() => {}}>
+      <YStack>页面内容（只编排 @kit/ui-native 已登记组件）</YStack>
+    </ScreenContainer>
+  )
+}

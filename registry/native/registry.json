@@ -1,0 +1,67 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "@kit/native",
+  "stack": "native",
+  "description": "cross-ui-kit 原生组件（Expo + Tamagui 封装），用于 iOS/Android 原生 App",
+  "items": [
+    {
+      "name": "button",
+      "type": "registry:component",
+      "title": "按钮 Button",
+      "description": "原生按钮，Tamagui Button 的统一封装；触控热区不小于 44px；loading 防重复提交",
+      "canonical": "Button",
+      "status": "planned",
+      "stack": "native",
+      "dependencies": ["tamagui"],
+      "registryDependencies": [],
+      "files": [
+        { "path": "packages/ui-native/src/Button/Button.tsx", "type": "registry:component" },
+        { "path": "packages/ui-native/src/Button/Button.types.ts", "type": "registry:ui" },
+        { "path": "packages/ui-native/src/Button/index.ts", "type": "registry:ui" }
+      ],
+      "props": [
+        {
+          "name": "variant",
+          "type": "'primary'|'secondary'|'ghost'|'danger'|'link'",
+          "default": "'primary'",
+          "required": false,
+          "desc": "视觉层级，与 web/mini 语义一致"
+        },
+        {
+          "name": "size",
+          "type": "'sm'|'md'|'lg'",
+          "default": "'md'",
+          "required": false,
+          "desc": "尺寸；最小热区 44px"
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "default": "false",
+          "required": false,
+          "desc": "禁用态"
+        },
+        {
+          "name": "loading",
+          "type": "boolean",
+          "default": "false",
+          "required": false,
+          "desc": "加载中，自动禁用并显示 ActivityIndicator"
+        }
+      ],
+      "events": [
+        { "name": "onPress", "type": "(e) => void", "desc": "按压点击（web 对应 onClick）" }
+      ],
+      "slots": ["children", "icon"],
+      "tokens": ["color-primary-default", "radius-md", "touch-min", "motion-duration-fast"],
+      "states": ["default", "pressed", "disabled", "loading"],
+      "a11y": "必须设置 accessibilityLabel 与 accessibilityRole='button'",
+      "usage": {
+        "do": ["提交绑定 loading", "补齐 accessibility* 属性", "样式只引用 Tamagui token"],
+        "dont": ["写裸样式对象颜色", "绕过封装直接拼业务样式"]
+      },
+      "docs": "packages/ui-native/src/Button/README.md",
+      "examples": ["packages/ui-native/src/Button/__examples__/Variants.tsx"]
+    }
+  ]
+}

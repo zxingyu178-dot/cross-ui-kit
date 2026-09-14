@@ -1,0 +1,34 @@
+{
+  "name": "__component-name__",
+  "type": "registry:component",
+  "title": "__ComponentName__",
+  "description": "<一句话用途；小程序/H5 场景>",
+  "canonical": "__ComponentName__",
+  "status": "beta",
+  "stack": "mini",
+  "dependencies": ["@nutui/nutui-react-taro"],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "packages/ui-mini/src/__ComponentName__/__ComponentName__.tsx",
+      "type": "registry:component"
+    },
+    {
+      "path": "packages/ui-mini/src/__ComponentName__/__ComponentName__.types.ts",
+      "type": "registry:ui"
+    },
+    { "path": "packages/ui-mini/src/__ComponentName__/index.ts", "type": "registry:ui" }
+  ],
+  "props": [],
+  "events": [{ "name": "onPress", "type": "() => void", "desc": "点击（web 对应 onClick）" }],
+  "slots": ["children"],
+  "tokens": [],
+  "states": ["default", "pressed", "loading", "disabled"],
+  "a11y": "图标按钮必须提供可读文字/无障碍标签；热区≥44px",
+  "usage": {
+    "do": ["<正确用法>"],
+    "dont": ["直接使用 NutUI 原始 API 拼业务", "内联 rpx/颜色", "组件内直接调平台 API"]
+  },
+  "docs": "packages/ui-mini/src/__ComponentName__/README.md",
+  "examples": ["packages/ui-mini/src/__ComponentName__/__examples__/Variants.tsx"]
+}

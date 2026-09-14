@@ -1,0 +1,70 @@
+{
+  "version": 1,
+  "description": "三栈组件 canonical 语义映射表，唯一事实来源；新增组件先在此登记（docs/06-registry.md §3）",
+  "components": [
+    {
+      "canonical": "Button",
+      "category": "base",
+      "sharedProps": {
+        "variant": "primary|secondary|ghost|danger|link",
+        "size": "sm|md|lg",
+        "disabled": "boolean",
+        "loading": "boolean"
+      },
+      "eventMap": { "web": "onClick", "mini": "onPress", "native": "onPress" },
+      "stacks": {
+        "web": { "item": "@kit/web-button", "status": "planned" },
+        "mini": { "item": "@kit/mini-button", "status": "planned" },
+        "native": { "item": "@kit/native-button", "status": "planned" }
+      }
+    },
+    {
+      "canonical": "Input",
+      "category": "form",
+      "sharedProps": {
+        "value": "string",
+        "placeholder": "string",
+        "disabled": "boolean",
+        "error": "boolean|string"
+      },
+      "eventMap": { "web": "onChange", "mini": "onChange", "native": "onChangeText" },
+      "stacks": {
+        "web": { "item": "@kit/web-input", "status": "planned" },
+        "mini": { "item": "@kit/mini-input", "status": "planned" },
+        "native": { "item": "@kit/native-input", "status": "planned" }
+      }
+    },
+    {
+      "canonical": "DataTable",
+      "category": "data",
+      "sharedProps": {
+        "columns": "ColumnDef<T>[]",
+        "data": "T[]",
+        "loading": "boolean",
+        "pagination": "PaginationState"
+      },
+      "eventMap": { "web": "onRowClick", "mini": "onItemClick", "native": "onItemPress" },
+      "stacks": {
+        "web": { "item": "@kit/web-data-table", "status": "planned" },
+        "mini": { "item": "@kit/mini-data-list", "status": "planned" },
+        "native": { "item": "@kit/native-data-list", "status": "planned" }
+      }
+    },
+    {
+      "canonical": "StateContainer",
+      "category": "feedback",
+      "sharedProps": {
+        "loading": "boolean",
+        "empty": "boolean",
+        "error": "Error|null",
+        "onRetry": "() => void"
+      },
+      "eventMap": { "web": "onRetry", "mini": "onRetry", "native": "onRetry" },
+      "stacks": {
+        "web": { "item": "@kit/web-state-container", "status": "planned" },
+        "mini": { "item": "@kit/mini-state-container", "status": "planned" },
+        "native": { "item": "@kit/native-state-container", "status": "planned" }
+      }
+    }
+  ]
+}

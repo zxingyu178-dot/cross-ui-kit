@@ -1,0 +1,16 @@
+/**
+ * 小端页面模板骨架（mini：小程序/H5）
+ * 复制到 packages/patterns-mini/src/<scene-page>/index.tsx
+ * 列表页必须含下拉刷新 + 触底加载；NavBar/安全区走页面容器。
+ */
+import { View } from '@tarojs/components'
+import { PageContainer } from '@kit/ui-mini'
+
+export default function __ScenePage__() {
+  // const { data, loading, error, refresh, onReachBottom } = useTable(...)
+  return (
+    <PageContainer title="__页面标题__" loading={false} empty={false} error={null} onRetry={() => {}}>
+      <View>页面内容（只编排 @kit/ui-mini 已登记组件）</View>
+    </PageContainer>
+  )
+}

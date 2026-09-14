@@ -1,0 +1,61 @@
+# pnpm workspace 定义：应用壳工程 + 库包
+packages:
+  - 'apps/*'
+  - 'packages/*'
+
+# 允许运行安装构建脚本的依赖（pnpm 12 机制：包名 -> true/false）
+# esbuild / @swc/core 的 postinstall 负责安装平台二进制，必须放行，否则构建不可用
+allowBuilds:
+  '@bundled-es-modules/glob': true
+  '@nutui/nutui-react-taro': true
+  '@swc/core': true
+  esbuild: true
+  style-dictionary: true
+
+# 统一依赖版本（单一事实来源，各包用 "catalog:" 引用，禁止各包自行写版本）
+# 升级共享依赖只改这里，全仓一致
+
+catalog:
+  # --- 语言与运行时 ---
+  # React 统一锁 18.3：Taro 4 / NutUI-React / react-spring 官方 peer 上限为 18，
+  # 是 web/mini/native 三栈最大公约数（shadcn、Tamagui、Expo SDK 52 均支持 18.3）；
+  # 待 Taro/NutUI 官方支持 React 19 后，仅在此处一处升级全库联动。
+  typescript: ^5.6.3
+  react: ^18.3.1
+  react-dom: ^18.3.1
+  # --- 三栈共享逻辑内核（headless，与渲染端无关） ---
+  '@tanstack/react-query': ^5.62.0
+  '@tanstack/react-table': ^8.20.5
+  '@tanstack/react-virtual': ^3.11.0
+  zustand: ^5.0.2
+  zod: ^3.24.1
+  react-hook-form: ^7.54.0
+  '@hookform/resolvers': ^3.9.1
+  # --- 工具 ---
+  clsx: ^2.1.1
+  tailwind-merge: ^2.5.5
+  dayjs: ^1.11.13
+  # --- 类型 ---
+  '@types/react': ^18.3.12
+  '@types/react-dom': ^18.3.1
+  '@types/node': ^22.10.2
+
+# 三栈各自的底座版本集中登记（实际由各 app/包引用）
+catalogs:
+  # 大端栈：React DOM + shadcn
+  web:
+    vite: ^6.0.0
+    tailwindcss: ^4.0.0
+    '@vitejs/plugin-react': ^4.3.4
+  # 小端栈：Taro + NutUI
+  mini:
+    '@tarojs/taro': ^4.0.0
+    '@tarojs/cli': ^4.0.0
+    '@nutui/nutui-react-taro': ^3.0.0
+  # 原生栈：Expo SDK 52（RN 0.76 + React 18.3，是唯一 React 18.3 的 SDK；
+  # SDK 53+ 已升级 React 19，与 Taro/NutUI 的 React 18.3 上限冲突）
+  # Tamagui 锁 1.121.x（与 SDK 52 同期；1.129+/v2 面向 React 19 / RN 0.81+）
+  native:
+    expo: ~52.0.0
+    react-native: ~0.76.0
+    tamagui: ~1.121.0

@@ -1,0 +1,26 @@
+{
+  "name": "@kit/interaction",
+  "version": "0.0.1",
+  "private": true,
+  "description": "交互规范的可复用实现：四态容器、反馈 hooks、手势封装（规范见 docs/07）",
+  "type": "module",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "scripts": {
+    "build": "echo \"[interaction] source-only package, no build step\" && exit 0",
+    "lint": "eslint src",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run --passWithNoTests"
+  },
+  "dependencies": {
+    "@kit/core": "workspace:*",
+    "@kit/tokens": "workspace:*",
+    "react": "catalog:"
+  },
+  "devDependencies": {
+    "@types/node": "catalog:",
+    "@types/react": "catalog:",
+    "typescript": "catalog:",
+    "vitest": "^3.0.0"
+  }
+}

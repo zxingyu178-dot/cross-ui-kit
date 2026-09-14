@@ -1,0 +1,34 @@
+{
+  "name": "__component-name__",
+  "type": "registry:component",
+  "title": "__ComponentName__",
+  "description": "<一句话用途；iOS/Android 原生场景>",
+  "canonical": "__ComponentName__",
+  "status": "beta",
+  "stack": "native",
+  "dependencies": ["tamagui"],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "packages/ui-native/src/__ComponentName__/__ComponentName__.tsx",
+      "type": "registry:component"
+    },
+    {
+      "path": "packages/ui-native/src/__ComponentName__/__ComponentName__.types.ts",
+      "type": "registry:ui"
+    },
+    { "path": "packages/ui-native/src/__ComponentName__/index.ts", "type": "registry:ui" }
+  ],
+  "props": [],
+  "events": [{ "name": "onPress", "type": "() => void", "desc": "按压（web 对应 onClick）" }],
+  "slots": ["children"],
+  "tokens": [],
+  "states": ["default", "pressed", "loading", "disabled"],
+  "a11y": "必须设置 accessibilityLabel 与 accessibilityRole",
+  "usage": {
+    "do": ["样式只引用 Tamagui token", "补齐 accessibility* 属性", "热区≥44px"],
+    "dont": ["裸样式对象颜色", "绕过封装直接写业务样式"]
+  },
+  "docs": "packages/ui-native/src/__ComponentName__/README.md",
+  "examples": ["packages/ui-native/src/__ComponentName__/__examples__/Variants.tsx"]
+}

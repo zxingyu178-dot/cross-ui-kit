@@ -1,0 +1,22 @@
+/**
+ * 大端页面模板骨架（web）
+ * 复制到 packages/patterns-web/src/<scene-page>/index.tsx
+ * 只允许从 @kit/ui-web 取组件、从 @kit/core 取数据 hooks。
+ */
+import { PageContainer } from '@kit/ui-web'
+
+export function __ScenePage__() {
+  // const { data, loading, error, refresh } = useRequest(...)
+  return (
+    <PageContainer
+      title="__页面标题__"
+      loading={false}
+      empty={false}
+      error={null}
+      onRetry={() => {}}
+    >
+      {/* 只编排已登记组件；搜索栏/表格/分页/表单控件均来自 @kit/ui-web */}
+      页面内容
+    </PageContainer>
+  )
+}

@@ -1,0 +1,34 @@
+{
+  "name": "__component-name__",
+  "type": "registry:component",
+  "title": "__ComponentName__",
+  "description": "<一句话用途；写清适用与不适用场景>",
+  "canonical": "__ComponentName__",
+  "status": "beta",
+  "stack": "web",
+  "dependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "packages/ui-web/src/__ComponentName__/__ComponentName__.tsx",
+      "type": "registry:component"
+    },
+    {
+      "path": "packages/ui-web/src/__ComponentName__/__ComponentName__.types.ts",
+      "type": "registry:ui"
+    },
+    { "path": "packages/ui-web/src/__ComponentName__/index.ts", "type": "registry:ui" }
+  ],
+  "props": [],
+  "events": [],
+  "slots": ["children"],
+  "tokens": [],
+  "states": ["default", "loading", "empty", "error"],
+  "a11y": "<键盘/焦点/aria 要求>",
+  "usage": {
+    "do": ["<正确用法>"],
+    "dont": ["<禁止用法，如硬编码颜色、内联业务请求>"]
+  },
+  "docs": "packages/ui-web/src/__ComponentName__/README.md",
+  "examples": ["packages/ui-web/src/__ComponentName__/__examples__/Variants.tsx"]
+}

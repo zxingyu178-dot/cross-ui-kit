@@ -1,0 +1,12 @@
+{
+  "motionDuration": {
+    "fast": { "$type": "duration", "$value": "150ms" },
+    "base": { "$type": "duration", "$value": "250ms" },
+    "slow": { "$type": "duration", "$value": "400ms" }
+  },
+  "motionEasing": {
+    "standard": { "$type": "other", "$value": "cubic-bezier(0.2, 0, 0, 1)" },
+    "decelerate": { "$type": "other", "$value": "cubic-bezier(0, 0, 0.2, 1)" },
+    "accelerate": { "$type": "other", "$value": "cubic-bezier(0.3, 0, 1, 1)" }
+  }
+}

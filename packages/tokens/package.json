@@ -1,0 +1,17 @@
+{
+  "name": "@kit/tokens",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Design Token 唯一源：Style Dictionary 一份 JSON 导出 web/mini/native 三栈变量",
+  "type": "module",
+  "scripts": {
+    "build": "node sd.config.mjs",
+    "watch": "node sd.config.mjs --watch",
+    "clean": "node -e \"require('fs').rmSync('dist',{recursive:true,force:true})\"",
+    "lint": "eslint sd.config.mjs",
+    "typecheck": "echo \"[tokens] no ts sources, skip\" && exit 0"
+  },
+  "devDependencies": {
+    "style-dictionary": "^4.3.0"
+  }
+}

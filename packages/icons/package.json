@@ -1,0 +1,22 @@
+{
+  "name": "@kit/icons",
+  "version": "0.0.1",
+  "private": true,
+  "description": "图标源与三栈产物（SVG 源 → React 组件 / 小程序图标字体或图片 / RN 组件）",
+  "type": "module",
+  "scripts": {
+    "build": "echo \"[icons] P1: svg 源 → 三栈产物\" && exit 0",
+    "lint": "eslint src",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run --passWithNoTests"
+  },
+  "dependencies": {
+    "react": "catalog:"
+  },
+  "devDependencies": {
+    "@types/node": "catalog:",
+    "@types/react": "catalog:",
+    "typescript": "catalog:",
+    "vitest": "^3.0.0"
+  }
+}

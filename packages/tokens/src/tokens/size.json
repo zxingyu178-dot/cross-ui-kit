@@ -1,0 +1,21 @@
+{
+  "controlHeight": {
+    "sm": { "$type": "dimension", "$value": "32px" },
+    "md": { "$type": "dimension", "$value": "40px" },
+    "lg": { "$type": "dimension", "$value": "48px" }
+  },
+  "touch": {
+    "min": { "$type": "dimension", "$value": "44px" }
+  },
+  "iconSize": {
+    "sm": { "$type": "dimension", "$value": "16px" },
+    "md": { "$type": "dimension", "$value": "20px" },
+    "lg": { "$type": "dimension", "$value": "24px" }
+  },
+  "layout": {
+    "content-max-width": { "$type": "dimension", "$value": "1440px" },
+    "sidebar-width": { "$type": "dimension", "$value": "240px" },
+    "navbar-height": { "$type": "dimension", "$value": "56px" },
+    "tabbar-height": { "$type": "dimension", "$value": "56px" }
+  }
+}

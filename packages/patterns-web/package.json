@@ -1,0 +1,27 @@
+{
+  "name": "@kit/patterns-web",
+  "version": "0.0.1",
+  "private": true,
+  "description": "大端页面模板（只编排已登记组件，数据走 core hooks）",
+  "type": "module",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "scripts": {
+    "build": "echo \"[patterns-web] source-only package\" && exit 0",
+    "lint": "eslint src",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run --passWithNoTests"
+  },
+  "dependencies": {
+    "@kit/core": "workspace:*",
+    "@kit/interaction": "workspace:*",
+    "@kit/ui-web": "workspace:*",
+    "react": "catalog:"
+  },
+  "devDependencies": {
+    "@types/node": "catalog:",
+    "@types/react": "catalog:",
+    "typescript": "catalog:",
+    "vitest": "^3.0.0"
+  }
+}

@@ -1,0 +1,11 @@
+node_modules
+dist
+build
+.turbo
+.taro
+.expo
+.tamagui
+packages/tokens/dist
+pnpm-lock.yaml
+*.md
+.husky
