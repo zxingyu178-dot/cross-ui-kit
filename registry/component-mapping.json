@@ -306,6 +306,29 @@
       }
     },
     {
+      "canonical": "Result",
+      "category": "feedback",
+      "sharedProps": {
+        "status": "'success'|'info'|'warning'|'error'|'notFound'（默认 info，决定默认图标与语义色）",
+        "title": "ReactNode（主标题）",
+        "description": "ReactNode（次要描述，最大宽 300）",
+        "icon": "ReactNode slot（替换默认状态图标）",
+        "action": "ReactNode slot（主操作，如重试，可并排多个）",
+        "extra": "ReactNode slot（次要操作，如联系客服）",
+        "accessibilityLabel": "string（无障碍标签）"
+      },
+      "eventMap": {
+        "web": "无事件（纯组合结果占位，操作经 action/extra slot 内按钮抛出）",
+        "mini": "无事件（纯组合结果占位，操作经 action/extra slot 内按钮抛出）",
+        "native": "无事件（纯组合结果占位，操作经 action/extra slot 内按钮抛出）"
+      },
+      "stacks": {
+        "web": { "item": "@kit/web-result", "status": "beta" },
+        "mini": { "item": "@kit/mini-result", "status": "beta" },
+        "native": { "item": "@kit/native-result", "status": "beta" }
+      }
+    },
+    {
       "canonical": "DataTable",
       "category": "data",
       "sharedProps": {

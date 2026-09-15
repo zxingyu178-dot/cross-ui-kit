@@ -1131,6 +1131,95 @@
       },
       "docs": "packages/ui-mini/src/Empty/README.md",
       "examples": ["packages/ui-mini/src/Empty/__examples__/States.tsx"]
+    },
+    {
+      "name": "result",
+      "type": "registry:component",
+      "title": "结果态 Result",
+      "description": "四态之 error，亦覆盖成功/信息/警告/404：Taro View/Text，几何条拼 check/x/!/i 符号（Result.scss status 修饰类给语义色），action/extra slot",
+      "canonical": "Result",
+      "status": "beta",
+      "stack": "mini",
+      "dependencies": ["@tarojs/components", "@kit/core"],
+      "registryDependencies": [],
+      "files": [
+        { "path": "packages/ui-mini/src/Result/Result.tsx", "type": "registry:component" },
+        { "path": "packages/ui-mini/src/Result/Result.types.ts", "type": "registry:ui" },
+        { "path": "packages/ui-mini/src/Result/Result.scss", "type": "registry:ui" },
+        { "path": "packages/ui-mini/src/Result/index.ts", "type": "registry:ui" }
+      ],
+      "props": [
+        {
+          "name": "status",
+          "type": "'success'|'info'|'warning'|'error'|'notFound'",
+          "required": false,
+          "default": "'info'",
+          "desc": "结果状态，决定默认图标与语义色"
+        },
+        { "name": "title", "type": "ReactNode", "required": false, "desc": "主标题" },
+        {
+          "name": "description",
+          "type": "ReactNode",
+          "required": false,
+          "desc": "次要描述，最大宽 300"
+        },
+        {
+          "name": "icon",
+          "type": "ReactNode",
+          "required": false,
+          "desc": "自定义图标，替换默认状态图标"
+        },
+        {
+          "name": "action",
+          "type": "ReactNode",
+          "required": false,
+          "desc": "主操作 slot（如重试），可并排多个"
+        },
+        {
+          "name": "extra",
+          "type": "ReactNode",
+          "required": false,
+          "desc": "次要操作 slot（如联系客服）"
+        },
+        {
+          "name": "accessibilityLabel",
+          "type": "string",
+          "required": false,
+          "desc": "H5 映射 aria-label"
+        }
+      ],
+      "events": [],
+      "slots": ["icon", "action", "extra"],
+      "tokens": [
+        "color-success-bg",
+        "color-success-default",
+        "color-info-bg",
+        "color-info-default",
+        "color-warning-bg",
+        "color-warning-default",
+        "color-danger-bg",
+        "color-danger-default",
+        "color-bg-active",
+        "color-text-primary",
+        "color-text-secondary",
+        "color-text-tertiary",
+        "font-size-title-sm",
+        "font-size-body-sm",
+        "font-weight-medium",
+        "font-weight-bold"
+      ],
+      "states": ["success", "info", "warning", "error", "notFound"],
+      "a11y": "标题/描述文本自然朗读；H5 下 accessibilityLabel 映射 aria-label",
+      "usage": {
+        "do": [
+          "加载失败/网络异常用 status=error 并在 action 放重试",
+          "404 用 notFound",
+          "语义色走 scss status 修饰类"
+        ],
+        "dont": ["在业务里内联结果态布局", "在 Result 内发请求", "硬编码颜色/尺寸"]
+      },
+      "docs": "packages/ui-mini/src/Result/README.md",
+      "examples": ["packages/ui-mini/src/Result/__examples__/States.tsx"]
     }
   ]
 }

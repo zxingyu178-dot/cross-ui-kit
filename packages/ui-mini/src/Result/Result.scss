@@ -1,0 +1,118 @@
+/* Result 结果态（mini）——布局、默认几何图标与 status 语义色，全部引用 kit token 变量 */
+
+.kit-result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 40px 24px;
+  text-align: center;
+}
+
+.kit-result__figure {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+/* 圆底 96（=3×control-height-sm 32） */
+.kit-result__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 96px;
+  height: 96px;
+  border-radius: 999px;
+}
+
+/* 40×40 符号定位区 */
+.kit-result__glyph {
+  position: relative;
+  width: 40px;
+  height: 40px;
+}
+
+/* 几何条/点统一圆角；颜色由下方 status 修饰类给出 */
+.kit-result__mark {
+  border-radius: 999px;
+  box-sizing: border-box;
+}
+
+.kit-result__num {
+  font-size: var(--kit-font-size-title-sm);
+  font-weight: var(--kit-font-weight-bold);
+}
+
+.kit-result__title {
+  display: block;
+  font-size: var(--kit-font-size-title-sm);
+  font-weight: var(--kit-font-weight-medium);
+  color: var(--kit-color-text-primary);
+  text-align: center;
+}
+
+.kit-result__desc {
+  display: block;
+  margin-top: 8px;
+  max-width: 300px;
+  font-size: var(--kit-font-size-body-sm);
+  line-height: 1.5;
+  color: var(--kit-color-text-secondary);
+  text-align: center;
+}
+
+.kit-result__action {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.kit-result__extra {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 12px;
+}
+
+/* ---- status 语义色：圆底 + 符号/数字色 ---- */
+.kit-result__icon--success {
+  background-color: var(--kit-color-success-bg);
+  .kit-result__mark {
+    background-color: var(--kit-color-success-default);
+  }
+}
+
+.kit-result__icon--info {
+  background-color: var(--kit-color-info-bg);
+  .kit-result__mark {
+    background-color: var(--kit-color-info-default);
+  }
+}
+
+.kit-result__icon--warning {
+  background-color: var(--kit-color-warning-bg);
+  .kit-result__mark {
+    background-color: var(--kit-color-warning-default);
+  }
+}
+
+.kit-result__icon--error {
+  background-color: var(--kit-color-danger-bg);
+  .kit-result__mark {
+    background-color: var(--kit-color-danger-default);
+  }
+}
+
+.kit-result__icon--notFound {
+  background-color: var(--kit-color-bg-active);
+  .kit-result__num {
+    color: var(--kit-color-text-tertiary);
+  }
+}
