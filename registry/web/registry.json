@@ -1395,6 +1395,74 @@
       },
       "docs": "packages/ui-web/src/Card/README.md",
       "examples": ["packages/ui-web/src/Card/__examples__/States.tsx"]
+    },
+    {
+      "name": "avatar",
+      "type": "registry:component",
+      "title": "头像 Avatar",
+      "description": "图片/文字首字/自定义内容三态头像，size sm/md/lg、shape circle/square，图片 onError 自动回退首字，全 token、暗色",
+      "canonical": "Avatar",
+      "status": "beta",
+      "stack": "web",
+      "dependencies": ["@kit/core"],
+      "registryDependencies": [],
+      "files": [
+        { "path": "packages/ui-web/src/Avatar/Avatar.tsx", "type": "registry:component" },
+        { "path": "packages/ui-web/src/Avatar/Avatar.types.ts", "type": "registry:ui" },
+        { "path": "packages/ui-web/src/Avatar/index.ts", "type": "registry:ui" }
+      ],
+      "props": [
+        {
+          "name": "src",
+          "type": "string",
+          "required": false,
+          "desc": "图片地址，存在且未失败时显示图片"
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "required": false,
+          "desc": "名称，无图/失败时取首字符"
+        },
+        {
+          "name": "size",
+          "type": "'sm'|'md'|'lg'",
+          "required": false,
+          "default": "'md'",
+          "desc": "32/40/48"
+        },
+        {
+          "name": "shape",
+          "type": "'circle'|'square'",
+          "required": false,
+          "default": "'circle'",
+          "desc": "圆形/圆角方形"
+        },
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "required": false,
+          "desc": "自定义内容，优先级最高"
+        }
+      ],
+      "events": [],
+      "slots": ["children"],
+      "tokens": [
+        "color-bg-active",
+        "color-text-secondary",
+        "radius-md",
+        "font-size-caption",
+        "font-size-body-md",
+        "font-size-title-sm"
+      ],
+      "states": ["normal", "image-fallback"],
+      "a11y": "图片 alt 默认取 name；文字首字带 aria-label=name",
+      "usage": {
+        "do": ["列表项/导航/评论/设备卡片统一头像占位", "失败兜底交给组件"],
+        "dont": ["硬编码尺寸/底色", "在组件内请求图片地址"]
+      },
+      "docs": "packages/ui-web/src/Avatar/README.md",
+      "examples": ["packages/ui-web/src/Avatar/__examples__/States.tsx"]
     }
   ]
 }

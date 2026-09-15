@@ -387,6 +387,27 @@
         "mini": { "item": "@kit/mini-card", "status": "beta" },
         "native": { "item": "@kit/native-card", "status": "beta" }
       }
+    },
+    {
+      "canonical": "Avatar",
+      "category": "data-display",
+      "sharedProps": {
+        "src": "string（图片地址，存在且未失败时显示）",
+        "name": "string（无图/失败时取首字符）",
+        "size": "'sm'|'md'|'lg'（默认 md，32/40/48）",
+        "shape": "'circle'|'square'（默认 circle）",
+        "children": "ReactNode（自定义内容，优先级最高）"
+      },
+      "eventMap": {
+        "web": "无对外事件（图片 onError 内部回退首字）",
+        "mini": "无对外事件（Image onError 内部回退首字）",
+        "native": "无对外事件（Image onError 内部回退首字）"
+      },
+      "stacks": {
+        "web": { "item": "@kit/web-avatar", "status": "beta" },
+        "mini": { "item": "@kit/mini-avatar", "status": "beta" },
+        "native": { "item": "@kit/native-avatar", "status": "beta" }
+      }
     }
   ]
 }

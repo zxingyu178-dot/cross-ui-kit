@@ -1,0 +1,57 @@
+/* Avatar 头像（mini）——尺寸/形状/底色全部引用 kit token 变量 */
+
+.kit-avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  vertical-align: middle;
+  border-radius: 999px;
+  background-color: var(--kit-color-bg-active);
+  color: var(--kit-color-text-secondary);
+}
+
+.kit-avatar--sm {
+  width: 32px;
+  height: 32px;
+}
+
+.kit-avatar--md {
+  width: 40px;
+  height: 40px;
+}
+
+.kit-avatar--lg {
+  width: 48px;
+  height: 48px;
+}
+
+.kit-avatar--square {
+  border-radius: var(--kit-radius-md);
+}
+
+.kit-avatar__img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.kit-avatar__text {
+  display: block;
+  font-weight: var(--kit-font-weight-medium);
+  line-height: 1;
+}
+
+.kit-avatar--sm .kit-avatar__text {
+  font-size: var(--kit-font-size-caption);
+}
+
+.kit-avatar--md .kit-avatar__text {
+  font-size: var(--kit-font-size-body-md);
+}
+
+.kit-avatar--lg .kit-avatar__text {
+  font-size: var(--kit-font-size-title-sm);
+}

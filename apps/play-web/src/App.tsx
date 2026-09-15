@@ -19,6 +19,7 @@ import { States as EmptyStates } from '@kit/ui-web/src/Empty/__examples__/States
 import { States as ResultStates } from '@kit/ui-web/src/Result/__examples__/States'
 import { States as StateContainerStates } from '@kit/ui-web/src/StateContainer/__examples__/States'
 import { States as CardStates } from '@kit/ui-web/src/Card/__examples__/States'
+import { States as AvatarStates } from '@kit/ui-web/src/Avatar/__examples__/States'
 
 /**
  * play-web 演示壳入口。
@@ -156,6 +157,13 @@ export default function App() {
       <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
         <h2 className="text-title-sm font-medium text-text-primary">Card · 卡片（组合式容器）</h2>
         <CardStates />
+      </section>
+
+      <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
+        <h2 className="text-title-sm font-medium text-text-primary">
+          Avatar · 头像（图片/首字/自定义）
+        </h2>
+        <AvatarStates />
       </section>
 
       <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">

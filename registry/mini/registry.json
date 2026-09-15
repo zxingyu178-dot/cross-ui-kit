@@ -1361,6 +1361,75 @@
       },
       "docs": "packages/ui-mini/src/Card/README.md",
       "examples": ["packages/ui-mini/src/Card/__examples__/States.tsx"]
+    },
+    {
+      "name": "avatar",
+      "type": "registry:component",
+      "title": "头像 Avatar",
+      "description": "Taro View/Image/Text 三态头像（Avatar.scss token 化），size sm/md/lg、shape circle/square，Image onError 回退首字",
+      "canonical": "Avatar",
+      "status": "beta",
+      "stack": "mini",
+      "dependencies": ["@tarojs/components", "@kit/core"],
+      "registryDependencies": [],
+      "files": [
+        { "path": "packages/ui-mini/src/Avatar/Avatar.tsx", "type": "registry:component" },
+        { "path": "packages/ui-mini/src/Avatar/Avatar.types.ts", "type": "registry:ui" },
+        { "path": "packages/ui-mini/src/Avatar/Avatar.scss", "type": "registry:ui" },
+        { "path": "packages/ui-mini/src/Avatar/index.ts", "type": "registry:ui" }
+      ],
+      "props": [
+        {
+          "name": "src",
+          "type": "string",
+          "required": false,
+          "desc": "图片地址（Image aspectFill）"
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "required": false,
+          "desc": "名称，无图/失败时取首字符"
+        },
+        {
+          "name": "size",
+          "type": "'sm'|'md'|'lg'",
+          "required": false,
+          "default": "'md'",
+          "desc": "32/40/48"
+        },
+        {
+          "name": "shape",
+          "type": "'circle'|'square'",
+          "required": false,
+          "default": "'circle'",
+          "desc": "圆形/圆角方形"
+        },
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "required": false,
+          "desc": "自定义内容，优先级最高"
+        }
+      ],
+      "events": [],
+      "slots": ["children"],
+      "tokens": [
+        "color-bg-active",
+        "color-text-secondary",
+        "radius-md",
+        "font-size-caption",
+        "font-size-body-md",
+        "font-size-title-sm"
+      ],
+      "states": ["normal", "image-fallback"],
+      "a11y": "文字首字为 Text 自然朗读",
+      "usage": {
+        "do": ["列表项/导航/评论统一头像占位", "失败兜底交给组件"],
+        "dont": ["硬编码尺寸/底色", "在组件内请求图片地址"]
+      },
+      "docs": "packages/ui-mini/src/Avatar/README.md",
+      "examples": ["packages/ui-mini/src/Avatar/__examples__/States.tsx"]
     }
   ]
 }
