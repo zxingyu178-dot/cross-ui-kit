@@ -408,6 +408,29 @@
         "mini": { "item": "@kit/mini-avatar", "status": "beta" },
         "native": { "item": "@kit/native-avatar", "status": "beta" }
       }
+    },
+    {
+      "canonical": "Tag",
+      "category": "data-display",
+      "sharedProps": {
+        "variant": "'neutral'|'primary'|'success'|'warning'|'danger'|'info'（默认 neutral，同 Badge 调色板）",
+        "tone": "'soft'|'solid'|'outline'（默认 soft；selected 时强制 solid）",
+        "size": "'sm'|'md'（默认 md，20/24 高）",
+        "selected": "boolean（选中态，实心高亮）",
+        "closable": "boolean（显示关闭 ×）",
+        "disabled": "boolean（禁点/禁关）",
+        "children": "ReactNode（标签内容）"
+      },
+      "eventMap": {
+        "web": "onClick（点标签切换）；onClose（点 ×，stopPropagation）",
+        "mini": "onPress（点标签切换）；onClose（点 ×，stopPropagation）",
+        "native": "onPress（点标签切换）；onClose（点 ×，子 Stack 响应手势）"
+      },
+      "stacks": {
+        "web": { "item": "@kit/web-tag", "status": "beta" },
+        "mini": { "item": "@kit/mini-tag", "status": "beta" },
+        "native": { "item": "@kit/native-tag", "status": "beta" }
+      }
     }
   ]
 }

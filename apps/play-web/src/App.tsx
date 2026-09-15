@@ -20,6 +20,7 @@ import { States as ResultStates } from '@kit/ui-web/src/Result/__examples__/Stat
 import { States as StateContainerStates } from '@kit/ui-web/src/StateContainer/__examples__/States'
 import { States as CardStates } from '@kit/ui-web/src/Card/__examples__/States'
 import { States as AvatarStates } from '@kit/ui-web/src/Avatar/__examples__/States'
+import { States as TagStates } from '@kit/ui-web/src/Tag/__examples__/States'
 
 /**
  * play-web 演示壳入口。
@@ -164,6 +165,13 @@ export default function App() {
           Avatar · 头像（图片/首字/自定义）
         </h2>
         <AvatarStates />
+      </section>
+
+      <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
+        <h2 className="text-title-sm font-medium text-text-primary">
+          Tag · 标签（可选中筛选 / 可关闭）
+        </h2>
+        <TagStates />
       </section>
 
       <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">

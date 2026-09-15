@@ -1430,6 +1430,88 @@
       },
       "docs": "packages/ui-mini/src/Avatar/README.md",
       "examples": ["packages/ui-mini/src/Avatar/__examples__/States.tsx"]
+    },
+    {
+      "name": "tag",
+      "type": "registry:component",
+      "title": "标签 Tag",
+      "description": "Taro View/Text 可选中/可关闭标签（Tag.scss 色值对齐 Badge），selected 走 solid、closable 关闭区 stopPropagation、disabled",
+      "canonical": "Tag",
+      "status": "beta",
+      "stack": "mini",
+      "dependencies": ["@tarojs/components"],
+      "registryDependencies": [],
+      "files": [
+        { "path": "packages/ui-mini/src/Tag/Tag.tsx", "type": "registry:component" },
+        { "path": "packages/ui-mini/src/Tag/Tag.types.ts", "type": "registry:ui" },
+        { "path": "packages/ui-mini/src/Tag/Tag.scss", "type": "registry:ui" },
+        { "path": "packages/ui-mini/src/Tag/index.ts", "type": "registry:ui" }
+      ],
+      "props": [
+        {
+          "name": "variant",
+          "type": "'neutral'|'primary'|'success'|'warning'|'danger'|'info'",
+          "required": false,
+          "default": "'neutral'",
+          "desc": "语义色（同 Badge）"
+        },
+        {
+          "name": "tone",
+          "type": "'soft'|'solid'|'outline'",
+          "required": false,
+          "default": "'soft'",
+          "desc": "形态；selected 时强制 solid"
+        },
+        {
+          "name": "size",
+          "type": "'sm'|'md'",
+          "required": false,
+          "default": "'md'",
+          "desc": "20/24 高"
+        },
+        {
+          "name": "selected",
+          "type": "boolean",
+          "required": false,
+          "default": "false",
+          "desc": "选中态（实心），配 onPress 切换"
+        },
+        {
+          "name": "closable",
+          "type": "boolean",
+          "required": false,
+          "default": "false",
+          "desc": "显示关闭 ×"
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "required": false,
+          "default": "false",
+          "desc": "禁点/禁关"
+        }
+      ],
+      "events": [
+        { "name": "onPress", "type": "() => void", "desc": "点标签切换选中（筛选）" },
+        { "name": "onClose", "type": "() => void", "desc": "点关闭 ×（stopPropagation）" }
+      ],
+      "slots": ["children"],
+      "tokens": [
+        "color-bg-hover",
+        "color-bg-inverse",
+        "color-text-inverse",
+        "六语义色 bg/default/border",
+        "font-size-body-sm",
+        "font-size-caption"
+      ],
+      "states": ["normal", "selected", "disabled"],
+      "a11y": "关闭区为独立可点 View；小端触控热区由关闭区 padding 保证",
+      "usage": {
+        "do": ["筛选用 selected+onPress", "可删除用 closable+onClose，父级受控维护"],
+        "dont": ["硬编码颜色", "在组件内维护选中/删除数据"]
+      },
+      "docs": "packages/ui-mini/src/Tag/README.md",
+      "examples": ["packages/ui-mini/src/Tag/__examples__/States.tsx"]
     }
   ]
 }

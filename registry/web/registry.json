@@ -1463,6 +1463,95 @@
       },
       "docs": "packages/ui-web/src/Avatar/README.md",
       "examples": ["packages/ui-web/src/Avatar/__examples__/States.tsx"]
+    },
+    {
+      "name": "tag",
+      "type": "registry:component",
+      "title": "标签 Tag",
+      "description": "可选中(筛选)/可关闭(删除)的内容标签，variant 六色、tone soft/solid/outline、size sm/md，selected 走 solid、closable 显示 ×(stopPropagation)、disabled",
+      "canonical": "Tag",
+      "status": "beta",
+      "stack": "web",
+      "dependencies": ["@kit/core"],
+      "registryDependencies": [],
+      "files": [
+        { "path": "packages/ui-web/src/Tag/Tag.tsx", "type": "registry:component" },
+        { "path": "packages/ui-web/src/Tag/Tag.types.ts", "type": "registry:ui" },
+        { "path": "packages/ui-web/src/Tag/index.ts", "type": "registry:ui" }
+      ],
+      "props": [
+        {
+          "name": "variant",
+          "type": "'neutral'|'primary'|'success'|'warning'|'danger'|'info'",
+          "required": false,
+          "default": "'neutral'",
+          "desc": "语义色（同 Badge）"
+        },
+        {
+          "name": "tone",
+          "type": "'soft'|'solid'|'outline'",
+          "required": false,
+          "default": "'soft'",
+          "desc": "形态；selected 时强制 solid"
+        },
+        {
+          "name": "size",
+          "type": "'sm'|'md'",
+          "required": false,
+          "default": "'md'",
+          "desc": "20/24 高"
+        },
+        {
+          "name": "selected",
+          "type": "boolean",
+          "required": false,
+          "default": "false",
+          "desc": "选中态（实心），配 onClick 切换"
+        },
+        {
+          "name": "closable",
+          "type": "boolean",
+          "required": false,
+          "default": "false",
+          "desc": "显示关闭 ×"
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "required": false,
+          "default": "false",
+          "desc": "禁点/禁关"
+        }
+      ],
+      "events": [
+        { "name": "onClick", "type": "() => void", "desc": "点标签切换选中（筛选）" },
+        {
+          "name": "onClose",
+          "type": "() => void",
+          "desc": "点关闭 ×（stopPropagation，不触发 onClick）"
+        }
+      ],
+      "slots": ["children"],
+      "tokens": [
+        "color-bg-hover",
+        "color-bg-inverse",
+        "color-text-inverse",
+        "六语义色 bg/default/border",
+        "font-size-body-sm",
+        "font-size-caption"
+      ],
+      "states": ["normal", "selected", "disabled"],
+      "a11y": "可点击带 role=button 与 aria-pressed；关闭为真实 button[aria-label=移除标签]；禁用 aria-disabled",
+      "usage": {
+        "do": [
+          "筛选用 selected+onClick",
+          "可删除用 closable+onClose，父级受控维护数据",
+          "状态计数改用 Badge"
+        ],
+        "dont": ["硬编码颜色", "在组件内维护选中/删除数据"]
+      },
+      "docs": "packages/ui-web/src/Tag/README.md",
+      "examples": ["packages/ui-web/src/Tag/__examples__/States.tsx"]
     }
   ]
 }

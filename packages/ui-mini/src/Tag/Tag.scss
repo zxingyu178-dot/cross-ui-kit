@@ -1,0 +1,188 @@
+/* Tag（mini）样式：布局 + 颜色（对齐 Badge 调色板），全走 --kit-* token；胶囊圆角为结构值 999px。 */
+
+.kit-tag {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  box-sizing: border-box;
+  gap: 2px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  font-weight: var(--kit-font-weight-medium);
+  white-space: nowrap;
+}
+.kit-tag--md {
+  height: 24px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.kit-tag--sm {
+  height: 20px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+.kit-tag--md.kit-tag--has-close {
+  padding-right: 2px;
+}
+.kit-tag--sm.kit-tag--has-close {
+  padding-right: 1px;
+}
+.kit-tag--clickable {
+  cursor: pointer;
+}
+.kit-tag--disabled {
+  opacity: 0.5;
+}
+.kit-tag__text {
+  font-size: var(--kit-font-size-body-sm);
+  line-height: 1;
+}
+.kit-tag--sm .kit-tag__text {
+  font-size: var(--kit-font-size-caption);
+}
+.kit-tag__close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  margin-left: 2px;
+  border-radius: 999px;
+}
+.kit-tag--sm .kit-tag__close {
+  width: 14px;
+  height: 14px;
+}
+.kit-tag__close-x {
+  font-size: var(--kit-font-size-body-sm);
+  line-height: 1;
+  color: inherit;
+}
+.kit-tag--sm .kit-tag__close-x {
+  font-size: var(--kit-font-size-caption);
+}
+
+/* ---- soft 浅底深字 ---- */
+.kit-tag--soft-neutral {
+  background: var(--kit-color-bg-hover);
+}
+.kit-tag--soft-neutral .kit-tag__text,
+.kit-tag--soft-neutral .kit-tag__close-x {
+  color: var(--kit-color-text-secondary);
+}
+.kit-tag--soft-primary {
+  background: var(--kit-color-primary-bg);
+}
+.kit-tag--soft-primary .kit-tag__text,
+.kit-tag--soft-primary .kit-tag__close-x {
+  color: var(--kit-color-primary-default);
+}
+.kit-tag--soft-success {
+  background: var(--kit-color-success-bg);
+}
+.kit-tag--soft-success .kit-tag__text,
+.kit-tag--soft-success .kit-tag__close-x {
+  color: var(--kit-color-success-default);
+}
+.kit-tag--soft-warning {
+  background: var(--kit-color-warning-bg);
+}
+.kit-tag--soft-warning .kit-tag__text,
+.kit-tag--soft-warning .kit-tag__close-x {
+  color: var(--kit-color-warning-default);
+}
+.kit-tag--soft-danger {
+  background: var(--kit-color-danger-bg);
+}
+.kit-tag--soft-danger .kit-tag__text,
+.kit-tag--soft-danger .kit-tag__close-x {
+  color: var(--kit-color-danger-default);
+}
+.kit-tag--soft-info {
+  background: var(--kit-color-info-bg);
+}
+.kit-tag--soft-info .kit-tag__text,
+.kit-tag--soft-info .kit-tag__close-x {
+  color: var(--kit-color-info-default);
+}
+
+/* ---- solid 深底白字 ---- */
+.kit-tag--solid-neutral {
+  background: var(--kit-color-bg-inverse);
+}
+.kit-tag--solid-neutral .kit-tag__text,
+.kit-tag--solid-neutral .kit-tag__close-x {
+  color: var(--kit-color-text-inverse);
+}
+.kit-tag--solid-primary {
+  background: var(--kit-color-primary-default);
+}
+.kit-tag--solid-success {
+  background: var(--kit-color-success-default);
+}
+.kit-tag--solid-warning {
+  background: var(--kit-color-warning-default);
+}
+.kit-tag--solid-danger {
+  background: var(--kit-color-danger-default);
+}
+.kit-tag--solid-info {
+  background: var(--kit-color-info-default);
+}
+.kit-tag--solid-primary .kit-tag__text,
+.kit-tag--solid-primary .kit-tag__close-x,
+.kit-tag--solid-success .kit-tag__text,
+.kit-tag--solid-success .kit-tag__close-x,
+.kit-tag--solid-warning .kit-tag__text,
+.kit-tag--solid-warning .kit-tag__close-x,
+.kit-tag--solid-danger .kit-tag__text,
+.kit-tag--solid-danger .kit-tag__close-x,
+.kit-tag--solid-info .kit-tag__text,
+.kit-tag--solid-info .kit-tag__close-x {
+  color: var(--kit-color-primary-text); /* 控件中性白，三栈统一 */
+}
+
+/* ---- outline 透明底 + 语义描边 + 深字 ---- */
+.kit-tag--outline-neutral {
+  border-color: var(--kit-color-border-default);
+}
+.kit-tag--outline-neutral .kit-tag__text,
+.kit-tag--outline-neutral .kit-tag__close-x {
+  color: var(--kit-color-text-secondary);
+}
+.kit-tag--outline-primary {
+  border-color: var(--kit-color-primary-default);
+}
+.kit-tag--outline-primary .kit-tag__text,
+.kit-tag--outline-primary .kit-tag__close-x {
+  color: var(--kit-color-primary-default);
+}
+.kit-tag--outline-success {
+  border-color: var(--kit-color-success-border);
+}
+.kit-tag--outline-success .kit-tag__text,
+.kit-tag--outline-success .kit-tag__close-x {
+  color: var(--kit-color-success-default);
+}
+.kit-tag--outline-warning {
+  border-color: var(--kit-color-warning-border);
+}
+.kit-tag--outline-warning .kit-tag__text,
+.kit-tag--outline-warning .kit-tag__close-x {
+  color: var(--kit-color-warning-default);
+}
+.kit-tag--outline-danger {
+  border-color: var(--kit-color-danger-border);
+}
+.kit-tag--outline-danger .kit-tag__text,
+.kit-tag--outline-danger .kit-tag__close-x {
+  color: var(--kit-color-danger-default);
+}
+.kit-tag--outline-info {
+  border-color: var(--kit-color-info-border);
+}
+.kit-tag--outline-info .kit-tag__text,
+.kit-tag--outline-info .kit-tag__close-x {
+  color: var(--kit-color-info-default);
+}
