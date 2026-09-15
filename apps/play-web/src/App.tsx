@@ -11,6 +11,7 @@ import { States as ToastStates } from '@kit/ui-web/src/Toast/__examples__/States
 import { States as SwitchStates } from '@kit/ui-web/src/Switch/__examples__/States'
 import { States as RadioGroupStates } from '@kit/ui-web/src/RadioGroup/__examples__/States'
 import { States as BadgeStates } from '@kit/ui-web/src/Badge/__examples__/States'
+import { States as TabsStates } from '@kit/ui-web/src/Tabs/__examples__/States'
 
 /**
  * play-web 演示壳入口。
@@ -104,6 +105,11 @@ export default function App() {
       <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
         <h2 className="text-title-sm font-medium text-text-primary">Badge · 徽标</h2>
         <BadgeStates />
+      </section>
+
+      <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
+        <h2 className="text-title-sm font-medium text-text-primary">Tabs · 选项卡</h2>
+        <TabsStates />
       </section>
 
       <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">

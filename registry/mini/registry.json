@@ -789,6 +789,75 @@
       },
       "docs": "packages/ui-mini/src/Badge/README.md",
       "examples": ["packages/ui-mini/src/Badge/__examples__/States.tsx"]
+    },
+    {
+      "name": "tabs",
+      "type": "registry:component",
+      "title": "选项卡 Tabs",
+      "description": "NutUI Tabs+TabPane 受控选项卡（line 下划线），activeColor 传主色变量，scss 全量 token 化，禁用项、内置面板或纯头导航",
+      "canonical": "Tabs",
+      "status": "beta",
+      "stack": "mini",
+      "dependencies": ["@nutui/nutui-react-taro", "@tarojs/components"],
+      "registryDependencies": [],
+      "files": [
+        { "path": "packages/ui-mini/src/Tabs/Tabs.tsx", "type": "registry:component" },
+        { "path": "packages/ui-mini/src/Tabs/Tabs.types.ts", "type": "registry:ui" },
+        { "path": "packages/ui-mini/src/Tabs/Tabs.scss", "type": "registry:ui" },
+        { "path": "packages/ui-mini/src/Tabs/index.ts", "type": "registry:ui" }
+      ],
+      "props": [
+        {
+          "name": "items",
+          "type": "{value:string;label:ReactNode;disabled?:boolean;content?:ReactNode}[]",
+          "required": true,
+          "desc": "选项卡列表（label 仅文本）"
+        },
+        { "name": "value", "type": "string", "required": false, "desc": "受控激活值" },
+        { "name": "defaultValue", "type": "string", "required": false, "desc": "非受控初值" },
+        {
+          "name": "size",
+          "type": "'sm'|'md'",
+          "default": "'md'",
+          "required": false,
+          "desc": "标签头字号"
+        }
+      ],
+      "events": [
+        {
+          "name": "onValueChange",
+          "type": "(value: string) => void",
+          "desc": "激活值变化（NutUI onChange 适配为 string）"
+        }
+      ],
+      "slots": ["items[].label", "items[].content"],
+      "tokens": [
+        "color-primary-default",
+        "color-border-default",
+        "color-text-primary",
+        "color-text-tertiary",
+        "font-size-body-sm",
+        "font-size-body-md",
+        "font-size-caption",
+        "font-weight-medium",
+        "motion-duration-base"
+      ],
+      "states": ["active", "inactive", "disabled"],
+      "a11y": "NutUI Tabs 自带标签栏/面板语义；标签头标题仅支持文本，节点级头需走 title 自定义渲染",
+      "usage": {
+        "do": [
+          "同层级平级内容切换用 Tabs",
+          "activeColor 传主色变量、其余颜色走 scss token",
+          "content 缺省做纯头导航"
+        ],
+        "dont": [
+          "硬编码激活色/底线/字号",
+          "在 label 传复杂节点（mini 仅文本）",
+          "保留 NutUI 默认主题色"
+        ]
+      },
+      "docs": "packages/ui-mini/src/Tabs/README.md",
+      "examples": ["packages/ui-mini/src/Tabs/__examples__/States.tsx"]
     }
   ]
 }

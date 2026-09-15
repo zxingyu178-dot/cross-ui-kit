@@ -850,6 +850,70 @@
       },
       "docs": "packages/ui-native/src/Badge/README.md",
       "examples": ["packages/ui-native/src/Badge/__examples__/States.tsx"]
+    },
+    {
+      "name": "tabs",
+      "type": "registry:component",
+      "title": "选项卡 Tabs",
+      "description": "Tamagui Tabs 受控选项卡（line 下划线），内部统一受控驱动激活下划线/文字色，禁用项、内置面板或纯头导航，全 token",
+      "canonical": "Tabs",
+      "status": "beta",
+      "stack": "native",
+      "dependencies": ["tamagui", "react-native"],
+      "registryDependencies": [],
+      "files": [
+        { "path": "packages/ui-native/src/Tabs/Tabs.tsx", "type": "registry:component" },
+        { "path": "packages/ui-native/src/Tabs/Tabs.types.ts", "type": "registry:ui" },
+        { "path": "packages/ui-native/src/Tabs/index.ts", "type": "registry:ui" }
+      ],
+      "props": [
+        {
+          "name": "items",
+          "type": "{value:string;label:ReactNode;disabled?:boolean;content?:ReactNode}[]",
+          "required": true,
+          "desc": "选项卡列表"
+        },
+        { "name": "value", "type": "string", "required": false, "desc": "受控激活值" },
+        { "name": "defaultValue", "type": "string", "required": false, "desc": "非受控初值" },
+        {
+          "name": "size",
+          "type": "'sm'|'md'",
+          "default": "'md'",
+          "required": false,
+          "desc": "标签头尺寸"
+        },
+        { "name": "accessibilityLabel", "type": "string", "required": false, "desc": "无障碍标签" }
+      ],
+      "events": [
+        { "name": "onValueChange", "type": "(value: string) => void", "desc": "激活值变化" }
+      ],
+      "slots": ["items[].label", "items[].content"],
+      "tokens": [
+        "color-primary-default",
+        "color-border-default",
+        "color-text-primary",
+        "color-text-tertiary",
+        "color-text-disabled",
+        "font-size-body-sm",
+        "font-size-body-md",
+        "font-size-caption",
+        "spacing-1",
+        "spacing-2",
+        "spacing-3",
+        "spacing-4"
+      ],
+      "states": ["active", "inactive", "disabled"],
+      "a11y": "Tamagui 自带 tablist/tab/tabpanel 语义、aria-selected 与方向键焦点管理；非激活面板默认卸载",
+      "usage": {
+        "do": [
+          "同层级平级内容切换用 Tabs",
+          "Tamagui props 上只用 token 字符串",
+          "content 缺省做纯头导航"
+        ],
+        "dont": ["硬编码下划线/激活文字色", "用于层级导航或步骤流", "绕过 Tabs context 自建选中态"]
+      },
+      "docs": "packages/ui-native/src/Tabs/README.md",
+      "examples": ["packages/ui-native/src/Tabs/__examples__/States.tsx"]
     }
   ]
 }

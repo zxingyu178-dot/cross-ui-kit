@@ -1,0 +1,39 @@
+/* Tabs（mini）样式：颜色/字号/底线走 --kit-* token；激活文字与下划线由 activeColor(主色变量) 控制，
+   这里负责未选文字、底线、面板文字与尺寸，并对激活色做兜底。 */
+
+.kit-tabs {
+  /* 标签栏底边线 */
+  .nut-tabs-titles {
+    border-bottom: 1px solid var(--kit-color-border-default);
+  }
+
+  /* 未选标签文字 */
+  .nut-tabs-titles-item .nut-tabs-titles-item-text {
+    color: var(--kit-color-text-tertiary);
+    font-weight: var(--kit-font-weight-medium);
+  }
+
+  /* 激活文字（兜底，activeColor 已传主色变量） */
+  .nut-tabs-titles-item-active .nut-tabs-titles-item-text {
+    color: var(--kit-color-primary-default);
+  }
+
+  /* 激活下划线（兜底） */
+  .nut-tabs-titles-item-active .nut-tabs-titles-item-line {
+    background: var(--kit-color-primary-default);
+  }
+
+  /* 面板文字 */
+  .nut-tabs-content .nut-tabpane {
+    color: var(--kit-color-text-primary);
+    font-size: var(--kit-font-size-body-md);
+  }
+
+  /* 尺寸（标签头字号） */
+  &.kit-tabs--md .nut-tabs-titles-item-text {
+    font-size: var(--kit-font-size-body-sm);
+  }
+  &.kit-tabs--sm .nut-tabs-titles-item-text {
+    font-size: var(--kit-font-size-caption);
+  }
+}

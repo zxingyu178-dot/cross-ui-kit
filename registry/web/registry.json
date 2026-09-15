@@ -806,6 +806,71 @@
       },
       "docs": "packages/ui-web/src/Badge/README.md",
       "examples": ["packages/ui-web/src/Badge/__examples__/States.tsx"]
+    },
+    {
+      "name": "tabs",
+      "type": "registry:component",
+      "title": "选项卡 Tabs",
+      "description": "Radix react-tabs 受控选项卡（line 下划线形态），items 数据驱动、受控/非受控、禁用项、内置面板或纯头导航、暗色",
+      "canonical": "Tabs",
+      "status": "beta",
+      "stack": "web",
+      "dependencies": ["@radix-ui/react-tabs", "@kit/core"],
+      "registryDependencies": [],
+      "files": [
+        { "path": "packages/ui-web/src/Tabs/Tabs.tsx", "type": "registry:component" },
+        { "path": "packages/ui-web/src/Tabs/Tabs.types.ts", "type": "registry:ui" },
+        { "path": "packages/ui-web/src/Tabs/index.ts", "type": "registry:ui" }
+      ],
+      "props": [
+        {
+          "name": "items",
+          "type": "{value:string;label:ReactNode;disabled?:boolean;content?:ReactNode}[]",
+          "required": true,
+          "desc": "选项卡列表"
+        },
+        { "name": "value", "type": "string", "required": false, "desc": "受控激活值" },
+        { "name": "defaultValue", "type": "string", "required": false, "desc": "非受控初值" },
+        {
+          "name": "size",
+          "type": "'sm'|'md'",
+          "default": "'md'",
+          "required": false,
+          "desc": "标签头尺寸"
+        }
+      ],
+      "events": [
+        { "name": "onValueChange", "type": "(value: string) => void", "desc": "激活值变化" }
+      ],
+      "slots": ["items[].label", "items[].content"],
+      "tokens": [
+        "color-primary-default",
+        "color-border-default",
+        "color-border-focus",
+        "color-text-primary",
+        "color-text-tertiary",
+        "color-text-disabled",
+        "font-size-body-sm",
+        "font-size-body-md",
+        "font-size-caption",
+        "motion-duration-fast"
+      ],
+      "states": ["active", "inactive", "disabled"],
+      "a11y": "Radix 自带 role=tablist/tab/tabpanel、aria-selected 与左右方向键切换；非激活面板默认卸载",
+      "usage": {
+        "do": [
+          "同层级平级内容切换用 Tabs",
+          "items 数据驱动，受控 value/onValueChange",
+          "content 缺省做纯头导航、内容外部渲染"
+        ],
+        "dont": [
+          "硬编码下划线/激活文字色",
+          "用于层级导航或步骤流（用面包屑/步骤条）",
+          "在业务里临时手写标签头"
+        ]
+      },
+      "docs": "packages/ui-web/src/Tabs/README.md",
+      "examples": ["packages/ui-web/src/Tabs/__examples__/States.tsx"]
     }
   ]
 }

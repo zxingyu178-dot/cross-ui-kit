@@ -204,6 +204,26 @@
       }
     },
     {
+      "canonical": "Tabs",
+      "category": "navigation",
+      "sharedProps": {
+        "items": "TabItem[] { value, label, disabled?, content? }",
+        "value": "string",
+        "defaultValue": "string",
+        "size": "sm|md"
+      },
+      "eventMap": {
+        "web": "Radix onValueChange(string)",
+        "mini": "NutUI onChange(SimpleValue) -> String -> onValueChange",
+        "native": "Tamagui onValueChange(string)"
+      },
+      "stacks": {
+        "web": { "item": "@kit/web-tabs", "status": "beta" },
+        "mini": { "item": "@kit/mini-tabs", "status": "beta" },
+        "native": { "item": "@kit/native-tabs", "status": "beta" }
+      }
+    },
+    {
       "canonical": "DataTable",
       "category": "data",
       "sharedProps": {
