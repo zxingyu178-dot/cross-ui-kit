@@ -1,0 +1,140 @@
+/* Steps 步骤条（mini）——颜色/尺寸全走 --kit-* token；胶囊/圆点圆角为结构值。 */
+
+.kit-steps {
+  box-sizing: border-box;
+  width: 100%;
+}
+
+/* ---- 横向 ---- */
+.kit-steps--horizontal {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+.kit-step--horizontal {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  flex: 1;
+  min-width: 0;
+}
+.kit-step__main--horizontal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+}
+.kit-step__main--clickable {
+  cursor: pointer;
+}
+.kit-step__body--horizontal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 8px;
+  text-align: center;
+}
+.kit-connector--horizontal {
+  flex: 1;
+  height: 2px;
+  min-width: 12px;
+  margin: 13px 4px 0;
+  border-radius: 1px;
+  background: var(--kit-color-border-default);
+}
+
+/* ---- 纵向 ---- */
+.kit-steps--vertical {
+  display: flex;
+  flex-direction: column;
+}
+.kit-step--vertical {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+.kit-step__rail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+}
+.kit-step__rail-main--clickable {
+  cursor: pointer;
+}
+.kit-connector--vertical {
+  width: 2px;
+  flex: 1;
+  min-height: 20px;
+  margin: 2px 0;
+  border-radius: 1px;
+  background: var(--kit-color-border-default);
+}
+.kit-step__body-wrap {
+  flex: 1;
+  padding-bottom: 20px;
+  min-width: 0;
+}
+.kit-step__body--vertical {
+  display: flex;
+  flex-direction: column;
+  margin-left: 12px;
+}
+
+/* ---- 圆点指示器（28px） ---- */
+.kit-step__indicator {
+  width: 28px;
+  height: 28px;
+  box-sizing: border-box;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: var(--kit-font-size-body-sm);
+  font-weight: var(--kit-font-weight-medium);
+}
+.kit-step__indicator--finish {
+  background: var(--kit-color-primary-default);
+  color: var(--kit-color-primary-text);
+}
+.kit-step__indicator--process {
+  background: var(--kit-color-bg-card);
+  border: 2px solid var(--kit-color-primary-default);
+  color: var(--kit-color-primary-default);
+}
+.kit-step__indicator--wait {
+  background: var(--kit-color-bg-active);
+  color: var(--kit-color-text-tertiary);
+}
+.kit-step__indicator--error {
+  background: var(--kit-color-danger-bg);
+  color: var(--kit-color-danger-default);
+}
+
+/* ---- 标题 / 描述 ---- */
+.kit-step__title {
+  font-size: var(--kit-font-size-body-sm);
+  color: var(--kit-color-text-primary);
+  line-height: 1.4;
+}
+.kit-step__title--process {
+  font-weight: var(--kit-font-weight-medium);
+}
+.kit-step__title--wait {
+  color: var(--kit-color-text-tertiary);
+}
+.kit-step__title--error {
+  color: var(--kit-color-danger-default);
+}
+.kit-step__desc {
+  margin-top: 2px;
+  font-size: var(--kit-font-size-caption);
+  color: var(--kit-color-text-tertiary);
+  line-height: 1.4;
+}
+
+/* ---- 连线完成态 ---- */
+.kit-connector--active {
+  background: var(--kit-color-primary-default);
+}

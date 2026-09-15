@@ -431,6 +431,26 @@
         "mini": { "item": "@kit/mini-tag", "status": "beta" },
         "native": { "item": "@kit/native-tag", "status": "beta" }
       }
+    },
+    {
+      "canonical": "Steps",
+      "category": "navigation",
+      "sharedProps": {
+        "items": "{title:ReactNode;description?:ReactNode;status?:StepStatus}[]（步骤列表）",
+        "current": "number（当前步骤索引，默认 0，状态由 core deriveStepStatus 推导）",
+        "direction": "'horizontal'|'vertical'（默认 horizontal）",
+        "StepStatus": "'wait'|'process'|'finish'|'error'（item.status 可覆盖推导）"
+      },
+      "eventMap": {
+        "web": "onChange(index)（点击 finish 步骤回溯，role=button，Enter/Space 可触发）",
+        "mini": "onChange(index)（点击 finish 步骤 onTap 回溯）",
+        "native": "onChange(index)（点击 finish 步骤 onPress 回溯，accessibilityRole=button）"
+      },
+      "stacks": {
+        "web": { "item": "@kit/web-steps", "status": "beta" },
+        "mini": { "item": "@kit/mini-steps", "status": "beta" },
+        "native": { "item": "@kit/native-steps", "status": "beta" }
+      }
     }
   ]
 }

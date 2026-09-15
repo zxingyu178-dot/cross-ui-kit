@@ -1512,6 +1512,78 @@
       },
       "docs": "packages/ui-mini/src/Tag/README.md",
       "examples": ["packages/ui-mini/src/Tag/__examples__/States.tsx"]
+    },
+    {
+      "name": "steps",
+      "type": "registry:component",
+      "title": "步骤条 Steps",
+      "description": "Taro View/Text 横向/纵向步骤条（Steps.scss token 化），状态由 core deriveStepStatus 推导，圆点+连线，finish 可点回溯",
+      "canonical": "Steps",
+      "status": "beta",
+      "stack": "mini",
+      "dependencies": ["@tarojs/components", "@kit/core"],
+      "registryDependencies": [],
+      "files": [
+        { "path": "packages/ui-mini/src/Steps/Steps.tsx", "type": "registry:component" },
+        { "path": "packages/ui-mini/src/Steps/Steps.types.ts", "type": "registry:ui" },
+        { "path": "packages/ui-mini/src/Steps/Steps.scss", "type": "registry:ui" },
+        { "path": "packages/ui-mini/src/Steps/index.ts", "type": "registry:ui" }
+      ],
+      "props": [
+        {
+          "name": "items",
+          "type": "{title:ReactNode;description?:ReactNode;status?:StepStatus}[]",
+          "required": true,
+          "desc": "步骤列表"
+        },
+        {
+          "name": "current",
+          "type": "number",
+          "required": false,
+          "default": "0",
+          "desc": "当前步骤索引"
+        },
+        {
+          "name": "direction",
+          "type": "'horizontal'|'vertical'",
+          "required": false,
+          "default": "'horizontal'",
+          "desc": "排列方向"
+        },
+        {
+          "name": "onChange",
+          "type": "(index:number)=>void",
+          "required": false,
+          "desc": "点击已完成步骤回溯"
+        }
+      ],
+      "events": [
+        {
+          "name": "onChange",
+          "type": "(index: number) => void",
+          "desc": "回溯到已完成步骤（onTap）"
+        }
+      ],
+      "slots": ["items[].title", "items[].description"],
+      "tokens": [
+        "color-primary-default",
+        "color-primary-text",
+        "color-bg-active",
+        "color-bg-card",
+        "color-danger-bg",
+        "color-danger-default",
+        "color-border-default",
+        "font-size-body-sm",
+        "font-size-caption"
+      ],
+      "states": ["wait", "process", "finish", "error"],
+      "a11y": "finish 步骤点击区绑 onTap；节点语义由壳工程补充无障碍标注",
+      "usage": {
+        "do": ["状态交给 current 推导", "错误用 item.status 覆盖"],
+        "dont": ["在视图手写状态判断", "硬编码圆点/连线颜色"]
+      },
+      "docs": "packages/ui-mini/src/Steps/README.md",
+      "examples": ["packages/ui-mini/src/Steps/__examples__/States.tsx"]
     }
   ]
 }
