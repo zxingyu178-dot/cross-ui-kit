@@ -1,0 +1,72 @@
+/* Card 卡片（mini）——容器与分区，全部引用 kit token 变量 */
+
+.kit-card {
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  border: 1px solid var(--kit-color-border-default);
+  border-radius: var(--kit-radius-lg);
+  background-color: var(--kit-color-bg-card);
+}
+
+/* elevated：H5 生效 box-shadow；小程序不支持时降级为描边卡片 */
+.kit-card--elevated {
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
+}
+
+.kit-card__header {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  box-sizing: border-box;
+  padding: 20px 24px 16px;
+}
+
+.kit-card__header-main {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 4px;
+  min-width: 0;
+}
+
+.kit-card__action {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-shrink: 0;
+  gap: 8px;
+}
+
+.kit-card__title {
+  display: block;
+  font-size: var(--kit-font-size-title-sm);
+  font-weight: var(--kit-font-weight-medium);
+  color: var(--kit-color-text-primary);
+}
+
+.kit-card__desc {
+  display: block;
+  margin-top: 4px;
+  font-size: var(--kit-font-size-caption);
+  color: var(--kit-color-text-tertiary);
+}
+
+.kit-card__content {
+  box-sizing: border-box;
+  padding: 16px 24px;
+  font-size: var(--kit-font-size-body-sm);
+  color: var(--kit-color-text-primary);
+}
+
+.kit-card__footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  box-sizing: border-box;
+  padding: 16px 24px;
+  border-top: 1px solid var(--kit-color-border-default);
+}

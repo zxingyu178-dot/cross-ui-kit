@@ -366,6 +366,27 @@
         "mini": { "item": "@kit/mini-state-container", "status": "beta" },
         "native": { "item": "@kit/native-state-container", "status": "beta" }
       }
+    },
+    {
+      "canonical": "Card",
+      "category": "data-display",
+      "sharedProps": {
+        "variant": "'outlined'|'elevated'（默认 outlined，elevated 投影）",
+        "CardHeader.title": "ReactNode（头部标题）",
+        "CardHeader.description": "ReactNode（头部次要描述）",
+        "CardHeader.action": "ReactNode（头部右侧操作区）",
+        "children": "ReactNode（组合 CardContent/CardFooter 等子件）"
+      },
+      "eventMap": {
+        "web": "无事件（纯容器，可点击由业务包裹）",
+        "mini": "无事件（纯容器，可点击由业务包裹）",
+        "native": "无事件（纯容器，可点击由业务包裹）"
+      },
+      "stacks": {
+        "web": { "item": "@kit/web-card", "status": "beta" },
+        "mini": { "item": "@kit/mini-card", "status": "beta" },
+        "native": { "item": "@kit/native-card", "status": "beta" }
+      }
     }
   ]
 }

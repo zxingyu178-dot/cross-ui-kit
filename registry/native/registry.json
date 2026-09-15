@@ -1327,6 +1327,68 @@
       },
       "docs": "packages/ui-native/src/StateContainer/README.md",
       "examples": ["packages/ui-native/src/StateContainer/__examples__/States.tsx"]
+    },
+    {
+      "name": "card",
+      "type": "registry:component",
+      "title": "卡片 Card",
+      "description": "Tamagui 组合式内容容器，含 Header(title/description/action)/Title/Description/Content/Footer，variant outlined/elevated(elevation)，颜色全 token",
+      "canonical": "Card",
+      "status": "beta",
+      "stack": "native",
+      "dependencies": ["tamagui"],
+      "registryDependencies": [],
+      "files": [
+        { "path": "packages/ui-native/src/Card/Card.tsx", "type": "registry:component" },
+        { "path": "packages/ui-native/src/Card/Card.types.ts", "type": "registry:ui" },
+        { "path": "packages/ui-native/src/Card/index.ts", "type": "registry:ui" }
+      ],
+      "props": [
+        {
+          "name": "variant",
+          "type": "'outlined'|'elevated'",
+          "required": false,
+          "default": "'outlined'",
+          "desc": "描边 / 投影（elevated 用 elevation）"
+        },
+        { "name": "CardHeader.title", "type": "ReactNode", "required": false, "desc": "头部标题" },
+        {
+          "name": "CardHeader.description",
+          "type": "ReactNode",
+          "required": false,
+          "desc": "头部次要描述"
+        },
+        {
+          "name": "CardHeader.action",
+          "type": "ReactNode",
+          "required": false,
+          "desc": "头部右侧操作区"
+        },
+        { "name": "children", "type": "ReactNode", "required": false, "desc": "卡片内容" }
+      ],
+      "events": [],
+      "slots": ["children", "header.title", "header.description", "header.action"],
+      "tokens": [
+        "radius-lg",
+        "color-border-default",
+        "color-bg-card",
+        "font-size-title-sm",
+        "font-size-caption",
+        "color-text-primary",
+        "color-text-tertiary"
+      ],
+      "states": ["normal"],
+      "a11y": "纯容器；标题/描述为 Text 自然朗读",
+      "usage": {
+        "do": [
+          "用 Card 承载列表/详情/表单/统计区块",
+          "操作放 Header action 或 Footer",
+          "颜色只用 token 字符串"
+        ],
+        "dont": ["硬编码颜色/圆角/阴影", "把 Card 当一次性 View 重写样式", "在卡片内发请求"]
+      },
+      "docs": "packages/ui-native/src/Card/README.md",
+      "examples": ["packages/ui-native/src/Card/__examples__/States.tsx"]
     }
   ]
 }

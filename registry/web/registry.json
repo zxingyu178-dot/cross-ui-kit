@@ -1323,6 +1323,78 @@
       },
       "docs": "packages/ui-web/src/StateContainer/README.md",
       "examples": ["packages/ui-web/src/StateContainer/__examples__/States.tsx"]
+    },
+    {
+      "name": "card",
+      "type": "registry:component",
+      "title": "卡片 Card",
+      "description": "组合式内容容器，含 Card/CardHeader(title/description/action)/CardTitle/CardDescription/CardContent/CardFooter，variant outlined/elevated，全 token、暗色",
+      "canonical": "Card",
+      "status": "beta",
+      "stack": "web",
+      "dependencies": ["@kit/core"],
+      "registryDependencies": [],
+      "files": [
+        { "path": "packages/ui-web/src/Card/Card.tsx", "type": "registry:component" },
+        { "path": "packages/ui-web/src/Card/Card.types.ts", "type": "registry:ui" },
+        { "path": "packages/ui-web/src/Card/index.ts", "type": "registry:ui" }
+      ],
+      "props": [
+        {
+          "name": "variant",
+          "type": "'outlined'|'elevated'",
+          "required": false,
+          "default": "'outlined'",
+          "desc": "描边 / 投影"
+        },
+        { "name": "CardHeader.title", "type": "ReactNode", "required": false, "desc": "头部标题" },
+        {
+          "name": "CardHeader.description",
+          "type": "ReactNode",
+          "required": false,
+          "desc": "头部次要描述"
+        },
+        {
+          "name": "CardHeader.action",
+          "type": "ReactNode",
+          "required": false,
+          "desc": "头部右侧操作区"
+        },
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "required": false,
+          "desc": "卡片内容（组合 Header/Content/Footer）"
+        }
+      ],
+      "events": [],
+      "slots": ["children", "header.title", "header.description", "header.action"],
+      "tokens": [
+        "radius-lg",
+        "color-border-default",
+        "color-bg-card",
+        "shadow-card",
+        "font-size-title-sm",
+        "font-size-caption",
+        "color-text-primary",
+        "color-text-tertiary"
+      ],
+      "states": ["normal"],
+      "a11y": "纯容器无语义负担；标题/描述为文本节点自然朗读；需要文章/分组语义时由业务包 section/article 或加 aria-label",
+      "usage": {
+        "do": [
+          "用 Card 承载列表/详情/表单/统计区块",
+          "操作放 Header action 或 Footer",
+          "间距用 Header/Content/Footer 固定分区"
+        ],
+        "dont": [
+          "在 Card 内硬编码颜色/圆角/阴影",
+          "把 Card 当一次性 div 重写样式",
+          "在卡片内发请求"
+        ]
+      },
+      "docs": "packages/ui-web/src/Card/README.md",
+      "examples": ["packages/ui-web/src/Card/__examples__/States.tsx"]
     }
   ]
 }
