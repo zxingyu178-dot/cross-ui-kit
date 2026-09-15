@@ -1085,6 +1085,74 @@
       },
       "docs": "packages/ui-web/src/Spinner/README.md",
       "examples": ["packages/ui-web/src/Spinner/__examples__/States.tsx"]
+    },
+    {
+      "name": "empty",
+      "type": "registry:component",
+      "title": "空态 Empty",
+      "description": "四态之 empty：无数据占位，居中组合 图标+标题+描述+可选操作；默认中性空文档几何图形，icon/action 为 slot，全 token、暗色",
+      "canonical": "Empty",
+      "status": "beta",
+      "stack": "web",
+      "dependencies": ["@kit/core"],
+      "registryDependencies": [],
+      "files": [
+        { "path": "packages/ui-web/src/Empty/Empty.tsx", "type": "registry:component" },
+        { "path": "packages/ui-web/src/Empty/Empty.types.ts", "type": "registry:ui" },
+        { "path": "packages/ui-web/src/Empty/index.ts", "type": "registry:ui" }
+      ],
+      "props": [
+        { "name": "title", "type": "ReactNode", "required": false, "desc": "主说明，弱化居中" },
+        {
+          "name": "description",
+          "type": "ReactNode",
+          "required": false,
+          "desc": "次要描述，最大宽 280"
+        },
+        {
+          "name": "icon",
+          "type": "ReactNode",
+          "required": false,
+          "desc": "自定义图标/插画，替换默认空文档图形"
+        },
+        {
+          "name": "action",
+          "type": "ReactNode",
+          "required": false,
+          "desc": "操作区 slot，通常放 Button"
+        },
+        {
+          "name": "accessibilityLabel",
+          "type": "string",
+          "required": false,
+          "desc": "映射 aria-label"
+        }
+      ],
+      "events": [],
+      "slots": ["icon", "action"],
+      "tokens": [
+        "color-bg-active",
+        "color-text-secondary",
+        "color-text-tertiary",
+        "color-primary-bg",
+        "color-primary-default",
+        "radius-md",
+        "radius-full",
+        "font-size-body-md",
+        "font-size-caption"
+      ],
+      "states": ["empty"],
+      "a11y": "标题/描述文本可被读屏自然朗读；可选 accessibilityLabel 映射 aria-label；默认装饰图形 aria-hidden",
+      "usage": {
+        "do": [
+          "无列表/无搜索结果/空收藏用 Empty",
+          "操作按钮经 action slot 传入",
+          "搜索/断网/错误经 icon 传对应图形"
+        ],
+        "dont": ["在业务里内联空态布局", "在 Empty 内发请求或写状态分支", "硬编码颜色/尺寸"]
+      },
+      "docs": "packages/ui-web/src/Empty/README.md",
+      "examples": ["packages/ui-web/src/Empty/__examples__/States.tsx"]
     }
   ]
 }

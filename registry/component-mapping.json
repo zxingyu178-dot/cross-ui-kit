@@ -285,6 +285,27 @@
       }
     },
     {
+      "canonical": "Empty",
+      "category": "feedback",
+      "sharedProps": {
+        "title": "ReactNode（主说明）",
+        "description": "ReactNode（次要描述，最大宽 280）",
+        "icon": "ReactNode slot（替换默认空文档图形）",
+        "action": "ReactNode slot（操作区，通常放 Button）",
+        "accessibilityLabel": "string（无障碍标签）"
+      },
+      "eventMap": {
+        "web": "无事件（纯组合占位，操作经 action slot 内按钮抛出）",
+        "mini": "无事件（纯组合占位，操作经 action slot 内按钮抛出）",
+        "native": "无事件（纯组合占位，操作经 action slot 内按钮抛出）"
+      },
+      "stacks": {
+        "web": { "item": "@kit/web-empty", "status": "beta" },
+        "mini": { "item": "@kit/mini-empty", "status": "beta" },
+        "native": { "item": "@kit/native-empty", "status": "beta" }
+      }
+    },
+    {
       "canonical": "DataTable",
       "category": "data",
       "sharedProps": {

@@ -1063,6 +1063,74 @@
       },
       "docs": "packages/ui-mini/src/Spinner/README.md",
       "examples": ["packages/ui-mini/src/Spinner/__examples__/States.tsx"]
+    },
+    {
+      "name": "empty",
+      "type": "registry:component",
+      "title": "空态 Empty",
+      "description": "四态之 empty：Taro View/Text 组合 图标+标题+描述+可选操作，默认空文档几何图形（Empty.scss token 化），icon/action 为 slot",
+      "canonical": "Empty",
+      "status": "beta",
+      "stack": "mini",
+      "dependencies": ["@tarojs/components", "@kit/core"],
+      "registryDependencies": [],
+      "files": [
+        { "path": "packages/ui-mini/src/Empty/Empty.tsx", "type": "registry:component" },
+        { "path": "packages/ui-mini/src/Empty/Empty.types.ts", "type": "registry:ui" },
+        { "path": "packages/ui-mini/src/Empty/Empty.scss", "type": "registry:ui" },
+        { "path": "packages/ui-mini/src/Empty/index.ts", "type": "registry:ui" }
+      ],
+      "props": [
+        { "name": "title", "type": "ReactNode", "required": false, "desc": "主说明，弱化居中" },
+        {
+          "name": "description",
+          "type": "ReactNode",
+          "required": false,
+          "desc": "次要描述，最大宽 280"
+        },
+        {
+          "name": "icon",
+          "type": "ReactNode",
+          "required": false,
+          "desc": "自定义图标/插画，替换默认图形"
+        },
+        {
+          "name": "action",
+          "type": "ReactNode",
+          "required": false,
+          "desc": "操作区 slot，通常放 Button"
+        },
+        {
+          "name": "accessibilityLabel",
+          "type": "string",
+          "required": false,
+          "desc": "H5 映射 aria-label"
+        }
+      ],
+      "events": [],
+      "slots": ["icon", "action"],
+      "tokens": [
+        "color-bg-active",
+        "color-text-secondary",
+        "color-text-tertiary",
+        "color-primary-bg",
+        "color-primary-default",
+        "radius-md",
+        "font-size-body-md",
+        "font-size-caption"
+      ],
+      "states": ["empty"],
+      "a11y": "标题/描述文本自然朗读；H5 下 accessibilityLabel 映射 aria-label",
+      "usage": {
+        "do": [
+          "无列表/无搜索结果/空收藏用 Empty",
+          "操作按钮经 action slot 传入",
+          "颜色走 scss token"
+        ],
+        "dont": ["在业务里内联空态布局", "在 Empty 内发请求", "硬编码颜色/尺寸"]
+      },
+      "docs": "packages/ui-mini/src/Empty/README.md",
+      "examples": ["packages/ui-mini/src/Empty/__examples__/States.tsx"]
     }
   ]
 }

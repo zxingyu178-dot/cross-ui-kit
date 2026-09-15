@@ -1,0 +1,74 @@
+/* Empty 空态（mini）——布局与默认几何图形，颜色/字号/圆角引用 kit token 变量 */
+
+.kit-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 40px 24px;
+  text-align: center;
+}
+
+.kit-empty__figure {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+/* 默认图形：圆底 96（=3×control-height-sm 32） */
+.kit-empty__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 96px;
+  height: 96px;
+  border-radius: 999px;
+  background-color: var(--kit-color-bg-active);
+}
+
+/* 空文档轮廓 38×34，描边 2px */
+.kit-empty__doc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 38px;
+  height: 34px;
+  border: 2px solid var(--kit-color-text-tertiary);
+  border-radius: var(--kit-radius-md);
+}
+
+/* 文档内横线 16×2 */
+.kit-empty__line {
+  width: 16px;
+  height: 2px;
+  border-radius: 999px;
+  background-color: var(--kit-color-text-tertiary);
+}
+
+.kit-empty__title {
+  display: block;
+  font-size: var(--kit-font-size-body-md);
+  color: var(--kit-color-text-secondary);
+  text-align: center;
+}
+
+.kit-empty__desc {
+  display: block;
+  margin-top: 4px;
+  max-width: 280px;
+  font-size: var(--kit-font-size-caption);
+  line-height: 1.5;
+  color: var(--kit-color-text-tertiary);
+  text-align: center;
+}
+
+.kit-empty__action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
