@@ -22,6 +22,7 @@
     "@radix-ui/react-dialog": "catalog:web",
     "@radix-ui/react-toast": "catalog:web",
     "@radix-ui/react-switch": "catalog:web",
+    "@radix-ui/react-radio-group": "catalog:web",
     "@radix-ui/react-slot": "catalog:web",
     "class-variance-authority": "catalog:web",
     "clsx": "catalog:",

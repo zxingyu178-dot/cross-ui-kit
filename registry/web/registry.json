@@ -635,6 +635,89 @@
       },
       "docs": "packages/ui-web/src/Switch/README.md",
       "examples": ["packages/ui-web/src/Switch/__examples__/States.tsx"]
+    },
+    {
+      "name": "radio-group",
+      "type": "registry:component",
+      "title": "单选组 RadioGroup",
+      "description": "Radix radio-group 受控单选组（互斥），options 数据驱动，竖向/横向、sm/md 尺寸、单项与整组禁用、暗色",
+      "canonical": "RadioGroup",
+      "status": "beta",
+      "stack": "web",
+      "dependencies": ["@radix-ui/react-radio-group", "@kit/core"],
+      "registryDependencies": [],
+      "files": [
+        { "path": "packages/ui-web/src/RadioGroup/RadioGroup.tsx", "type": "registry:component" },
+        { "path": "packages/ui-web/src/RadioGroup/RadioGroup.types.ts", "type": "registry:ui" },
+        { "path": "packages/ui-web/src/RadioGroup/index.ts", "type": "registry:ui" }
+      ],
+      "props": [
+        {
+          "name": "options",
+          "type": "{value:string;label:ReactNode;disabled?:boolean}[]",
+          "required": true,
+          "desc": "选项列表"
+        },
+        { "name": "value", "type": "string", "required": false, "desc": "受控选中值" },
+        { "name": "defaultValue", "type": "string", "required": false, "desc": "非受控初值" },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "default": "false",
+          "required": false,
+          "desc": "整组禁用"
+        },
+        {
+          "name": "direction",
+          "type": "'vertical'|'horizontal'",
+          "default": "'vertical'",
+          "required": false,
+          "desc": "排列方向（横向换行）"
+        },
+        {
+          "name": "size",
+          "type": "'sm'|'md'",
+          "default": "'md'",
+          "required": false,
+          "desc": "圆圈/内点尺寸"
+        }
+      ],
+      "events": [
+        {
+          "name": "onValueChange",
+          "type": "(value: string) => void",
+          "desc": "选中值变化（string 值回调）"
+        }
+      ],
+      "slots": ["options[].label"],
+      "tokens": [
+        "color-primary-default",
+        "color-bg-card",
+        "color-bg-hover",
+        "color-border-default",
+        "color-border-focus",
+        "color-text-primary",
+        "color-text-disabled",
+        "font-size-body-md",
+        "icon-size-sm",
+        "icon-size-md"
+      ],
+      "states": ["unselected", "selected", "disabled"],
+      "a11y": "Radix 自带 role=radiogroup/radio、aria-checked、方向键组内移动；选项用原生 label 关联，可点文字选中",
+      "usage": {
+        "do": [
+          "options 数据驱动，受控 value/onValueChange",
+          "互斥单选用 RadioGroup、多选用 Checkbox、开关设置用 Switch",
+          "圆圈/内点颜色只用 token"
+        ],
+        "dont": [
+          "在业务里手写一次性单选圆圈",
+          "硬编码圆圈/内点颜色或尺寸",
+          "用再次点击取消单选（单选不可取消）"
+        ]
+      },
+      "docs": "packages/ui-web/src/RadioGroup/README.md",
+      "examples": ["packages/ui-web/src/RadioGroup/__examples__/States.tsx"]
     }
   ]
 }

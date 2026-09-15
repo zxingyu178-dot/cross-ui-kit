@@ -1,0 +1,75 @@
+/* RadioGroup（mini）样式：颜色/圆角/文字走 --kit-* token；圆圈结构尺寸与 web 档对齐
+   （md 圆圈 20 / 内点 10，sm 圆圈 16 / 内点 8）。 */
+
+/* 组排列与间距 */
+.kit-radio-group--vertical .nut-radio {
+  margin-bottom: var(--kit-spacing-3);
+}
+.kit-radio-group--vertical .nut-radio:last-child {
+  margin-bottom: 0;
+}
+.kit-radio-group--horizontal {
+  display: flex;
+  flex-wrap: wrap;
+}
+.kit-radio-group--horizontal .nut-radio {
+  margin-right: var(--kit-spacing-4);
+  margin-bottom: var(--kit-spacing-2);
+}
+
+.kit-radio {
+  display: inline-flex;
+  align-items: center;
+}
+
+/* 圆圈 */
+.kit-radio__circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  background: var(--kit-color-bg-card);
+  border: 1px solid var(--kit-color-border-default);
+  border-radius: 50%;
+}
+.kit-radio__circle--md {
+  width: var(--kit-icon-size-md);
+  height: var(--kit-icon-size-md);
+}
+.kit-radio__circle--sm {
+  width: var(--kit-icon-size-sm);
+  height: var(--kit-icon-size-sm);
+}
+.kit-radio__circle--checked {
+  border-color: var(--kit-color-primary-default);
+}
+
+/* 内点（结构尺寸与 web 对齐） */
+.kit-radio__dot {
+  border-radius: 50%;
+  background: var(--kit-color-primary-default);
+}
+.kit-radio__dot--md {
+  width: 10px;
+  height: 10px;
+}
+.kit-radio__dot--sm {
+  width: 8px;
+  height: 8px;
+}
+
+/* 禁用态：NutUI 给禁用项加 .nut-radio--disabled */
+.kit-radio.nut-radio--disabled .kit-radio__circle {
+  background: var(--kit-color-bg-hover);
+}
+
+/* 文本 */
+.kit-radio__label {
+  font-size: var(--kit-font-size-body-md);
+  line-height: 1.5;
+  color: var(--kit-color-text-primary);
+}
+.kit-radio__label--disabled {
+  color: var(--kit-color-text-disabled);
+}

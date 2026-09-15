@@ -9,6 +9,7 @@ import { States as SelectStates } from '@kit/ui-web/src/Select/__examples__/Stat
 import { States as DialogStates } from '@kit/ui-web/src/Dialog/__examples__/States'
 import { States as ToastStates } from '@kit/ui-web/src/Toast/__examples__/States'
 import { States as SwitchStates } from '@kit/ui-web/src/Switch/__examples__/States'
+import { States as RadioGroupStates } from '@kit/ui-web/src/RadioGroup/__examples__/States'
 
 /**
  * play-web 演示壳入口。
@@ -92,6 +93,11 @@ export default function App() {
       <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
         <h2 className="text-title-sm font-medium text-text-primary">Switch · 开关</h2>
         <SwitchStates />
+      </section>
+
+      <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
+        <h2 className="text-title-sm font-medium text-text-primary">RadioGroup · 单选组</h2>
+        <RadioGroupStates />
       </section>
 
       <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">

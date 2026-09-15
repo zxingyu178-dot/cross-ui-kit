@@ -162,6 +162,28 @@
       }
     },
     {
+      "canonical": "RadioGroup",
+      "category": "form",
+      "sharedProps": {
+        "options": "RadioOption[] { value, label, disabled? }",
+        "value": "string",
+        "defaultValue": "string",
+        "disabled": "boolean",
+        "direction": "vertical|horizontal",
+        "size": "sm|md"
+      },
+      "eventMap": {
+        "web": "Radix onValueChange(string)",
+        "mini": "NutUI onChange(SimpleValue) -> String -> onValueChange",
+        "native": "Tamagui onValueChange(string)"
+      },
+      "stacks": {
+        "web": { "item": "@kit/web-radio-group", "status": "beta" },
+        "mini": { "item": "@kit/mini-radio-group", "status": "beta" },
+        "native": { "item": "@kit/native-radio-group", "status": "beta" }
+      }
+    },
+    {
       "canonical": "DataTable",
       "category": "data",
       "sharedProps": {

@@ -684,6 +684,93 @@
       },
       "docs": "packages/ui-native/src/Switch/README.md",
       "examples": ["packages/ui-native/src/Switch/__examples__/States.tsx"]
+    },
+    {
+      "name": "radio-group",
+      "type": "registry:component",
+      "title": "单选组 RadioGroup",
+      "description": "Tamagui RadioGroup+Item+Indicator 受控单选组（互斥），options 数据驱动，竖向/横向、sm/md、禁用，Label 关联",
+      "canonical": "RadioGroup",
+      "status": "beta",
+      "stack": "native",
+      "dependencies": ["tamagui", "react-native"],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "packages/ui-native/src/RadioGroup/RadioGroup.tsx",
+          "type": "registry:component"
+        },
+        { "path": "packages/ui-native/src/RadioGroup/RadioGroup.types.ts", "type": "registry:ui" },
+        { "path": "packages/ui-native/src/RadioGroup/index.ts", "type": "registry:ui" }
+      ],
+      "props": [
+        {
+          "name": "options",
+          "type": "{value:string;label:ReactNode;disabled?:boolean}[]",
+          "required": true,
+          "desc": "选项列表"
+        },
+        { "name": "value", "type": "string", "required": false, "desc": "受控选中值" },
+        { "name": "defaultValue", "type": "string", "required": false, "desc": "非受控初值" },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "default": "false",
+          "required": false,
+          "desc": "整组禁用（单项走 options）"
+        },
+        {
+          "name": "direction",
+          "type": "'vertical'|'horizontal'",
+          "default": "'vertical'",
+          "required": false,
+          "desc": "排列方向（横向换行）"
+        },
+        {
+          "name": "size",
+          "type": "'sm'|'md'",
+          "default": "'md'",
+          "required": false,
+          "desc": "圆圈 20/内点 10；sm 16/8"
+        },
+        {
+          "name": "accessibilityLabel",
+          "type": "string",
+          "required": false,
+          "desc": "无障碍组标签"
+        }
+      ],
+      "events": [
+        {
+          "name": "onValueChange",
+          "type": "(value: string) => void",
+          "desc": "选中值变化（string 值回调）"
+        }
+      ],
+      "slots": ["options[].label"],
+      "tokens": [
+        "color-primary-default",
+        "color-bg-card",
+        "color-border-default",
+        "color-text-primary",
+        "color-text-disabled",
+        "font-size-body-md",
+        "spacing-2",
+        "spacing-3",
+        "spacing-4"
+      ],
+      "states": ["unselected", "selected", "disabled"],
+      "a11y": "Tamagui 自带 radiogroup/radio 语义、aria-checked 与方向键焦点管理；Label htmlFor 关联，点文字可选中",
+      "usage": {
+        "do": [
+          "options 数据驱动，受控 value/onValueChange",
+          "Tamagui props 上用 token，结构尺寸与 web 档对齐",
+          "互斥单选用 RadioGroup、多选用 Checkbox"
+        ],
+        "dont": ["硬编码圆圈/内点颜色或尺寸", "自建单选互斥逻辑绕过 context", "用再次点击取消单选"]
+      },
+      "docs": "packages/ui-native/src/RadioGroup/README.md",
+      "examples": ["packages/ui-native/src/RadioGroup/__examples__/States.tsx"]
     }
   ]
 }

@@ -627,6 +627,88 @@
       },
       "docs": "packages/ui-mini/src/Switch/README.md",
       "examples": ["packages/ui-mini/src/Switch/__examples__/States.tsx"]
+    },
+    {
+      "name": "radio-group",
+      "type": "registry:component",
+      "title": "单选组 RadioGroup",
+      "description": "NutUI RadioGroup+Radio 受控单选组，自建圆圈/内点图标全量 token 化，options 数据驱动，竖向/横向、sm/md、禁用",
+      "canonical": "RadioGroup",
+      "status": "beta",
+      "stack": "mini",
+      "dependencies": ["@nutui/nutui-react-taro", "@tarojs/components"],
+      "registryDependencies": [],
+      "files": [
+        { "path": "packages/ui-mini/src/RadioGroup/RadioGroup.tsx", "type": "registry:component" },
+        { "path": "packages/ui-mini/src/RadioGroup/RadioGroup.types.ts", "type": "registry:ui" },
+        { "path": "packages/ui-mini/src/RadioGroup/RadioGroup.scss", "type": "registry:ui" },
+        { "path": "packages/ui-mini/src/RadioGroup/index.ts", "type": "registry:ui" }
+      ],
+      "props": [
+        {
+          "name": "options",
+          "type": "{value:string;label:ReactNode;disabled?:boolean}[]",
+          "required": true,
+          "desc": "选项列表"
+        },
+        { "name": "value", "type": "string", "required": false, "desc": "受控选中值" },
+        { "name": "defaultValue", "type": "string", "required": false, "desc": "非受控初值" },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "default": "false",
+          "required": false,
+          "desc": "整组禁用"
+        },
+        {
+          "name": "direction",
+          "type": "'vertical'|'horizontal'",
+          "default": "'vertical'",
+          "required": false,
+          "desc": "排列方向（横向换行）"
+        },
+        {
+          "name": "size",
+          "type": "'sm'|'md'",
+          "default": "'md'",
+          "required": false,
+          "desc": "圆圈/内点尺寸（md 20/10、sm 16/8）"
+        }
+      ],
+      "events": [
+        {
+          "name": "onValueChange",
+          "type": "(value: string) => void",
+          "desc": "选中值变化（NutUI onChange 适配为 string）"
+        }
+      ],
+      "slots": ["options[].label"],
+      "tokens": [
+        "color-primary-default",
+        "color-bg-card",
+        "color-bg-hover",
+        "color-border-default",
+        "color-text-primary",
+        "color-text-disabled",
+        "font-size-body-md",
+        "icon-size-sm",
+        "icon-size-md",
+        "spacing-2",
+        "spacing-3",
+        "spacing-4"
+      ],
+      "states": ["unselected", "selected", "disabled"],
+      "a11y": "NutUI RadioGroup 自带 radiogroup/radio 语义；圆圈视觉热区小于 44px 时由布局补足触控热区",
+      "usage": {
+        "do": [
+          "options 数据驱动，受控 value/onValueChange",
+          "圆圈/内点自建并只用 var(--kit-*)",
+          "互斥单选用 RadioGroup、多选用 Checkbox"
+        ],
+        "dont": ["保留 NutUI 默认主题色", "硬编码颜色/rpx", "用再次点击取消单选"]
+      },
+      "docs": "packages/ui-mini/src/RadioGroup/README.md",
+      "examples": ["packages/ui-mini/src/RadioGroup/__examples__/States.tsx"]
     }
   ]
 }
