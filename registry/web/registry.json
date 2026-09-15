@@ -718,6 +718,94 @@
       },
       "docs": "packages/ui-web/src/RadioGroup/README.md",
       "examples": ["packages/ui-web/src/RadioGroup/__examples__/States.tsx"]
+    },
+    {
+      "name": "badge",
+      "type": "registry:component",
+      "title": "徽标 Badge",
+      "description": "纯展示胶囊徽标（无底座依赖），soft/solid/outline 三形态 × 六语义色、sm/md 尺寸、可点击，暗色",
+      "canonical": "Badge",
+      "status": "beta",
+      "stack": "web",
+      "dependencies": ["@kit/core"],
+      "registryDependencies": [],
+      "files": [
+        { "path": "packages/ui-web/src/Badge/Badge.tsx", "type": "registry:component" },
+        { "path": "packages/ui-web/src/Badge/Badge.types.ts", "type": "registry:ui" },
+        { "path": "packages/ui-web/src/Badge/index.ts", "type": "registry:ui" }
+      ],
+      "props": [
+        { "name": "children", "type": "ReactNode", "required": true, "desc": "徽标内容" },
+        {
+          "name": "variant",
+          "type": "'primary'|'success'|'warning'|'danger'|'info'|'neutral'",
+          "default": "'neutral'",
+          "required": false,
+          "desc": "语义色"
+        },
+        {
+          "name": "tone",
+          "type": "'soft'|'solid'|'outline'",
+          "default": "'soft'",
+          "required": false,
+          "desc": "形态：浅底/实心/描边"
+        },
+        {
+          "name": "size",
+          "type": "'sm'|'md'",
+          "default": "'md'",
+          "required": false,
+          "desc": "尺寸"
+        }
+      ],
+      "events": [
+        {
+          "name": "onClick",
+          "type": "() => void",
+          "desc": "传入即可点击（自动加 role=button、tabIndex、cursor-pointer）"
+        }
+      ],
+      "slots": ["children"],
+      "tokens": [
+        "color-primary-default",
+        "color-primary-bg",
+        "color-primary-text",
+        "color-success-default",
+        "color-success-bg",
+        "color-success-border",
+        "color-warning-default",
+        "color-warning-bg",
+        "color-warning-border",
+        "color-danger-default",
+        "color-danger-bg",
+        "color-danger-border",
+        "color-info-default",
+        "color-info-bg",
+        "color-info-border",
+        "color-bg-hover",
+        "color-bg-inverse",
+        "color-text-secondary",
+        "color-text-inverse",
+        "color-border-default",
+        "font-size-body-sm",
+        "font-size-caption"
+      ],
+      "states": ["default", "clickable"],
+      "a11y": "可点击时自动 role=button、tabIndex=0；纯展示为 span，不占用表单语义",
+      "usage": {
+        "do": [
+          "状态标记用语义 variant，默认 soft 浅底",
+          "颜色只用 token 语义类",
+          "计数/标签等短文本用 Badge"
+        ],
+        "dont": [
+          "硬编码颜色或圆角",
+          "用 Badge 承载可交互主操作（用 Button）",
+          "在 Badge 内放复杂布局"
+        ]
+      },
+      "docs": "packages/ui-web/src/Badge/README.md",
+      "examples": ["packages/ui-web/src/Badge/__examples__/States.tsx"]
     }
   ]
 }

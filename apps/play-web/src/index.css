@@ -30,6 +30,7 @@
   --color-bg-elevated: var(--kit-color-bg-elevated);
   --color-bg-hover: var(--kit-color-bg-hover);
   --color-bg-active: var(--kit-color-bg-active);
+  --color-bg-inverse: var(--kit-color-bg-inverse);
 
   /* 边框色 */
   --color-border-default: var(--kit-color-border-default);
@@ -49,8 +50,16 @@
   --color-danger-default: var(--kit-color-danger-default);
   --color-danger-hover: var(--kit-color-danger-hover);
   --color-danger-bg: var(--kit-color-danger-bg);
+  --color-danger-border: var(--kit-color-danger-border);
   --color-success-default: var(--kit-color-success-default);
+  --color-success-bg: var(--kit-color-success-bg);
+  --color-success-border: var(--kit-color-success-border);
   --color-warning-default: var(--kit-color-warning-default);
+  --color-warning-bg: var(--kit-color-warning-bg);
+  --color-warning-border: var(--kit-color-warning-border);
+  --color-info-default: var(--kit-color-info-default);
+  --color-info-bg: var(--kit-color-info-bg);
+  --color-info-border: var(--kit-color-info-border);
 
   /* 圆角 */
   --radius-sm: var(--kit-radius-sm);

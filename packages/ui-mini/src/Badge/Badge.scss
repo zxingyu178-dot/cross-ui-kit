@@ -1,0 +1,133 @@
+/* Badge（mini）样式：颜色/字号/圆角全走 --kit-* token；胶囊圆角为结构值 999px。 */
+
+.kit-badge {
+  display: inline-flex;
+  align-items: center;
+  box-sizing: border-box;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  font-weight: var(--kit-font-weight-medium);
+  white-space: nowrap;
+}
+.kit-badge--md {
+  padding: 3px 8px;
+}
+.kit-badge--sm {
+  padding: 1px 6px;
+}
+.kit-badge--clickable {
+  cursor: pointer;
+}
+.kit-badge__text {
+  font-size: var(--kit-font-size-body-sm);
+  line-height: 1.4;
+}
+.kit-badge--sm .kit-badge__text {
+  font-size: var(--kit-font-size-caption);
+}
+
+/* ---- soft 浅底深字 ---- */
+.kit-badge--soft-neutral {
+  background: var(--kit-color-bg-hover);
+}
+.kit-badge--soft-neutral .kit-badge__text {
+  color: var(--kit-color-text-secondary);
+}
+.kit-badge--soft-primary {
+  background: var(--kit-color-primary-bg);
+}
+.kit-badge--soft-primary .kit-badge__text {
+  color: var(--kit-color-primary-default);
+}
+.kit-badge--soft-success {
+  background: var(--kit-color-success-bg);
+}
+.kit-badge--soft-success .kit-badge__text {
+  color: var(--kit-color-success-default);
+}
+.kit-badge--soft-warning {
+  background: var(--kit-color-warning-bg);
+}
+.kit-badge--soft-warning .kit-badge__text {
+  color: var(--kit-color-warning-default);
+}
+.kit-badge--soft-danger {
+  background: var(--kit-color-danger-bg);
+}
+.kit-badge--soft-danger .kit-badge__text {
+  color: var(--kit-color-danger-default);
+}
+.kit-badge--soft-info {
+  background: var(--kit-color-info-bg);
+}
+.kit-badge--soft-info .kit-badge__text {
+  color: var(--kit-color-info-default);
+}
+
+/* ---- solid 深底白字 ---- */
+.kit-badge--solid-neutral {
+  background: var(--kit-color-bg-inverse);
+}
+.kit-badge--solid-neutral .kit-badge__text {
+  color: var(--kit-color-text-inverse);
+}
+.kit-badge--solid-primary {
+  background: var(--kit-color-primary-default);
+}
+.kit-badge--solid-success {
+  background: var(--kit-color-success-default);
+}
+.kit-badge--solid-warning {
+  background: var(--kit-color-warning-default);
+}
+.kit-badge--solid-danger {
+  background: var(--kit-color-danger-default);
+}
+.kit-badge--solid-info {
+  background: var(--kit-color-info-default);
+}
+.kit-badge--solid-primary .kit-badge__text,
+.kit-badge--solid-success .kit-badge__text,
+.kit-badge--solid-warning .kit-badge__text,
+.kit-badge--solid-danger .kit-badge__text,
+.kit-badge--solid-info .kit-badge__text {
+  color: var(--kit-color-primary-text); /* 控件中性白，三栈统一 */
+}
+
+/* ---- outline 透明底 + 语义描边 + 深字 ---- */
+.kit-badge--outline-neutral {
+  border-color: var(--kit-color-border-default);
+}
+.kit-badge--outline-neutral .kit-badge__text {
+  color: var(--kit-color-text-secondary);
+}
+.kit-badge--outline-primary {
+  border-color: var(--kit-color-primary-default);
+}
+.kit-badge--outline-primary .kit-badge__text {
+  color: var(--kit-color-primary-default);
+}
+.kit-badge--outline-success {
+  border-color: var(--kit-color-success-border);
+}
+.kit-badge--outline-success .kit-badge__text {
+  color: var(--kit-color-success-default);
+}
+.kit-badge--outline-warning {
+  border-color: var(--kit-color-warning-border);
+}
+.kit-badge--outline-warning .kit-badge__text {
+  color: var(--kit-color-warning-default);
+}
+.kit-badge--outline-danger {
+  border-color: var(--kit-color-danger-border);
+}
+.kit-badge--outline-danger .kit-badge__text {
+  color: var(--kit-color-danger-default);
+}
+.kit-badge--outline-info {
+  border-color: var(--kit-color-info-border);
+}
+.kit-badge--outline-info .kit-badge__text {
+  color: var(--kit-color-info-default);
+}

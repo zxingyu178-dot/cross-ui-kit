@@ -709,6 +709,86 @@
       },
       "docs": "packages/ui-mini/src/RadioGroup/README.md",
       "examples": ["packages/ui-mini/src/RadioGroup/__examples__/States.tsx"]
+    },
+    {
+      "name": "badge",
+      "type": "registry:component",
+      "title": "徽标 Badge",
+      "description": "View+Text 自建胶囊徽标（不依赖 NutUI），soft/solid/outline 三形态 × 六语义色、sm/md、可点击，全量 token 化",
+      "canonical": "Badge",
+      "status": "beta",
+      "stack": "mini",
+      "dependencies": ["@tarojs/components"],
+      "registryDependencies": [],
+      "files": [
+        { "path": "packages/ui-mini/src/Badge/Badge.tsx", "type": "registry:component" },
+        { "path": "packages/ui-mini/src/Badge/Badge.types.ts", "type": "registry:ui" },
+        { "path": "packages/ui-mini/src/Badge/Badge.scss", "type": "registry:ui" },
+        { "path": "packages/ui-mini/src/Badge/index.ts", "type": "registry:ui" }
+      ],
+      "props": [
+        { "name": "children", "type": "ReactNode", "required": true, "desc": "徽标内容" },
+        {
+          "name": "variant",
+          "type": "'primary'|'success'|'warning'|'danger'|'info'|'neutral'",
+          "default": "'neutral'",
+          "required": false,
+          "desc": "语义色"
+        },
+        {
+          "name": "tone",
+          "type": "'soft'|'solid'|'outline'",
+          "default": "'soft'",
+          "required": false,
+          "desc": "形态：浅底/实心/描边"
+        },
+        {
+          "name": "size",
+          "type": "'sm'|'md'",
+          "default": "'md'",
+          "required": false,
+          "desc": "尺寸"
+        }
+      ],
+      "events": [{ "name": "onClick", "type": "() => void", "desc": "传入即可点击" }],
+      "slots": ["children"],
+      "tokens": [
+        "color-primary-default",
+        "color-primary-bg",
+        "color-primary-text",
+        "color-success-default",
+        "color-success-bg",
+        "color-success-border",
+        "color-warning-default",
+        "color-warning-bg",
+        "color-warning-border",
+        "color-danger-default",
+        "color-danger-bg",
+        "color-danger-border",
+        "color-info-default",
+        "color-info-bg",
+        "color-info-border",
+        "color-bg-hover",
+        "color-bg-inverse",
+        "color-text-secondary",
+        "color-text-inverse",
+        "color-border-default",
+        "font-size-body-sm",
+        "font-size-caption",
+        "font-weight-medium"
+      ],
+      "states": ["default", "clickable"],
+      "a11y": "纯展示为 View+Text；可点击时由壳工程补充无障碍语义",
+      "usage": {
+        "do": [
+          "状态标记用语义 variant，默认 soft 浅底",
+          "颜色只用 var(--kit-*)",
+          "短文本标签/计数用 Badge"
+        ],
+        "dont": ["硬编码颜色/rpx/圆角", "用 Badge 承载主操作（用 Button）", "引入 NutUI 默认主题色"]
+      },
+      "docs": "packages/ui-mini/src/Badge/README.md",
+      "examples": ["packages/ui-mini/src/Badge/__examples__/States.tsx"]
     }
   ]
 }

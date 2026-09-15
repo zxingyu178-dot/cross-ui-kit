@@ -19,6 +19,7 @@ const twMerge = extendTailwindMerge({
         },
       ],
       // 自定义文字颜色类（@theme --color-*）：text-text-primary / text-primary-text / text-text-link ...
+      // 语义深字（徽标 outline/soft 文字）：text-success-default / text-info-default ...
       'text-color': [
         {
           text: [
@@ -32,6 +33,54 @@ const twMerge = extendTailwindMerge({
             'text-success',
             'text-warning',
             'primary-text',
+            'primary-default',
+            'success-default',
+            'warning-default',
+            'danger-default',
+            'info-default',
+          ],
+        },
+      ],
+      // 自定义背景色类（@theme --color-*）：bg-bg-card / bg-primary-bg / bg-success-bg / bg-info-default ...
+      'bg-color': [
+        {
+          bg: [
+            'bg-page',
+            'bg-card',
+            'bg-elevated',
+            'bg-hover',
+            'bg-active',
+            'bg-inverse',
+            'primary-default',
+            'primary-hover',
+            'primary-active',
+            'primary-disabled',
+            'primary-bg',
+            'success-default',
+            'success-bg',
+            'warning-default',
+            'warning-bg',
+            'danger-default',
+            'danger-hover',
+            'danger-bg',
+            'info-default',
+            'info-bg',
+          ],
+        },
+      ],
+      // 自定义边框色类（@theme --color-*）：border-border-default / border-success-border / border-info-border ...
+      'border-color': [
+        {
+          border: [
+            'border-default',
+            'border-strong',
+            'border-focus',
+            'border-danger',
+            'primary-default',
+            'success-border',
+            'warning-border',
+            'danger-border',
+            'info-border',
           ],
         },
       ],

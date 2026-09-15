@@ -184,6 +184,26 @@
       }
     },
     {
+      "canonical": "Badge",
+      "category": "data-display",
+      "sharedProps": {
+        "children": "ReactNode",
+        "variant": "primary|success|warning|danger|info|neutral",
+        "tone": "soft|solid|outline",
+        "size": "sm|md"
+      },
+      "eventMap": {
+        "web": "onClick()",
+        "mini": "onClick()",
+        "native": "onPress()"
+      },
+      "stacks": {
+        "web": { "item": "@kit/web-badge", "status": "beta" },
+        "mini": { "item": "@kit/mini-badge", "status": "beta" },
+        "native": { "item": "@kit/native-badge", "status": "beta" }
+      }
+    },
+    {
       "canonical": "DataTable",
       "category": "data",
       "sharedProps": {
