@@ -977,6 +977,80 @@
       },
       "docs": "packages/ui-native/src/Progress/README.md",
       "examples": ["packages/ui-native/src/Progress/__examples__/States.tsx"]
+    },
+    {
+      "name": "skeleton",
+      "type": "registry:component",
+      "title": "骨架屏 Skeleton",
+      "description": "Tamagui Stack/YStack 加载占位（rect/circle/text），底色/圆角/尺寸全 token，react-native Animated 呼吸脉冲，服务四态之 loading",
+      "canonical": "Skeleton",
+      "status": "beta",
+      "stack": "native",
+      "dependencies": ["tamagui", "react-native"],
+      "registryDependencies": [],
+      "files": [
+        { "path": "packages/ui-native/src/Skeleton/Skeleton.tsx", "type": "registry:component" },
+        { "path": "packages/ui-native/src/Skeleton/Skeleton.types.ts", "type": "registry:ui" },
+        { "path": "packages/ui-native/src/Skeleton/index.ts", "type": "registry:ui" }
+      ],
+      "props": [
+        {
+          "name": "variant",
+          "type": "'rect'|'circle'|'text'",
+          "default": "'rect'",
+          "required": false,
+          "desc": "骨架形态"
+        },
+        {
+          "name": "size",
+          "type": "'sm'|'md'|'lg'",
+          "default": "'md'",
+          "required": false,
+          "desc": "circle 直径 $6/$10/$14（24/40/56）"
+        },
+        {
+          "name": "lines",
+          "type": "number",
+          "default": "3",
+          "required": false,
+          "desc": "text 行数，末行收窄 60%"
+        },
+        {
+          "name": "width",
+          "type": "string|number",
+          "required": false,
+          "desc": "宽度覆盖，数字 px / 百分比"
+        },
+        {
+          "name": "height",
+          "type": "string|number",
+          "required": false,
+          "desc": "高度覆盖，数字 px / 百分比"
+        },
+        { "name": "accessibilityLabel", "type": "string", "required": false, "desc": "无障碍标签" }
+      ],
+      "events": [],
+      "slots": [],
+      "tokens": [
+        "color-bg-active",
+        "radius-md",
+        "radius-full",
+        "spacing-2",
+        "spacing-3",
+        "spacing-4"
+      ],
+      "states": ["loading"],
+      "a11y": "纯占位；脉冲用 react-native Animated（useNativeDriver），不依赖 Tamagui animation driver",
+      "usage": {
+        "do": [
+          "loading 态优先用骨架屏还原页面骨架",
+          "props 上只用 token 字符串，覆盖宽高走 style",
+          "组合出真实版式"
+        ],
+        "dont": ["硬编码底色/圆角", "放真实文案", "长时间不可预期的全屏加载用骨架"]
+      },
+      "docs": "packages/ui-native/src/Skeleton/README.md",
+      "examples": ["packages/ui-native/src/Skeleton/__examples__/States.tsx"]
     }
   ]
 }

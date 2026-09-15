@@ -245,6 +245,27 @@
       }
     },
     {
+      "canonical": "Skeleton",
+      "category": "feedback",
+      "sharedProps": {
+        "variant": "rect|circle|text",
+        "size": "sm|md|lg（circle 直径档）",
+        "lines": "number（text 行数，默认 3）",
+        "width": "string|number（覆盖）",
+        "height": "string|number（覆盖）"
+      },
+      "eventMap": {
+        "web": "无事件（纯占位，aria-hidden）",
+        "mini": "无事件（纯占位，CSS 呼吸脉冲）",
+        "native": "无事件（纯占位，react-native Animated 呼吸）"
+      },
+      "stacks": {
+        "web": { "item": "@kit/web-skeleton", "status": "beta" },
+        "mini": { "item": "@kit/mini-skeleton", "status": "beta" },
+        "native": { "item": "@kit/native-skeleton", "status": "beta" }
+      }
+    },
+    {
       "canonical": "DataTable",
       "category": "data",
       "sharedProps": {

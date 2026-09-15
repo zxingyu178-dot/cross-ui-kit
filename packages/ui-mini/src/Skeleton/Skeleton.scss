@@ -1,0 +1,42 @@
+/* Skeleton 骨架屏（mini）——占位灰块 + 呼吸脉冲，全部引用 kit token 变量 */
+
+/* 骨架呼吸周期为组件内置动画常量（持续占位效果，非交互过渡动效） */
+@keyframes kit-skeleton-pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.kit-skeleton {
+  background-color: var(--kit-color-bg-active);
+  animation: kit-skeleton-pulse 1.5s ease-in-out infinite;
+}
+
+/* 矩形块：圆角 radius-md(8)，默认宽度由组件/样式给 100% */
+.kit-skeleton--rect {
+  width: 100%;
+  border-radius: var(--kit-radius-md);
+}
+
+/* 圆形头像：全圆 */
+.kit-skeleton--circle {
+  border-radius: 999px;
+  flex-shrink: 0;
+}
+
+/* 文本行：全圆胶囊条 */
+.kit-skeleton--line {
+  border-radius: 999px;
+}
+
+/* 文本行组容器：行间距 spacing-2(8) */
+.kit-skeleton-text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--kit-spacing-2);
+  width: 100%;
+}

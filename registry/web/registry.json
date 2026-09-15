@@ -943,6 +943,83 @@
       },
       "docs": "packages/ui-web/src/Progress/README.md",
       "examples": ["packages/ui-web/src/Progress/__examples__/States.tsx"]
+    },
+    {
+      "name": "skeleton",
+      "type": "registry:component",
+      "title": "骨架屏 Skeleton",
+      "description": "加载占位灰块（rect/circle/text 三形态，文本末行收窄），animate-pulse 呼吸，全 token、暗色，服务四态之 loading",
+      "canonical": "Skeleton",
+      "status": "beta",
+      "stack": "web",
+      "dependencies": ["@kit/core"],
+      "registryDependencies": [],
+      "files": [
+        { "path": "packages/ui-web/src/Skeleton/Skeleton.tsx", "type": "registry:component" },
+        { "path": "packages/ui-web/src/Skeleton/Skeleton.types.ts", "type": "registry:ui" },
+        { "path": "packages/ui-web/src/Skeleton/index.ts", "type": "registry:ui" }
+      ],
+      "props": [
+        {
+          "name": "variant",
+          "type": "'rect'|'circle'|'text'",
+          "default": "'rect'",
+          "required": false,
+          "desc": "骨架形态"
+        },
+        {
+          "name": "size",
+          "type": "'sm'|'md'|'lg'",
+          "default": "'md'",
+          "required": false,
+          "desc": "circle 直径 24/40/56"
+        },
+        {
+          "name": "lines",
+          "type": "number",
+          "default": "3",
+          "required": false,
+          "desc": "text 行数，末行收窄 60%"
+        },
+        {
+          "name": "width",
+          "type": "string|number",
+          "required": false,
+          "desc": "宽度覆盖，数字按 px"
+        },
+        {
+          "name": "height",
+          "type": "string|number",
+          "required": false,
+          "desc": "高度覆盖，数字按 px"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "tokens": [
+        "color-bg-active",
+        "radius-md",
+        "radius-full",
+        "spacing-2",
+        "spacing-3",
+        "spacing-4"
+      ],
+      "states": ["loading"],
+      "a11y": "占位块 aria-hidden 对读屏隐藏，加载态由容器 aria-busy 表达",
+      "usage": {
+        "do": [
+          "loading 态优先用骨架屏还原页面骨架",
+          "组合出卡片/列表等真实版式，减少跳动",
+          "布局宽高用 Tailwind 刻度类覆盖"
+        ],
+        "dont": [
+          "硬编码底色/圆角",
+          "在骨架里放真实文案",
+          "用骨架代替长时间不可预期的全屏加载（用 Spinner）"
+        ]
+      },
+      "docs": "packages/ui-web/src/Skeleton/README.md",
+      "examples": ["packages/ui-web/src/Skeleton/__examples__/States.tsx"]
     }
   ]
 }

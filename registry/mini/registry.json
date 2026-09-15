@@ -932,6 +932,80 @@
       },
       "docs": "packages/ui-mini/src/Progress/README.md",
       "examples": ["packages/ui-mini/src/Progress/__examples__/States.tsx"]
+    },
+    {
+      "name": "skeleton",
+      "type": "registry:component",
+      "title": "骨架屏 Skeleton",
+      "description": "Taro View 自建加载占位（rect/circle/text），底色与圆角/间距在 scss 全 token 化，CSS 呼吸脉冲，服务四态之 loading",
+      "canonical": "Skeleton",
+      "status": "beta",
+      "stack": "mini",
+      "dependencies": ["@tarojs/components", "@kit/core"],
+      "registryDependencies": [],
+      "files": [
+        { "path": "packages/ui-mini/src/Skeleton/Skeleton.tsx", "type": "registry:component" },
+        { "path": "packages/ui-mini/src/Skeleton/Skeleton.types.ts", "type": "registry:ui" },
+        { "path": "packages/ui-mini/src/Skeleton/Skeleton.scss", "type": "registry:ui" },
+        { "path": "packages/ui-mini/src/Skeleton/index.ts", "type": "registry:ui" }
+      ],
+      "props": [
+        {
+          "name": "variant",
+          "type": "'rect'|'circle'|'text'",
+          "default": "'rect'",
+          "required": false,
+          "desc": "骨架形态"
+        },
+        {
+          "name": "size",
+          "type": "'sm'|'md'|'lg'",
+          "default": "'md'",
+          "required": false,
+          "desc": "circle 直径 24/40/56"
+        },
+        {
+          "name": "lines",
+          "type": "number",
+          "default": "3",
+          "required": false,
+          "desc": "text 行数，末行收窄 60%"
+        },
+        {
+          "name": "width",
+          "type": "string|number",
+          "required": false,
+          "desc": "宽度覆盖，数字 px / 百分比"
+        },
+        {
+          "name": "height",
+          "type": "string|number",
+          "required": false,
+          "desc": "高度覆盖，数字 px / 百分比"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "tokens": [
+        "color-bg-active",
+        "radius-md",
+        "spacing-2",
+        "spacing-3",
+        "spacing-4",
+        "font-size-caption"
+      ],
+      "states": ["loading"],
+      "a11y": "纯占位；小程序无障碍随壳工程统一处理",
+      "usage": {
+        "do": [
+          "loading 态优先用骨架屏还原页面骨架",
+          "底色/圆角/间距走 scss token",
+          "宽高用 width/height 覆盖"
+        ],
+        "dont": ["硬编码底色/圆角", "放真实文案", "长时间不可预期的全屏加载用骨架"]
+      },
+      "docs": "packages/ui-mini/src/Skeleton/README.md",
+      "examples": ["packages/ui-mini/src/Skeleton/__examples__/States.tsx"]
     }
   ]
 }
