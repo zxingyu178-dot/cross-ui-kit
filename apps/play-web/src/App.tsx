@@ -17,6 +17,7 @@ import { States as SkeletonStates } from '@kit/ui-web/src/Skeleton/__examples__/
 import { States as SpinnerStates } from '@kit/ui-web/src/Spinner/__examples__/States'
 import { States as EmptyStates } from '@kit/ui-web/src/Empty/__examples__/States'
 import { States as ResultStates } from '@kit/ui-web/src/Result/__examples__/States'
+import { States as StateContainerStates } from '@kit/ui-web/src/StateContainer/__examples__/States'
 
 /**
  * play-web 演示壳入口。
@@ -142,6 +143,13 @@ export default function App() {
           Result · 结果态（error/success/warning/info/404）
         </h2>
         <ResultStates />
+      </section>
+
+      <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
+        <h2 className="text-title-sm font-medium text-text-primary">
+          StateContainer · 四态编排容器（loading/empty/error/success）
+        </h2>
+        <StateContainerStates />
       </section>
 
       <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">

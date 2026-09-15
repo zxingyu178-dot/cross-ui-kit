@@ -1249,6 +1249,84 @@
       },
       "docs": "packages/ui-native/src/Result/README.md",
       "examples": ["packages/ui-native/src/Result/__examples__/States.tsx"]
+    },
+    {
+      "name": "state-container",
+      "type": "registry:component",
+      "title": "四态编排容器 StateContainer",
+      "description": "铁律#6 四态必齐一站式收口：受控 status 切换，Tamagui 编排 native Skeleton/Spinner、Empty、Result，各态 slot 可覆盖，onRetry 接默认重试",
+      "canonical": "StateContainer",
+      "status": "beta",
+      "stack": "native",
+      "dependencies": ["tamagui"],
+      "registryDependencies": ["skeleton", "spinner", "empty", "result", "button"],
+      "files": [
+        {
+          "path": "packages/ui-native/src/StateContainer/StateContainer.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "packages/ui-native/src/StateContainer/StateContainer.types.ts",
+          "type": "registry:ui"
+        },
+        { "path": "packages/ui-native/src/StateContainer/index.ts", "type": "registry:ui" }
+      ],
+      "props": [
+        {
+          "name": "status",
+          "type": "'loading'|'empty'|'error'|'success'",
+          "required": true,
+          "desc": "当前状态（受控）"
+        },
+        {
+          "name": "loadingMode",
+          "type": "'skeleton'|'spinner'",
+          "required": false,
+          "default": "'skeleton'",
+          "desc": "loading 态呈现"
+        },
+        {
+          "name": "loading",
+          "type": "ReactNode",
+          "required": false,
+          "desc": "自定义 loading 视图 slot"
+        },
+        { "name": "empty", "type": "ReactNode", "required": false, "desc": "自定义空态视图 slot" },
+        { "name": "error", "type": "ReactNode", "required": false, "desc": "自定义错误视图 slot" },
+        {
+          "name": "onRetry",
+          "type": "() => void",
+          "required": false,
+          "desc": "默认错误视图重试回调，传入才显示重试按钮"
+        },
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "required": true,
+          "desc": "success（normal）态内容"
+        }
+      ],
+      "events": [
+        {
+          "name": "onRetry",
+          "payload": "void",
+          "desc": "默认错误视图重试按钮按压（native onPress）"
+        }
+      ],
+      "slots": ["loading", "empty", "error", "children"],
+      "tokens": [],
+      "states": ["loading", "empty", "error", "success"],
+      "a11y": "loading 态自动带 accessibilityState.busy；占位组件各自无障碍语义透传",
+      "usage": {
+        "do": [
+          "承载数据的区块用 StateContainer 包裹",
+          "status 由 core 请求 hook 输出",
+          "定制时传 loading/empty/error slot"
+        ],
+        "dont": ["不在页面里各写一套四态判断", "不在容器内发请求", "不硬编码占位颜色/尺寸"]
+      },
+      "docs": "packages/ui-native/src/StateContainer/README.md",
+      "examples": ["packages/ui-native/src/StateContainer/__examples__/States.tsx"]
     }
   ]
 }

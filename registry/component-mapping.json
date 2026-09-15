@@ -348,16 +348,23 @@
       "canonical": "StateContainer",
       "category": "feedback",
       "sharedProps": {
-        "loading": "boolean",
-        "empty": "boolean",
-        "error": "Error|null",
-        "onRetry": "() => void"
+        "status": "'loading'|'empty'|'error'|'success'（受控，必填，通常由请求 hook 输出）",
+        "loadingMode": "'skeleton'|'spinner'（默认 skeleton）",
+        "loading": "ReactNode slot（覆盖默认骨架/转圈）",
+        "empty": "ReactNode slot（覆盖默认 Empty）",
+        "error": "ReactNode slot（覆盖默认 Result error）",
+        "onRetry": "() => void（默认错误视图重试回调，传入才显示重试按钮）",
+        "children": "ReactNode（success/normal 内容，必填）"
       },
-      "eventMap": { "web": "onRetry", "mini": "onRetry", "native": "onRetry" },
+      "eventMap": {
+        "web": "onRetry（默认重试按钮 onClick）",
+        "mini": "onRetry（默认重试按钮 onPress）",
+        "native": "onRetry（默认重试按钮 onPress）"
+      },
       "stacks": {
-        "web": { "item": "@kit/web-state-container", "status": "planned" },
-        "mini": { "item": "@kit/mini-state-container", "status": "planned" },
-        "native": { "item": "@kit/native-state-container", "status": "planned" }
+        "web": { "item": "@kit/web-state-container", "status": "beta" },
+        "mini": { "item": "@kit/mini-state-container", "status": "beta" },
+        "native": { "item": "@kit/native-state-container", "status": "beta" }
       }
     }
   ]

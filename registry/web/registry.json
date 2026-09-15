@@ -1245,6 +1245,84 @@
       },
       "docs": "packages/ui-web/src/Result/README.md",
       "examples": ["packages/ui-web/src/Result/__examples__/States.tsx"]
+    },
+    {
+      "name": "state-container",
+      "type": "registry:component",
+      "title": "四态编排容器 StateContainer",
+      "description": "铁律#6 四态必齐一站式收口：受控 status(loading/empty/error/success) 切换，默认 Skeleton/Spinner、Empty、Result 兜底，各态 slot 可覆盖，onRetry 接默认重试",
+      "canonical": "StateContainer",
+      "status": "beta",
+      "stack": "web",
+      "dependencies": ["@kit/core"],
+      "registryDependencies": ["skeleton", "spinner", "empty", "result", "button"],
+      "files": [
+        {
+          "path": "packages/ui-web/src/StateContainer/StateContainer.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "packages/ui-web/src/StateContainer/StateContainer.types.ts",
+          "type": "registry:ui"
+        },
+        { "path": "packages/ui-web/src/StateContainer/index.ts", "type": "registry:ui" }
+      ],
+      "props": [
+        {
+          "name": "status",
+          "type": "'loading'|'empty'|'error'|'success'",
+          "required": true,
+          "desc": "当前状态（受控，通常由请求 hook 输出）"
+        },
+        {
+          "name": "loadingMode",
+          "type": "'skeleton'|'spinner'",
+          "required": false,
+          "default": "'skeleton'",
+          "desc": "loading 态呈现：骨架屏或居中转圈"
+        },
+        {
+          "name": "loading",
+          "type": "ReactNode",
+          "required": false,
+          "desc": "自定义 loading 视图 slot"
+        },
+        { "name": "empty", "type": "ReactNode", "required": false, "desc": "自定义空态视图 slot" },
+        { "name": "error", "type": "ReactNode", "required": false, "desc": "自定义错误视图 slot" },
+        {
+          "name": "onRetry",
+          "type": "() => void",
+          "required": false,
+          "desc": "默认错误视图重试回调，传入才显示重试按钮"
+        },
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "required": true,
+          "desc": "success（normal）态内容"
+        }
+      ],
+      "events": [
+        { "name": "onRetry", "payload": "void", "desc": "默认错误视图重试按钮点击（web onClick）" }
+      ],
+      "slots": ["loading", "empty", "error", "children"],
+      "tokens": [],
+      "states": ["loading", "empty", "error", "success"],
+      "a11y": "loading 态根节点自动带 aria-busy；占位组件（Skeleton/Empty/Result）各自无障碍语义透传",
+      "usage": {
+        "do": [
+          "承载数据的区块用 StateContainer 包裹，四态交给它切换",
+          "status 由 core 的 useRequest/useTable 输出",
+          "需要定制时传 loading/empty/error slot"
+        ],
+        "dont": [
+          "不在页面里各写一套 loading/empty/error 判断",
+          "不在容器内发请求或写业务分支",
+          "不硬编码占位颜色/尺寸"
+        ]
+      },
+      "docs": "packages/ui-web/src/StateContainer/README.md",
+      "examples": ["packages/ui-web/src/StateContainer/__examples__/States.tsx"]
     }
   ]
 }
