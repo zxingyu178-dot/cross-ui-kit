@@ -14,6 +14,7 @@ import { States as BadgeStates } from '@kit/ui-web/src/Badge/__examples__/States
 import { States as TabsStates } from '@kit/ui-web/src/Tabs/__examples__/States'
 import { States as ProgressStates } from '@kit/ui-web/src/Progress/__examples__/States'
 import { States as SkeletonStates } from '@kit/ui-web/src/Skeleton/__examples__/States'
+import { States as SpinnerStates } from '@kit/ui-web/src/Spinner/__examples__/States'
 
 /**
  * play-web 演示壳入口。
@@ -122,6 +123,11 @@ export default function App() {
       <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
         <h2 className="text-title-sm font-medium text-text-primary">Skeleton · 骨架屏</h2>
         <SkeletonStates />
+      </section>
+
+      <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
+        <h2 className="text-title-sm font-medium text-text-primary">Spinner · 加载指示器</h2>
+        <SpinnerStates />
       </section>
 
       <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">

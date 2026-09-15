@@ -266,6 +266,25 @@
       }
     },
     {
+      "canonical": "Spinner",
+      "category": "feedback",
+      "sharedProps": {
+        "size": "sm|md|lg（直径 16/24/32）",
+        "tone": "primary|muted|inverse",
+        "accessibilityLabel": "string（无障碍标签，文案外部提供）"
+      },
+      "eventMap": {
+        "web": "无事件（role=status，CSS animate-spin）",
+        "mini": "无事件（CSS 1s 匀速旋转）",
+        "native": "无事件（react-native Animated.loop 匀速旋转）"
+      },
+      "stacks": {
+        "web": { "item": "@kit/web-spinner", "status": "beta" },
+        "mini": { "item": "@kit/mini-spinner", "status": "beta" },
+        "native": { "item": "@kit/native-spinner", "status": "beta" }
+      }
+    },
+    {
       "canonical": "DataTable",
       "category": "data",
       "sharedProps": {

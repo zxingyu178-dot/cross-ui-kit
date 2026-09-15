@@ -1006,6 +1006,63 @@
       },
       "docs": "packages/ui-mini/src/Skeleton/README.md",
       "examples": ["packages/ui-mini/src/Skeleton/__examples__/States.tsx"]
+    },
+    {
+      "name": "spinner",
+      "type": "registry:component",
+      "title": "加载指示器 Spinner",
+      "description": "Taro View 自建 border 旋转圈（CSS 1s 匀速旋转），sm/md/lg、primary/muted/inverse，scss 全 token 化，用于不确定时长加载",
+      "canonical": "Spinner",
+      "status": "beta",
+      "stack": "mini",
+      "dependencies": ["@tarojs/components", "@kit/core"],
+      "registryDependencies": [],
+      "files": [
+        { "path": "packages/ui-mini/src/Spinner/Spinner.tsx", "type": "registry:component" },
+        { "path": "packages/ui-mini/src/Spinner/Spinner.types.ts", "type": "registry:ui" },
+        { "path": "packages/ui-mini/src/Spinner/Spinner.scss", "type": "registry:ui" },
+        { "path": "packages/ui-mini/src/Spinner/index.ts", "type": "registry:ui" }
+      ],
+      "props": [
+        {
+          "name": "size",
+          "type": "'sm'|'md'|'lg'",
+          "default": "'md'",
+          "required": false,
+          "desc": "直径 16/24/32"
+        },
+        {
+          "name": "tone",
+          "type": "'primary'|'muted'|'inverse'",
+          "default": "'primary'",
+          "required": false,
+          "desc": "主色/中性灰/反白"
+        },
+        {
+          "name": "accessibilityLabel",
+          "type": "string",
+          "required": false,
+          "desc": "H5 映射 aria-label"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "tokens": [
+        "color-primary-default",
+        "color-border-default",
+        "color-text-tertiary",
+        "icon-size-sm",
+        "icon-size-lg",
+        "control-height-sm"
+      ],
+      "states": ["loading"],
+      "a11y": "H5 下 aria-label 由 accessibilityLabel 提供；小程序无障碍随壳工程统一",
+      "usage": {
+        "do": ["不可预期时长的等待用 Spinner", "主色/深色底上用 tone=inverse", "颜色走 scss token"],
+        "dont": ["硬编码颜色/尺寸", "能给出比例用 Progress", "整块内容首屏加载用 Skeleton"]
+      },
+      "docs": "packages/ui-mini/src/Spinner/README.md",
+      "examples": ["packages/ui-mini/src/Spinner/__examples__/States.tsx"]
     }
   ]
 }

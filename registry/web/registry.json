@@ -1020,6 +1020,71 @@
       },
       "docs": "packages/ui-web/src/Skeleton/README.md",
       "examples": ["packages/ui-web/src/Skeleton/__examples__/States.tsx"]
+    },
+    {
+      "name": "spinner",
+      "type": "registry:component",
+      "title": "加载指示器 Spinner",
+      "description": "不确定时长加载的 border 旋转圈（animate-spin），sm/md/lg 三尺寸、primary/muted/inverse 三色调，全 token、暗色，role=status",
+      "canonical": "Spinner",
+      "status": "beta",
+      "stack": "web",
+      "dependencies": ["@kit/core"],
+      "registryDependencies": [],
+      "files": [
+        { "path": "packages/ui-web/src/Spinner/Spinner.tsx", "type": "registry:component" },
+        { "path": "packages/ui-web/src/Spinner/Spinner.types.ts", "type": "registry:ui" },
+        { "path": "packages/ui-web/src/Spinner/index.ts", "type": "registry:ui" }
+      ],
+      "props": [
+        {
+          "name": "size",
+          "type": "'sm'|'md'|'lg'",
+          "default": "'md'",
+          "required": false,
+          "desc": "直径 16/24/32"
+        },
+        {
+          "name": "tone",
+          "type": "'primary'|'muted'|'inverse'",
+          "default": "'primary'",
+          "required": false,
+          "desc": "主色/中性灰/反白"
+        },
+        {
+          "name": "accessibilityLabel",
+          "type": "string",
+          "required": false,
+          "desc": "映射 aria-label，文案由外部 i18n 提供"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "tokens": [
+        "color-primary-default",
+        "color-border-default",
+        "color-text-tertiary",
+        "icon-size-sm",
+        "icon-size-lg",
+        "control-height-sm",
+        "radius-full"
+      ],
+      "states": ["loading"],
+      "a11y": "role=status 表达忙碌；aria-label 由外部通过 accessibilityLabel 提供（不写死文案）",
+      "usage": {
+        "do": [
+          "不可预期时长的等待用 Spinner",
+          "主色/深色底上用 tone=inverse",
+          "配套文字放组件外部水平排列"
+        ],
+        "dont": [
+          "硬编码颜色/尺寸/动画时长",
+          "能给出完成比例时用 Spinner（应使用 Progress）",
+          "整块内容首屏加载用 Spinner（应使用 Skeleton）"
+        ]
+      },
+      "docs": "packages/ui-web/src/Spinner/README.md",
+      "examples": ["packages/ui-web/src/Spinner/__examples__/States.tsx"]
     }
   ]
 }

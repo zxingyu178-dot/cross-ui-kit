@@ -1,0 +1,48 @@
+/* Spinner 加载指示器（mini）——标准 border 旋转圈，颜色引用 kit token 变量 */
+
+.kit-spinner {
+  display: inline-block;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 999px;
+  /* 旋转周期 1s linear infinite（组件内置动画常量，与 web animate-spin 一致） */
+  animation: kit-spin 1s linear infinite;
+}
+
+/* 直径档：sm=icon-sm(16)、md=icon-lg(24)、lg=control-height-sm(32) */
+.kit-spinner--sm {
+  width: 16px;
+  height: 16px;
+}
+.kit-spinner--md {
+  width: 24px;
+  height: 24px;
+}
+.kit-spinner--lg {
+  width: 32px;
+  height: 32px;
+}
+
+/* primary：中性轨道 + 主色旋转头 */
+.kit-spinner--primary {
+  border-color: var(--kit-color-border-default);
+  border-top-color: var(--kit-color-primary-default);
+}
+
+/* muted：全灰低调 */
+.kit-spinner--muted {
+  border-color: var(--kit-color-border-default);
+  border-top-color: var(--kit-color-text-tertiary);
+}
+
+/* inverse：白圈，用于主色/深色底（白色为三栈统一结构色） */
+.kit-spinner--inverse {
+  border-color: rgba(255, 255, 255, 0.3);
+  border-top-color: #ffffff;
+}
+
+@keyframes kit-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

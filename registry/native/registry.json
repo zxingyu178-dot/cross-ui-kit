@@ -1051,6 +1051,61 @@
       },
       "docs": "packages/ui-native/src/Skeleton/README.md",
       "examples": ["packages/ui-native/src/Skeleton/__examples__/States.tsx"]
+    },
+    {
+      "name": "spinner",
+      "type": "registry:component",
+      "title": "加载指示器 Spinner",
+      "description": "RN Animated 匀速旋转 + Tamagui Stack 承载 border 视觉，sm/md/lg、primary/muted/inverse，颜色全 token，用于不确定时长加载",
+      "canonical": "Spinner",
+      "status": "beta",
+      "stack": "native",
+      "dependencies": ["tamagui", "react-native"],
+      "registryDependencies": [],
+      "files": [
+        { "path": "packages/ui-native/src/Spinner/Spinner.tsx", "type": "registry:component" },
+        { "path": "packages/ui-native/src/Spinner/Spinner.types.ts", "type": "registry:ui" },
+        { "path": "packages/ui-native/src/Spinner/index.ts", "type": "registry:ui" }
+      ],
+      "props": [
+        {
+          "name": "size",
+          "type": "'sm'|'md'|'lg'",
+          "default": "'md'",
+          "required": false,
+          "desc": "直径 16/24/32"
+        },
+        {
+          "name": "tone",
+          "type": "'primary'|'muted'|'inverse'",
+          "default": "'primary'",
+          "required": false,
+          "desc": "主色/中性灰/反白"
+        },
+        { "name": "accessibilityLabel", "type": "string", "required": false, "desc": "无障碍标签" }
+      ],
+      "events": [],
+      "slots": [],
+      "tokens": [
+        "color-primary-default",
+        "color-border-default",
+        "color-text-tertiary",
+        "icon-size-sm",
+        "icon-size-lg",
+        "control-height-sm"
+      ],
+      "states": ["loading"],
+      "a11y": "accessibilityRole=progressbar + accessibilityState.busy；旋转用 useNativeDriver，不依赖 Tamagui animation driver",
+      "usage": {
+        "do": [
+          "不可预期时长的等待用 Spinner",
+          "主色/深色底上用 tone=inverse",
+          "边框颜色只用 token 字符串"
+        ],
+        "dont": ["硬编码颜色/尺寸", "能给出比例用 Progress", "整块内容首屏加载用 Skeleton"]
+      },
+      "docs": "packages/ui-native/src/Spinner/README.md",
+      "examples": ["packages/ui-native/src/Spinner/__examples__/States.tsx"]
     }
   ]
 }
