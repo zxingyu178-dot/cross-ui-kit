@@ -1,0 +1,22 @@
+/* Progress 进度条（mini）——NutUI 样式覆盖，全部引用 kit token 变量 */
+
+.kit-progress {
+  width: 100%;
+
+  .nut-progress-outer {
+    width: 100%;
+    border-radius: 999px;
+    overflow: hidden;
+  }
+
+  .nut-progress-inner {
+    border-radius: 999px;
+  }
+
+  .nut-progress-text {
+    color: var(--kit-color-text-secondary);
+    font-size: var(--kit-font-size-caption);
+    line-height: 1;
+    margin-left: var(--kit-spacing-2);
+  }
+}

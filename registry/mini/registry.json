@@ -858,6 +858,80 @@
       },
       "docs": "packages/ui-mini/src/Tabs/README.md",
       "examples": ["packages/ui-mini/src/Tabs/__examples__/States.tsx"]
+    },
+    {
+      "name": "progress",
+      "type": "registry:component",
+      "title": "进度条 Progress",
+      "description": "NutUI Progress 线性进度条，统一 value/max（内部换算 percent），填充/轨道色传 CSS 变量，scss token 化，语义色、sm/md、可选百分比",
+      "canonical": "Progress",
+      "status": "beta",
+      "stack": "mini",
+      "dependencies": ["@nutui/nutui-react-taro", "@tarojs/components"],
+      "registryDependencies": ["@kit/core"],
+      "files": [
+        { "path": "packages/ui-mini/src/Progress/Progress.tsx", "type": "registry:component" },
+        { "path": "packages/ui-mini/src/Progress/Progress.types.ts", "type": "registry:ui" },
+        { "path": "packages/ui-mini/src/Progress/Progress.scss", "type": "registry:ui" },
+        { "path": "packages/ui-mini/src/Progress/index.ts", "type": "registry:ui" }
+      ],
+      "props": [
+        { "name": "value", "type": "number", "required": true, "desc": "当前进度（0 到 max）" },
+        {
+          "name": "max",
+          "type": "number",
+          "default": "100",
+          "required": false,
+          "desc": "最大值，内部换算 percent"
+        },
+        {
+          "name": "size",
+          "type": "'sm'|'md'",
+          "default": "'md'",
+          "required": false,
+          "desc": "轨道高度 4/8px（spacing 档）"
+        },
+        {
+          "name": "tone",
+          "type": "'primary'|'success'|'warning'|'danger'",
+          "default": "'primary'",
+          "required": false,
+          "desc": "填充语义色（CSS 变量）"
+        },
+        {
+          "name": "showLabel",
+          "type": "boolean",
+          "default": "false",
+          "required": false,
+          "desc": "显示百分比（NutUI showText）"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "tokens": [
+        "color-primary-default",
+        "color-success-default",
+        "color-warning-default",
+        "color-danger-default",
+        "color-bg-active",
+        "color-text-secondary",
+        "font-size-caption",
+        "spacing-1",
+        "spacing-2",
+        "motion-duration-base"
+      ],
+      "states": ["empty", "in-progress", "complete"],
+      "a11y": "NutUI Progress 自带进度语义；动画 duration 取 motion-base(250)",
+      "usage": {
+        "do": [
+          "展示确定比例的进度",
+          "activeColor/backgroundColor 传语义色变量",
+          "文字颜色走 scss token"
+        ],
+        "dont": ["硬编码填充/轨道/文字颜色", "保留 NutUI 默认主题色", "不确定时长的加载用进度条"]
+      },
+      "docs": "packages/ui-mini/src/Progress/README.md",
+      "examples": ["packages/ui-mini/src/Progress/__examples__/States.tsx"]
     }
   ]
 }

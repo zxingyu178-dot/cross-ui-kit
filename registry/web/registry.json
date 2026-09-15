@@ -871,6 +871,78 @@
       },
       "docs": "packages/ui-web/src/Tabs/README.md",
       "examples": ["packages/ui-web/src/Tabs/__examples__/States.tsx"]
+    },
+    {
+      "name": "progress",
+      "type": "registry:component",
+      "title": "进度条 Progress",
+      "description": "Radix react-progress 线性进度条，受控 value/max，语义色调（primary/success/warning/danger）、sm/md、可选百分比，全 token、暗色",
+      "canonical": "Progress",
+      "status": "beta",
+      "stack": "web",
+      "dependencies": ["@radix-ui/react-progress", "@kit/core"],
+      "registryDependencies": [],
+      "files": [
+        { "path": "packages/ui-web/src/Progress/Progress.tsx", "type": "registry:component" },
+        { "path": "packages/ui-web/src/Progress/Progress.types.ts", "type": "registry:ui" },
+        { "path": "packages/ui-web/src/Progress/index.ts", "type": "registry:ui" }
+      ],
+      "props": [
+        { "name": "value", "type": "number", "required": true, "desc": "当前进度（0 到 max）" },
+        { "name": "max", "type": "number", "default": "100", "required": false, "desc": "最大值" },
+        {
+          "name": "size",
+          "type": "'sm'|'md'",
+          "default": "'md'",
+          "required": false,
+          "desc": "轨道高度 4/8px"
+        },
+        {
+          "name": "tone",
+          "type": "'primary'|'success'|'warning'|'danger'",
+          "default": "'primary'",
+          "required": false,
+          "desc": "填充语义色"
+        },
+        {
+          "name": "showLabel",
+          "type": "boolean",
+          "default": "false",
+          "required": false,
+          "desc": "末尾显示百分比"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "tokens": [
+        "color-primary-default",
+        "color-success-default",
+        "color-warning-default",
+        "color-danger-default",
+        "color-bg-active",
+        "color-text-secondary",
+        "font-size-caption",
+        "spacing-1",
+        "spacing-2",
+        "radius-full",
+        "motion-duration-base"
+      ],
+      "states": ["empty", "in-progress", "complete"],
+      "a11y": "Radix 自带 role=progressbar 与 aria-valuenow/min/max/valuetext（getValueLabel 输出整数百分比）",
+      "usage": {
+        "do": [
+          "展示确定比例的任务/加载进度",
+          "随业务进度实时更新 value",
+          "用 tone 表达成功/警告/危险状态"
+        ],
+        "dont": [
+          "硬编码轨道/填充颜色与高度",
+          "不确定时长的加载用进度条（应使用骨架屏/Spinner）",
+          "在业务里临时手写进度条"
+        ]
+      },
+      "docs": "packages/ui-web/src/Progress/README.md",
+      "examples": ["packages/ui-web/src/Progress/__examples__/States.tsx"]
     }
   ]
 }

@@ -224,6 +224,27 @@
       }
     },
     {
+      "canonical": "Progress",
+      "category": "feedback",
+      "sharedProps": {
+        "value": "number（0 到 max）",
+        "max": "number（默认 100）",
+        "size": "sm|md",
+        "tone": "primary|success|warning|danger",
+        "showLabel": "boolean"
+      },
+      "eventMap": {
+        "web": "无事件（纯展示，Radix value/max 受控）",
+        "mini": "无事件（NutUI percent 受控，onActiveEnd 不对外暴露）",
+        "native": "无事件（Tamagui value/max 受控）"
+      },
+      "stacks": {
+        "web": { "item": "@kit/web-progress", "status": "beta" },
+        "mini": { "item": "@kit/mini-progress", "status": "beta" },
+        "native": { "item": "@kit/native-progress", "status": "beta" }
+      }
+    },
+    {
       "canonical": "DataTable",
       "category": "data",
       "sharedProps": {
