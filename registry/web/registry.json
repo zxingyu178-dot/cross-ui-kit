@@ -1623,6 +1623,88 @@
       },
       "docs": "packages/ui-web/src/Steps/README.md",
       "examples": ["packages/ui-web/src/Steps/__examples__/States.tsx"]
+    },
+    {
+      "name": "pagination",
+      "type": "registry:component",
+      "title": "分页 Pagination",
+      "description": "受控分页，页码列表由 core getPageList 生成（含省略号），上一页/下一页边界禁用，当前页高亮，支持 showTotal/size/disabled",
+      "canonical": "Pagination",
+      "status": "beta",
+      "stack": "web",
+      "dependencies": ["@kit/core"],
+      "registryDependencies": [],
+      "files": [
+        { "path": "packages/ui-web/src/Pagination/Pagination.tsx", "type": "registry:component" },
+        { "path": "packages/ui-web/src/Pagination/Pagination.types.ts", "type": "registry:ui" },
+        { "path": "packages/ui-web/src/Pagination/index.ts", "type": "registry:ui" }
+      ],
+      "props": [
+        {
+          "name": "current",
+          "type": "number",
+          "required": false,
+          "default": "1",
+          "desc": "当前页（1-based）"
+        },
+        {
+          "name": "pageSize",
+          "type": "number",
+          "required": false,
+          "default": "10",
+          "desc": "每页条数"
+        },
+        { "name": "total", "type": "number", "required": true, "desc": "总条数" },
+        {
+          "name": "onChange",
+          "type": "(page:number)=>void",
+          "required": true,
+          "desc": "页码变化回调（受控）"
+        },
+        {
+          "name": "showTotal",
+          "type": "boolean",
+          "required": false,
+          "default": "true",
+          "desc": "显示共 N 条"
+        },
+        {
+          "name": "size",
+          "type": "'sm'|'md'",
+          "required": false,
+          "default": "'md'",
+          "desc": "按钮尺寸"
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "required": false,
+          "default": "false",
+          "desc": "整体禁用"
+        }
+      ],
+      "events": [{ "name": "onChange", "type": "(page: number) => void", "desc": "页码变化" }],
+      "slots": [],
+      "tokens": [
+        "color-primary-default",
+        "color-primary-text",
+        "color-bg-card",
+        "color-bg-hover",
+        "color-border-default",
+        "color-text-primary",
+        "color-text-tertiary",
+        "font-size-body-sm",
+        "font-size-caption",
+        "radius-md"
+      ],
+      "states": ["normal", "active", "disabled"],
+      "a11y": "nav aria-label=分页；页码按钮 type=button + aria-label=第 N 页；当前页 aria-current=page",
+      "usage": {
+        "do": ["受控使用 current+onChange", "页码/省略号计算交给 core getPageList"],
+        "dont": ["在视图手写页码逻辑", "硬编码按钮颜色"]
+      },
+      "docs": "packages/ui-web/src/Pagination/README.md",
+      "examples": ["packages/ui-web/src/Pagination/__examples__/States.tsx"]
     }
   ]
 }

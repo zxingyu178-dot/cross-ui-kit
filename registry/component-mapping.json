@@ -451,6 +451,29 @@
         "mini": { "item": "@kit/mini-steps", "status": "beta" },
         "native": { "item": "@kit/native-steps", "status": "beta" }
       }
+    },
+    {
+      "canonical": "Pagination",
+      "category": "navigation",
+      "sharedProps": {
+        "current": "number（当前页，1-based，默认 1，受控）",
+        "pageSize": "number（每页条数，默认 10）",
+        "total": "number（总条数，必填）",
+        "showTotal": "boolean（显示共 N 条，默认 true）",
+        "size": "'sm'|'md'（按钮尺寸，默认 md）",
+        "disabled": "boolean（整体禁用）"
+      },
+      "eventMap": {
+        "web": "onChange(page)（页码按钮/上下页 onClick，当前页 aria-current=page）",
+        "mini": "onChange(page)（页码按钮 onTap）",
+        "native": "onChange(page)（页码按钮 onPress，accessibilityRole=button）"
+      },
+      "logicDeps": ["@kit/core getPageCount / getPageList（页码与省略号计算，三栈共用）"],
+      "stacks": {
+        "web": { "item": "@kit/web-pagination", "status": "beta" },
+        "mini": { "item": "@kit/mini-pagination", "status": "beta" },
+        "native": { "item": "@kit/native-pagination", "status": "beta" }
+      }
     }
   ]
 }

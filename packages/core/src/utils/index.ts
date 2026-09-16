@@ -1,3 +1,5 @@
 export { cn } from './cn'
 export { deriveStepStatus, isConnectorActive } from './step'
 export type { StepStatus } from './step'
+export { getPageCount, getPageList } from './pagination'
+export type { PageItem } from './pagination'

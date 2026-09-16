@@ -22,6 +22,7 @@ import { States as CardStates } from '@kit/ui-web/src/Card/__examples__/States'
 import { States as AvatarStates } from '@kit/ui-web/src/Avatar/__examples__/States'
 import { States as TagStates } from '@kit/ui-web/src/Tag/__examples__/States'
 import { States as StepsStates } from '@kit/ui-web/src/Steps/__examples__/States'
+import { States as PaginationStates } from '@kit/ui-web/src/Pagination/__examples__/States'
 
 /**
  * play-web 演示壳入口。
@@ -180,6 +181,13 @@ export default function App() {
           Steps · 步骤条（横向/纵向 · 四态）
         </h2>
         <StepsStates />
+      </section>
+
+      <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
+        <h2 className="text-title-sm font-medium text-text-primary">
+          Pagination · 分页（受控 / 省略号 / 禁用）
+        </h2>
+        <PaginationStates />
       </section>
 
       <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">

@@ -1,0 +1,63 @@
+/* Pagination 分页（mini）——颜色/尺寸全走 --kit-* token；圆角/间距为结构值。 */
+
+.kit-pagination {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  box-sizing: border-box;
+}
+
+.kit-pagination__total {
+  font-size: var(--kit-font-size-caption);
+  color: var(--kit-color-text-tertiary);
+  margin-right: 4px;
+}
+
+.kit-pagination__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  border-radius: var(--kit-radius-md);
+  border: 1px solid var(--kit-color-border-default);
+  background: var(--kit-color-bg-card);
+  color: var(--kit-color-text-primary);
+  transition: background-color 150ms ease;
+}
+.kit-pagination__btn--md {
+  height: 32px;
+  min-width: 32px;
+  padding: 0 8px;
+  font-size: var(--kit-font-size-body-sm);
+}
+.kit-pagination__btn--sm {
+  height: 28px;
+  min-width: 28px;
+  padding: 0 6px;
+  font-size: var(--kit-font-size-caption);
+}
+.kit-pagination__btn--active {
+  background: var(--kit-color-primary-default);
+  border-color: transparent;
+  color: var(--kit-color-primary-text);
+  font-weight: var(--kit-font-weight-medium);
+}
+.kit-pagination__btn--disabled {
+  opacity: 0.5;
+}
+
+.kit-pagination__ellipsis {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--kit-color-text-tertiary);
+}
+.kit-pagination__ellipsis--md {
+  height: 32px;
+  min-width: 28px;
+}
+.kit-pagination__ellipsis--sm {
+  height: 28px;
+  min-width: 24px;
+}
