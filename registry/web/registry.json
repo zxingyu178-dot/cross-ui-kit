@@ -1765,6 +1765,102 @@
       },
       "docs": "packages/ui-web/src/Breadcrumb/README.md",
       "examples": ["packages/ui-web/src/Breadcrumb/__examples__/States.tsx"]
+    },
+    {
+      "name": "datatable",
+      "type": "registry:component",
+      "title": "数据表格 DataTable",
+      "description": "语义化 table 数据表格：受控排序(aria-sort，逻辑在 core sortData)、loading Skeleton 行、空态、斑马纹、行点击、列 render/align/width",
+      "canonical": "DataTable",
+      "status": "beta",
+      "stack": "web",
+      "dependencies": ["@kit/core"],
+      "registryDependencies": [],
+      "files": [
+        { "path": "packages/ui-web/src/DataTable/DataTable.tsx", "type": "registry:component" },
+        { "path": "packages/ui-web/src/DataTable/DataTable.types.ts", "type": "registry:ui" },
+        { "path": "packages/ui-web/src/DataTable/index.ts", "type": "registry:ui" }
+      ],
+      "props": [
+        {
+          "name": "columns",
+          "type": "TableColumn<T>[]",
+          "required": true,
+          "desc": "列配置(key/title/align/width/render/sortable/sorter)"
+        },
+        { "name": "data", "type": "T[]", "required": true, "desc": "数据行" },
+        {
+          "name": "rowKey",
+          "type": "keyof T | (row,index)=>string",
+          "required": false,
+          "desc": "行唯一 key"
+        },
+        {
+          "name": "loading",
+          "type": "boolean",
+          "required": false,
+          "default": "false",
+          "desc": "加载中骨架行"
+        },
+        {
+          "name": "empty",
+          "type": "ReactNode",
+          "required": false,
+          "default": "暂无数据",
+          "desc": "空态文案"
+        },
+        {
+          "name": "stripe",
+          "type": "boolean",
+          "required": false,
+          "default": "true",
+          "desc": "斑马纹"
+        },
+        { "name": "onRowClick", "type": "(row,index)=>void", "required": false, "desc": "行点击" },
+        {
+          "name": "sortState",
+          "type": "{key,order}|null",
+          "required": false,
+          "desc": "受控排序状态"
+        },
+        {
+          "name": "onSortChange",
+          "type": "(key,order)=>void",
+          "required": false,
+          "desc": "排序变化回调"
+        }
+      ],
+      "events": [
+        { "name": "onRowClick", "type": "(row, index) => void", "desc": "行点击" },
+        { "name": "onSortChange", "type": "(key, order) => void", "desc": "表头排序变化" }
+      ],
+      "slots": ["columns[].title", "columns[].render", "empty"],
+      "tokens": [
+        "color-bg-card",
+        "color-bg-hover",
+        "color-bg-active",
+        "color-border-default",
+        "color-text-primary",
+        "color-text-secondary",
+        "color-text-tertiary",
+        "color-primary-default",
+        "font-size-caption",
+        "font-size-body-sm",
+        "radius-lg",
+        "radius-sm"
+      ],
+      "states": ["normal", "loading", "empty", "sorted"],
+      "a11y": "语义化 table/thead/tbody；排序 th aria-sort=ascending/descending/none；表头按钮 type=button",
+      "usage": {
+        "do": [
+          "列排序交给 core sortData",
+          "受控排序 sortState+onSortChange",
+          "loading 用骨架行、空态轻文本(整页空态用 Empty)"
+        ],
+        "dont": ["在视图内写排序逻辑", "表格内放整页级 Empty"]
+      },
+      "docs": "packages/ui-web/src/DataTable/README.md",
+      "examples": ["packages/ui-web/src/DataTable/__examples__/States.tsx"]
     }
   ]
 }

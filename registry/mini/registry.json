@@ -1724,6 +1724,93 @@
       },
       "docs": "packages/ui-mini/src/Breadcrumb/README.md",
       "examples": ["packages/ui-mini/src/Breadcrumb/__examples__/States.tsx"]
+    },
+    {
+      "name": "datatable",
+      "type": "registry:component",
+      "title": "数据表格 DataTable",
+      "description": "Taro View flex 网格表格（DataTable.scss token 化）：受控排序、loading 骨架、空态、斑马纹、行点击、列 render/align/width",
+      "canonical": "DataTable",
+      "status": "beta",
+      "stack": "mini",
+      "dependencies": ["@tarojs/components", "@kit/core"],
+      "registryDependencies": [],
+      "files": [
+        { "path": "packages/ui-mini/src/DataTable/DataTable.tsx", "type": "registry:component" },
+        { "path": "packages/ui-mini/src/DataTable/DataTable.types.ts", "type": "registry:ui" },
+        { "path": "packages/ui-mini/src/DataTable/DataTable.scss", "type": "registry:ui" },
+        { "path": "packages/ui-mini/src/DataTable/index.ts", "type": "registry:ui" }
+      ],
+      "props": [
+        { "name": "columns", "type": "TableColumn<T>[]", "required": true, "desc": "列配置" },
+        { "name": "data", "type": "T[]", "required": true, "desc": "数据行" },
+        {
+          "name": "rowKey",
+          "type": "keyof T | (row,index)=>string",
+          "required": false,
+          "desc": "行唯一 key"
+        },
+        {
+          "name": "loading",
+          "type": "boolean",
+          "required": false,
+          "default": "false",
+          "desc": "加载中骨架行"
+        },
+        {
+          "name": "empty",
+          "type": "ReactNode",
+          "required": false,
+          "default": "暂无数据",
+          "desc": "空态文案"
+        },
+        {
+          "name": "stripe",
+          "type": "boolean",
+          "required": false,
+          "default": "true",
+          "desc": "斑马纹"
+        },
+        { "name": "onRowClick", "type": "(row,index)=>void", "required": false, "desc": "行点击" },
+        {
+          "name": "sortState",
+          "type": "{key,order}|null",
+          "required": false,
+          "desc": "受控排序状态"
+        },
+        {
+          "name": "onSortChange",
+          "type": "(key,order)=>void",
+          "required": false,
+          "desc": "排序变化回调"
+        }
+      ],
+      "events": [
+        { "name": "onRowClick", "type": "(row, index) => void", "desc": "行点击(onTap)" },
+        { "name": "onSortChange", "type": "(key, order) => void", "desc": "表头排序变化" }
+      ],
+      "slots": ["columns[].title", "columns[].render", "empty"],
+      "tokens": [
+        "color-bg-card",
+        "color-bg-hover",
+        "color-bg-active",
+        "color-border-default",
+        "color-text-primary",
+        "color-text-secondary",
+        "color-text-tertiary",
+        "font-size-caption",
+        "font-size-body-sm",
+        "radius-lg",
+        "radius-sm"
+      ],
+      "states": ["normal", "loading", "empty", "sorted"],
+      "a11y": "表头排序箭头 ↑↓↕；无障碍语义由壳工程补充",
+      "usage": {
+        "do": ["列排序交给 core sortData", "受控排序"],
+        "dont": ["在视图内写排序逻辑"]
+      },
+      "docs": "packages/ui-mini/src/DataTable/README.md",
+      "examples": ["packages/ui-mini/src/DataTable/__examples__/States.tsx"]
     }
   ]
 }

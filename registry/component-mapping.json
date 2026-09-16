@@ -493,6 +493,30 @@
         "mini": { "item": "@kit/mini-breadcrumb", "status": "beta" },
         "native": { "item": "@kit/native-breadcrumb", "status": "beta" }
       }
+    },
+    {
+      "canonical": "DataTable",
+      "category": "data-display",
+      "sharedProps": {
+        "columns": "TableColumn<T>[]（key/title/align/width/render/sortable/sorter）",
+        "data": "T[]（数据行）",
+        "rowKey": "keyof T | (row,index)=>string（行唯一 key）",
+        "loading": "boolean（骨架行）",
+        "empty": "ReactNode（空态文案）",
+        "stripe": "boolean（斑马纹，默认 true）",
+        "sortState": "{key,order}|null（受控排序状态）"
+      },
+      "eventMap": {
+        "web": "onRowClick(row,index)（行点击）；onSortChange(key,order)（表头排序，aria-sort）",
+        "mini": "onRowClick(row,index)（onTap）；onSortChange(key,order)（表头排序）",
+        "native": "onRowClick(row,index)（onPress）；onSortChange(key,order)（表头排序）"
+      },
+      "logicDeps": ["@kit/core sortData / compareValues / SortState（三栈共用排序）"],
+      "stacks": {
+        "web": { "item": "@kit/web-datatable", "status": "beta" },
+        "mini": { "item": "@kit/mini-datatable", "status": "beta" },
+        "native": { "item": "@kit/native-datatable", "status": "beta" }
+      }
     }
   ]
 }

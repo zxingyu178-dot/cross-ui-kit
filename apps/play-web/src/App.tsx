@@ -24,6 +24,7 @@ import { States as TagStates } from '@kit/ui-web/src/Tag/__examples__/States'
 import { States as StepsStates } from '@kit/ui-web/src/Steps/__examples__/States'
 import { States as PaginationStates } from '@kit/ui-web/src/Pagination/__examples__/States'
 import { States as BreadcrumbStates } from '@kit/ui-web/src/Breadcrumb/__examples__/States'
+import { States as DataTableStates } from '@kit/ui-web/src/DataTable/__examples__/States'
 
 /**
  * play-web 演示壳入口。
@@ -196,6 +197,13 @@ export default function App() {
           Breadcrumb · 面包屑（路径导航）
         </h2>
         <BreadcrumbStates />
+      </section>
+
+      <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
+        <h2 className="text-title-sm font-medium text-text-primary">
+          DataTable · 数据表格（排序 / 骨架 / 空态）
+        </h2>
+        <DataTableStates />
       </section>
 
       <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
