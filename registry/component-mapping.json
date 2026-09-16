@@ -474,6 +474,25 @@
         "mini": { "item": "@kit/mini-pagination", "status": "beta" },
         "native": { "item": "@kit/native-pagination", "status": "beta" }
       }
+    },
+    {
+      "canonical": "Breadcrumb",
+      "category": "navigation",
+      "sharedProps": {
+        "items": "{label:ReactNode;href?:string}[]（路径项，最后一项为当前页）",
+        "separator": "ReactNode（默认 '/'，可换 '›' 等）",
+        "onNavigate": "(index:number)=>void（点击中间项受控回调）"
+      },
+      "eventMap": {
+        "web": "onNavigate(index)（有 href 渲染 <a> + preventDefault；无 href 可点项 role=button）",
+        "mini": "onNavigate(index)（中间项 onTap）",
+        "native": "onNavigate(index)（中间项 onPress，accessibilityRole=link）"
+      },
+      "stacks": {
+        "web": { "item": "@kit/web-breadcrumb", "status": "beta" },
+        "mini": { "item": "@kit/mini-breadcrumb", "status": "beta" },
+        "native": { "item": "@kit/native-breadcrumb", "status": "beta" }
+      }
     }
   ]
 }

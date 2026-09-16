@@ -1705,6 +1705,66 @@
       },
       "docs": "packages/ui-web/src/Pagination/README.md",
       "examples": ["packages/ui-web/src/Pagination/__examples__/States.tsx"]
+    },
+    {
+      "name": "breadcrumb",
+      "type": "registry:component",
+      "title": "面包屑 Breadcrumb",
+      "description": "路径导航，最后一项当前页(aria-current=page)，中间项有 href 渲染 <a>，onNavigate 受控点击（无 href 可点项 role=button）",
+      "canonical": "Breadcrumb",
+      "status": "beta",
+      "stack": "web",
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        { "path": "packages/ui-web/src/Breadcrumb/Breadcrumb.tsx", "type": "registry:component" },
+        { "path": "packages/ui-web/src/Breadcrumb/Breadcrumb.types.ts", "type": "registry:ui" },
+        { "path": "packages/ui-web/src/Breadcrumb/index.ts", "type": "registry:ui" }
+      ],
+      "props": [
+        {
+          "name": "items",
+          "type": "{label:ReactNode;href?:string}[]",
+          "required": true,
+          "desc": "路径项，最后一项为当前页"
+        },
+        {
+          "name": "separator",
+          "type": "ReactNode",
+          "required": false,
+          "default": "'/'",
+          "desc": "分隔符"
+        },
+        {
+          "name": "onNavigate",
+          "type": "(index:number)=>void",
+          "required": false,
+          "desc": "点击中间项回调（受控）"
+        }
+      ],
+      "events": [
+        {
+          "name": "onNavigate",
+          "type": "(index: number) => void",
+          "desc": "点击中间项（有 href 渲染 <a> 并 preventDefault）"
+        }
+      ],
+      "slots": ["items[].label"],
+      "tokens": [
+        "color-text-secondary",
+        "color-text-tertiary",
+        "color-primary-default",
+        "font-size-body-sm",
+        "font-size-caption"
+      ],
+      "states": ["normal", "current"],
+      "a11y": "nav aria-label=面包屑 + ol/li；当前页 aria-current=page；无 href 可点项 role=button + Enter/Space；分隔符 aria-hidden",
+      "usage": {
+        "do": ["页面层级深时用面包屑", "最后一项固定当前页"],
+        "dont": ["在当前页放链接", "硬编码文字颜色"]
+      },
+      "docs": "packages/ui-web/src/Breadcrumb/README.md",
+      "examples": ["packages/ui-web/src/Breadcrumb/__examples__/States.tsx"]
     }
   ]
 }

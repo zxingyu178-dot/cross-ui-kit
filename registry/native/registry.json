@@ -1694,6 +1694,64 @@
       },
       "docs": "packages/ui-native/src/Pagination/README.md",
       "examples": ["packages/ui-native/src/Pagination/__examples__/States.tsx"]
+    },
+    {
+      "name": "breadcrumb",
+      "type": "registry:component",
+      "title": "面包屑 Breadcrumb",
+      "description": "Tamagui 路径导航，最后一项当前页，中间项 onPress 受控点击，可点项 accessibilityRole=link",
+      "canonical": "Breadcrumb",
+      "status": "beta",
+      "stack": "native",
+      "dependencies": ["tamagui"],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "packages/ui-native/src/Breadcrumb/Breadcrumb.tsx",
+          "type": "registry:component"
+        },
+        { "path": "packages/ui-native/src/Breadcrumb/Breadcrumb.types.ts", "type": "registry:ui" },
+        { "path": "packages/ui-native/src/Breadcrumb/index.ts", "type": "registry:ui" }
+      ],
+      "props": [
+        {
+          "name": "items",
+          "type": "{label:ReactNode;href?:string}[]",
+          "required": true,
+          "desc": "路径项，最后一项为当前页"
+        },
+        {
+          "name": "separator",
+          "type": "ReactNode",
+          "required": false,
+          "default": "'/'",
+          "desc": "分隔符"
+        },
+        {
+          "name": "onNavigate",
+          "type": "(index:number)=>void",
+          "required": false,
+          "desc": "点击中间项回调"
+        }
+      ],
+      "events": [
+        { "name": "onNavigate", "type": "(index: number) => void", "desc": "点击中间项（onPress）" }
+      ],
+      "slots": ["items[].label"],
+      "tokens": [
+        "color-text-secondary",
+        "color-text-tertiary",
+        "font-size-body-sm",
+        "font-size-caption"
+      ],
+      "states": ["normal", "current"],
+      "a11y": "可点中间项 accessibilityRole=link",
+      "usage": {
+        "do": ["页面层级深时用面包屑", "最后一项固定当前页"],
+        "dont": ["在当前页放链接", "跳转逻辑写进组件"]
+      },
+      "docs": "packages/ui-native/src/Breadcrumb/README.md",
+      "examples": ["packages/ui-native/src/Breadcrumb/__examples__/States.tsx"]
     }
   ]
 }

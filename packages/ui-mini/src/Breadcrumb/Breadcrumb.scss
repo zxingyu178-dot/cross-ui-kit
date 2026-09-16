@@ -1,0 +1,38 @@
+/* Breadcrumb 面包屑（mini）——颜色/字号全走 --kit-* token。 */
+
+.kit-breadcrumb {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  box-sizing: border-box;
+}
+
+.kit-breadcrumb__item {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+.kit-breadcrumb__link {
+  font-size: var(--kit-font-size-body-sm);
+  color: var(--kit-color-text-secondary);
+  line-height: 1.4;
+}
+.kit-breadcrumb__link--clickable {
+  cursor: pointer;
+}
+
+.kit-breadcrumb__current {
+  font-size: var(--kit-font-size-body-sm);
+  color: var(--kit-color-text-tertiary);
+  line-height: 1.4;
+}
+
+.kit-breadcrumb__sep {
+  font-size: var(--kit-font-size-caption);
+  color: var(--kit-color-text-tertiary);
+  line-height: 1.4;
+}
