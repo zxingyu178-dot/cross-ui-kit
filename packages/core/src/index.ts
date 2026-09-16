@@ -16,5 +16,6 @@
  *   types/    分页、接口响应、通用实体类型
  */
 export * from './utils'
+export * from './hooks'
 
 export const KIT_CORE_VERSION = '0.0.1'

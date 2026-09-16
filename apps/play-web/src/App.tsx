@@ -25,6 +25,7 @@ import { States as StepsStates } from '@kit/ui-web/src/Steps/__examples__/States
 import { States as PaginationStates } from '@kit/ui-web/src/Pagination/__examples__/States'
 import { States as BreadcrumbStates } from '@kit/ui-web/src/Breadcrumb/__examples__/States'
 import { States as DataTableStates } from '@kit/ui-web/src/DataTable/__examples__/States'
+import { RequestDemo } from './demos/RequestDemo'
 
 /**
  * play-web 演示壳入口。
@@ -204,6 +205,13 @@ export default function App() {
           DataTable · 数据表格（排序 / 骨架 / 空态）
         </h2>
         <DataTableStates />
+      </section>
+
+      <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
+        <h2 className="text-title-sm font-medium text-text-primary">
+          useRequest · 请求状态机（加载 / 成功 / 失败重试）
+        </h2>
+        <RequestDemo />
       </section>
 
       <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
