@@ -1,0 +1,24 @@
+/* Address（mini）样式：颜色全走 --kit-* token。 */
+
+.kit-address {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+
+.kit-address__picker {
+  flex: 1;
+  height: 40px;
+  padding: 0 12px;
+  border: 1px solid var(--kit-color-border-default);
+  border-radius: var(--kit-radius-md);
+  background: var(--kit-color-bg-card);
+  font-size: var(--kit-font-size-bodySm);
+  color: var(--kit-color-text-primary);
+  display: flex;
+  align-items: center;
+}
+
+.kit-address__picker--placeholder {
+  color: var(--kit-color-text-tertiary);
+}

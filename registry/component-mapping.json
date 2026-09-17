@@ -2489,6 +2489,36 @@
           "status": "beta"
         }
       }
+    },
+    {
+      "canonical": "Address",
+      "category": "form",
+      "sharedProps": {
+        "value": "AddressValue",
+        "onChange": "(value: AddressValue) => void",
+        "options": "AddressOption[]",
+        "placeholder": "string",
+        "disabled": "boolean"
+      },
+      "eventMap": {
+        "web": "onChange",
+        "mini": "onChange",
+        "native": "onChange"
+      },
+      "stacks": {
+        "web": {
+          "item": "@kit/web-address",
+          "status": "beta"
+        },
+        "mini": {
+          "item": "@kit/mini-address",
+          "status": "beta"
+        },
+        "native": {
+          "item": "@kit/native-address",
+          "status": "beta"
+        }
+      }
     }
   ]
 }

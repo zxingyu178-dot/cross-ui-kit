@@ -8107,6 +8107,103 @@
       },
       "docs": "packages/ui-mini/src/CountUp/README.md",
       "examples": ["packages/ui-mini/src/CountUp/__examples__/States.tsx"]
+    },
+    {
+      "name": "address",
+      "type": "registry:component",
+      "title": "地址选择器 Address",
+      "description": "地址选择器组件，省市区三级级联选择",
+      "canonical": "Address",
+      "status": "beta",
+      "stack": "mini",
+      "dependencies": ["@kit/core"],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "packages/ui-mini/src/Address/Address.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "packages/ui-mini/src/Address/Address.types.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-mini/src/Address/Address.scss",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-mini/src/Address/index.ts",
+          "type": "registry:ui"
+        }
+      ],
+      "props": [
+        {
+          "name": "value",
+          "type": "AddressValue",
+          "default": "{}",
+          "required": false,
+          "desc": "选中值 { province, city, district }"
+        },
+        {
+          "name": "onChange",
+          "type": "(value: AddressValue) => void",
+          "required": false,
+          "desc": "值变化回调"
+        },
+        {
+          "name": "options",
+          "type": "AddressOption[]",
+          "default": "内置默认数据",
+          "required": false,
+          "desc": "省市区数据"
+        },
+        {
+          "name": "placeholder",
+          "type": "string",
+          "default": "'请选择'",
+          "required": false,
+          "desc": "占位符"
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "default": "false",
+          "required": false,
+          "desc": "是否禁用"
+        },
+        {
+          "name": "className",
+          "type": "string",
+          "required": false,
+          "desc": "外层容器类名"
+        }
+      ],
+      "events": ["onChange"],
+      "slots": ["province", "city", "district"],
+      "tokens": [
+        "color-bg-card",
+        "color-border-default",
+        "color-text-primary",
+        "color-text-tertiary",
+        "color-primary-bg",
+        "color-primary-default",
+        "radius-md",
+        "font-size-bodySm"
+      ],
+      "states": ["normal", "disabled"],
+      "a11y": "选择器可点击；禁用状态不可交互",
+      "usage": {
+        "do": [
+          "用 Address 承载省市区选择",
+          "value 设置选中值",
+          "onChange 监听值变化",
+          "options 自定义省市区数据",
+          "placeholder 设置占位符"
+        ],
+        "dont": ["用 Address 承载单级选择（用 Select）", "options 数据结构不符合规范"]
+      },
+      "docs": "packages/ui-mini/src/Address/README.md",
+      "examples": ["packages/ui-mini/src/Address/__examples__/States.tsx"]
     }
   ]
 }
