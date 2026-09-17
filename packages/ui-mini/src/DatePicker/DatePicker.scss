@@ -1,0 +1,53 @@
+/* DatePicker（mini）样式：颜色全走 --kit-* token。 */
+
+.kit-datepicker {
+  position: relative;
+  width: 100%;
+}
+
+.kit-datepicker__trigger {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 40px;
+  padding: 0 12px;
+  border: 1px solid var(--kit-color-border-default);
+  border-radius: var(--kit-radius-md);
+  background: var(--kit-color-bg-card);
+}
+
+.kit-datepicker__trigger--open {
+  border-color: var(--kit-color-primary-default);
+}
+
+.kit-datepicker__trigger--disabled {
+  opacity: 0.5;
+}
+
+.kit-datepicker__text {
+  font-size: var(--kit-font-size-body-md);
+  color: var(--kit-color-text-primary);
+}
+
+.kit-datepicker__placeholder {
+  font-size: var(--kit-font-size-body-md);
+  color: var(--kit-color-text-tertiary);
+}
+
+.kit-datepicker__icon {
+  font-size: 16px;
+}
+
+.kit-datepicker__panel {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 4px;
+  padding: 8px;
+  border: 1px solid var(--kit-color-border-default);
+  border-radius: var(--kit-radius-md);
+  background: var(--kit-color-bg-card);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+}

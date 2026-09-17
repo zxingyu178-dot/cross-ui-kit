@@ -4350,6 +4350,108 @@
       },
       "docs": "packages/ui-web/src/TimePicker/README.md",
       "examples": ["packages/ui-web/src/TimePicker/__examples__/States.tsx"]
+    },
+    {
+      "name": "date-picker",
+      "type": "registry:component",
+      "title": "日期选择器 DatePicker",
+      "description": "日期选择器，输入框 + Calendar 弹出面板，受控优先，支持多种显示格式",
+      "canonical": "DatePicker",
+      "status": "beta",
+      "stack": "web",
+      "dependencies": ["@kit/core"],
+      "registryDependencies": ["calendar"],
+      "files": [
+        {
+          "path": "packages/ui-web/src/DatePicker/DatePicker.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "packages/ui-web/src/DatePicker/DatePicker.types.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-web/src/DatePicker/index.ts",
+          "type": "registry:ui"
+        }
+      ],
+      "props": [
+        {
+          "name": "value",
+          "type": "Date",
+          "required": false,
+          "desc": "受控值"
+        },
+        {
+          "name": "defaultValue",
+          "type": "Date",
+          "required": false,
+          "desc": "非受控默认值"
+        },
+        {
+          "name": "onChange",
+          "type": "(date:Date)=>void",
+          "required": false,
+          "desc": "值变化回调"
+        },
+        {
+          "name": "format",
+          "type": "'YYYY-MM-DD'|'YYYY/MM/DD'|'YYYY年MM月DD日'",
+          "default": "'YYYY-MM-DD'",
+          "required": false,
+          "desc": "显示格式"
+        },
+        {
+          "name": "placeholder",
+          "type": "string",
+          "default": "'请选择日期'",
+          "required": false,
+          "desc": "占位文本"
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "default": "false",
+          "required": false,
+          "desc": "是否禁用"
+        },
+        {
+          "name": "className",
+          "type": "string",
+          "required": false,
+          "desc": "外层容器类名"
+        }
+      ],
+      "events": [
+        {
+          "name": "onChange",
+          "type": "(date: Date) => void",
+          "desc": "值变化回调"
+        }
+      ],
+      "slots": [],
+      "tokens": [
+        "color-primary-default",
+        "color-bg-card",
+        "color-text-primary",
+        "color-text-secondary",
+        "color-text-tertiary",
+        "color-border-default",
+        "radius-md",
+        "font-size-body-md"
+      ],
+      "states": ["normal", "open", "selected", "disabled"],
+      "a11y": "输入框可点击；accessibilityLabel 由占位文本提供",
+      "usage": {
+        "do": [
+          "受控优先；value + onChange 配合使用",
+          "复用 Calendar 组件实现日期选择",
+          "format 控制显示格式"
+        ],
+        "dont": ["用 DatePicker 承载时间选择（用 TimePicker）", "value 与 defaultValue 同时使用"]
+      },
+      "docs": "packages/ui-web/src/DatePicker/README.md",
+      "examples": ["packages/ui-web/src/DatePicker/__examples__/States.tsx"]
     }
   ]
 }

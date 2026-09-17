@@ -1391,6 +1391,37 @@
           "status": "beta"
         }
       }
+    },
+    {
+      "canonical": "DatePicker",
+      "category": "form",
+      "sharedProps": {
+        "value": "Date",
+        "defaultValue": "Date",
+        "onChange": "(d:Date)=>void",
+        "format": "YYYY-MM-DD|YYYY/MM/DD|YYYY年MM月DD日",
+        "placeholder": "string",
+        "disabled": "boolean"
+      },
+      "eventMap": {
+        "web": "onChange（选择日期）",
+        "mini": "onChange（选择日期）",
+        "native": "onChange（选择日期）"
+      },
+      "stacks": {
+        "web": {
+          "item": "@kit/web-date-picker",
+          "status": "beta"
+        },
+        "mini": {
+          "item": "@kit/mini-date-picker",
+          "status": "beta"
+        },
+        "native": {
+          "item": "@kit/native-date-picker",
+          "status": "beta"
+        }
+      }
     }
   ]
 }

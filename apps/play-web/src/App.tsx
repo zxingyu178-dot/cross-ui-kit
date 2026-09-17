@@ -46,6 +46,7 @@ import { States as BackTopStates } from '@kit/ui-web/src/BackTop/__examples__/St
 import { States as CalendarStates } from '@kit/ui-web/src/Calendar/__examples__/States'
 import { States as CascaderStates } from '@kit/ui-web/src/Cascader/__examples__/States'
 import { States as TimePickerStates } from '@kit/ui-web/src/TimePicker/__examples__/States'
+import { States as DatePickerStates } from '@kit/ui-web/src/DatePicker/__examples__/States'
 import { RequestDemo } from './demos/RequestDemo'
 
 /**
@@ -380,6 +381,13 @@ export default function App() {
           TimePicker · 时间选择器（时分秒 / 仅时分 / 受控）
         </h2>
         <TimePickerStates />
+      </section>
+
+      <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
+        <h2 className="text-title-sm font-medium text-text-primary">
+          DatePicker · 日期选择器（多格式 / 受控 / 禁用）
+        </h2>
+        <DatePickerStates />
       </section>
 
       <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
