@@ -2311,6 +2311,33 @@
           "status": "beta"
         }
       }
+    },
+    {
+      "canonical": "PasswordStrength",
+      "category": "form",
+      "sharedProps": {
+        "value": "string",
+        "minLength": "number"
+      },
+      "eventMap": {
+        "web": "",
+        "mini": "",
+        "native": ""
+      },
+      "stacks": {
+        "web": {
+          "item": "@kit/web-password-strength",
+          "status": "beta"
+        },
+        "mini": {
+          "item": "@kit/mini-password-strength",
+          "status": "beta"
+        },
+        "native": {
+          "item": "@kit/native-password-strength",
+          "status": "beta"
+        }
+      }
     }
   ]
 }

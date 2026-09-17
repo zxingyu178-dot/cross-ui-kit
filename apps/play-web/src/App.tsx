@@ -76,6 +76,7 @@ import { States as AvatarGroupStates } from '@kit/ui-web/src/AvatarGroup/__examp
 import { States as TagGroupStates } from '@kit/ui-web/src/TagGroup/__examples__/States'
 import { States as CardGroupStates } from '@kit/ui-web/src/CardGroup/__examples__/States'
 import { States as StatisticCardStates } from '@kit/ui-web/src/StatisticCard/__examples__/States'
+import { States as PasswordStrengthStates } from '@kit/ui-web/src/PasswordStrength/__examples__/States'
 import { RequestDemo } from './demos/RequestDemo'
 
 /**
@@ -620,6 +621,13 @@ export default function App() {
           StatisticCard · 统计卡片（基础 / 带后缀 / 自定义颜色）
         </h2>
         <StatisticCardStates />
+      </section>
+
+      <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
+        <h2 className="text-title-sm font-medium text-text-primary">
+          PasswordStrength · 密码强度指示器（输入测试 / 各等级预览）
+        </h2>
+        <PasswordStrengthStates />
       </section>
 
       <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">

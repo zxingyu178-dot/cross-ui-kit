@@ -7353,6 +7353,75 @@
       },
       "docs": "packages/ui-web/src/StatisticCard/README.md",
       "examples": ["packages/ui-web/src/StatisticCard/__examples__/States.tsx"]
+    },
+    {
+      "name": "password-strength",
+      "type": "registry:component",
+      "title": "密码强度指示器 PasswordStrength",
+      "description": "密码强度指示器组件，进度条 + 强度文字（弱/中/强）",
+      "canonical": "PasswordStrength",
+      "status": "beta",
+      "stack": "web",
+      "dependencies": ["@kit/core"],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "packages/ui-web/src/PasswordStrength/PasswordStrength.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "packages/ui-web/src/PasswordStrength/PasswordStrength.types.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-web/src/PasswordStrength/index.ts",
+          "type": "registry:ui"
+        }
+      ],
+      "props": [
+        {
+          "name": "value",
+          "type": "string",
+          "required": true,
+          "desc": "密码值"
+        },
+        {
+          "name": "minLength",
+          "type": "number",
+          "default": "8",
+          "required": false,
+          "desc": "最小长度"
+        },
+        {
+          "name": "className",
+          "type": "string",
+          "required": false,
+          "desc": "外层容器类名"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "tokens": [
+        "color-bg-muted",
+        "color-danger-default",
+        "color-warning-default",
+        "color-success-default",
+        "color-text-tertiary",
+        "font-size-caption"
+      ],
+      "states": ["empty", "weak", "medium", "strong"],
+      "a11y": "密码强度可读；强度等级与长度可读",
+      "usage": {
+        "do": [
+          "用 PasswordStrength 展示密码强度",
+          "value 传入密码值",
+          "minLength 设置最小长度要求",
+          "配合 InputPassword 使用"
+        ],
+        "dont": ["用 PasswordStrength 展示非密码强度（用 Progress）", "value 传入非密码内容"]
+      },
+      "docs": "packages/ui-web/src/PasswordStrength/README.md",
+      "examples": ["packages/ui-web/src/PasswordStrength/__examples__/States.tsx"]
     }
   ]
 }
