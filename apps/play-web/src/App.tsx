@@ -70,6 +70,7 @@ import { States as TextAreaStates } from '@kit/ui-web/src/TextArea/__examples__/
 import { States as InputPasswordStates } from '@kit/ui-web/src/InputPassword/__examples__/States'
 import { States as SearchStates } from '@kit/ui-web/src/Search/__examples__/States'
 import { States as OtpInputStates } from '@kit/ui-web/src/OtpInput/__examples__/States'
+import { States as DateRangePickerStates } from '@kit/ui-web/src/DateRangePicker/__examples__/States'
 import { RequestDemo } from './demos/RequestDemo'
 
 /**
@@ -572,6 +573,13 @@ export default function App() {
           OtpInput · 验证码输入框（6位 / 4位密码 / 禁用）
         </h2>
         <OtpInputStates />
+      </section>
+
+      <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
+        <h2 className="text-title-sm font-medium text-text-primary">
+          DateRangePicker · 日期范围选择器（基础 / 自定义连接符 / 禁用）
+        </h2>
+        <DateRangePickerStates />
       </section>
 
       <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">

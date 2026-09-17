@@ -2132,6 +2132,36 @@
           "status": "beta"
         }
       }
+    },
+    {
+      "canonical": "DateRangePicker",
+      "category": "form",
+      "sharedProps": {
+        "value": "[string,string]",
+        "onChange": "(v:[string,string])=>void",
+        "placeholder": "[string,string]",
+        "disabled": "boolean",
+        "separator": "string"
+      },
+      "eventMap": {
+        "web": "onChange",
+        "mini": "onChange",
+        "native": "onChange"
+      },
+      "stacks": {
+        "web": {
+          "item": "@kit/web-date-range-picker",
+          "status": "beta"
+        },
+        "mini": {
+          "item": "@kit/mini-date-range-picker",
+          "status": "beta"
+        },
+        "native": {
+          "item": "@kit/native-date-range-picker",
+          "status": "beta"
+        }
+      }
     }
   ]
 }
