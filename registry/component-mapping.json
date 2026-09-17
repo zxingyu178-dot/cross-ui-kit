@@ -1453,6 +1453,38 @@
           "status": "beta"
         }
       }
+    },
+    {
+      "canonical": "List",
+      "category": "data-display",
+      "sharedProps": {
+        "dataSource": "ListItem[]",
+        "header": "ReactNode",
+        "footer": "ReactNode",
+        "bordered": "boolean",
+        "size": "sm|md|lg",
+        "loading": "boolean",
+        "emptyText": "string"
+      },
+      "eventMap": {
+        "web": "无（纯展示）",
+        "mini": "无（纯展示）",
+        "native": "无（纯展示）"
+      },
+      "stacks": {
+        "web": {
+          "item": "@kit/web-list",
+          "status": "beta"
+        },
+        "mini": {
+          "item": "@kit/mini-list",
+          "status": "beta"
+        },
+        "native": {
+          "item": "@kit/native-list",
+          "status": "beta"
+        }
+      }
     }
   ]
 }

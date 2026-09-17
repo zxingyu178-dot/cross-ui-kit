@@ -48,6 +48,7 @@ import { States as CascaderStates } from '@kit/ui-web/src/Cascader/__examples__/
 import { States as TimePickerStates } from '@kit/ui-web/src/TimePicker/__examples__/States'
 import { States as DatePickerStates } from '@kit/ui-web/src/DatePicker/__examples__/States'
 import { States as UploadStates } from '@kit/ui-web/src/Upload/__examples__/States'
+import { States as ListStates } from '@kit/ui-web/src/List/__examples__/States'
 import { RequestDemo } from './demos/RequestDemo'
 
 /**
@@ -396,6 +397,13 @@ export default function App() {
           Upload · 上传（单选/多选/最大数量/禁用）
         </h2>
         <UploadStates />
+      </section>
+
+      <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
+        <h2 className="text-title-sm font-medium text-text-primary">
+          List · 列表（基础/小尺寸/加载/空状态）
+        </h2>
+        <ListStates />
       </section>
 
       <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">

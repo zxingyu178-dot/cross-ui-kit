@@ -4565,6 +4565,118 @@
       },
       "docs": "packages/ui-web/src/Upload/README.md",
       "examples": ["packages/ui-web/src/Upload/__examples__/States.tsx"]
+    },
+    {
+      "name": "list",
+      "type": "registry:component",
+      "title": "列表 List",
+      "description": "列表组件，支持数据源/自定义渲染/头部底部/边框/尺寸/加载/空状态",
+      "canonical": "List",
+      "status": "beta",
+      "stack": "web",
+      "dependencies": ["@kit/core"],
+      "registryDependencies": ["empty", "skeleton"],
+      "files": [
+        {
+          "path": "packages/ui-web/src/List/List.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "packages/ui-web/src/List/List.types.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-web/src/List/index.ts",
+          "type": "registry:ui"
+        }
+      ],
+      "props": [
+        {
+          "name": "dataSource",
+          "type": "ListItem[]",
+          "default": "[]",
+          "required": false,
+          "desc": "数据源"
+        },
+        {
+          "name": "renderItem",
+          "type": "(item,index)=>ReactNode",
+          "required": false,
+          "desc": "自定义渲染项（web 端）"
+        },
+        {
+          "name": "header",
+          "type": "ReactNode",
+          "required": false,
+          "desc": "列表头部"
+        },
+        {
+          "name": "footer",
+          "type": "ReactNode",
+          "required": false,
+          "desc": "列表底部"
+        },
+        {
+          "name": "bordered",
+          "type": "boolean",
+          "default": "false",
+          "required": false,
+          "desc": "是否显示边框"
+        },
+        {
+          "name": "size",
+          "type": "'sm'|'md'|'lg'",
+          "default": "'md'",
+          "required": false,
+          "desc": "尺寸"
+        },
+        {
+          "name": "loading",
+          "type": "boolean",
+          "default": "false",
+          "required": false,
+          "desc": "是否加载中"
+        },
+        {
+          "name": "emptyText",
+          "type": "string",
+          "default": "'暂无数据'",
+          "required": false,
+          "desc": "空状态文本"
+        },
+        {
+          "name": "className",
+          "type": "string",
+          "required": false,
+          "desc": "外层容器类名"
+        }
+      ],
+      "events": [],
+      "slots": ["header", "footer", "item.extra", "renderItem"],
+      "tokens": [
+        "color-bg-card",
+        "color-text-primary",
+        "color-text-secondary",
+        "color-text-tertiary",
+        "color-border-default",
+        "color-bg-muted",
+        "radius-md",
+        "font-size-body-md",
+        "font-size-body-sm",
+        "font-size-caption"
+      ],
+      "states": ["normal", "loading", "empty", "bordered"],
+      "a11y": "列表项可点击；accessibilityLabel 由 title 提供",
+      "usage": {
+        "do": [
+          "用 dataSource 渲染简单列表",
+          "用 renderItem 自定义复杂列表项（web 端）",
+          "loading 时显示骨架屏"
+        ],
+        "dont": ["用 List 承载表格数据（用 DataTable）", "在列表项内硬编码颜色/间距"]
+      },
+      "docs": "packages/ui-web/src/List/README.md",
+      "examples": ["packages/ui-web/src/List/__examples__/States.tsx"]
     }
   ]
 }
