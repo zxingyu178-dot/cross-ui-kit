@@ -4844,6 +4844,87 @@
       },
       "docs": "packages/ui-web/src/Grid/README.md",
       "examples": ["packages/ui-web/src/Grid/__examples__/States.tsx"]
+    },
+    {
+      "name": "affix",
+      "type": "registry:component",
+      "title": "固钉 Affix",
+      "description": "固钉组件，监听滚动，当元素距离视口顶部/底部达到偏移量时固定定位",
+      "canonical": "Affix",
+      "status": "beta",
+      "stack": "web",
+      "dependencies": ["@kit/core"],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "packages/ui-web/src/Affix/Affix.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "packages/ui-web/src/Affix/Affix.types.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-web/src/Affix/index.ts",
+          "type": "registry:ui"
+        }
+      ],
+      "props": [
+        {
+          "name": "offsetTop",
+          "type": "number",
+          "required": false,
+          "desc": "距离窗口顶部达到指定偏移量后触发"
+        },
+        {
+          "name": "offsetBottom",
+          "type": "number",
+          "required": false,
+          "desc": "距离窗口底部达到指定偏移量后触发"
+        },
+        {
+          "name": "onChange",
+          "type": "(affixed:boolean)=>void",
+          "required": false,
+          "desc": "固定状态改变时触发回调"
+        },
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "required": false,
+          "desc": "子元素"
+        },
+        {
+          "name": "className",
+          "type": "string",
+          "required": false,
+          "desc": "外层容器类名"
+        }
+      ],
+      "events": [
+        {
+          "name": "onChange",
+          "type": "(affixed: boolean) => void",
+          "desc": "固定状态改变时触发回调"
+        }
+      ],
+      "slots": ["children"],
+      "tokens": [],
+      "states": ["normal", "affixed"],
+      "a11y": "固定元素保持可访问性",
+      "usage": {
+        "do": [
+          "用 Affix 固定导航栏/操作按钮",
+          "offsetTop/offsetBottom 控制触发位置",
+          "web 端支持滚动监听自动固定"
+        ],
+        "dont": [
+          "用 Affix 承载模态框（用 Dialog）",
+          "在 mini/native 端依赖滚动监听（简化为固定定位）"
+        ]
+      },
+      "docs": "packages/ui-web/src/Affix/README.md",
+      "examples": ["packages/ui-web/src/Affix/__examples__/States.tsx"]
     }
   ]
 }

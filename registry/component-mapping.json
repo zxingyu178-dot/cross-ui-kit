@@ -1545,6 +1545,35 @@
           "status": "beta"
         }
       }
+    },
+    {
+      "canonical": "Affix",
+      "category": "other",
+      "sharedProps": {
+        "offsetTop": "number",
+        "offsetBottom": "number",
+        "onChange": "(a:boolean)=>void",
+        "children": "ReactNode"
+      },
+      "eventMap": {
+        "web": "onChange（固定状态改变）",
+        "mini": "不触发（简化为固定定位）",
+        "native": "不触发（简化为固定定位）"
+      },
+      "stacks": {
+        "web": {
+          "item": "@kit/web-affix",
+          "status": "beta"
+        },
+        "mini": {
+          "item": "@kit/mini-affix",
+          "status": "beta"
+        },
+        "native": {
+          "item": "@kit/native-affix",
+          "status": "beta"
+        }
+      }
     }
   ]
 }
