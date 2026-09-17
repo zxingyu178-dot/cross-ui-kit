@@ -1,0 +1,55 @@
+/* Collapse（mini）样式：颜色全走 --kit-* token。 */
+
+.kit-collapse {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.kit-collapse__item {
+  border: 1px solid var(--kit-color-border-default);
+  border-radius: var(--kit-radius-md);
+  background: var(--kit-color-bg-card);
+  overflow: hidden;
+}
+
+.kit-collapse__item--disabled {
+  opacity: 0.5;
+}
+
+.kit-collapse__header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+}
+
+.kit-collapse__title {
+  font-size: var(--kit-font-size-body-md);
+  font-weight: var(--kit-font-weight-medium);
+  color: var(--kit-color-text-primary);
+  flex: 1;
+}
+
+.kit-collapse__arrow {
+  font-size: 12px;
+  color: var(--kit-color-text-tertiary);
+  transition: transform 0.2s ease;
+  flex-shrink: 0;
+  margin-left: 8px;
+}
+
+.kit-collapse__arrow--open {
+  transform: rotate(180deg);
+}
+
+.kit-collapse__content {
+  padding: 0 16px 12px;
+}
+
+.kit-collapse__content-text {
+  font-size: var(--kit-font-size-body-sm);
+  color: var(--kit-color-text-secondary);
+  line-height: 1.5;
+}

@@ -33,6 +33,7 @@ import { States as InputNumberStates } from '@kit/ui-web/src/InputNumber/__examp
 import { States as StatisticStates } from '@kit/ui-web/src/Statistic/__examples__/States'
 import { States as SegmentedStates } from '@kit/ui-web/src/Segmented/__examples__/States'
 import { States as RateStates } from '@kit/ui-web/src/Rate/__examples__/States'
+import { States as CollapseStates } from '@kit/ui-web/src/Collapse/__examples__/States'
 import { RequestDemo } from './demos/RequestDemo'
 
 /**
@@ -276,6 +277,13 @@ export default function App() {
           Rate · 评分（半星 / 自定义字符 / 禁用）
         </h2>
         <RateStates />
+      </section>
+
+      <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
+        <h2 className="text-title-sm font-medium text-text-primary">
+          Collapse · 折叠面板（多展开 / 手风琴 / 禁用项）
+        </h2>
+        <CollapseStates />
       </section>
 
       <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">

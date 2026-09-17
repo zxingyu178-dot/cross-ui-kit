@@ -993,6 +993,36 @@
           "status": "beta"
         }
       }
+    },
+    {
+      "canonical": "Collapse",
+      "category": "layout",
+      "sharedProps": {
+        "items": "CollapseItem[]",
+        "activeKey": "string|string[]",
+        "defaultActiveKey": "string|string[]",
+        "onChange": "(k:string|string[])=>void",
+        "accordion": "boolean"
+      },
+      "eventMap": {
+        "web": "onChange（Radix onOpenChange）",
+        "mini": "onChange（View onClick）",
+        "native": "onChange（XStack onPress）"
+      },
+      "stacks": {
+        "web": {
+          "item": "@kit/web-collapse",
+          "status": "beta"
+        },
+        "mini": {
+          "item": "@kit/mini-collapse",
+          "status": "beta"
+        },
+        "native": {
+          "item": "@kit/native-collapse",
+          "status": "beta"
+        }
+      }
     }
   ]
 }
