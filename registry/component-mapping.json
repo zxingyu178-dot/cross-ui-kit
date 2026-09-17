@@ -1977,6 +1977,36 @@
           "status": "beta"
         }
       }
+    },
+    {
+      "canonical": "Form",
+      "category": "form",
+      "sharedProps": {
+        "layout": "'horizontal'|'vertical'|'inline'",
+        "initialValues": "Record<string,unknown>",
+        "onFinish": "(v)=>void",
+        "onFinishFailed": "(e)=>void",
+        "labelWidth": "number"
+      },
+      "eventMap": {
+        "web": "onFinish/onFinishFailed",
+        "mini": "onFinish/onFinishFailed",
+        "native": "onFinish/onFinishFailed"
+      },
+      "stacks": {
+        "web": {
+          "item": "@kit/web-form",
+          "status": "beta"
+        },
+        "mini": {
+          "item": "@kit/mini-form",
+          "status": "beta"
+        },
+        "native": {
+          "item": "@kit/native-form",
+          "status": "beta"
+        }
+      }
     }
   ]
 }

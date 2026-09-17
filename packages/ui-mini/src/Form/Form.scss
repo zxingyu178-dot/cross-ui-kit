@@ -1,0 +1,71 @@
+/* Form（mini）样式：颜色全走 --kit-* token。 */
+
+.kit-form {
+  width: 100%;
+}
+
+.kit-form--vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.kit-form--horizontal {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.kit-form--inline {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: flex-end;
+}
+
+.kit-form-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.kit-form-item--horizontal {
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.kit-form-item__label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  flex-shrink: 0;
+  padding-top: 8px;
+  font-size: var(--kit-font-size-body-sm);
+  color: var(--kit-color-text-primary);
+}
+
+.kit-form-item__label--vertical {
+  justify-content: flex-start;
+  padding-top: 0;
+}
+
+.kit-form-item__required {
+  color: var(--kit-color-danger-default);
+  margin-right: 4px;
+}
+
+.kit-form-item__content {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.kit-form-item__error {
+  font-size: var(--kit-font-size-caption);
+  color: var(--kit-color-danger-default);
+}

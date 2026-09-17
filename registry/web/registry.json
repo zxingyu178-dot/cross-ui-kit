@@ -6277,6 +6277,111 @@
       },
       "docs": "packages/ui-web/src/Mentions/README.md",
       "examples": ["packages/ui-web/src/Mentions/__examples__/States.tsx"]
+    },
+    {
+      "name": "form",
+      "type": "registry:component",
+      "title": "表单 Form",
+      "description": "表单组件，表单容器 + Form.Item，提供布局、校验、提交功能",
+      "canonical": "Form",
+      "status": "beta",
+      "stack": "web",
+      "dependencies": ["@kit/core"],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "packages/ui-web/src/Form/Form.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "packages/ui-web/src/Form/Form.types.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-web/src/Form/index.ts",
+          "type": "registry:ui"
+        }
+      ],
+      "props": [
+        {
+          "name": "layout",
+          "type": "'horizontal'|'vertical'|'inline'",
+          "default": "'vertical'",
+          "required": false,
+          "desc": "布局方式"
+        },
+        {
+          "name": "initialValues",
+          "type": "Record<string, unknown>",
+          "default": "{}",
+          "required": false,
+          "desc": "初始值"
+        },
+        {
+          "name": "onFinish",
+          "type": "(values)=>void",
+          "required": false,
+          "desc": "提交成功回调"
+        },
+        {
+          "name": "onFinishFailed",
+          "type": "(errors)=>void",
+          "required": false,
+          "desc": "提交失败回调"
+        },
+        {
+          "name": "labelWidth",
+          "type": "number",
+          "default": "100",
+          "required": false,
+          "desc": "标签宽度（px）"
+        },
+        {
+          "name": "className",
+          "type": "string",
+          "required": false,
+          "desc": "外层容器类名"
+        }
+      ],
+      "events": [
+        {
+          "name": "onFinish",
+          "type": "(values: Record<string, unknown>) => void",
+          "desc": "提交成功回调"
+        },
+        {
+          "name": "onFinishFailed",
+          "type": "(errors: Record<string, string>) => void",
+          "desc": "提交失败回调"
+        }
+      ],
+      "slots": ["Form.Item", "Form.Item.label", "Form.Item.children"],
+      "tokens": [
+        "color-primary-default",
+        "color-danger-default",
+        "color-text-primary",
+        "color-text-secondary",
+        "color-text-tertiary",
+        "color-border-default",
+        "radius-md",
+        "font-size-body-sm",
+        "font-size-caption"
+      ],
+      "states": ["normal", "error", "submitting"],
+      "a11y": "表单可提交；字段有 label 关联；错误信息可读",
+      "usage": {
+        "do": [
+          "用 Form 承载表单提交场景",
+          "Form.Item 包裹输入组件并指定 name",
+          "rules 配置校验规则（required/pattern/min/max/validator）"
+        ],
+        "dont": [
+          "用 Form 承载非表单布局（用 Grid/Space）",
+          "Form.Item 中放多个输入组件（只取第一个）"
+        ]
+      },
+      "docs": "packages/ui-web/src/Form/README.md",
+      "examples": ["packages/ui-web/src/Form/__examples__/States.tsx"]
     }
   ]
 }
