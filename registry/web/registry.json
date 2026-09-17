@@ -15,9 +15,18 @@
       "dependencies": ["@radix-ui/react-slot", "class-variance-authority", "@kit/core"],
       "registryDependencies": [],
       "files": [
-        { "path": "packages/ui-web/src/Button/Button.tsx", "type": "registry:component" },
-        { "path": "packages/ui-web/src/Button/Button.types.ts", "type": "registry:ui" },
-        { "path": "packages/ui-web/src/Button/index.ts", "type": "registry:ui" }
+        {
+          "path": "packages/ui-web/src/Button/Button.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "packages/ui-web/src/Button/Button.types.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-web/src/Button/index.ts",
+          "type": "registry:ui"
+        }
       ],
       "props": [
         {
@@ -112,13 +121,32 @@
       "dependencies": ["class-variance-authority", "@kit/core"],
       "registryDependencies": [],
       "files": [
-        { "path": "packages/ui-web/src/Input/Input.tsx", "type": "registry:component" },
-        { "path": "packages/ui-web/src/Input/Input.types.ts", "type": "registry:ui" },
-        { "path": "packages/ui-web/src/Input/index.ts", "type": "registry:ui" }
+        {
+          "path": "packages/ui-web/src/Input/Input.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "packages/ui-web/src/Input/Input.types.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-web/src/Input/index.ts",
+          "type": "registry:ui"
+        }
       ],
       "props": [
-        { "name": "value", "type": "string", "required": false, "desc": "受控值" },
-        { "name": "defaultValue", "type": "string", "required": false, "desc": "非受控初值" },
+        {
+          "name": "value",
+          "type": "string",
+          "required": false,
+          "desc": "受控值"
+        },
+        {
+          "name": "defaultValue",
+          "type": "string",
+          "required": false,
+          "desc": "非受控初值"
+        },
         {
           "name": "type",
           "type": "'text'|'password'|'number'|'tel'|'email'|'search'",
@@ -154,9 +182,24 @@
           "required": false,
           "desc": "只读"
         },
-        { "name": "prefixIcon", "type": "ReactNode", "required": false, "desc": "前置图标槽" },
-        { "name": "suffixIcon", "type": "ReactNode", "required": false, "desc": "后置图标槽" },
-        { "name": "maxLength", "type": "number", "required": false, "desc": "最大长度" }
+        {
+          "name": "prefixIcon",
+          "type": "ReactNode",
+          "required": false,
+          "desc": "前置图标槽"
+        },
+        {
+          "name": "suffixIcon",
+          "type": "ReactNode",
+          "required": false,
+          "desc": "后置图标槽"
+        },
+        {
+          "name": "maxLength",
+          "type": "number",
+          "required": false,
+          "desc": "最大长度"
+        }
       ],
       "events": [
         {
@@ -202,13 +245,32 @@
       "dependencies": ["@radix-ui/react-checkbox", "@kit/core"],
       "registryDependencies": [],
       "files": [
-        { "path": "packages/ui-web/src/Checkbox/Checkbox.tsx", "type": "registry:component" },
-        { "path": "packages/ui-web/src/Checkbox/Checkbox.types.ts", "type": "registry:ui" },
-        { "path": "packages/ui-web/src/Checkbox/index.ts", "type": "registry:ui" }
+        {
+          "path": "packages/ui-web/src/Checkbox/Checkbox.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "packages/ui-web/src/Checkbox/Checkbox.types.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-web/src/Checkbox/index.ts",
+          "type": "registry:ui"
+        }
       ],
       "props": [
-        { "name": "checked", "type": "boolean", "required": false, "desc": "受控选中态" },
-        { "name": "defaultChecked", "type": "boolean", "required": false, "desc": "非受控初值" },
+        {
+          "name": "checked",
+          "type": "boolean",
+          "required": false,
+          "desc": "受控选中态"
+        },
+        {
+          "name": "defaultChecked",
+          "type": "boolean",
+          "required": false,
+          "desc": "非受控初值"
+        },
         {
           "name": "disabled",
           "type": "boolean",
@@ -279,9 +341,18 @@
       "dependencies": ["@radix-ui/react-select", "class-variance-authority", "@kit/core"],
       "registryDependencies": [],
       "files": [
-        { "path": "packages/ui-web/src/Select/Select.tsx", "type": "registry:component" },
-        { "path": "packages/ui-web/src/Select/Select.types.ts", "type": "registry:ui" },
-        { "path": "packages/ui-web/src/Select/index.ts", "type": "registry:ui" }
+        {
+          "path": "packages/ui-web/src/Select/Select.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "packages/ui-web/src/Select/Select.types.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-web/src/Select/index.ts",
+          "type": "registry:ui"
+        }
       ],
       "props": [
         {
@@ -290,8 +361,18 @@
           "required": true,
           "desc": "选项列表"
         },
-        { "name": "value", "type": "string", "required": false, "desc": "受控值" },
-        { "name": "defaultValue", "type": "string", "required": false, "desc": "非受控初值" },
+        {
+          "name": "value",
+          "type": "string",
+          "required": false,
+          "desc": "受控值"
+        },
+        {
+          "name": "defaultValue",
+          "type": "string",
+          "required": false,
+          "desc": "非受控初值"
+        },
         {
           "name": "placeholder",
           "type": "string",
@@ -370,12 +451,26 @@
       "dependencies": ["@radix-ui/react-dialog", "@kit/core"],
       "registryDependencies": [],
       "files": [
-        { "path": "packages/ui-web/src/Dialog/Dialog.tsx", "type": "registry:component" },
-        { "path": "packages/ui-web/src/Dialog/Dialog.types.ts", "type": "registry:ui" },
-        { "path": "packages/ui-web/src/Dialog/index.ts", "type": "registry:ui" }
+        {
+          "path": "packages/ui-web/src/Dialog/Dialog.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "packages/ui-web/src/Dialog/Dialog.types.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-web/src/Dialog/index.ts",
+          "type": "registry:ui"
+        }
       ],
       "props": [
-        { "name": "open", "type": "boolean", "required": true, "desc": "受控可见" },
+        {
+          "name": "open",
+          "type": "boolean",
+          "required": true,
+          "desc": "受控可见"
+        },
         {
           "name": "onOpenChange",
           "type": "(open:boolean)=>void",
@@ -450,13 +545,21 @@
         }
       ],
       "events": [
-        { "name": "onOpenChange", "type": "(open: boolean) => void", "desc": "开关请求" },
+        {
+          "name": "onOpenChange",
+          "type": "(open: boolean) => void",
+          "desc": "开关请求"
+        },
         {
           "name": "onConfirm",
           "type": "() => void | false",
           "desc": "点击确定；返回 false 阻止自动关闭（异步提交场景）"
         },
-        { "name": "onCancel", "type": "() => void", "desc": "点击取消/关闭（随后请求关闭）" }
+        {
+          "name": "onCancel",
+          "type": "() => void",
+          "desc": "点击取消/关闭（随后请求关闭）"
+        }
       ],
       "slots": ["title", "description", "children", "footer"],
       "tokens": [
@@ -498,19 +601,38 @@
       "dependencies": ["@radix-ui/react-toast", "@kit/core"],
       "registryDependencies": [],
       "files": [
-        { "path": "packages/ui-web/src/Toast/Toast.tsx", "type": "registry:component" },
-        { "path": "packages/ui-web/src/Toast/Toast.types.ts", "type": "registry:ui" },
-        { "path": "packages/ui-web/src/Toast/index.ts", "type": "registry:ui" }
+        {
+          "path": "packages/ui-web/src/Toast/Toast.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "packages/ui-web/src/Toast/Toast.types.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-web/src/Toast/index.ts",
+          "type": "registry:ui"
+        }
       ],
       "props": [
-        { "name": "open", "type": "boolean", "required": true, "desc": "受控可见" },
+        {
+          "name": "open",
+          "type": "boolean",
+          "required": true,
+          "desc": "受控可见"
+        },
         {
           "name": "onOpenChange",
           "type": "(open:boolean)=>void",
           "required": false,
           "desc": "自动消失/滑动关闭时以 false 回调"
         },
-        { "name": "message", "type": "ReactNode", "required": true, "desc": "提示文本" },
+        {
+          "name": "message",
+          "type": "ReactNode",
+          "required": true,
+          "desc": "提示文本"
+        },
         {
           "name": "type",
           "type": "'info'|'success'|'warning'|'error'|'loading'",
@@ -534,8 +656,16 @@
         }
       ],
       "events": [
-        { "name": "onOpenChange", "type": "(open: boolean) => void", "desc": "开关请求" },
-        { "name": "onClose", "type": "() => void", "desc": "完全关闭后回调" }
+        {
+          "name": "onOpenChange",
+          "type": "(open: boolean) => void",
+          "desc": "开关请求"
+        },
+        {
+          "name": "onClose",
+          "type": "() => void",
+          "desc": "完全关闭后回调"
+        }
       ],
       "slots": ["message"],
       "tokens": [
@@ -575,13 +705,32 @@
       "dependencies": ["@radix-ui/react-switch", "@kit/core"],
       "registryDependencies": [],
       "files": [
-        { "path": "packages/ui-web/src/Switch/Switch.tsx", "type": "registry:component" },
-        { "path": "packages/ui-web/src/Switch/Switch.types.ts", "type": "registry:ui" },
-        { "path": "packages/ui-web/src/Switch/index.ts", "type": "registry:ui" }
+        {
+          "path": "packages/ui-web/src/Switch/Switch.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "packages/ui-web/src/Switch/Switch.types.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-web/src/Switch/index.ts",
+          "type": "registry:ui"
+        }
       ],
       "props": [
-        { "name": "checked", "type": "boolean", "required": false, "desc": "受控开关态" },
-        { "name": "defaultChecked", "type": "boolean", "required": false, "desc": "非受控初值" },
+        {
+          "name": "checked",
+          "type": "boolean",
+          "required": false,
+          "desc": "受控开关态"
+        },
+        {
+          "name": "defaultChecked",
+          "type": "boolean",
+          "required": false,
+          "desc": "非受控初值"
+        },
         {
           "name": "disabled",
           "type": "boolean",
@@ -603,7 +752,12 @@
           "required": false,
           "desc": "尺寸"
         },
-        { "name": "label", "type": "ReactNode", "required": false, "desc": "右侧文本" }
+        {
+          "name": "label",
+          "type": "ReactNode",
+          "required": false,
+          "desc": "右侧文本"
+        }
       ],
       "events": [
         {
@@ -647,9 +801,18 @@
       "dependencies": ["@radix-ui/react-radio-group", "@kit/core"],
       "registryDependencies": [],
       "files": [
-        { "path": "packages/ui-web/src/RadioGroup/RadioGroup.tsx", "type": "registry:component" },
-        { "path": "packages/ui-web/src/RadioGroup/RadioGroup.types.ts", "type": "registry:ui" },
-        { "path": "packages/ui-web/src/RadioGroup/index.ts", "type": "registry:ui" }
+        {
+          "path": "packages/ui-web/src/RadioGroup/RadioGroup.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "packages/ui-web/src/RadioGroup/RadioGroup.types.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-web/src/RadioGroup/index.ts",
+          "type": "registry:ui"
+        }
       ],
       "props": [
         {
@@ -658,8 +821,18 @@
           "required": true,
           "desc": "选项列表"
         },
-        { "name": "value", "type": "string", "required": false, "desc": "受控选中值" },
-        { "name": "defaultValue", "type": "string", "required": false, "desc": "非受控初值" },
+        {
+          "name": "value",
+          "type": "string",
+          "required": false,
+          "desc": "受控选中值"
+        },
+        {
+          "name": "defaultValue",
+          "type": "string",
+          "required": false,
+          "desc": "非受控初值"
+        },
         {
           "name": "disabled",
           "type": "boolean",
@@ -730,12 +903,26 @@
       "dependencies": ["@kit/core"],
       "registryDependencies": [],
       "files": [
-        { "path": "packages/ui-web/src/Badge/Badge.tsx", "type": "registry:component" },
-        { "path": "packages/ui-web/src/Badge/Badge.types.ts", "type": "registry:ui" },
-        { "path": "packages/ui-web/src/Badge/index.ts", "type": "registry:ui" }
+        {
+          "path": "packages/ui-web/src/Badge/Badge.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "packages/ui-web/src/Badge/Badge.types.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-web/src/Badge/index.ts",
+          "type": "registry:ui"
+        }
       ],
       "props": [
-        { "name": "children", "type": "ReactNode", "required": true, "desc": "徽标内容" },
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "required": true,
+          "desc": "徽标内容"
+        },
         {
           "name": "variant",
           "type": "'primary'|'success'|'warning'|'danger'|'info'|'neutral'",
@@ -818,9 +1005,18 @@
       "dependencies": ["@radix-ui/react-tabs", "@kit/core"],
       "registryDependencies": [],
       "files": [
-        { "path": "packages/ui-web/src/Tabs/Tabs.tsx", "type": "registry:component" },
-        { "path": "packages/ui-web/src/Tabs/Tabs.types.ts", "type": "registry:ui" },
-        { "path": "packages/ui-web/src/Tabs/index.ts", "type": "registry:ui" }
+        {
+          "path": "packages/ui-web/src/Tabs/Tabs.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "packages/ui-web/src/Tabs/Tabs.types.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-web/src/Tabs/index.ts",
+          "type": "registry:ui"
+        }
       ],
       "props": [
         {
@@ -829,8 +1025,18 @@
           "required": true,
           "desc": "选项卡列表"
         },
-        { "name": "value", "type": "string", "required": false, "desc": "受控激活值" },
-        { "name": "defaultValue", "type": "string", "required": false, "desc": "非受控初值" },
+        {
+          "name": "value",
+          "type": "string",
+          "required": false,
+          "desc": "受控激活值"
+        },
+        {
+          "name": "defaultValue",
+          "type": "string",
+          "required": false,
+          "desc": "非受控初值"
+        },
         {
           "name": "size",
           "type": "'sm'|'md'",
@@ -840,7 +1046,11 @@
         }
       ],
       "events": [
-        { "name": "onValueChange", "type": "(value: string) => void", "desc": "激活值变化" }
+        {
+          "name": "onValueChange",
+          "type": "(value: string) => void",
+          "desc": "激活值变化"
+        }
       ],
       "slots": ["items[].label", "items[].content"],
       "tokens": [
@@ -883,13 +1093,33 @@
       "dependencies": ["@radix-ui/react-progress", "@kit/core"],
       "registryDependencies": [],
       "files": [
-        { "path": "packages/ui-web/src/Progress/Progress.tsx", "type": "registry:component" },
-        { "path": "packages/ui-web/src/Progress/Progress.types.ts", "type": "registry:ui" },
-        { "path": "packages/ui-web/src/Progress/index.ts", "type": "registry:ui" }
+        {
+          "path": "packages/ui-web/src/Progress/Progress.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "packages/ui-web/src/Progress/Progress.types.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-web/src/Progress/index.ts",
+          "type": "registry:ui"
+        }
       ],
       "props": [
-        { "name": "value", "type": "number", "required": true, "desc": "当前进度（0 到 max）" },
-        { "name": "max", "type": "number", "default": "100", "required": false, "desc": "最大值" },
+        {
+          "name": "value",
+          "type": "number",
+          "required": true,
+          "desc": "当前进度（0 到 max）"
+        },
+        {
+          "name": "max",
+          "type": "number",
+          "default": "100",
+          "required": false,
+          "desc": "最大值"
+        },
         {
           "name": "size",
           "type": "'sm'|'md'",
@@ -955,9 +1185,18 @@
       "dependencies": ["@kit/core"],
       "registryDependencies": [],
       "files": [
-        { "path": "packages/ui-web/src/Skeleton/Skeleton.tsx", "type": "registry:component" },
-        { "path": "packages/ui-web/src/Skeleton/Skeleton.types.ts", "type": "registry:ui" },
-        { "path": "packages/ui-web/src/Skeleton/index.ts", "type": "registry:ui" }
+        {
+          "path": "packages/ui-web/src/Skeleton/Skeleton.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "packages/ui-web/src/Skeleton/Skeleton.types.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-web/src/Skeleton/index.ts",
+          "type": "registry:ui"
+        }
       ],
       "props": [
         {
@@ -1032,9 +1271,18 @@
       "dependencies": ["@kit/core"],
       "registryDependencies": [],
       "files": [
-        { "path": "packages/ui-web/src/Spinner/Spinner.tsx", "type": "registry:component" },
-        { "path": "packages/ui-web/src/Spinner/Spinner.types.ts", "type": "registry:ui" },
-        { "path": "packages/ui-web/src/Spinner/index.ts", "type": "registry:ui" }
+        {
+          "path": "packages/ui-web/src/Spinner/Spinner.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "packages/ui-web/src/Spinner/Spinner.types.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-web/src/Spinner/index.ts",
+          "type": "registry:ui"
+        }
       ],
       "props": [
         {
@@ -1097,12 +1345,26 @@
       "dependencies": ["@kit/core"],
       "registryDependencies": [],
       "files": [
-        { "path": "packages/ui-web/src/Empty/Empty.tsx", "type": "registry:component" },
-        { "path": "packages/ui-web/src/Empty/Empty.types.ts", "type": "registry:ui" },
-        { "path": "packages/ui-web/src/Empty/index.ts", "type": "registry:ui" }
+        {
+          "path": "packages/ui-web/src/Empty/Empty.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "packages/ui-web/src/Empty/Empty.types.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-web/src/Empty/index.ts",
+          "type": "registry:ui"
+        }
       ],
       "props": [
-        { "name": "title", "type": "ReactNode", "required": false, "desc": "主说明，弱化居中" },
+        {
+          "name": "title",
+          "type": "ReactNode",
+          "required": false,
+          "desc": "主说明，弱化居中"
+        },
         {
           "name": "description",
           "type": "ReactNode",
@@ -1165,9 +1427,18 @@
       "dependencies": ["@kit/core"],
       "registryDependencies": [],
       "files": [
-        { "path": "packages/ui-web/src/Result/Result.tsx", "type": "registry:component" },
-        { "path": "packages/ui-web/src/Result/Result.types.ts", "type": "registry:ui" },
-        { "path": "packages/ui-web/src/Result/index.ts", "type": "registry:ui" }
+        {
+          "path": "packages/ui-web/src/Result/Result.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "packages/ui-web/src/Result/Result.types.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-web/src/Result/index.ts",
+          "type": "registry:ui"
+        }
       ],
       "props": [
         {
@@ -1177,7 +1448,12 @@
           "default": "'info'",
           "desc": "结果状态，决定默认图标与语义色"
         },
-        { "name": "title", "type": "ReactNode", "required": false, "desc": "主标题" },
+        {
+          "name": "title",
+          "type": "ReactNode",
+          "required": false,
+          "desc": "主标题"
+        },
         {
           "name": "description",
           "type": "ReactNode",
@@ -1265,7 +1541,10 @@
           "path": "packages/ui-web/src/StateContainer/StateContainer.types.ts",
           "type": "registry:ui"
         },
-        { "path": "packages/ui-web/src/StateContainer/index.ts", "type": "registry:ui" }
+        {
+          "path": "packages/ui-web/src/StateContainer/index.ts",
+          "type": "registry:ui"
+        }
       ],
       "props": [
         {
@@ -1287,8 +1566,18 @@
           "required": false,
           "desc": "自定义 loading 视图 slot"
         },
-        { "name": "empty", "type": "ReactNode", "required": false, "desc": "自定义空态视图 slot" },
-        { "name": "error", "type": "ReactNode", "required": false, "desc": "自定义错误视图 slot" },
+        {
+          "name": "empty",
+          "type": "ReactNode",
+          "required": false,
+          "desc": "自定义空态视图 slot"
+        },
+        {
+          "name": "error",
+          "type": "ReactNode",
+          "required": false,
+          "desc": "自定义错误视图 slot"
+        },
         {
           "name": "onRetry",
           "type": "() => void",
@@ -1303,7 +1592,11 @@
         }
       ],
       "events": [
-        { "name": "onRetry", "payload": "void", "desc": "默认错误视图重试按钮点击（web onClick）" }
+        {
+          "name": "onRetry",
+          "payload": "void",
+          "desc": "默认错误视图重试按钮点击（web onClick）"
+        }
       ],
       "slots": ["loading", "empty", "error", "children"],
       "tokens": [],
@@ -1335,9 +1628,18 @@
       "dependencies": ["@kit/core"],
       "registryDependencies": [],
       "files": [
-        { "path": "packages/ui-web/src/Card/Card.tsx", "type": "registry:component" },
-        { "path": "packages/ui-web/src/Card/Card.types.ts", "type": "registry:ui" },
-        { "path": "packages/ui-web/src/Card/index.ts", "type": "registry:ui" }
+        {
+          "path": "packages/ui-web/src/Card/Card.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "packages/ui-web/src/Card/Card.types.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-web/src/Card/index.ts",
+          "type": "registry:ui"
+        }
       ],
       "props": [
         {
@@ -1347,7 +1649,12 @@
           "default": "'outlined'",
           "desc": "描边 / 投影"
         },
-        { "name": "CardHeader.title", "type": "ReactNode", "required": false, "desc": "头部标题" },
+        {
+          "name": "CardHeader.title",
+          "type": "ReactNode",
+          "required": false,
+          "desc": "头部标题"
+        },
         {
           "name": "CardHeader.description",
           "type": "ReactNode",
@@ -1407,9 +1714,18 @@
       "dependencies": ["@kit/core"],
       "registryDependencies": [],
       "files": [
-        { "path": "packages/ui-web/src/Avatar/Avatar.tsx", "type": "registry:component" },
-        { "path": "packages/ui-web/src/Avatar/Avatar.types.ts", "type": "registry:ui" },
-        { "path": "packages/ui-web/src/Avatar/index.ts", "type": "registry:ui" }
+        {
+          "path": "packages/ui-web/src/Avatar/Avatar.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "packages/ui-web/src/Avatar/Avatar.types.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-web/src/Avatar/index.ts",
+          "type": "registry:ui"
+        }
       ],
       "props": [
         {
@@ -1475,9 +1791,18 @@
       "dependencies": ["@kit/core"],
       "registryDependencies": [],
       "files": [
-        { "path": "packages/ui-web/src/Tag/Tag.tsx", "type": "registry:component" },
-        { "path": "packages/ui-web/src/Tag/Tag.types.ts", "type": "registry:ui" },
-        { "path": "packages/ui-web/src/Tag/index.ts", "type": "registry:ui" }
+        {
+          "path": "packages/ui-web/src/Tag/Tag.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "packages/ui-web/src/Tag/Tag.types.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-web/src/Tag/index.ts",
+          "type": "registry:ui"
+        }
       ],
       "props": [
         {
@@ -1524,7 +1849,11 @@
         }
       ],
       "events": [
-        { "name": "onClick", "type": "() => void", "desc": "点标签切换选中（筛选）" },
+        {
+          "name": "onClick",
+          "type": "() => void",
+          "desc": "点标签切换选中（筛选）"
+        },
         {
           "name": "onClose",
           "type": "() => void",
@@ -1564,9 +1893,18 @@
       "dependencies": ["@kit/core"],
       "registryDependencies": [],
       "files": [
-        { "path": "packages/ui-web/src/Steps/Steps.tsx", "type": "registry:component" },
-        { "path": "packages/ui-web/src/Steps/Steps.types.ts", "type": "registry:ui" },
-        { "path": "packages/ui-web/src/Steps/index.ts", "type": "registry:ui" }
+        {
+          "path": "packages/ui-web/src/Steps/Steps.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "packages/ui-web/src/Steps/Steps.types.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-web/src/Steps/index.ts",
+          "type": "registry:ui"
+        }
       ],
       "props": [
         {
@@ -1597,7 +1935,11 @@
         }
       ],
       "events": [
-        { "name": "onChange", "type": "(index: number) => void", "desc": "回溯到已完成步骤" }
+        {
+          "name": "onChange",
+          "type": "(index: number) => void",
+          "desc": "回溯到已完成步骤"
+        }
       ],
       "slots": ["items[].title", "items[].description"],
       "tokens": [
@@ -1635,9 +1977,18 @@
       "dependencies": ["@kit/core"],
       "registryDependencies": [],
       "files": [
-        { "path": "packages/ui-web/src/Pagination/Pagination.tsx", "type": "registry:component" },
-        { "path": "packages/ui-web/src/Pagination/Pagination.types.ts", "type": "registry:ui" },
-        { "path": "packages/ui-web/src/Pagination/index.ts", "type": "registry:ui" }
+        {
+          "path": "packages/ui-web/src/Pagination/Pagination.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "packages/ui-web/src/Pagination/Pagination.types.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-web/src/Pagination/index.ts",
+          "type": "registry:ui"
+        }
       ],
       "props": [
         {
@@ -1654,7 +2005,12 @@
           "default": "10",
           "desc": "每页条数"
         },
-        { "name": "total", "type": "number", "required": true, "desc": "总条数" },
+        {
+          "name": "total",
+          "type": "number",
+          "required": true,
+          "desc": "总条数"
+        },
         {
           "name": "onChange",
           "type": "(page:number)=>void",
@@ -1683,7 +2039,13 @@
           "desc": "整体禁用"
         }
       ],
-      "events": [{ "name": "onChange", "type": "(page: number) => void", "desc": "页码变化" }],
+      "events": [
+        {
+          "name": "onChange",
+          "type": "(page: number) => void",
+          "desc": "页码变化"
+        }
+      ],
       "slots": [],
       "tokens": [
         "color-primary-default",
@@ -1717,9 +2079,18 @@
       "dependencies": [],
       "registryDependencies": [],
       "files": [
-        { "path": "packages/ui-web/src/Breadcrumb/Breadcrumb.tsx", "type": "registry:component" },
-        { "path": "packages/ui-web/src/Breadcrumb/Breadcrumb.types.ts", "type": "registry:ui" },
-        { "path": "packages/ui-web/src/Breadcrumb/index.ts", "type": "registry:ui" }
+        {
+          "path": "packages/ui-web/src/Breadcrumb/Breadcrumb.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "packages/ui-web/src/Breadcrumb/Breadcrumb.types.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-web/src/Breadcrumb/index.ts",
+          "type": "registry:ui"
+        }
       ],
       "props": [
         {
@@ -1777,9 +2148,18 @@
       "dependencies": ["@kit/core"],
       "registryDependencies": [],
       "files": [
-        { "path": "packages/ui-web/src/DataTable/DataTable.tsx", "type": "registry:component" },
-        { "path": "packages/ui-web/src/DataTable/DataTable.types.ts", "type": "registry:ui" },
-        { "path": "packages/ui-web/src/DataTable/index.ts", "type": "registry:ui" }
+        {
+          "path": "packages/ui-web/src/DataTable/DataTable.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "packages/ui-web/src/DataTable/DataTable.types.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-web/src/DataTable/index.ts",
+          "type": "registry:ui"
+        }
       ],
       "props": [
         {
@@ -1788,7 +2168,12 @@
           "required": true,
           "desc": "列配置(key/title/align/width/render/sortable/sorter)"
         },
-        { "name": "data", "type": "T[]", "required": true, "desc": "数据行" },
+        {
+          "name": "data",
+          "type": "T[]",
+          "required": true,
+          "desc": "数据行"
+        },
         {
           "name": "rowKey",
           "type": "keyof T | (row,index)=>string",
@@ -1816,7 +2201,12 @@
           "default": "true",
           "desc": "斑马纹"
         },
-        { "name": "onRowClick", "type": "(row,index)=>void", "required": false, "desc": "行点击" },
+        {
+          "name": "onRowClick",
+          "type": "(row,index)=>void",
+          "required": false,
+          "desc": "行点击"
+        },
         {
           "name": "sortState",
           "type": "{key,order}|null",
@@ -1831,8 +2221,16 @@
         }
       ],
       "events": [
-        { "name": "onRowClick", "type": "(row, index) => void", "desc": "行点击" },
-        { "name": "onSortChange", "type": "(key, order) => void", "desc": "表头排序变化" }
+        {
+          "name": "onRowClick",
+          "type": "(row, index) => void",
+          "desc": "行点击"
+        },
+        {
+          "name": "onSortChange",
+          "type": "(key, order) => void",
+          "desc": "表头排序变化"
+        }
       ],
       "slots": ["columns[].title", "columns[].render", "empty"],
       "tokens": [
@@ -1861,6 +2259,129 @@
       },
       "docs": "packages/ui-web/src/DataTable/README.md",
       "examples": ["packages/ui-web/src/DataTable/__examples__/States.tsx"]
+    },
+    {
+      "name": "tooltip",
+      "type": "registry:component",
+      "title": "文字提示 Tooltip",
+      "description": "Radix Tooltip hover 触发的轻量提示，深色气泡（bg-inverse/text-inverse）四向 placement + 箭头，delayDuration 延迟显示，受控/非受控",
+      "canonical": "Tooltip",
+      "status": "beta",
+      "stack": "web",
+      "dependencies": ["@radix-ui/react-tooltip", "@kit/core"],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "packages/ui-web/src/Tooltip/Tooltip.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "packages/ui-web/src/Tooltip/Tooltip.types.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-web/src/Tooltip/index.ts",
+          "type": "registry:ui"
+        }
+      ],
+      "props": [
+        {
+          "name": "content",
+          "type": "ReactNode",
+          "required": true,
+          "desc": "提示内容"
+        },
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "required": true,
+          "desc": "触发元素"
+        },
+        {
+          "name": "placement",
+          "type": "'top'|'bottom'|'left'|'right'",
+          "default": "'top'",
+          "required": false,
+          "desc": "气泡位置"
+        },
+        {
+          "name": "sideOffset",
+          "type": "number",
+          "default": "4",
+          "required": false,
+          "desc": "触发元素与气泡间距 px"
+        },
+        {
+          "name": "open",
+          "type": "boolean",
+          "required": false,
+          "desc": "受控可见"
+        },
+        {
+          "name": "onOpenChange",
+          "type": "(open:boolean)=>void",
+          "required": false,
+          "desc": "可见变化回调"
+        },
+        {
+          "name": "defaultOpen",
+          "type": "boolean",
+          "required": false,
+          "desc": "默认可见（非受控）"
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "default": "false",
+          "required": false,
+          "desc": "禁用提示（仅渲染 children）"
+        },
+        {
+          "name": "delayDuration",
+          "type": "number",
+          "default": "200",
+          "required": false,
+          "desc": "hover 延迟显示 ms"
+        },
+        {
+          "name": "className",
+          "type": "string",
+          "required": false,
+          "desc": "气泡容器类名"
+        }
+      ],
+      "events": [
+        {
+          "name": "onOpenChange",
+          "type": "(open: boolean) => void",
+          "desc": "可见变化（hover/focus 触发）"
+        }
+      ],
+      "slots": ["content", "children"],
+      "tokens": [
+        "color-bg-inverse",
+        "color-text-inverse",
+        "radius-sm",
+        "font-size-body-sm",
+        "shadow-md",
+        "z-popover"
+      ],
+      "states": ["hidden", "visible", "disabled"],
+      "a11y": "Radix 自带 role=tooltip、焦点触发、Esc 关闭、aria-describedby 关联触发元素",
+      "usage": {
+        "do": [
+          "短提示用 Tooltip、需操作的用 Popover/Dialog",
+          "children 为可转发 ref 的单个元素",
+          "气泡内容走 i18n key"
+        ],
+        "dont": [
+          "在 Tooltip 内放可交互元素（hover 气泡不可点击）",
+          "硬编码颜色/层级",
+          "用 Tooltip 承载关键操作确认"
+        ]
+      },
+      "docs": "packages/ui-web/src/Tooltip/README.md",
+      "examples": ["packages/ui-web/src/Tooltip/__examples__/States.tsx"]
     }
   ]
 }

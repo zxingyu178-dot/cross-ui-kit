@@ -13,11 +13,24 @@
         "block": "boolean",
         "icon": "ReactNode"
       },
-      "eventMap": { "web": "onClick", "mini": "onPress", "native": "onPress" },
+      "eventMap": {
+        "web": "onClick",
+        "mini": "onPress",
+        "native": "onPress"
+      },
       "stacks": {
-        "web": { "item": "@kit/web-button", "status": "beta" },
-        "mini": { "item": "@kit/mini-button", "status": "beta" },
-        "native": { "item": "@kit/native-button", "status": "beta" }
+        "web": {
+          "item": "@kit/web-button",
+          "status": "beta"
+        },
+        "mini": {
+          "item": "@kit/mini-button",
+          "status": "beta"
+        },
+        "native": {
+          "item": "@kit/native-button",
+          "status": "beta"
+        }
       }
     },
     {
@@ -42,9 +55,18 @@
         "native": "onChangeText->onChange(value)"
       },
       "stacks": {
-        "web": { "item": "@kit/web-input", "status": "beta" },
-        "mini": { "item": "@kit/mini-input", "status": "beta" },
-        "native": { "item": "@kit/native-input", "status": "beta" }
+        "web": {
+          "item": "@kit/web-input",
+          "status": "beta"
+        },
+        "mini": {
+          "item": "@kit/mini-input",
+          "status": "beta"
+        },
+        "native": {
+          "item": "@kit/native-input",
+          "status": "beta"
+        }
       }
     },
     {
@@ -64,9 +86,18 @@
         "native": "onCheckedChange->onChange(boolean)"
       },
       "stacks": {
-        "web": { "item": "@kit/web-checkbox", "status": "beta" },
-        "mini": { "item": "@kit/mini-checkbox", "status": "beta" },
-        "native": { "item": "@kit/native-checkbox", "status": "beta" }
+        "web": {
+          "item": "@kit/web-checkbox",
+          "status": "beta"
+        },
+        "mini": {
+          "item": "@kit/mini-checkbox",
+          "status": "beta"
+        },
+        "native": {
+          "item": "@kit/native-checkbox",
+          "status": "beta"
+        }
       }
     },
     {
@@ -87,9 +118,18 @@
         "native": "Modal option press->onChange(value)"
       },
       "stacks": {
-        "web": { "item": "@kit/web-select", "status": "beta" },
-        "mini": { "item": "@kit/mini-select", "status": "beta" },
-        "native": { "item": "@kit/native-select", "status": "beta" }
+        "web": {
+          "item": "@kit/web-select",
+          "status": "beta"
+        },
+        "mini": {
+          "item": "@kit/mini-select",
+          "status": "beta"
+        },
+        "native": {
+          "item": "@kit/native-select",
+          "status": "beta"
+        }
       }
     },
     {
@@ -113,9 +153,18 @@
         "native": "Modal.onRequestClose/遮罩 onPress->onOpenChange(open) / onConfirm / onCancel"
       },
       "stacks": {
-        "web": { "item": "@kit/web-dialog", "status": "beta" },
-        "mini": { "item": "@kit/mini-dialog", "status": "beta" },
-        "native": { "item": "@kit/native-dialog", "status": "beta" }
+        "web": {
+          "item": "@kit/web-dialog",
+          "status": "beta"
+        },
+        "mini": {
+          "item": "@kit/mini-dialog",
+          "status": "beta"
+        },
+        "native": {
+          "item": "@kit/native-dialog",
+          "status": "beta"
+        }
       }
     },
     {
@@ -134,9 +183,18 @@
         "native": "内部 setTimeout->onOpenChange(open) / onClose"
       },
       "stacks": {
-        "web": { "item": "@kit/web-toast", "status": "beta" },
-        "mini": { "item": "@kit/mini-toast", "status": "beta" },
-        "native": { "item": "@kit/native-toast", "status": "beta" }
+        "web": {
+          "item": "@kit/web-toast",
+          "status": "beta"
+        },
+        "mini": {
+          "item": "@kit/mini-toast",
+          "status": "beta"
+        },
+        "native": {
+          "item": "@kit/native-toast",
+          "status": "beta"
+        }
       }
     },
     {
@@ -156,9 +214,18 @@
         "native": "Tamagui onCheckedChange(boolean)"
       },
       "stacks": {
-        "web": { "item": "@kit/web-switch", "status": "beta" },
-        "mini": { "item": "@kit/mini-switch", "status": "beta" },
-        "native": { "item": "@kit/native-switch", "status": "beta" }
+        "web": {
+          "item": "@kit/web-switch",
+          "status": "beta"
+        },
+        "mini": {
+          "item": "@kit/mini-switch",
+          "status": "beta"
+        },
+        "native": {
+          "item": "@kit/native-switch",
+          "status": "beta"
+        }
       }
     },
     {
@@ -178,9 +245,18 @@
         "native": "Tamagui onValueChange(string)"
       },
       "stacks": {
-        "web": { "item": "@kit/web-radio-group", "status": "beta" },
-        "mini": { "item": "@kit/mini-radio-group", "status": "beta" },
-        "native": { "item": "@kit/native-radio-group", "status": "beta" }
+        "web": {
+          "item": "@kit/web-radio-group",
+          "status": "beta"
+        },
+        "mini": {
+          "item": "@kit/mini-radio-group",
+          "status": "beta"
+        },
+        "native": {
+          "item": "@kit/native-radio-group",
+          "status": "beta"
+        }
       }
     },
     {
@@ -198,9 +274,18 @@
         "native": "onPress()"
       },
       "stacks": {
-        "web": { "item": "@kit/web-badge", "status": "beta" },
-        "mini": { "item": "@kit/mini-badge", "status": "beta" },
-        "native": { "item": "@kit/native-badge", "status": "beta" }
+        "web": {
+          "item": "@kit/web-badge",
+          "status": "beta"
+        },
+        "mini": {
+          "item": "@kit/mini-badge",
+          "status": "beta"
+        },
+        "native": {
+          "item": "@kit/native-badge",
+          "status": "beta"
+        }
       }
     },
     {
@@ -218,9 +303,18 @@
         "native": "Tamagui onValueChange(string)"
       },
       "stacks": {
-        "web": { "item": "@kit/web-tabs", "status": "beta" },
-        "mini": { "item": "@kit/mini-tabs", "status": "beta" },
-        "native": { "item": "@kit/native-tabs", "status": "beta" }
+        "web": {
+          "item": "@kit/web-tabs",
+          "status": "beta"
+        },
+        "mini": {
+          "item": "@kit/mini-tabs",
+          "status": "beta"
+        },
+        "native": {
+          "item": "@kit/native-tabs",
+          "status": "beta"
+        }
       }
     },
     {
@@ -239,9 +333,18 @@
         "native": "无事件（Tamagui value/max 受控）"
       },
       "stacks": {
-        "web": { "item": "@kit/web-progress", "status": "beta" },
-        "mini": { "item": "@kit/mini-progress", "status": "beta" },
-        "native": { "item": "@kit/native-progress", "status": "beta" }
+        "web": {
+          "item": "@kit/web-progress",
+          "status": "beta"
+        },
+        "mini": {
+          "item": "@kit/mini-progress",
+          "status": "beta"
+        },
+        "native": {
+          "item": "@kit/native-progress",
+          "status": "beta"
+        }
       }
     },
     {
@@ -260,9 +363,18 @@
         "native": "无事件（纯占位，react-native Animated 呼吸）"
       },
       "stacks": {
-        "web": { "item": "@kit/web-skeleton", "status": "beta" },
-        "mini": { "item": "@kit/mini-skeleton", "status": "beta" },
-        "native": { "item": "@kit/native-skeleton", "status": "beta" }
+        "web": {
+          "item": "@kit/web-skeleton",
+          "status": "beta"
+        },
+        "mini": {
+          "item": "@kit/mini-skeleton",
+          "status": "beta"
+        },
+        "native": {
+          "item": "@kit/native-skeleton",
+          "status": "beta"
+        }
       }
     },
     {
@@ -279,9 +391,18 @@
         "native": "无事件（react-native Animated.loop 匀速旋转）"
       },
       "stacks": {
-        "web": { "item": "@kit/web-spinner", "status": "beta" },
-        "mini": { "item": "@kit/mini-spinner", "status": "beta" },
-        "native": { "item": "@kit/native-spinner", "status": "beta" }
+        "web": {
+          "item": "@kit/web-spinner",
+          "status": "beta"
+        },
+        "mini": {
+          "item": "@kit/mini-spinner",
+          "status": "beta"
+        },
+        "native": {
+          "item": "@kit/native-spinner",
+          "status": "beta"
+        }
       }
     },
     {
@@ -300,9 +421,18 @@
         "native": "无事件（纯组合占位，操作经 action slot 内按钮抛出）"
       },
       "stacks": {
-        "web": { "item": "@kit/web-empty", "status": "beta" },
-        "mini": { "item": "@kit/mini-empty", "status": "beta" },
-        "native": { "item": "@kit/native-empty", "status": "beta" }
+        "web": {
+          "item": "@kit/web-empty",
+          "status": "beta"
+        },
+        "mini": {
+          "item": "@kit/mini-empty",
+          "status": "beta"
+        },
+        "native": {
+          "item": "@kit/native-empty",
+          "status": "beta"
+        }
       }
     },
     {
@@ -323,9 +453,18 @@
         "native": "无事件（纯组合结果占位，操作经 action/extra slot 内按钮抛出）"
       },
       "stacks": {
-        "web": { "item": "@kit/web-result", "status": "beta" },
-        "mini": { "item": "@kit/mini-result", "status": "beta" },
-        "native": { "item": "@kit/native-result", "status": "beta" }
+        "web": {
+          "item": "@kit/web-result",
+          "status": "beta"
+        },
+        "mini": {
+          "item": "@kit/mini-result",
+          "status": "beta"
+        },
+        "native": {
+          "item": "@kit/native-result",
+          "status": "beta"
+        }
       }
     },
     {
@@ -337,11 +476,24 @@
         "loading": "boolean",
         "pagination": "PaginationState"
       },
-      "eventMap": { "web": "onRowClick", "mini": "onItemClick", "native": "onItemPress" },
+      "eventMap": {
+        "web": "onRowClick",
+        "mini": "onItemClick",
+        "native": "onItemPress"
+      },
       "stacks": {
-        "web": { "item": "@kit/web-data-table", "status": "planned" },
-        "mini": { "item": "@kit/mini-data-list", "status": "planned" },
-        "native": { "item": "@kit/native-data-list", "status": "planned" }
+        "web": {
+          "item": "@kit/web-data-table",
+          "status": "planned"
+        },
+        "mini": {
+          "item": "@kit/mini-data-list",
+          "status": "planned"
+        },
+        "native": {
+          "item": "@kit/native-data-list",
+          "status": "planned"
+        }
       }
     },
     {
@@ -362,9 +514,18 @@
         "native": "onRetry（默认重试按钮 onPress）"
       },
       "stacks": {
-        "web": { "item": "@kit/web-state-container", "status": "beta" },
-        "mini": { "item": "@kit/mini-state-container", "status": "beta" },
-        "native": { "item": "@kit/native-state-container", "status": "beta" }
+        "web": {
+          "item": "@kit/web-state-container",
+          "status": "beta"
+        },
+        "mini": {
+          "item": "@kit/mini-state-container",
+          "status": "beta"
+        },
+        "native": {
+          "item": "@kit/native-state-container",
+          "status": "beta"
+        }
       }
     },
     {
@@ -383,9 +544,18 @@
         "native": "无事件（纯容器，可点击由业务包裹）"
       },
       "stacks": {
-        "web": { "item": "@kit/web-card", "status": "beta" },
-        "mini": { "item": "@kit/mini-card", "status": "beta" },
-        "native": { "item": "@kit/native-card", "status": "beta" }
+        "web": {
+          "item": "@kit/web-card",
+          "status": "beta"
+        },
+        "mini": {
+          "item": "@kit/mini-card",
+          "status": "beta"
+        },
+        "native": {
+          "item": "@kit/native-card",
+          "status": "beta"
+        }
       }
     },
     {
@@ -404,9 +574,18 @@
         "native": "无对外事件（Image onError 内部回退首字）"
       },
       "stacks": {
-        "web": { "item": "@kit/web-avatar", "status": "beta" },
-        "mini": { "item": "@kit/mini-avatar", "status": "beta" },
-        "native": { "item": "@kit/native-avatar", "status": "beta" }
+        "web": {
+          "item": "@kit/web-avatar",
+          "status": "beta"
+        },
+        "mini": {
+          "item": "@kit/mini-avatar",
+          "status": "beta"
+        },
+        "native": {
+          "item": "@kit/native-avatar",
+          "status": "beta"
+        }
       }
     },
     {
@@ -427,9 +606,18 @@
         "native": "onPress（点标签切换）；onClose（点 ×，子 Stack 响应手势）"
       },
       "stacks": {
-        "web": { "item": "@kit/web-tag", "status": "beta" },
-        "mini": { "item": "@kit/mini-tag", "status": "beta" },
-        "native": { "item": "@kit/native-tag", "status": "beta" }
+        "web": {
+          "item": "@kit/web-tag",
+          "status": "beta"
+        },
+        "mini": {
+          "item": "@kit/mini-tag",
+          "status": "beta"
+        },
+        "native": {
+          "item": "@kit/native-tag",
+          "status": "beta"
+        }
       }
     },
     {
@@ -447,9 +635,18 @@
         "native": "onChange(index)（点击 finish 步骤 onPress 回溯，accessibilityRole=button）"
       },
       "stacks": {
-        "web": { "item": "@kit/web-steps", "status": "beta" },
-        "mini": { "item": "@kit/mini-steps", "status": "beta" },
-        "native": { "item": "@kit/native-steps", "status": "beta" }
+        "web": {
+          "item": "@kit/web-steps",
+          "status": "beta"
+        },
+        "mini": {
+          "item": "@kit/mini-steps",
+          "status": "beta"
+        },
+        "native": {
+          "item": "@kit/native-steps",
+          "status": "beta"
+        }
       }
     },
     {
@@ -470,9 +667,18 @@
       },
       "logicDeps": ["@kit/core getPageCount / getPageList（页码与省略号计算，三栈共用）"],
       "stacks": {
-        "web": { "item": "@kit/web-pagination", "status": "beta" },
-        "mini": { "item": "@kit/mini-pagination", "status": "beta" },
-        "native": { "item": "@kit/native-pagination", "status": "beta" }
+        "web": {
+          "item": "@kit/web-pagination",
+          "status": "beta"
+        },
+        "mini": {
+          "item": "@kit/mini-pagination",
+          "status": "beta"
+        },
+        "native": {
+          "item": "@kit/native-pagination",
+          "status": "beta"
+        }
       }
     },
     {
@@ -489,9 +695,18 @@
         "native": "onNavigate(index)（中间项 onPress，accessibilityRole=link）"
       },
       "stacks": {
-        "web": { "item": "@kit/web-breadcrumb", "status": "beta" },
-        "mini": { "item": "@kit/mini-breadcrumb", "status": "beta" },
-        "native": { "item": "@kit/native-breadcrumb", "status": "beta" }
+        "web": {
+          "item": "@kit/web-breadcrumb",
+          "status": "beta"
+        },
+        "mini": {
+          "item": "@kit/mini-breadcrumb",
+          "status": "beta"
+        },
+        "native": {
+          "item": "@kit/native-breadcrumb",
+          "status": "beta"
+        }
       }
     },
     {
@@ -513,9 +728,51 @@
       },
       "logicDeps": ["@kit/core sortData / compareValues / SortState（三栈共用排序）"],
       "stacks": {
-        "web": { "item": "@kit/web-datatable", "status": "beta" },
-        "mini": { "item": "@kit/mini-datatable", "status": "beta" },
-        "native": { "item": "@kit/native-datatable", "status": "beta" }
+        "web": {
+          "item": "@kit/web-datatable",
+          "status": "beta"
+        },
+        "mini": {
+          "item": "@kit/mini-datatable",
+          "status": "beta"
+        },
+        "native": {
+          "item": "@kit/native-datatable",
+          "status": "beta"
+        }
+      }
+    },
+    {
+      "canonical": "Tooltip",
+      "category": "overlay",
+      "sharedProps": {
+        "content": "ReactNode",
+        "children": "ReactNode",
+        "placement": "top|bottom|left|right",
+        "sideOffset": "number",
+        "open": "boolean",
+        "onOpenChange": "(open:boolean)=>void",
+        "defaultOpen": "boolean",
+        "disabled": "boolean"
+      },
+      "eventMap": {
+        "web": "onOpenChange（hover/focus 触发，delayDuration 延迟）",
+        "mini": "onOpenChange（onClick 触发切换）",
+        "native": "onOpenChange（onPress 触发切换）"
+      },
+      "stacks": {
+        "web": {
+          "item": "@kit/web-tooltip",
+          "status": "beta"
+        },
+        "mini": {
+          "item": "@kit/mini-tooltip",
+          "status": "beta"
+        },
+        "native": {
+          "item": "@kit/native-tooltip",
+          "status": "beta"
+        }
       }
     }
   ]

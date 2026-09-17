@@ -15,9 +15,18 @@
       "dependencies": ["tamagui", "react-native"],
       "registryDependencies": [],
       "files": [
-        { "path": "packages/ui-native/src/Button/Button.tsx", "type": "registry:component" },
-        { "path": "packages/ui-native/src/Button/Button.types.ts", "type": "registry:ui" },
-        { "path": "packages/ui-native/src/Button/index.ts", "type": "registry:ui" }
+        {
+          "path": "packages/ui-native/src/Button/Button.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "packages/ui-native/src/Button/Button.types.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-native/src/Button/index.ts",
+          "type": "registry:ui"
+        }
       ],
       "props": [
         {
@@ -69,7 +78,11 @@
         }
       ],
       "events": [
-        { "name": "onPress", "type": "(e) => void", "desc": "按压点击（web 对应 onClick）" }
+        {
+          "name": "onPress",
+          "type": "(e) => void",
+          "desc": "按压点击（web 对应 onClick）"
+        }
       ],
       "slots": ["children", "icon"],
       "tokens": [
@@ -111,13 +124,32 @@
       "dependencies": ["tamagui", "react-native"],
       "registryDependencies": [],
       "files": [
-        { "path": "packages/ui-native/src/Input/Input.tsx", "type": "registry:component" },
-        { "path": "packages/ui-native/src/Input/Input.types.ts", "type": "registry:ui" },
-        { "path": "packages/ui-native/src/Input/index.ts", "type": "registry:ui" }
+        {
+          "path": "packages/ui-native/src/Input/Input.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "packages/ui-native/src/Input/Input.types.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-native/src/Input/index.ts",
+          "type": "registry:ui"
+        }
       ],
       "props": [
-        { "name": "value", "type": "string", "required": false, "desc": "受控值" },
-        { "name": "defaultValue", "type": "string", "required": false, "desc": "非受控初值" },
+        {
+          "name": "value",
+          "type": "string",
+          "required": false,
+          "desc": "受控值"
+        },
+        {
+          "name": "defaultValue",
+          "type": "string",
+          "required": false,
+          "desc": "非受控初值"
+        },
         {
           "name": "type",
           "type": "'text'|'password'|'number'|'tel'|'email'|'search'",
@@ -153,9 +185,24 @@
           "required": false,
           "desc": "editable=false 不置灰"
         },
-        { "name": "prefixIcon", "type": "ReactNode", "required": false, "desc": "前置图标槽" },
-        { "name": "suffixIcon", "type": "ReactNode", "required": false, "desc": "后置图标槽" },
-        { "name": "maxLength", "type": "number", "required": false, "desc": "最大长度" },
+        {
+          "name": "prefixIcon",
+          "type": "ReactNode",
+          "required": false,
+          "desc": "前置图标槽"
+        },
+        {
+          "name": "suffixIcon",
+          "type": "ReactNode",
+          "required": false,
+          "desc": "后置图标槽"
+        },
+        {
+          "name": "maxLength",
+          "type": "number",
+          "required": false,
+          "desc": "最大长度"
+        },
         {
           "name": "accessibilityLabel",
           "type": "string",
@@ -207,12 +254,26 @@
       "dependencies": ["tamagui", "react-native"],
       "registryDependencies": [],
       "files": [
-        { "path": "packages/ui-native/src/Checkbox/Checkbox.tsx", "type": "registry:component" },
-        { "path": "packages/ui-native/src/Checkbox/Checkbox.types.ts", "type": "registry:ui" },
-        { "path": "packages/ui-native/src/Checkbox/index.ts", "type": "registry:ui" }
+        {
+          "path": "packages/ui-native/src/Checkbox/Checkbox.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "packages/ui-native/src/Checkbox/Checkbox.types.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-native/src/Checkbox/index.ts",
+          "type": "registry:ui"
+        }
       ],
       "props": [
-        { "name": "checked", "type": "boolean", "required": false, "desc": "受控选中态" },
+        {
+          "name": "checked",
+          "type": "boolean",
+          "required": false,
+          "desc": "受控选中态"
+        },
         {
           "name": "defaultChecked",
           "type": "boolean",
@@ -233,7 +294,12 @@
           "required": false,
           "desc": "半选"
         },
-        { "name": "label", "type": "ReactNode", "required": false, "desc": "文本" },
+        {
+          "name": "label",
+          "type": "ReactNode",
+          "required": false,
+          "desc": "文本"
+        },
         {
           "name": "error",
           "type": "boolean",
@@ -288,9 +354,18 @@
       "dependencies": ["tamagui", "react-native"],
       "registryDependencies": [],
       "files": [
-        { "path": "packages/ui-native/src/Select/Select.tsx", "type": "registry:component" },
-        { "path": "packages/ui-native/src/Select/Select.types.ts", "type": "registry:ui" },
-        { "path": "packages/ui-native/src/Select/index.ts", "type": "registry:ui" }
+        {
+          "path": "packages/ui-native/src/Select/Select.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "packages/ui-native/src/Select/Select.types.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-native/src/Select/index.ts",
+          "type": "registry:ui"
+        }
       ],
       "props": [
         {
@@ -299,8 +374,18 @@
           "required": true,
           "desc": "选项列表（label 用字符串）"
         },
-        { "name": "value", "type": "string", "required": false, "desc": "受控值" },
-        { "name": "defaultValue", "type": "string", "required": false, "desc": "非受控初值" },
+        {
+          "name": "value",
+          "type": "string",
+          "required": false,
+          "desc": "受控值"
+        },
+        {
+          "name": "defaultValue",
+          "type": "string",
+          "required": false,
+          "desc": "非受控初值"
+        },
         {
           "name": "placeholder",
           "type": "string",
@@ -387,12 +472,26 @@
       "dependencies": ["tamagui", "react-native"],
       "registryDependencies": [],
       "files": [
-        { "path": "packages/ui-native/src/Dialog/Dialog.tsx", "type": "registry:component" },
-        { "path": "packages/ui-native/src/Dialog/Dialog.types.ts", "type": "registry:ui" },
-        { "path": "packages/ui-native/src/Dialog/index.ts", "type": "registry:ui" }
+        {
+          "path": "packages/ui-native/src/Dialog/Dialog.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "packages/ui-native/src/Dialog/Dialog.types.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-native/src/Dialog/index.ts",
+          "type": "registry:ui"
+        }
       ],
       "props": [
-        { "name": "open", "type": "boolean", "required": true, "desc": "受控可见" },
+        {
+          "name": "open",
+          "type": "boolean",
+          "required": true,
+          "desc": "受控可见"
+        },
         {
           "name": "onOpenChange",
           "type": "(open:boolean)=>void",
@@ -466,13 +565,21 @@
         }
       ],
       "events": [
-        { "name": "onOpenChange", "type": "(open: boolean) => void", "desc": "开关请求" },
+        {
+          "name": "onOpenChange",
+          "type": "(open: boolean) => void",
+          "desc": "开关请求"
+        },
         {
           "name": "onConfirm",
           "type": "() => void | false",
           "desc": "点击确定；返回 false 阻止自动关闭（异步提交场景）"
         },
-        { "name": "onCancel", "type": "() => void", "desc": "点击取消/关闭（随后请求关闭）" }
+        {
+          "name": "onCancel",
+          "type": "() => void",
+          "desc": "点击取消/关闭（随后请求关闭）"
+        }
       ],
       "slots": ["title", "description", "children", "footer"],
       "tokens": [
@@ -517,12 +624,26 @@
       "dependencies": ["tamagui", "react-native"],
       "registryDependencies": [],
       "files": [
-        { "path": "packages/ui-native/src/Toast/Toast.tsx", "type": "registry:component" },
-        { "path": "packages/ui-native/src/Toast/Toast.types.ts", "type": "registry:ui" },
-        { "path": "packages/ui-native/src/Toast/index.ts", "type": "registry:ui" }
+        {
+          "path": "packages/ui-native/src/Toast/Toast.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "packages/ui-native/src/Toast/Toast.types.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-native/src/Toast/index.ts",
+          "type": "registry:ui"
+        }
       ],
       "props": [
-        { "name": "open", "type": "boolean", "required": true, "desc": "受控可见" },
+        {
+          "name": "open",
+          "type": "boolean",
+          "required": true,
+          "desc": "受控可见"
+        },
         {
           "name": "onOpenChange",
           "type": "(open:boolean)=>void",
@@ -564,8 +685,16 @@
         }
       ],
       "events": [
-        { "name": "onOpenChange", "type": "(open: boolean) => void", "desc": "开关请求" },
-        { "name": "onClose", "type": "() => void", "desc": "完全关闭后回调" }
+        {
+          "name": "onOpenChange",
+          "type": "(open: boolean) => void",
+          "desc": "开关请求"
+        },
+        {
+          "name": "onClose",
+          "type": "() => void",
+          "desc": "完全关闭后回调"
+        }
       ],
       "slots": ["message"],
       "tokens": [
@@ -608,12 +737,26 @@
       "dependencies": ["tamagui", "react-native"],
       "registryDependencies": [],
       "files": [
-        { "path": "packages/ui-native/src/Switch/Switch.tsx", "type": "registry:component" },
-        { "path": "packages/ui-native/src/Switch/Switch.types.ts", "type": "registry:ui" },
-        { "path": "packages/ui-native/src/Switch/index.ts", "type": "registry:ui" }
+        {
+          "path": "packages/ui-native/src/Switch/Switch.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "packages/ui-native/src/Switch/Switch.types.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-native/src/Switch/index.ts",
+          "type": "registry:ui"
+        }
       ],
       "props": [
-        { "name": "checked", "type": "boolean", "required": false, "desc": "受控开关态" },
+        {
+          "name": "checked",
+          "type": "boolean",
+          "required": false,
+          "desc": "受控开关态"
+        },
         {
           "name": "defaultChecked",
           "type": "boolean",
@@ -700,8 +843,14 @@
           "path": "packages/ui-native/src/RadioGroup/RadioGroup.tsx",
           "type": "registry:component"
         },
-        { "path": "packages/ui-native/src/RadioGroup/RadioGroup.types.ts", "type": "registry:ui" },
-        { "path": "packages/ui-native/src/RadioGroup/index.ts", "type": "registry:ui" }
+        {
+          "path": "packages/ui-native/src/RadioGroup/RadioGroup.types.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-native/src/RadioGroup/index.ts",
+          "type": "registry:ui"
+        }
       ],
       "props": [
         {
@@ -710,8 +859,18 @@
           "required": true,
           "desc": "选项列表"
         },
-        { "name": "value", "type": "string", "required": false, "desc": "受控选中值" },
-        { "name": "defaultValue", "type": "string", "required": false, "desc": "非受控初值" },
+        {
+          "name": "value",
+          "type": "string",
+          "required": false,
+          "desc": "受控选中值"
+        },
+        {
+          "name": "defaultValue",
+          "type": "string",
+          "required": false,
+          "desc": "非受控初值"
+        },
         {
           "name": "disabled",
           "type": "boolean",
@@ -783,12 +942,26 @@
       "dependencies": ["tamagui", "react-native"],
       "registryDependencies": [],
       "files": [
-        { "path": "packages/ui-native/src/Badge/Badge.tsx", "type": "registry:component" },
-        { "path": "packages/ui-native/src/Badge/Badge.types.ts", "type": "registry:ui" },
-        { "path": "packages/ui-native/src/Badge/index.ts", "type": "registry:ui" }
+        {
+          "path": "packages/ui-native/src/Badge/Badge.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "packages/ui-native/src/Badge/Badge.types.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-native/src/Badge/index.ts",
+          "type": "registry:ui"
+        }
       ],
       "props": [
-        { "name": "children", "type": "ReactNode", "required": true, "desc": "徽标内容" },
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "required": true,
+          "desc": "徽标内容"
+        },
         {
           "name": "variant",
           "type": "'primary'|'success'|'warning'|'danger'|'info'|'neutral'",
@@ -810,9 +983,20 @@
           "required": false,
           "desc": "尺寸"
         },
-        { "name": "accessibilityLabel", "type": "string", "required": false, "desc": "无障碍标签" }
+        {
+          "name": "accessibilityLabel",
+          "type": "string",
+          "required": false,
+          "desc": "无障碍标签"
+        }
       ],
-      "events": [{ "name": "onPress", "type": "() => void", "desc": "传入即可点击" }],
+      "events": [
+        {
+          "name": "onPress",
+          "type": "() => void",
+          "desc": "传入即可点击"
+        }
+      ],
       "slots": ["children"],
       "tokens": [
         "color-primary-default",
@@ -862,9 +1046,18 @@
       "dependencies": ["tamagui", "react-native"],
       "registryDependencies": [],
       "files": [
-        { "path": "packages/ui-native/src/Tabs/Tabs.tsx", "type": "registry:component" },
-        { "path": "packages/ui-native/src/Tabs/Tabs.types.ts", "type": "registry:ui" },
-        { "path": "packages/ui-native/src/Tabs/index.ts", "type": "registry:ui" }
+        {
+          "path": "packages/ui-native/src/Tabs/Tabs.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "packages/ui-native/src/Tabs/Tabs.types.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-native/src/Tabs/index.ts",
+          "type": "registry:ui"
+        }
       ],
       "props": [
         {
@@ -873,8 +1066,18 @@
           "required": true,
           "desc": "选项卡列表"
         },
-        { "name": "value", "type": "string", "required": false, "desc": "受控激活值" },
-        { "name": "defaultValue", "type": "string", "required": false, "desc": "非受控初值" },
+        {
+          "name": "value",
+          "type": "string",
+          "required": false,
+          "desc": "受控激活值"
+        },
+        {
+          "name": "defaultValue",
+          "type": "string",
+          "required": false,
+          "desc": "非受控初值"
+        },
         {
           "name": "size",
           "type": "'sm'|'md'",
@@ -882,10 +1085,19 @@
           "required": false,
           "desc": "标签头尺寸"
         },
-        { "name": "accessibilityLabel", "type": "string", "required": false, "desc": "无障碍标签" }
+        {
+          "name": "accessibilityLabel",
+          "type": "string",
+          "required": false,
+          "desc": "无障碍标签"
+        }
       ],
       "events": [
-        { "name": "onValueChange", "type": "(value: string) => void", "desc": "激活值变化" }
+        {
+          "name": "onValueChange",
+          "type": "(value: string) => void",
+          "desc": "激活值变化"
+        }
       ],
       "slots": ["items[].label", "items[].content"],
       "tokens": [
@@ -926,13 +1138,33 @@
       "dependencies": ["tamagui", "react-native"],
       "registryDependencies": [],
       "files": [
-        { "path": "packages/ui-native/src/Progress/Progress.tsx", "type": "registry:component" },
-        { "path": "packages/ui-native/src/Progress/Progress.types.ts", "type": "registry:ui" },
-        { "path": "packages/ui-native/src/Progress/index.ts", "type": "registry:ui" }
+        {
+          "path": "packages/ui-native/src/Progress/Progress.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "packages/ui-native/src/Progress/Progress.types.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-native/src/Progress/index.ts",
+          "type": "registry:ui"
+        }
       ],
       "props": [
-        { "name": "value", "type": "number", "required": true, "desc": "当前进度（0 到 max）" },
-        { "name": "max", "type": "number", "default": "100", "required": false, "desc": "最大值" },
+        {
+          "name": "value",
+          "type": "number",
+          "required": true,
+          "desc": "当前进度（0 到 max）"
+        },
+        {
+          "name": "max",
+          "type": "number",
+          "default": "100",
+          "required": false,
+          "desc": "最大值"
+        },
         {
           "name": "size",
           "type": "'sm'|'md'",
@@ -954,7 +1186,12 @@
           "required": false,
           "desc": "末尾显示百分比"
         },
-        { "name": "accessibilityLabel", "type": "string", "required": false, "desc": "无障碍标签" }
+        {
+          "name": "accessibilityLabel",
+          "type": "string",
+          "required": false,
+          "desc": "无障碍标签"
+        }
       ],
       "events": [],
       "slots": [],
@@ -989,9 +1226,18 @@
       "dependencies": ["tamagui", "react-native"],
       "registryDependencies": [],
       "files": [
-        { "path": "packages/ui-native/src/Skeleton/Skeleton.tsx", "type": "registry:component" },
-        { "path": "packages/ui-native/src/Skeleton/Skeleton.types.ts", "type": "registry:ui" },
-        { "path": "packages/ui-native/src/Skeleton/index.ts", "type": "registry:ui" }
+        {
+          "path": "packages/ui-native/src/Skeleton/Skeleton.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "packages/ui-native/src/Skeleton/Skeleton.types.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-native/src/Skeleton/index.ts",
+          "type": "registry:ui"
+        }
       ],
       "props": [
         {
@@ -1027,7 +1273,12 @@
           "required": false,
           "desc": "高度覆盖，数字 px / 百分比"
         },
-        { "name": "accessibilityLabel", "type": "string", "required": false, "desc": "无障碍标签" }
+        {
+          "name": "accessibilityLabel",
+          "type": "string",
+          "required": false,
+          "desc": "无障碍标签"
+        }
       ],
       "events": [],
       "slots": [],
@@ -1063,9 +1314,18 @@
       "dependencies": ["tamagui", "react-native"],
       "registryDependencies": [],
       "files": [
-        { "path": "packages/ui-native/src/Spinner/Spinner.tsx", "type": "registry:component" },
-        { "path": "packages/ui-native/src/Spinner/Spinner.types.ts", "type": "registry:ui" },
-        { "path": "packages/ui-native/src/Spinner/index.ts", "type": "registry:ui" }
+        {
+          "path": "packages/ui-native/src/Spinner/Spinner.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "packages/ui-native/src/Spinner/Spinner.types.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-native/src/Spinner/index.ts",
+          "type": "registry:ui"
+        }
       ],
       "props": [
         {
@@ -1082,7 +1342,12 @@
           "required": false,
           "desc": "主色/中性灰/反白"
         },
-        { "name": "accessibilityLabel", "type": "string", "required": false, "desc": "无障碍标签" }
+        {
+          "name": "accessibilityLabel",
+          "type": "string",
+          "required": false,
+          "desc": "无障碍标签"
+        }
       ],
       "events": [],
       "slots": [],
@@ -1118,12 +1383,26 @@
       "dependencies": ["tamagui"],
       "registryDependencies": [],
       "files": [
-        { "path": "packages/ui-native/src/Empty/Empty.tsx", "type": "registry:component" },
-        { "path": "packages/ui-native/src/Empty/Empty.types.ts", "type": "registry:ui" },
-        { "path": "packages/ui-native/src/Empty/index.ts", "type": "registry:ui" }
+        {
+          "path": "packages/ui-native/src/Empty/Empty.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "packages/ui-native/src/Empty/Empty.types.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-native/src/Empty/index.ts",
+          "type": "registry:ui"
+        }
       ],
       "props": [
-        { "name": "title", "type": "ReactNode", "required": false, "desc": "主说明，弱化居中" },
+        {
+          "name": "title",
+          "type": "ReactNode",
+          "required": false,
+          "desc": "主说明，弱化居中"
+        },
         {
           "name": "description",
           "type": "ReactNode",
@@ -1142,7 +1421,12 @@
           "required": false,
           "desc": "操作区 slot，通常放 Button"
         },
-        { "name": "accessibilityLabel", "type": "string", "required": false, "desc": "无障碍标签" }
+        {
+          "name": "accessibilityLabel",
+          "type": "string",
+          "required": false,
+          "desc": "无障碍标签"
+        }
       ],
       "events": [],
       "slots": ["icon", "action"],
@@ -1180,9 +1464,18 @@
       "dependencies": ["tamagui"],
       "registryDependencies": [],
       "files": [
-        { "path": "packages/ui-native/src/Result/Result.tsx", "type": "registry:component" },
-        { "path": "packages/ui-native/src/Result/Result.types.ts", "type": "registry:ui" },
-        { "path": "packages/ui-native/src/Result/index.ts", "type": "registry:ui" }
+        {
+          "path": "packages/ui-native/src/Result/Result.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "packages/ui-native/src/Result/Result.types.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-native/src/Result/index.ts",
+          "type": "registry:ui"
+        }
       ],
       "props": [
         {
@@ -1192,7 +1485,12 @@
           "default": "'info'",
           "desc": "结果状态，决定默认图标与语义色"
         },
-        { "name": "title", "type": "ReactNode", "required": false, "desc": "主标题" },
+        {
+          "name": "title",
+          "type": "ReactNode",
+          "required": false,
+          "desc": "主标题"
+        },
         {
           "name": "description",
           "type": "ReactNode",
@@ -1217,7 +1515,12 @@
           "required": false,
           "desc": "次要操作 slot（如联系客服）"
         },
-        { "name": "accessibilityLabel", "type": "string", "required": false, "desc": "无障碍标签" }
+        {
+          "name": "accessibilityLabel",
+          "type": "string",
+          "required": false,
+          "desc": "无障碍标签"
+        }
       ],
       "events": [],
       "slots": ["icon", "action", "extra"],
@@ -1269,7 +1572,10 @@
           "path": "packages/ui-native/src/StateContainer/StateContainer.types.ts",
           "type": "registry:ui"
         },
-        { "path": "packages/ui-native/src/StateContainer/index.ts", "type": "registry:ui" }
+        {
+          "path": "packages/ui-native/src/StateContainer/index.ts",
+          "type": "registry:ui"
+        }
       ],
       "props": [
         {
@@ -1291,8 +1597,18 @@
           "required": false,
           "desc": "自定义 loading 视图 slot"
         },
-        { "name": "empty", "type": "ReactNode", "required": false, "desc": "自定义空态视图 slot" },
-        { "name": "error", "type": "ReactNode", "required": false, "desc": "自定义错误视图 slot" },
+        {
+          "name": "empty",
+          "type": "ReactNode",
+          "required": false,
+          "desc": "自定义空态视图 slot"
+        },
+        {
+          "name": "error",
+          "type": "ReactNode",
+          "required": false,
+          "desc": "自定义错误视图 slot"
+        },
         {
           "name": "onRetry",
           "type": "() => void",
@@ -1339,9 +1655,18 @@
       "dependencies": ["tamagui"],
       "registryDependencies": [],
       "files": [
-        { "path": "packages/ui-native/src/Card/Card.tsx", "type": "registry:component" },
-        { "path": "packages/ui-native/src/Card/Card.types.ts", "type": "registry:ui" },
-        { "path": "packages/ui-native/src/Card/index.ts", "type": "registry:ui" }
+        {
+          "path": "packages/ui-native/src/Card/Card.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "packages/ui-native/src/Card/Card.types.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-native/src/Card/index.ts",
+          "type": "registry:ui"
+        }
       ],
       "props": [
         {
@@ -1351,7 +1676,12 @@
           "default": "'outlined'",
           "desc": "描边 / 投影（elevated 用 elevation）"
         },
-        { "name": "CardHeader.title", "type": "ReactNode", "required": false, "desc": "头部标题" },
+        {
+          "name": "CardHeader.title",
+          "type": "ReactNode",
+          "required": false,
+          "desc": "头部标题"
+        },
         {
           "name": "CardHeader.description",
           "type": "ReactNode",
@@ -1364,7 +1694,12 @@
           "required": false,
           "desc": "头部右侧操作区"
         },
-        { "name": "children", "type": "ReactNode", "required": false, "desc": "卡片内容" }
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "required": false,
+          "desc": "卡片内容"
+        }
       ],
       "events": [],
       "slots": ["children", "header.title", "header.description", "header.action"],
@@ -1401,12 +1736,26 @@
       "dependencies": ["tamagui"],
       "registryDependencies": [],
       "files": [
-        { "path": "packages/ui-native/src/Avatar/Avatar.tsx", "type": "registry:component" },
-        { "path": "packages/ui-native/src/Avatar/Avatar.types.ts", "type": "registry:ui" },
-        { "path": "packages/ui-native/src/Avatar/index.ts", "type": "registry:ui" }
+        {
+          "path": "packages/ui-native/src/Avatar/Avatar.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "packages/ui-native/src/Avatar/Avatar.types.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-native/src/Avatar/index.ts",
+          "type": "registry:ui"
+        }
       ],
       "props": [
-        { "name": "src", "type": "string", "required": false, "desc": "图片地址（source.uri）" },
+        {
+          "name": "src",
+          "type": "string",
+          "required": false,
+          "desc": "图片地址（source.uri）"
+        },
         {
           "name": "name",
           "type": "string",
@@ -1464,9 +1813,18 @@
       "dependencies": ["tamagui"],
       "registryDependencies": [],
       "files": [
-        { "path": "packages/ui-native/src/Tag/Tag.tsx", "type": "registry:component" },
-        { "path": "packages/ui-native/src/Tag/Tag.types.ts", "type": "registry:ui" },
-        { "path": "packages/ui-native/src/Tag/index.ts", "type": "registry:ui" }
+        {
+          "path": "packages/ui-native/src/Tag/Tag.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "packages/ui-native/src/Tag/Tag.types.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-native/src/Tag/index.ts",
+          "type": "registry:ui"
+        }
       ],
       "props": [
         {
@@ -1513,7 +1871,11 @@
         }
       ],
       "events": [
-        { "name": "onPress", "type": "() => void", "desc": "点标签切换选中（筛选）" },
+        {
+          "name": "onPress",
+          "type": "() => void",
+          "desc": "点标签切换选中（筛选）"
+        },
         {
           "name": "onClose",
           "type": "() => void",
@@ -1549,9 +1911,18 @@
       "dependencies": ["tamagui", "@kit/core"],
       "registryDependencies": [],
       "files": [
-        { "path": "packages/ui-native/src/Steps/Steps.tsx", "type": "registry:component" },
-        { "path": "packages/ui-native/src/Steps/Steps.types.ts", "type": "registry:ui" },
-        { "path": "packages/ui-native/src/Steps/index.ts", "type": "registry:ui" }
+        {
+          "path": "packages/ui-native/src/Steps/Steps.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "packages/ui-native/src/Steps/Steps.types.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-native/src/Steps/index.ts",
+          "type": "registry:ui"
+        }
       ],
       "props": [
         {
@@ -1624,8 +1995,14 @@
           "path": "packages/ui-native/src/Pagination/Pagination.tsx",
           "type": "registry:component"
         },
-        { "path": "packages/ui-native/src/Pagination/Pagination.types.ts", "type": "registry:ui" },
-        { "path": "packages/ui-native/src/Pagination/index.ts", "type": "registry:ui" }
+        {
+          "path": "packages/ui-native/src/Pagination/Pagination.types.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-native/src/Pagination/index.ts",
+          "type": "registry:ui"
+        }
       ],
       "props": [
         {
@@ -1642,7 +2019,12 @@
           "default": "10",
           "desc": "每页条数"
         },
-        { "name": "total", "type": "number", "required": true, "desc": "总条数" },
+        {
+          "name": "total",
+          "type": "number",
+          "required": true,
+          "desc": "总条数"
+        },
         {
           "name": "onChange",
           "type": "(page:number)=>void",
@@ -1672,7 +2054,11 @@
         }
       ],
       "events": [
-        { "name": "onChange", "type": "(page: number) => void", "desc": "页码变化（onPress）" }
+        {
+          "name": "onChange",
+          "type": "(page: number) => void",
+          "desc": "页码变化（onPress）"
+        }
       ],
       "slots": [],
       "tokens": [
@@ -1710,8 +2096,14 @@
           "path": "packages/ui-native/src/Breadcrumb/Breadcrumb.tsx",
           "type": "registry:component"
         },
-        { "path": "packages/ui-native/src/Breadcrumb/Breadcrumb.types.ts", "type": "registry:ui" },
-        { "path": "packages/ui-native/src/Breadcrumb/index.ts", "type": "registry:ui" }
+        {
+          "path": "packages/ui-native/src/Breadcrumb/Breadcrumb.types.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-native/src/Breadcrumb/index.ts",
+          "type": "registry:ui"
+        }
       ],
       "props": [
         {
@@ -1735,7 +2127,11 @@
         }
       ],
       "events": [
-        { "name": "onNavigate", "type": "(index: number) => void", "desc": "点击中间项（onPress）" }
+        {
+          "name": "onNavigate",
+          "type": "(index: number) => void",
+          "desc": "点击中间项（onPress）"
+        }
       ],
       "slots": ["items[].label"],
       "tokens": [
@@ -1764,13 +2160,32 @@
       "dependencies": ["tamagui", "@kit/core"],
       "registryDependencies": [],
       "files": [
-        { "path": "packages/ui-native/src/DataTable/DataTable.tsx", "type": "registry:component" },
-        { "path": "packages/ui-native/src/DataTable/DataTable.types.ts", "type": "registry:ui" },
-        { "path": "packages/ui-native/src/DataTable/index.ts", "type": "registry:ui" }
+        {
+          "path": "packages/ui-native/src/DataTable/DataTable.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "packages/ui-native/src/DataTable/DataTable.types.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-native/src/DataTable/index.ts",
+          "type": "registry:ui"
+        }
       ],
       "props": [
-        { "name": "columns", "type": "TableColumn<T>[]", "required": true, "desc": "列配置" },
-        { "name": "data", "type": "T[]", "required": true, "desc": "数据行" },
+        {
+          "name": "columns",
+          "type": "TableColumn<T>[]",
+          "required": true,
+          "desc": "列配置"
+        },
+        {
+          "name": "data",
+          "type": "T[]",
+          "required": true,
+          "desc": "数据行"
+        },
         {
           "name": "rowKey",
           "type": "keyof T | (row,index)=>string",
@@ -1798,7 +2213,12 @@
           "default": "true",
           "desc": "斑马纹"
         },
-        { "name": "onRowClick", "type": "(row,index)=>void", "required": false, "desc": "行点击" },
+        {
+          "name": "onRowClick",
+          "type": "(row,index)=>void",
+          "required": false,
+          "desc": "行点击"
+        },
         {
           "name": "sortState",
           "type": "{key,order}|null",
@@ -1813,8 +2233,16 @@
         }
       ],
       "events": [
-        { "name": "onRowClick", "type": "(row, index) => void", "desc": "行点击(onPress)" },
-        { "name": "onSortChange", "type": "(key, order) => void", "desc": "表头排序变化" }
+        {
+          "name": "onRowClick",
+          "type": "(row, index) => void",
+          "desc": "行点击(onPress)"
+        },
+        {
+          "name": "onSortChange",
+          "type": "(key, order) => void",
+          "desc": "表头排序变化"
+        }
       ],
       "slots": ["columns[].title", "columns[].render", "empty"],
       "tokens": [
@@ -1838,6 +2266,117 @@
       },
       "docs": "packages/ui-native/src/DataTable/README.md",
       "examples": ["packages/ui-native/src/DataTable/__examples__/States.tsx"]
+    },
+    {
+      "name": "tooltip",
+      "type": "registry:component",
+      "title": "文字提示 Tooltip",
+      "description": "Tamagui XStack+Pressable+YStack 自建绝对定位浮层，点击触发切换，深色气泡（$bgInverse/$textInverse）四向 placement，受控/非受控",
+      "canonical": "Tooltip",
+      "status": "beta",
+      "stack": "native",
+      "dependencies": ["@kit/core"],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "packages/ui-native/src/Tooltip/Tooltip.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "packages/ui-native/src/Tooltip/Tooltip.types.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-native/src/Tooltip/index.ts",
+          "type": "registry:ui"
+        }
+      ],
+      "props": [
+        {
+          "name": "content",
+          "type": "ReactNode",
+          "required": true,
+          "desc": "提示内容"
+        },
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "required": true,
+          "desc": "触发元素"
+        },
+        {
+          "name": "placement",
+          "type": "'top'|'bottom'|'left'|'right'",
+          "default": "'top'",
+          "required": false,
+          "desc": "气泡位置"
+        },
+        {
+          "name": "sideOffset",
+          "type": "number",
+          "default": "4",
+          "required": false,
+          "desc": "触发元素与气泡间距 px"
+        },
+        {
+          "name": "open",
+          "type": "boolean",
+          "required": false,
+          "desc": "受控可见"
+        },
+        {
+          "name": "onOpenChange",
+          "type": "(open:boolean)=>void",
+          "required": false,
+          "desc": "可见变化回调"
+        },
+        {
+          "name": "defaultOpen",
+          "type": "boolean",
+          "required": false,
+          "desc": "默认可见（非受控）"
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "default": "false",
+          "required": false,
+          "desc": "禁用提示（仅渲染 children）"
+        },
+        {
+          "name": "style",
+          "type": "ViewStyle",
+          "required": false,
+          "desc": "外层容器样式"
+        }
+      ],
+      "events": [
+        {
+          "name": "onOpenChange",
+          "type": "(open: boolean) => void",
+          "desc": "可见变化（onPress 触发）"
+        }
+      ],
+      "slots": ["content", "children"],
+      "tokens": [
+        "color-bg-inverse",
+        "color-text-inverse",
+        "radius-sm",
+        "font-size-body-sm",
+        "z-popover"
+      ],
+      "states": ["hidden", "visible", "disabled"],
+      "a11y": "Pressable onPress 触发，accessibilityLabel 由触发元素提供",
+      "usage": {
+        "do": [
+          "原生端点击触发，props 语义与 web/mini 一致",
+          "气泡内容走 i18n key",
+          "zIndex=1060（popover 档）"
+        ],
+        "dont": ["硬编码颜色/层级", "在气泡内放复杂交互"]
+      },
+      "docs": "packages/ui-native/src/Tooltip/README.md",
+      "examples": ["packages/ui-native/src/Tooltip/__examples__/States.tsx"]
     }
   ]
 }

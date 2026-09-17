@@ -1,0 +1,51 @@
+/* Tooltip（mini）样式：颜色/字号/圆角/层级全走 --kit-* token；点击触发的绝对定位浮层。 */
+
+.kit-tooltip {
+  position: relative;
+  display: inline-flex;
+}
+
+.kit-tooltip__trigger {
+  display: inline-flex;
+}
+
+.kit-tooltip__bubble {
+  position: absolute;
+  z-index: var(--kit-z-popover);
+  max-width: 200px;
+  box-sizing: border-box;
+  padding: 4px 12px;
+  border-radius: var(--kit-radius-sm);
+  background: var(--kit-color-bg-inverse);
+  white-space: nowrap;
+}
+
+.kit-tooltip__bubble--top {
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.kit-tooltip__bubble--bottom {
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.kit-tooltip__bubble--left {
+  right: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.kit-tooltip__bubble--right {
+  left: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.kit-tooltip__text {
+  font-size: var(--kit-font-size-body-sm);
+  line-height: 1.4;
+  color: var(--kit-color-text-inverse);
+}
