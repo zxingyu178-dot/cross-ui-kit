@@ -74,6 +74,7 @@ import { States as DateRangePickerStates } from '@kit/ui-web/src/DateRangePicker
 import { States as TimeRangePickerStates } from '@kit/ui-web/src/TimeRangePicker/__examples__/States'
 import { States as AvatarGroupStates } from '@kit/ui-web/src/AvatarGroup/__examples__/States'
 import { States as TagGroupStates } from '@kit/ui-web/src/TagGroup/__examples__/States'
+import { States as CardGroupStates } from '@kit/ui-web/src/CardGroup/__examples__/States'
 import { RequestDemo } from './demos/RequestDemo'
 
 /**
@@ -604,6 +605,13 @@ export default function App() {
           TagGroup · 标签组（基础 / 超出+N / 可关闭 / 尺寸）
         </h2>
         <TagGroupStates />
+      </section>
+
+      <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
+        <h2 className="text-title-sm font-medium text-text-primary">
+          CardGroup · 卡片组（基础 / 2列 / 带封面）
+        </h2>
+        <CardGroupStates />
       </section>
 
       <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">

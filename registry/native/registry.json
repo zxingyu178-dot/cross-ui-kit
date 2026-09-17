@@ -7159,6 +7159,85 @@
       },
       "docs": "packages/ui-native/src/TagGroup/README.md",
       "examples": ["packages/ui-native/src/TagGroup/__examples__/States.tsx"]
+    },
+    {
+      "name": "card-group",
+      "type": "registry:component",
+      "title": "卡片组 CardGroup",
+      "description": "卡片组组件，多个卡片网格排列",
+      "canonical": "CardGroup",
+      "status": "beta",
+      "stack": "native",
+      "dependencies": ["@kit/core"],
+      "registryDependencies": ["card"],
+      "files": [
+        {
+          "path": "packages/ui-native/src/CardGroup/CardGroup.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "packages/ui-native/src/CardGroup/CardGroup.types.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-native/src/CardGroup/index.ts",
+          "type": "registry:ui"
+        }
+      ],
+      "props": [
+        {
+          "name": "items",
+          "type": "CardGroupItem[]",
+          "default": "[]",
+          "required": false,
+          "desc": "卡片列表"
+        },
+        {
+          "name": "columns",
+          "type": "1|2|3|4",
+          "default": "2",
+          "required": false,
+          "desc": "列数"
+        },
+        {
+          "name": "gutter",
+          "type": "number",
+          "default": "12",
+          "required": false,
+          "desc": "卡片间距（px）"
+        },
+        {
+          "name": "style",
+          "type": "ViewStyle",
+          "required": false,
+          "desc": "外层容器样式"
+        }
+      ],
+      "events": [],
+      "slots": ["items[].title", "items[].content", "items[].cover"],
+      "tokens": [
+        "color-bg-card",
+        "color-text-primary",
+        "color-text-secondary",
+        "color-border-default",
+        "radius-lg",
+        "shadow-card",
+        "font-size-body-md",
+        "font-size-body-sm"
+      ],
+      "states": ["normal", "hover"],
+      "a11y": "卡片组可读；卡片标题与内容可读",
+      "usage": {
+        "do": [
+          "用 CardGroup 承载多卡片展示",
+          "columns 控制列数",
+          "gutter 控制卡片间距",
+          "cover 展示卡片封面图"
+        ],
+        "dont": ["用 CardGroup 承载单个卡片（用 Card）", "items 中重复 key"]
+      },
+      "docs": "packages/ui-native/src/CardGroup/README.md",
+      "examples": ["packages/ui-native/src/CardGroup/__examples__/States.tsx"]
     }
   ]
 }

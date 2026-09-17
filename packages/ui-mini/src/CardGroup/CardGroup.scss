@@ -1,0 +1,35 @@
+/* CardGroup（mini）样式：颜色全走 --kit-* token。 */
+
+.kit-card-group__item {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: var(--kit-radius-lg);
+  border: 1px solid var(--kit-color-border-default);
+  background: var(--kit-color-bg-card);
+  box-shadow: var(--kit-shadow-card);
+  box-sizing: border-box;
+}
+
+.kit-card-group__cover {
+  width: 100%;
+  height: 120px;
+}
+
+.kit-card-group__body {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 12px;
+}
+
+.kit-card-group__title {
+  font-size: var(--kit-font-size-body-md);
+  font-weight: 500;
+  color: var(--kit-color-text-primary);
+}
+
+.kit-card-group__content {
+  font-size: var(--kit-font-size-body-sm);
+  color: var(--kit-color-text-secondary);
+}

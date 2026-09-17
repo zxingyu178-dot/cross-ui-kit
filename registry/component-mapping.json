@@ -2251,6 +2251,34 @@
           "status": "beta"
         }
       }
+    },
+    {
+      "canonical": "CardGroup",
+      "category": "data-display",
+      "sharedProps": {
+        "items": "CardGroupItem[]",
+        "columns": "1|2|3|4",
+        "gutter": "number"
+      },
+      "eventMap": {
+        "web": "",
+        "mini": "",
+        "native": ""
+      },
+      "stacks": {
+        "web": {
+          "item": "@kit/web-card-group",
+          "status": "beta"
+        },
+        "mini": {
+          "item": "@kit/mini-card-group",
+          "status": "beta"
+        },
+        "native": {
+          "item": "@kit/native-card-group",
+          "status": "beta"
+        }
+      }
     }
   ]
 }
