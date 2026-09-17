@@ -1,0 +1,32 @@
+/* TimeRangePicker（mini）样式：颜色全走 --kit-* token。 */
+
+.kit-time-range-picker {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+}
+
+.kit-time-range-picker__input {
+  flex: 1;
+  height: 36px;
+  padding: 0 12px;
+  border: 1px solid var(--kit-color-border-default);
+  border-radius: var(--kit-radius-md);
+  background: var(--kit-color-bg-card);
+  font-size: var(--kit-font-size-body-sm);
+  color: var(--kit-color-text-primary);
+  box-sizing: border-box;
+}
+
+.kit-time-range-picker__input--disabled {
+  background: var(--kit-color-bg-muted);
+  opacity: 0.5;
+}
+
+.kit-time-range-picker__separator {
+  flex-shrink: 0;
+  font-size: var(--kit-font-size-body-sm);
+  color: var(--kit-color-text-tertiary);
+}

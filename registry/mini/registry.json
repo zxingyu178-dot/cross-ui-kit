@@ -7070,6 +7070,105 @@
       },
       "docs": "packages/ui-mini/src/DateRangePicker/README.md",
       "examples": ["packages/ui-mini/src/DateRangePicker/__examples__/States.tsx"]
+    },
+    {
+      "name": "time-range-picker",
+      "type": "registry:component",
+      "title": "时间范围选择器 TimeRangePicker",
+      "description": "时间范围选择器组件，两个时间输入框 + 连接符",
+      "canonical": "TimeRangePicker",
+      "status": "beta",
+      "stack": "mini",
+      "dependencies": ["@kit/core"],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "packages/ui-mini/src/TimeRangePicker/TimeRangePicker.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "packages/ui-mini/src/TimeRangePicker/TimeRangePicker.types.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-mini/src/TimeRangePicker/TimeRangePicker.scss",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-mini/src/TimeRangePicker/index.ts",
+          "type": "registry:ui"
+        }
+      ],
+      "props": [
+        {
+          "name": "value",
+          "type": "[string, string]",
+          "required": false,
+          "desc": "选中值 [start, end]（HH:mm:ss）"
+        },
+        {
+          "name": "onChange",
+          "type": "(value:[string,string])=>void",
+          "required": false,
+          "desc": "值变化回调"
+        },
+        {
+          "name": "placeholder",
+          "type": "[string, string]",
+          "default": "['开始时间', '结束时间']",
+          "required": false,
+          "desc": "占位文字"
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "default": "false",
+          "required": false,
+          "desc": "是否禁用"
+        },
+        {
+          "name": "separator",
+          "type": "string",
+          "default": "'至'",
+          "required": false,
+          "desc": "连接符"
+        },
+        {
+          "name": "className",
+          "type": "string",
+          "required": false,
+          "desc": "外层容器类名"
+        }
+      ],
+      "events": [
+        {
+          "name": "onChange",
+          "type": "(value: [string, string]) => void",
+          "desc": "值变化回调"
+        }
+      ],
+      "slots": [],
+      "tokens": [
+        "color-bg-card",
+        "color-text-primary",
+        "color-text-tertiary",
+        "color-border-default",
+        "color-primary-default",
+        "radius-md",
+        "font-size-body-sm"
+      ],
+      "states": ["normal", "focus", "disabled"],
+      "a11y": "时间输入框可输入；连接符可读",
+      "usage": {
+        "do": [
+          "用 TimeRangePicker 承载时间范围选择场景",
+          "value 为 [start, end] 元组",
+          "separator 自定义连接符"
+        ],
+        "dont": ["用 TimeRangePicker 承载单个时间选择（用 TimePicker）", "value 长度不为 2"]
+      },
+      "docs": "packages/ui-mini/src/TimeRangePicker/README.md",
+      "examples": ["packages/ui-mini/src/TimeRangePicker/__examples__/States.tsx"]
     }
   ]
 }
