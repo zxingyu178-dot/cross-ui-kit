@@ -1668,6 +1668,38 @@
           "status": "beta"
         }
       }
+    },
+    {
+      "canonical": "Tree",
+      "category": "data-display",
+      "sharedProps": {
+        "data": "TreeNode[]",
+        "defaultExpandAll": "boolean",
+        "expandedKeys": "string[]",
+        "onExpand": "(k:string[])=>void",
+        "selectedKeys": "string[]",
+        "onSelect": "(k:string[])=>void",
+        "disabled": "boolean"
+      },
+      "eventMap": {
+        "web": "onExpand/onSelect",
+        "mini": "onExpand/onSelect",
+        "native": "onExpand/onSelect"
+      },
+      "stacks": {
+        "web": {
+          "item": "@kit/web-tree",
+          "status": "beta"
+        },
+        "mini": {
+          "item": "@kit/mini-tree",
+          "status": "beta"
+        },
+        "native": {
+          "item": "@kit/native-tree",
+          "status": "beta"
+        }
+      }
     }
   ]
 }

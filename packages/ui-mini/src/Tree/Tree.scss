@@ -1,0 +1,58 @@
+/* Tree（mini）样式：颜色全走 --kit-* token。 */
+
+.kit-tree {
+  border: 1px solid var(--kit-color-border-default);
+  border-radius: var(--kit-radius-md);
+  background: var(--kit-color-bg-card);
+  padding: 8px;
+  width: 100%;
+}
+
+.kit-tree__node {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 8px;
+  border-radius: 4px;
+}
+
+.kit-tree__node--selected {
+  background: rgba(37, 99, 235, 0.1);
+}
+
+.kit-tree__node--disabled {
+  opacity: 0.5;
+}
+
+.kit-tree__arrow {
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  color: var(--kit-color-text-tertiary);
+  transition: transform 0.2s;
+  flex-shrink: 0;
+}
+
+.kit-tree__arrow--expanded {
+  transform: rotate(90deg);
+}
+
+.kit-tree__arrow-placeholder {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+.kit-tree__title {
+  font-size: var(--kit-font-size-body-sm);
+  color: var(--kit-color-text-primary);
+}
+
+.kit-tree__title--selected {
+  font-weight: 500;
+  color: var(--kit-color-primary-default);
+}

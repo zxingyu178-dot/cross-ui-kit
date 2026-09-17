@@ -5358,6 +5358,123 @@
       },
       "docs": "packages/ui-mini/src/Transfer/README.md",
       "examples": ["packages/ui-mini/src/Transfer/__examples__/States.tsx"]
+    },
+    {
+      "name": "tree",
+      "type": "registry:component",
+      "title": "树形控件 Tree",
+      "description": "树形控件，div 树形结构，支持展开/折叠、选中、禁用、多级嵌套",
+      "canonical": "Tree",
+      "status": "beta",
+      "stack": "mini",
+      "dependencies": ["@kit/core"],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "packages/ui-mini/src/Tree/Tree.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "packages/ui-mini/src/Tree/Tree.types.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-mini/src/Tree/Tree.scss",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-mini/src/Tree/index.ts",
+          "type": "registry:ui"
+        }
+      ],
+      "props": [
+        {
+          "name": "data",
+          "type": "TreeNode[]",
+          "default": "[]",
+          "required": false,
+          "desc": "树形数据"
+        },
+        {
+          "name": "defaultExpandAll",
+          "type": "boolean",
+          "default": "false",
+          "required": false,
+          "desc": "默认展开所有节点"
+        },
+        {
+          "name": "expandedKeys",
+          "type": "string[]",
+          "required": false,
+          "desc": "展开的 key 列表（受控）"
+        },
+        {
+          "name": "onExpand",
+          "type": "(expandedKeys:string[])=>void",
+          "required": false,
+          "desc": "展开变化回调"
+        },
+        {
+          "name": "selectedKeys",
+          "type": "string[]",
+          "required": false,
+          "desc": "选中的 key 列表（受控）"
+        },
+        {
+          "name": "onSelect",
+          "type": "(selectedKeys:string[])=>void",
+          "required": false,
+          "desc": "选中变化回调"
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "default": "false",
+          "required": false,
+          "desc": "是否禁用"
+        },
+        {
+          "name": "className",
+          "type": "string",
+          "required": false,
+          "desc": "外层容器类名"
+        }
+      ],
+      "events": [
+        {
+          "name": "onExpand",
+          "type": "(expandedKeys: string[]) => void",
+          "desc": "展开变化回调"
+        },
+        {
+          "name": "onSelect",
+          "type": "(selectedKeys: string[]) => void",
+          "desc": "选中变化回调"
+        }
+      ],
+      "slots": ["data[].title", "data[].icon"],
+      "tokens": [
+        "color-primary-default",
+        "color-bg-card",
+        "color-text-primary",
+        "color-text-secondary",
+        "color-text-tertiary",
+        "color-border-default",
+        "radius-md",
+        "font-size-body-sm"
+      ],
+      "states": ["normal", "expanded", "selected", "disabled"],
+      "a11y": "节点可点击展开/选中；箭头按钮可点击",
+      "usage": {
+        "do": [
+          "用 Tree 承载层级数据（如组织架构、文件目录）",
+          "data 为树形结构，children 嵌套",
+          "defaultExpandAll 默认展开全部"
+        ],
+        "dont": ["用 Tree 承载扁平列表（用 List）", "在 data 中重复 key"]
+      },
+      "docs": "packages/ui-mini/src/Tree/README.md",
+      "examples": ["packages/ui-mini/src/Tree/__examples__/States.tsx"]
     }
   ]
 }
