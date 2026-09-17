@@ -11,12 +11,7 @@ export function States() {
         <Text style={{ fontSize: 12, color: 'var(--kit-color-text-tertiary)' }}>
           基础验证码输入框
         </Text>
-        <Captcha
-          value={code}
-          onChange={setCode}
-          onSend={() => console.log('发送验证码')}
-          countdown={10}
-        />
+        <Captcha value={code} onChange={setCode} onSend={() => {}} countdown={10} />
       </View>
       <View style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
         <Text style={{ fontSize: 12, color: 'var(--kit-color-text-tertiary)' }}>禁用状态</Text>

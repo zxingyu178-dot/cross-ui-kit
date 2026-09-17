@@ -7725,6 +7725,78 @@
       },
       "docs": "packages/ui-web/src/PageHeader/README.md",
       "examples": ["packages/ui-web/src/PageHeader/__examples__/States.tsx"]
+    },
+    {
+      "name": "layout",
+      "type": "registry:component",
+      "title": "布局 Layout",
+      "description": "布局组件，页面整体布局，含 Header/Sider/Content/Footer",
+      "canonical": "Layout",
+      "status": "beta",
+      "stack": "web",
+      "dependencies": ["@kit/core"],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "packages/ui-web/src/Layout/Layout.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "packages/ui-web/src/Layout/Layout.types.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-web/src/Layout/index.ts",
+          "type": "registry:ui"
+        }
+      ],
+      "props": [
+        {
+          "name": "direction",
+          "type": "'horizontal'|'vertical'",
+          "default": "'vertical'",
+          "required": false,
+          "desc": "布局方向"
+        },
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "required": false,
+          "desc": "子元素"
+        },
+        {
+          "name": "className",
+          "type": "string",
+          "required": false,
+          "desc": "外层容器类名"
+        }
+      ],
+      "subComponents": ["Header", "Sider", "Content", "Footer"],
+      "events": [],
+      "slots": ["Header", "Sider", "Content", "Footer"],
+      "tokens": [
+        "color-bg-card",
+        "color-bg-muted",
+        "color-border-default",
+        "color-text-primary",
+        "color-text-tertiary",
+        "font-size-caption"
+      ],
+      "states": ["normal"],
+      "a11y": "布局语义化：header/main/footer/aside",
+      "usage": {
+        "do": [
+          "用 Layout 承载页面整体布局",
+          "Header 设置顶部导航",
+          "Sider 设置侧边栏",
+          "Content 设置主内容区",
+          "Footer 设置底部信息",
+          "嵌套 Layout 实现复杂布局"
+        ],
+        "dont": ["用 Layout 承载简单居中（用 Space/Grid）", "Sider 宽度不设置"]
+      },
+      "docs": "packages/ui-web/src/Layout/README.md",
+      "examples": ["packages/ui-web/src/Layout/__examples__/States.tsx"]
     }
   ]
 }

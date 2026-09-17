@@ -1,0 +1,54 @@
+/* Layout（mini）样式：颜色全走 --kit-* token。 */
+
+.kit-layout {
+  display: flex;
+  width: 100%;
+  min-height: 0;
+}
+
+.kit-layout--vertical {
+  flex-direction: column;
+}
+
+.kit-layout--horizontal {
+  flex-direction: row;
+}
+
+.kit-layout__header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 56px;
+  padding: 0 16px;
+  border-bottom: 1px solid var(--kit-color-border-default);
+  background: var(--kit-color-bg-card);
+  flex-shrink: 0;
+}
+
+.kit-layout__sider {
+  flex-shrink: 0;
+  overflow: auto;
+  border-right: 1px solid var(--kit-color-border-default);
+  background: var(--kit-color-bg-card);
+}
+
+.kit-layout__content {
+  flex: 1;
+  overflow: auto;
+  padding: 16px;
+  background: var(--kit-color-bg-muted);
+}
+
+.kit-layout__footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  padding: 0 16px;
+  border-top: 1px solid var(--kit-color-border-default);
+  background: var(--kit-color-bg-card);
+  font-size: var(--kit-font-size-caption);
+  color: var(--kit-color-text-tertiary);
+  flex-shrink: 0;
+}

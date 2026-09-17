@@ -2430,6 +2430,34 @@
           "status": "beta"
         }
       }
+    },
+    {
+      "canonical": "Layout",
+      "category": "layout",
+      "sharedProps": {
+        "direction": "'horizontal'|'vertical'",
+        "children": "ReactNode"
+      },
+      "subComponents": ["Header", "Sider", "Content", "Footer"],
+      "eventMap": {
+        "web": "",
+        "mini": "",
+        "native": ""
+      },
+      "stacks": {
+        "web": {
+          "item": "@kit/web-layout",
+          "status": "beta"
+        },
+        "mini": {
+          "item": "@kit/mini-layout",
+          "status": "beta"
+        },
+        "native": {
+          "item": "@kit/native-layout",
+          "status": "beta"
+        }
+      }
     }
   ]
 }
