@@ -1023,6 +1023,34 @@
           "status": "beta"
         }
       }
+    },
+    {
+      "canonical": "DropdownMenu",
+      "category": "overlay",
+      "sharedProps": {
+        "trigger": "ReactNode",
+        "items": "DropdownMenuItem[]",
+        "align": "start|center|end"
+      },
+      "eventMap": {
+        "web": "items[].onClick（Radix onSelect）",
+        "mini": "items[].onClick（View onClick）",
+        "native": "items[].onClick（XStack onPress）"
+      },
+      "stacks": {
+        "web": {
+          "item": "@kit/web-dropdown-menu",
+          "status": "beta"
+        },
+        "mini": {
+          "item": "@kit/mini-dropdown-menu",
+          "status": "beta"
+        },
+        "native": {
+          "item": "@kit/native-dropdown-menu",
+          "status": "beta"
+        }
+      }
     }
   ]
 }

@@ -34,6 +34,7 @@ import { States as StatisticStates } from '@kit/ui-web/src/Statistic/__examples_
 import { States as SegmentedStates } from '@kit/ui-web/src/Segmented/__examples__/States'
 import { States as RateStates } from '@kit/ui-web/src/Rate/__examples__/States'
 import { States as CollapseStates } from '@kit/ui-web/src/Collapse/__examples__/States'
+import { States as DropdownMenuStates } from '@kit/ui-web/src/DropdownMenu/__examples__/States'
 import { RequestDemo } from './demos/RequestDemo'
 
 /**
@@ -284,6 +285,13 @@ export default function App() {
           Collapse · 折叠面板（多展开 / 手风琴 / 禁用项）
         </h2>
         <CollapseStates />
+      </section>
+
+      <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
+        <h2 className="text-title-sm font-medium text-text-primary">
+          DropdownMenu · 下拉菜单（禁用 / 危险 / 对齐）
+        </h2>
+        <DropdownMenuStates />
       </section>
 
       <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">

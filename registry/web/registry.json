@@ -3181,6 +3181,91 @@
       },
       "docs": "packages/ui-web/src/Collapse/README.md",
       "examples": ["packages/ui-web/src/Collapse/__examples__/States.tsx"]
+    },
+    {
+      "name": "dropdown-menu",
+      "type": "registry:component",
+      "title": "下拉菜单 DropdownMenu",
+      "description": "点击触发弹出菜单，菜单项点击回调，禁用/危险态，三对齐方式",
+      "canonical": "DropdownMenu",
+      "status": "beta",
+      "stack": "web",
+      "dependencies": ["@kit/core", "@radix-ui/react-dropdown-menu"],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "packages/ui-web/src/DropdownMenu/DropdownMenu.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "packages/ui-web/src/DropdownMenu/DropdownMenu.types.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-web/src/DropdownMenu/index.ts",
+          "type": "registry:ui"
+        }
+      ],
+      "props": [
+        {
+          "name": "trigger",
+          "type": "ReactNode",
+          "required": true,
+          "desc": "触发元素（web 需可转发 ref）"
+        },
+        {
+          "name": "items",
+          "type": "DropdownMenuItem[]",
+          "required": true,
+          "desc": "菜单项列表（key/label/onClick/disabled/danger/icon）"
+        },
+        {
+          "name": "align",
+          "type": "'start'|'center'|'end'",
+          "default": "'start'",
+          "required": false,
+          "desc": "对齐方式"
+        },
+        {
+          "name": "className",
+          "type": "string",
+          "required": false,
+          "desc": "外层容器类名"
+        }
+      ],
+      "events": [
+        {
+          "name": "items[].onClick",
+          "type": "() => void",
+          "desc": "菜单项点击回调"
+        }
+      ],
+      "slots": ["trigger", "items[].label", "items[].icon"],
+      "tokens": [
+        "color-border-default",
+        "color-bg-card",
+        "color-bg-muted",
+        "color-text-primary",
+        "color-danger-default",
+        "radius-md",
+        "radius-sm",
+        "font-size-body-sm"
+      ],
+      "states": ["open", "closed", "disabled", "danger"],
+      "a11y": "Radix DropdownMenu 原生无障碍（role=menu/menuitem，键盘导航）",
+      "usage": {
+        "do": [
+          "trigger 需可转发 ref（web 端用 button 等元素）",
+          "危险操作用 danger 红色标识",
+          "菜单关闭后自动触发 onClick"
+        ],
+        "dont": [
+          "用 DropdownMenu 承载 Tab 切换（用 Tabs）",
+          "嵌套过深的菜单（用 Select 或 Dialog）"
+        ]
+      },
+      "docs": "packages/ui-web/src/DropdownMenu/README.md",
+      "examples": ["packages/ui-web/src/DropdownMenu/__examples__/States.tsx"]
     }
   ]
 }

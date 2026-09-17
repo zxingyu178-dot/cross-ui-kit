@@ -1,0 +1,69 @@
+/* DropdownMenu（mini）样式：颜色全走 --kit-* token。 */
+
+.kit-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.kit-dropdown__trigger {
+  display: inline-flex;
+  align-items: center;
+}
+
+.kit-dropdown__menu {
+  position: absolute;
+  top: 100%;
+  margin-top: 4px;
+  min-width: 160px;
+  padding: 4px;
+  border: 1px solid var(--kit-color-border-default);
+  border-radius: var(--kit-radius-md);
+  background: var(--kit-color-bg-card);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+}
+
+.kit-dropdown__menu--start {
+  left: 0;
+}
+
+.kit-dropdown__menu--center {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.kit-dropdown__menu--end {
+  right: 0;
+}
+
+.kit-dropdown__item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: var(--kit-radius-sm);
+}
+
+.kit-dropdown__item--disabled {
+  opacity: 0.4;
+}
+
+.kit-dropdown__item--danger .kit-dropdown__label {
+  color: var(--kit-color-danger-default);
+}
+
+.kit-dropdown__icon {
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.kit-dropdown__label {
+  font-size: var(--kit-font-size-body-sm);
+  color: var(--kit-color-text-primary);
+  flex: 1;
+}

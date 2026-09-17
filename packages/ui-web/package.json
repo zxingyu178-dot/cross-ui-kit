@@ -27,6 +27,8 @@
     "@radix-ui/react-progress": "catalog:web",
     "@radix-ui/react-tooltip": "catalog:web",
     "@radix-ui/react-collapsible": "catalog:web",
+    "@radix-ui/react-dropdown-menu": "catalog:web",
+    "@radix-ui/react-popover": "catalog:web",
     "@radix-ui/react-slot": "catalog:web",
     "class-variance-authority": "catalog:web",
     "clsx": "catalog:",
