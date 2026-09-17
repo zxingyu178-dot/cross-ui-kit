@@ -1485,6 +1485,36 @@
           "status": "beta"
         }
       }
+    },
+    {
+      "canonical": "Space",
+      "category": "layout",
+      "sharedProps": {
+        "size": "xs|sm|md|lg|xl|number",
+        "direction": "horizontal|vertical",
+        "align": "start|center|end|baseline",
+        "wrap": "boolean",
+        "children": "ReactNode"
+      },
+      "eventMap": {
+        "web": "无（纯布局）",
+        "mini": "无（纯布局）",
+        "native": "无（纯布局）"
+      },
+      "stacks": {
+        "web": {
+          "item": "@kit/web-space",
+          "status": "beta"
+        },
+        "mini": {
+          "item": "@kit/mini-space",
+          "status": "beta"
+        },
+        "native": {
+          "item": "@kit/native-space",
+          "status": "beta"
+        }
+      }
     }
   ]
 }

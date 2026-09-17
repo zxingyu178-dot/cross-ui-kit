@@ -49,6 +49,7 @@ import { States as TimePickerStates } from '@kit/ui-web/src/TimePicker/__example
 import { States as DatePickerStates } from '@kit/ui-web/src/DatePicker/__examples__/States'
 import { States as UploadStates } from '@kit/ui-web/src/Upload/__examples__/States'
 import { States as ListStates } from '@kit/ui-web/src/List/__examples__/States'
+import { States as SpaceStates } from '@kit/ui-web/src/Space/__examples__/States'
 import { RequestDemo } from './demos/RequestDemo'
 
 /**
@@ -404,6 +405,13 @@ export default function App() {
           List · 列表（基础/小尺寸/加载/空状态）
         </h2>
         <ListStates />
+      </section>
+
+      <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
+        <h2 className="text-title-sm font-medium text-text-primary">
+          Space · 间距（水平/垂直/自定义数值/换行）
+        </h2>
+        <SpaceStates />
       </section>
 
       <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">

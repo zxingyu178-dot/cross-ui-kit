@@ -1,0 +1,7 @@
+/* Space（mini）样式：基础容器，间距通过 inline style gap 控制。 */
+
+.kit-space {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+}

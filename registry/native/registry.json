@@ -4666,6 +4666,87 @@
       },
       "docs": "packages/ui-native/src/List/README.md",
       "examples": ["packages/ui-native/src/List/__examples__/States.tsx"]
+    },
+    {
+      "name": "space",
+      "type": "registry:component",
+      "title": "间距 Space",
+      "description": "间距组件，flex 容器，gap 控制间距，支持水平/垂直/对齐/换行",
+      "canonical": "Space",
+      "status": "beta",
+      "stack": "native",
+      "dependencies": ["@kit/core"],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "packages/ui-native/src/Space/Space.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "packages/ui-native/src/Space/Space.types.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-native/src/Space/index.ts",
+          "type": "registry:ui"
+        }
+      ],
+      "props": [
+        {
+          "name": "size",
+          "type": "'xs'|'sm'|'md'|'lg'|'xl'|number",
+          "default": "'md'",
+          "required": false,
+          "desc": "间距大小"
+        },
+        {
+          "name": "direction",
+          "type": "'horizontal'|'vertical'",
+          "default": "'horizontal'",
+          "required": false,
+          "desc": "方向"
+        },
+        {
+          "name": "align",
+          "type": "'start'|'center'|'end'|'baseline'",
+          "required": false,
+          "desc": "对齐方式"
+        },
+        {
+          "name": "wrap",
+          "type": "boolean",
+          "default": "false",
+          "required": false,
+          "desc": "是否换行"
+        },
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "required": false,
+          "desc": "子元素"
+        },
+        {
+          "name": "style",
+          "type": "ViewStyle",
+          "required": false,
+          "desc": "外层容器样式"
+        }
+      ],
+      "events": [],
+      "slots": ["children"],
+      "tokens": [],
+      "states": ["horizontal", "vertical", "wrap"],
+      "a11y": "纯布局容器，无交互",
+      "usage": {
+        "do": [
+          "用 Space 控制组件之间的间距",
+          "size 支持预设值和自定义数值",
+          "direction=vertical 时用 YStack（native）"
+        ],
+        "dont": ["用 Space 承载复杂布局（用 Grid）", "在 Space 内硬编码 margin/padding"]
+      },
+      "docs": "packages/ui-native/src/Space/README.md",
+      "examples": ["packages/ui-native/src/Space/__examples__/States.tsx"]
     }
   ]
 }
