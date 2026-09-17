@@ -2370,6 +2370,36 @@
           "status": "beta"
         }
       }
+    },
+    {
+      "canonical": "Menu",
+      "category": "navigation",
+      "sharedProps": {
+        "items": "MenuItem[]",
+        "selectedKey": "string",
+        "onSelect": "(k:string)=>void",
+        "mode": "'horizontal'|'vertical'",
+        "defaultOpenKeys": "string[]"
+      },
+      "eventMap": {
+        "web": "onSelect",
+        "mini": "onSelect",
+        "native": "onSelect"
+      },
+      "stacks": {
+        "web": {
+          "item": "@kit/web-menu",
+          "status": "beta"
+        },
+        "mini": {
+          "item": "@kit/mini-menu",
+          "status": "beta"
+        },
+        "native": {
+          "item": "@kit/native-menu",
+          "status": "beta"
+        }
+      }
     }
   ]
 }

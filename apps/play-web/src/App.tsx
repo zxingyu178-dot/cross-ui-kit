@@ -78,6 +78,7 @@ import { States as CardGroupStates } from '@kit/ui-web/src/CardGroup/__examples_
 import { States as StatisticCardStates } from '@kit/ui-web/src/StatisticCard/__examples__/States'
 import { States as PasswordStrengthStates } from '@kit/ui-web/src/PasswordStrength/__examples__/States'
 import { States as CaptchaStates } from '@kit/ui-web/src/Captcha/__examples__/States'
+import { States as MenuStates } from '@kit/ui-web/src/Menu/__examples__/States'
 import { RequestDemo } from './demos/RequestDemo'
 
 /**
@@ -636,6 +637,13 @@ export default function App() {
           Captcha · 验证码输入框（基础 / 自定义 / 禁用）
         </h2>
         <CaptchaStates />
+      </section>
+
+      <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
+        <h2 className="text-title-sm font-medium text-text-primary">
+          Menu · 导航菜单（水平 / 垂直，含二级菜单）
+        </h2>
+        <MenuStates />
       </section>
 
       <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">

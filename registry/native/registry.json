@@ -7526,6 +7526,106 @@
       },
       "docs": "packages/ui-native/src/Captcha/README.md",
       "examples": ["packages/ui-native/src/Captcha/__examples__/States.tsx"]
+    },
+    {
+      "name": "menu",
+      "type": "registry:component",
+      "title": "导航菜单 Menu",
+      "description": "导航菜单组件，支持一级/二级菜单、选中高亮、水平/垂直布局",
+      "canonical": "Menu",
+      "status": "beta",
+      "stack": "native",
+      "dependencies": ["@kit/core"],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "packages/ui-native/src/Menu/Menu.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "packages/ui-native/src/Menu/Menu.types.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-native/src/Menu/index.ts",
+          "type": "registry:ui"
+        }
+      ],
+      "props": [
+        {
+          "name": "items",
+          "type": "MenuItem[]",
+          "default": "[]",
+          "required": false,
+          "desc": "菜单项"
+        },
+        {
+          "name": "selectedKey",
+          "type": "string",
+          "required": false,
+          "desc": "当前选中项"
+        },
+        {
+          "name": "onSelect",
+          "type": "(key:string)=>void",
+          "required": false,
+          "desc": "选中回调"
+        },
+        {
+          "name": "mode",
+          "type": "'horizontal'|'vertical'",
+          "default": "'horizontal'",
+          "required": false,
+          "desc": "布局模式"
+        },
+        {
+          "name": "defaultOpenKeys",
+          "type": "string[]",
+          "default": "[]",
+          "required": false,
+          "desc": "默认展开的子菜单 key 列表"
+        },
+        {
+          "name": "style",
+          "type": "ViewStyle",
+          "required": false,
+          "desc": "外层容器样式"
+        }
+      ],
+      "events": [
+        {
+          "name": "onSelect",
+          "type": "(key: string) => void",
+          "desc": "选中回调"
+        }
+      ],
+      "slots": ["items[].label", "items[].icon", "items[].children"],
+      "tokens": [
+        "color-bg-card",
+        "color-bg-muted",
+        "color-primary-bg",
+        "color-primary-default",
+        "color-text-primary",
+        "color-text-tertiary",
+        "color-border-default",
+        "radius-md",
+        "font-size-body-sm",
+        "font-size-caption"
+      ],
+      "states": ["normal", "selected", "disabled", "open"],
+      "a11y": "菜单项可点击；选中状态有视觉区分；禁用状态不可点击；子菜单展开/收起有动画",
+      "usage": {
+        "do": [
+          "用 Menu 承载导航菜单",
+          "items 定义菜单项（支持二级菜单）",
+          "selectedKey + onSelect 控制选中状态",
+          "mode 控制水平/垂直布局",
+          "defaultOpenKeys 设置默认展开的子菜单"
+        ],
+        "dont": ["用 Menu 承载选项卡（用 Tabs）", "items 中重复 key", "二级菜单嵌套超过 2 层"]
+      },
+      "docs": "packages/ui-native/src/Menu/README.md",
+      "examples": ["packages/ui-native/src/Menu/__examples__/States.tsx"]
     }
   ]
 }
