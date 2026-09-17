@@ -5924,6 +5924,124 @@
       },
       "docs": "packages/ui-mini/src/TreeSelect/README.md",
       "examples": ["packages/ui-mini/src/TreeSelect/__examples__/States.tsx"]
+    },
+    {
+      "name": "notification",
+      "type": "registry:component",
+      "title": "通知 Notification",
+      "description": "通知组件，固定位置通知卡片，支持自动关闭、类型、关闭按钮",
+      "canonical": "Notification",
+      "status": "beta",
+      "stack": "mini",
+      "dependencies": ["@kit/core"],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "packages/ui-mini/src/Notification/Notification.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "packages/ui-mini/src/Notification/Notification.types.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-mini/src/Notification/Notification.scss",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-mini/src/Notification/index.ts",
+          "type": "registry:ui"
+        }
+      ],
+      "props": [
+        {
+          "name": "title",
+          "type": "string",
+          "required": false,
+          "desc": "标题"
+        },
+        {
+          "name": "description",
+          "type": "string",
+          "required": false,
+          "desc": "描述"
+        },
+        {
+          "name": "type",
+          "type": "'success'|'info'|'warning'|'error'",
+          "default": "'info'",
+          "required": false,
+          "desc": "类型"
+        },
+        {
+          "name": "duration",
+          "type": "number",
+          "default": "4500",
+          "required": false,
+          "desc": "自动关闭时长（ms），0 表示不自动关闭"
+        },
+        {
+          "name": "onClose",
+          "type": "()=>void",
+          "required": false,
+          "desc": "关闭回调"
+        },
+        {
+          "name": "closable",
+          "type": "boolean",
+          "default": "true",
+          "required": false,
+          "desc": "是否显示关闭按钮"
+        },
+        {
+          "name": "icon",
+          "type": "ReactNode",
+          "required": false,
+          "desc": "自定义图标"
+        },
+        {
+          "name": "className",
+          "type": "string",
+          "required": false,
+          "desc": "外层容器类名"
+        }
+      ],
+      "events": [
+        {
+          "name": "onClose",
+          "type": "() => void",
+          "desc": "关闭回调"
+        }
+      ],
+      "slots": ["title", "description", "icon"],
+      "tokens": [
+        "color-success-default",
+        "color-info-default",
+        "color-warning-default",
+        "color-danger-default",
+        "color-bg-card",
+        "color-text-primary",
+        "color-text-secondary",
+        "color-text-tertiary",
+        "radius-lg",
+        "font-size-body-sm",
+        "font-size-caption"
+      ],
+      "states": ["normal", "success", "info", "warning", "error"],
+      "a11y": "role=\"alert\"；关闭按钮可点击",
+      "usage": {
+        "do": [
+          "用 Notification 承载全局通知反馈",
+          "duration 控制自动关闭时长",
+          "type 控制通知类型和颜色"
+        ],
+        "dont": [
+          "用 Notification 承载表单内联错误（用 Form.Item 校验）",
+          "duration=0 时必须提供关闭方式"
+        ]
+      },
+      "docs": "packages/ui-mini/src/Notification/README.md",
+      "examples": ["packages/ui-mini/src/Notification/__examples__/States.tsx"]
     }
   ]
 }

@@ -61,6 +61,7 @@ import { States as CountdownStates } from '@kit/ui-web/src/Countdown/__examples_
 import { States as FloatButtonStates } from '@kit/ui-web/src/FloatButton/__examples__/States'
 import { States as TypographyStates } from '@kit/ui-web/src/Typography/__examples__/States'
 import { States as TreeSelectStates } from '@kit/ui-web/src/TreeSelect/__examples__/States'
+import { States as NotificationStates } from '@kit/ui-web/src/Notification/__examples__/States'
 import { RequestDemo } from './demos/RequestDemo'
 
 /**
@@ -500,6 +501,13 @@ export default function App() {
           TreeSelect · 树形选择器（基础 / 禁用 / 多级嵌套）
         </h2>
         <TreeSelectStates />
+      </section>
+
+      <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
+        <h2 className="text-title-sm font-medium text-text-primary">
+          Notification · 通知（success / info / warning / error）
+        </h2>
+        <NotificationStates />
       </section>
 
       <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">

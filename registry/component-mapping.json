@@ -1845,6 +1845,38 @@
           "status": "beta"
         }
       }
+    },
+    {
+      "canonical": "Notification",
+      "category": "feedback",
+      "sharedProps": {
+        "title": "string",
+        "description": "string",
+        "type": "'success'|'info'|'warning'|'error'",
+        "duration": "number",
+        "onClose": "()=>void",
+        "closable": "boolean",
+        "icon": "ReactNode"
+      },
+      "eventMap": {
+        "web": "onClose（关闭）",
+        "mini": "onClose（关闭）",
+        "native": "onClose（关闭）"
+      },
+      "stacks": {
+        "web": {
+          "item": "@kit/web-notification",
+          "status": "beta"
+        },
+        "mini": {
+          "item": "@kit/mini-notification",
+          "status": "beta"
+        },
+        "native": {
+          "item": "@kit/native-notification",
+          "status": "beta"
+        }
+      }
     }
   ]
 }
