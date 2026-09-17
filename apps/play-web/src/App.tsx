@@ -47,6 +47,7 @@ import { States as CalendarStates } from '@kit/ui-web/src/Calendar/__examples__/
 import { States as CascaderStates } from '@kit/ui-web/src/Cascader/__examples__/States'
 import { States as TimePickerStates } from '@kit/ui-web/src/TimePicker/__examples__/States'
 import { States as DatePickerStates } from '@kit/ui-web/src/DatePicker/__examples__/States'
+import { States as UploadStates } from '@kit/ui-web/src/Upload/__examples__/States'
 import { RequestDemo } from './demos/RequestDemo'
 
 /**
@@ -388,6 +389,13 @@ export default function App() {
           DatePicker · 日期选择器（多格式 / 受控 / 禁用）
         </h2>
         <DatePickerStates />
+      </section>
+
+      <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
+        <h2 className="text-title-sm font-medium text-text-primary">
+          Upload · 上传（单选/多选/最大数量/禁用）
+        </h2>
+        <UploadStates />
       </section>
 
       <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">

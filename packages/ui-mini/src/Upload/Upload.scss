@@ -1,0 +1,101 @@
+/* Upload（mini）样式：颜色全走 --kit-* token。 */
+
+.kit-upload {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.kit-upload__add {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  height: 40px;
+  width: 128px;
+  border: 1px dashed var(--kit-color-border-default);
+  border-radius: var(--kit-radius-md);
+  background: var(--kit-color-bg-card);
+}
+
+.kit-upload__add--disabled {
+  opacity: 0.5;
+}
+
+.kit-upload__add-icon {
+  font-size: 18px;
+  color: var(--kit-color-text-secondary);
+}
+
+.kit-upload__add-text {
+  font-size: var(--kit-font-size-body-sm);
+  color: var(--kit-color-text-secondary);
+}
+
+.kit-upload__list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.kit-upload__item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  border: 1px solid var(--kit-color-border-default);
+  border-radius: var(--kit-radius-md);
+  background: var(--kit-color-bg-card);
+}
+
+.kit-upload__item-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+  min-width: 0;
+}
+
+.kit-upload__item-icon {
+  font-size: 18px;
+}
+
+.kit-upload__item-detail {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+}
+
+.kit-upload__item-name {
+  font-size: var(--kit-font-size-body-sm);
+  color: var(--kit-color-text-primary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.kit-upload__item-size {
+  font-size: var(--kit-font-size-caption);
+  color: var(--kit-color-text-tertiary);
+}
+
+.kit-upload__remove {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  margin-left: 8px;
+  border-radius: 4px;
+  font-size: 16px;
+  color: var(--kit-color-text-tertiary);
+}
+
+.kit-upload__remove--disabled {
+  opacity: 0.5;
+}

@@ -1422,6 +1422,37 @@
           "status": "beta"
         }
       }
+    },
+    {
+      "canonical": "Upload",
+      "category": "form",
+      "sharedProps": {
+        "value": "UploadFile[]",
+        "defaultValue": "UploadFile[]",
+        "onChange": "(f:UploadFile[])=>void",
+        "multiple": "boolean",
+        "maxCount": "number",
+        "disabled": "boolean"
+      },
+      "eventMap": {
+        "web": "onChange（文件列表变化）",
+        "mini": "onChange（文件列表变化）",
+        "native": "onChange（文件列表变化）"
+      },
+      "stacks": {
+        "web": {
+          "item": "@kit/web-upload",
+          "status": "beta"
+        },
+        "mini": {
+          "item": "@kit/mini-upload",
+          "status": "beta"
+        },
+        "native": {
+          "item": "@kit/native-upload",
+          "status": "beta"
+        }
+      }
     }
   ]
 }

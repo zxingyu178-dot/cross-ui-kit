@@ -4538,6 +4538,123 @@
       },
       "docs": "packages/ui-mini/src/DatePicker/README.md",
       "examples": ["packages/ui-mini/src/DatePicker/__examples__/States.tsx"]
+    },
+    {
+      "name": "upload",
+      "type": "registry:component",
+      "title": "上传 Upload",
+      "description": "上传组件，文件列表展示 + 删除按钮，受控优先，支持多选/最大数量/文件类型过滤",
+      "canonical": "Upload",
+      "status": "beta",
+      "stack": "mini",
+      "dependencies": ["@kit/core"],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "packages/ui-mini/src/Upload/Upload.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "packages/ui-mini/src/Upload/Upload.types.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-mini/src/Upload/Upload.scss",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-mini/src/Upload/index.ts",
+          "type": "registry:ui"
+        }
+      ],
+      "props": [
+        {
+          "name": "value",
+          "type": "UploadFile[]",
+          "required": false,
+          "desc": "受控文件列表"
+        },
+        {
+          "name": "defaultValue",
+          "type": "UploadFile[]",
+          "default": "[]",
+          "required": false,
+          "desc": "非受控默认文件列表"
+        },
+        {
+          "name": "onChange",
+          "type": "(files:UploadFile[])=>void",
+          "required": false,
+          "desc": "文件列表变化回调"
+        },
+        {
+          "name": "accept",
+          "type": "string",
+          "required": false,
+          "desc": "接受的文件类型（web 端）"
+        },
+        {
+          "name": "multiple",
+          "type": "boolean",
+          "default": "false",
+          "required": false,
+          "desc": "是否支持多选"
+        },
+        {
+          "name": "maxCount",
+          "type": "number",
+          "required": false,
+          "desc": "最大文件数量"
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "default": "false",
+          "required": false,
+          "desc": "是否禁用"
+        },
+        {
+          "name": "className",
+          "type": "string",
+          "required": false,
+          "desc": "外层容器类名"
+        }
+      ],
+      "events": [
+        {
+          "name": "onChange",
+          "type": "(files: UploadFile[]) => void",
+          "desc": "文件列表变化回调"
+        }
+      ],
+      "slots": [],
+      "tokens": [
+        "color-primary-default",
+        "color-bg-card",
+        "color-text-primary",
+        "color-text-secondary",
+        "color-text-tertiary",
+        "color-border-default",
+        "color-danger-default",
+        "radius-md",
+        "font-size-body-sm",
+        "font-size-caption"
+      ],
+      "states": ["normal", "disabled", "has-files"],
+      "a11y": "删除按钮可点击；accessibilityLabel 由文件名提供",
+      "usage": {
+        "do": [
+          "受控优先；value + onChange 配合使用",
+          "实际上传逻辑由业务方通过 onChange 处理",
+          "maxCount 限制最大文件数量"
+        ],
+        "dont": [
+          "在组件内直接 fetch 上传（业务逻辑下沉 core）",
+          "用 Upload 承载单张图片预览（用 Image）"
+        ]
+      },
+      "docs": "packages/ui-mini/src/Upload/README.md",
+      "examples": ["packages/ui-mini/src/Upload/__examples__/States.tsx"]
     }
   ]
 }
