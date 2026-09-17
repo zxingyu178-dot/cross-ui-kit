@@ -1,0 +1,102 @@
+/* Mentions（mini）样式：颜色全走 --kit-* token。 */
+
+.kit-mentions {
+  position: relative;
+  width: 100%;
+}
+
+.kit-mentions__input {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 36px;
+  padding: 0 12px;
+  border: 1px solid var(--kit-color-border-default);
+  border-radius: var(--kit-radius-md);
+  background: var(--kit-color-bg-card);
+}
+
+.kit-mentions__input--focus {
+  border-color: var(--kit-color-primary-default);
+}
+
+.kit-mentions__input--disabled {
+  background: var(--kit-color-bg-muted);
+  opacity: 0.5;
+}
+
+.kit-mentions__native-input {
+  flex: 1;
+  font-size: var(--kit-font-size-body-sm);
+  color: var(--kit-color-text-primary);
+}
+
+.kit-mentions__clear {
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: var(--kit-color-text-tertiary);
+  margin-left: 8px;
+}
+
+.kit-mentions__dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  margin-top: 4px;
+  max-height: 192px;
+  overflow-y: auto;
+  border: 1px solid var(--kit-color-border-default);
+  border-radius: var(--kit-radius-md);
+  background: var(--kit-color-bg-card);
+  padding: 4px;
+  z-index: 50;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.kit-mentions__option {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 8px;
+  border-radius: 4px;
+}
+
+.kit-mentions__avatar {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: rgba(37, 99, 235, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.kit-mentions__avatar-text {
+  font-size: var(--kit-font-size-caption);
+  font-weight: 500;
+  color: var(--kit-color-primary-default);
+}
+
+.kit-mentions__option-content {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.kit-mentions__option-label {
+  font-size: var(--kit-font-size-body-sm);
+  color: var(--kit-color-text-primary);
+}
+
+.kit-mentions__option-desc {
+  font-size: var(--kit-font-size-caption);
+  color: var(--kit-color-text-tertiary);
+}

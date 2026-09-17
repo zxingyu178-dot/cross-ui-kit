@@ -6155,6 +6155,128 @@
       },
       "docs": "packages/ui-web/src/Tour/README.md",
       "examples": ["packages/ui-web/src/Tour/__examples__/States.tsx"]
+    },
+    {
+      "name": "mentions",
+      "type": "registry:component",
+      "title": "提及输入 Mentions",
+      "description": "提及输入组件，输入框 + 弹出选项列表，输入 prefix 时触发",
+      "canonical": "Mentions",
+      "status": "beta",
+      "stack": "web",
+      "dependencies": ["@kit/core"],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "packages/ui-web/src/Mentions/Mentions.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "packages/ui-web/src/Mentions/Mentions.types.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-web/src/Mentions/index.ts",
+          "type": "registry:ui"
+        }
+      ],
+      "props": [
+        {
+          "name": "value",
+          "type": "string",
+          "required": false,
+          "desc": "输入值"
+        },
+        {
+          "name": "onChange",
+          "type": "(value:string)=>void",
+          "required": false,
+          "desc": "值变化回调"
+        },
+        {
+          "name": "options",
+          "type": "MentionOption[]",
+          "default": "[]",
+          "required": false,
+          "desc": "提及选项列表"
+        },
+        {
+          "name": "prefix",
+          "type": "string",
+          "default": "'@'",
+          "required": false,
+          "desc": "触发前缀"
+        },
+        {
+          "name": "placeholder",
+          "type": "string",
+          "default": "'请输入'",
+          "required": false,
+          "desc": "占位文字"
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "default": "false",
+          "required": false,
+          "desc": "是否禁用"
+        },
+        {
+          "name": "allowClear",
+          "type": "boolean",
+          "default": "true",
+          "required": false,
+          "desc": "是否可清空"
+        },
+        {
+          "name": "onSelect",
+          "type": "(option:MentionOption)=>void",
+          "required": false,
+          "desc": "选中提及回调"
+        },
+        {
+          "name": "className",
+          "type": "string",
+          "required": false,
+          "desc": "外层容器类名"
+        }
+      ],
+      "events": [
+        {
+          "name": "onChange",
+          "type": "(value: string) => void",
+          "desc": "值变化回调"
+        },
+        {
+          "name": "onSelect",
+          "type": "(option: MentionOption) => void",
+          "desc": "选中提及回调"
+        }
+      ],
+      "slots": ["options[].label", "options[].description", "options[].avatar"],
+      "tokens": [
+        "color-primary-default",
+        "color-bg-card",
+        "color-text-primary",
+        "color-text-secondary",
+        "color-text-tertiary",
+        "color-border-default",
+        "radius-md",
+        "font-size-body-sm",
+        "font-size-caption"
+      ],
+      "states": ["normal", "open", "disabled"],
+      "a11y": "输入框可输入；选项可点击选中",
+      "usage": {
+        "do": [
+          "用 Mentions 承载 @提及用户功能",
+          "options 为用户列表，每项含 key/label/description",
+          "prefix 控制触发字符（默认 @）"
+        ],
+        "dont": ["用 Mentions 承载普通下拉选择（用 Select）", "options 中重复 key"]
+      },
+      "docs": "packages/ui-web/src/Mentions/README.md",
+      "examples": ["packages/ui-web/src/Mentions/__examples__/States.tsx"]
     }
   ]
 }

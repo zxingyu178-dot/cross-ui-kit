@@ -1944,6 +1944,39 @@
           "status": "beta"
         }
       }
+    },
+    {
+      "canonical": "Mentions",
+      "category": "form",
+      "sharedProps": {
+        "value": "string",
+        "onChange": "(v:string)=>void",
+        "options": "MentionOption[]",
+        "prefix": "string",
+        "placeholder": "string",
+        "disabled": "boolean",
+        "allowClear": "boolean",
+        "onSelect": "(o:MentionOption)=>void"
+      },
+      "eventMap": {
+        "web": "onChange/onSelect",
+        "mini": "onChange/onSelect",
+        "native": "onChange/onSelect"
+      },
+      "stacks": {
+        "web": {
+          "item": "@kit/web-mentions",
+          "status": "beta"
+        },
+        "mini": {
+          "item": "@kit/mini-mentions",
+          "status": "beta"
+        },
+        "native": {
+          "item": "@kit/native-mentions",
+          "status": "beta"
+        }
+      }
     }
   ]
 }
