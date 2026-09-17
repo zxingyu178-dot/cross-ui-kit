@@ -3662,6 +3662,105 @@
       },
       "docs": "packages/ui-web/src/Descriptions/README.md",
       "examples": ["packages/ui-web/src/Descriptions/__examples__/States.tsx"]
+    },
+    {
+      "name": "drawer",
+      "type": "registry:component",
+      "title": "抽屉 Drawer",
+      "description": "抽屉组件，四方向（left/right/top/bottom），遮罩层，受控优先，键盘无障碍",
+      "canonical": "Drawer",
+      "status": "beta",
+      "stack": "web",
+      "dependencies": ["@kit/core", "@radix-ui/react-dialog"],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "packages/ui-web/src/Drawer/Drawer.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "packages/ui-web/src/Drawer/Drawer.types.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-web/src/Drawer/index.ts",
+          "type": "registry:ui"
+        }
+      ],
+      "props": [
+        {
+          "name": "open",
+          "type": "boolean",
+          "default": "false",
+          "required": false,
+          "desc": "是否打开（受控）"
+        },
+        {
+          "name": "onOpenChange",
+          "type": "(open:boolean)=>void",
+          "required": false,
+          "desc": "打开状态变化回调"
+        },
+        {
+          "name": "title",
+          "type": "ReactNode",
+          "required": false,
+          "desc": "标题"
+        },
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "required": true,
+          "desc": "抽屉内容"
+        },
+        {
+          "name": "placement",
+          "type": "'left'|'right'|'top'|'bottom'",
+          "default": "'right'",
+          "required": false,
+          "desc": "弹出方向"
+        },
+        {
+          "name": "size",
+          "type": "number",
+          "default": "360",
+          "required": false,
+          "desc": "宽度（左右）/ 高度（上下）"
+        },
+        {
+          "name": "className",
+          "type": "string",
+          "required": false,
+          "desc": "外层容器类名"
+        }
+      ],
+      "events": [
+        {
+          "name": "onOpenChange",
+          "type": "(open: boolean) => void",
+          "desc": "打开状态变化回调"
+        }
+      ],
+      "slots": ["title", "children"],
+      "tokens": [
+        "color-bg-card",
+        "color-text-primary",
+        "color-text-tertiary",
+        "color-border-default",
+        "font-size-body-md"
+      ],
+      "states": ["open", "closed"],
+      "a11y": "Radix Dialog 原生无障碍（role=dialog，焦点管理，Esc 关闭）",
+      "usage": {
+        "do": [
+          "受控优先；open + onOpenChange 配合使用",
+          "placement 控制弹出方向",
+          "size 控制宽度/高度"
+        ],
+        "dont": ["用 Drawer 承载模态对话框（用 Dialog）", "用 Drawer 承载气泡内容（用 Popover）"]
+      },
+      "docs": "packages/ui-web/src/Drawer/README.md",
+      "examples": ["packages/ui-web/src/Drawer/__examples__/States.tsx"]
     }
   ]
 }

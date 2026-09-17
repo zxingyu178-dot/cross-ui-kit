@@ -1176,6 +1176,37 @@
           "status": "beta"
         }
       }
+    },
+    {
+      "canonical": "Drawer",
+      "category": "overlay",
+      "sharedProps": {
+        "open": "boolean",
+        "onOpenChange": "(open:boolean)=>void",
+        "title": "ReactNode",
+        "children": "ReactNode",
+        "placement": "left|right|top|bottom",
+        "size": "number"
+      },
+      "eventMap": {
+        "web": "onOpenChange（Radix Dialog）",
+        "mini": "onOpenChange（点击遮罩/关闭按钮）",
+        "native": "onOpenChange（点击遮罩/关闭按钮）"
+      },
+      "stacks": {
+        "web": {
+          "item": "@kit/web-drawer",
+          "status": "beta"
+        },
+        "mini": {
+          "item": "@kit/mini-drawer",
+          "status": "beta"
+        },
+        "native": {
+          "item": "@kit/native-drawer",
+          "status": "beta"
+        }
+      }
     }
   ]
 }

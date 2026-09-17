@@ -39,6 +39,7 @@ import { States as PopoverStates } from '@kit/ui-web/src/Popover/__examples__/St
 import { States as SliderStates } from '@kit/ui-web/src/Slider/__examples__/States'
 import { States as AutoCompleteStates } from '@kit/ui-web/src/AutoComplete/__examples__/States'
 import { States as DescriptionsStates } from '@kit/ui-web/src/Descriptions/__examples__/States'
+import { States as DrawerStates } from '@kit/ui-web/src/Drawer/__examples__/States'
 import { RequestDemo } from './demos/RequestDemo'
 
 /**
@@ -324,6 +325,13 @@ export default function App() {
           Descriptions · 描述列表（列数 / 边框 / span）
         </h2>
         <DescriptionsStates />
+      </section>
+
+      <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
+        <h2 className="text-title-sm font-medium text-text-primary">
+          Drawer · 抽屉（四方向 / 遮罩 / 受控）
+        </h2>
+        <DrawerStates />
       </section>
 
       <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">

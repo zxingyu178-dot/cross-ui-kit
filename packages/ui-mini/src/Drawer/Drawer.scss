@@ -1,0 +1,85 @@
+/* Drawer（mini）样式：颜色全走 --kit-* token。 */
+
+.kit-drawer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+}
+
+.kit-drawer__mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.kit-drawer__content {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  background: var(--kit-color-bg-card);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.kit-drawer__content--right {
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.kit-drawer__content--left {
+  top: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.kit-drawer__content--top {
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.kit-drawer__content--bottom {
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.kit-drawer__header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--kit-color-border-default);
+}
+
+.kit-drawer__title {
+  font-size: var(--kit-font-size-body-md);
+  font-weight: 500;
+  color: var(--kit-color-text-primary);
+}
+
+.kit-drawer__close {
+  font-size: 16px;
+  color: var(--kit-color-text-tertiary);
+  padding: 4px;
+}
+
+.kit-drawer__close--absolute {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  z-index: 1;
+}
+
+.kit-drawer__body {
+  flex: 1;
+  overflow: auto;
+  padding: 16px;
+}
