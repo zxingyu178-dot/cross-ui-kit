@@ -2221,6 +2221,36 @@
           "status": "beta"
         }
       }
+    },
+    {
+      "canonical": "TagGroup",
+      "category": "data-display",
+      "sharedProps": {
+        "items": "TagGroupItem[]",
+        "max": "number",
+        "size": "'sm'|'md'|'lg'",
+        "variant": "'soft'|'solid'|'outline'",
+        "onClose": "(key:string)=>void"
+      },
+      "eventMap": {
+        "web": "onClose",
+        "mini": "onClose",
+        "native": "onClose"
+      },
+      "stacks": {
+        "web": {
+          "item": "@kit/web-tag-group",
+          "status": "beta"
+        },
+        "mini": {
+          "item": "@kit/mini-tag-group",
+          "status": "beta"
+        },
+        "native": {
+          "item": "@kit/native-tag-group",
+          "status": "beta"
+        }
+      }
     }
   ]
 }

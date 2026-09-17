@@ -1,0 +1,37 @@
+/* TagGroup（mini）样式：颜色全走 --kit-* token。 */
+
+.kit-tag-group {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.kit-tag-group__item {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+  border-radius: var(--kit-radius-sm);
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+.kit-tag-group__label {
+  font-weight: 500;
+}
+
+.kit-tag-group__close {
+  margin-left: 2px;
+  opacity: 0.6;
+}
+
+.kit-tag-group__item--more {
+  background: var(--kit-color-bg-muted);
+}
+
+.kit-tag-group__more-text {
+  font-weight: 500;
+  color: var(--kit-color-text-secondary);
+}

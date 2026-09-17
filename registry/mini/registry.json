@@ -7256,6 +7256,106 @@
       },
       "docs": "packages/ui-mini/src/AvatarGroup/README.md",
       "examples": ["packages/ui-mini/src/AvatarGroup/__examples__/States.tsx"]
+    },
+    {
+      "name": "tag-group",
+      "type": "registry:component",
+      "title": "标签组 TagGroup",
+      "description": "标签组组件，多个标签排列显示，超出显示 +N",
+      "canonical": "TagGroup",
+      "status": "beta",
+      "stack": "mini",
+      "dependencies": ["@kit/core"],
+      "registryDependencies": ["tag"],
+      "files": [
+        {
+          "path": "packages/ui-mini/src/TagGroup/TagGroup.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "packages/ui-mini/src/TagGroup/TagGroup.types.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-mini/src/TagGroup/TagGroup.scss",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-mini/src/TagGroup/index.ts",
+          "type": "registry:ui"
+        }
+      ],
+      "props": [
+        {
+          "name": "items",
+          "type": "TagGroupItem[]",
+          "default": "[]",
+          "required": false,
+          "desc": "标签列表"
+        },
+        {
+          "name": "max",
+          "type": "number",
+          "required": false,
+          "desc": "最大显示数量（超出显示 +N）"
+        },
+        {
+          "name": "size",
+          "type": "'sm'|'md'|'lg'",
+          "default": "'md'",
+          "required": false,
+          "desc": "标签大小"
+        },
+        {
+          "name": "variant",
+          "type": "'soft'|'solid'|'outline'",
+          "default": "'soft'",
+          "required": false,
+          "desc": "标签形态"
+        },
+        {
+          "name": "onClose",
+          "type": "(key:string)=>void",
+          "required": false,
+          "desc": "关闭回调"
+        },
+        {
+          "name": "className",
+          "type": "string",
+          "required": false,
+          "desc": "外层容器类名"
+        }
+      ],
+      "events": [
+        {
+          "name": "onClose",
+          "type": "(key: string) => void",
+          "desc": "关闭回调"
+        }
+      ],
+      "slots": ["items[].label", "items[].color"],
+      "tokens": [
+        "color-bg-muted",
+        "color-text-secondary",
+        "color-primary-bg",
+        "color-primary-default",
+        "radius-sm",
+        "font-size-body-sm"
+      ],
+      "states": ["normal", "overflow", "closable"],
+      "a11y": "标签组可读；关闭按钮有 aria-label",
+      "usage": {
+        "do": [
+          "用 TagGroup 承载多标签展示",
+          "max 控制最大显示数量",
+          "size 控制标签大小",
+          "variant 控制标签形态",
+          "closable + onClose 实现可关闭标签"
+        ],
+        "dont": ["用 TagGroup 承载单个标签（用 Tag）", "items 中重复 key"]
+      },
+      "docs": "packages/ui-mini/src/TagGroup/README.md",
+      "examples": ["packages/ui-mini/src/TagGroup/__examples__/States.tsx"]
     }
   ]
 }

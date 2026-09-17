@@ -73,6 +73,7 @@ import { States as OtpInputStates } from '@kit/ui-web/src/OtpInput/__examples__/
 import { States as DateRangePickerStates } from '@kit/ui-web/src/DateRangePicker/__examples__/States'
 import { States as TimeRangePickerStates } from '@kit/ui-web/src/TimeRangePicker/__examples__/States'
 import { States as AvatarGroupStates } from '@kit/ui-web/src/AvatarGroup/__examples__/States'
+import { States as TagGroupStates } from '@kit/ui-web/src/TagGroup/__examples__/States'
 import { RequestDemo } from './demos/RequestDemo'
 
 /**
@@ -596,6 +597,13 @@ export default function App() {
           AvatarGroup · 头像组（基础 / 超出+N / 方形 / 大尺寸）
         </h2>
         <AvatarGroupStates />
+      </section>
+
+      <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
+        <h2 className="text-title-sm font-medium text-text-primary">
+          TagGroup · 标签组（基础 / 超出+N / 可关闭 / 尺寸）
+        </h2>
+        <TagGroupStates />
       </section>
 
       <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
