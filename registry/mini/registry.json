@@ -5475,6 +5475,348 @@
       },
       "docs": "packages/ui-mini/src/Tree/README.md",
       "examples": ["packages/ui-mini/src/Tree/__examples__/States.tsx"]
+    },
+    {
+      "name": "watermark",
+      "type": "registry:component",
+      "title": "水印 Watermark",
+      "description": "水印组件，纯 CSS 背景图实现，覆盖在子元素上方",
+      "canonical": "Watermark",
+      "status": "beta",
+      "stack": "mini",
+      "dependencies": ["@kit/core"],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "packages/ui-mini/src/Watermark/Watermark.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "packages/ui-mini/src/Watermark/Watermark.types.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-mini/src/Watermark/Watermark.scss",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-mini/src/Watermark/index.ts",
+          "type": "registry:ui"
+        }
+      ],
+      "props": [
+        {
+          "name": "text",
+          "type": "string",
+          "default": "'Watermark'",
+          "desc": "水印文字"
+        },
+        {
+          "name": "color",
+          "type": "string",
+          "default": "'rgba(0,0,0,0.15)'",
+          "desc": "水印文字颜色"
+        },
+        {
+          "name": "fontSize",
+          "type": "number",
+          "default": "14",
+          "desc": "水印文字大小（px）"
+        },
+        {
+          "name": "rotate",
+          "type": "number",
+          "default": "-22",
+          "desc": "水印旋转角度（deg）"
+        },
+        {
+          "name": "gap",
+          "type": "number",
+          "default": "100",
+          "desc": "水印间距（px）"
+        },
+        {
+          "name": "opacity",
+          "type": "number",
+          "default": "1",
+          "desc": "水印透明度（0-1）"
+        },
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "desc": "子元素"
+        },
+        {
+          "name": "className",
+          "type": "string",
+          "desc": "外层容器类名"
+        }
+      ],
+      "events": [],
+      "slots": ["children"],
+      "tokens": [
+        "color-text-primary",
+        "color-bg-card",
+        "color-primary-default",
+        "font-size-body-md",
+        "font-size-caption"
+      ],
+      "states": ["normal"],
+      "a11y": "aria-label 提供",
+      "usage": {
+        "do": ["用 Watermark 承载水印组件"],
+        "dont": ["不要硬编码颜色/间距"]
+      },
+      "docs": "packages/ui-mini/src/Watermark/README.md",
+      "examples": ["packages/ui-mini/src/Watermark/__examples__/States.tsx"]
+    },
+    {
+      "name": "countdown",
+      "type": "registry:component",
+      "title": "倒计时 Countdown",
+      "description": "倒计时组件，useEffect + setInterval 倒计时，支持格式化",
+      "canonical": "Countdown",
+      "status": "beta",
+      "stack": "mini",
+      "dependencies": ["@kit/core"],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "packages/ui-mini/src/Countdown/Countdown.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "packages/ui-mini/src/Countdown/Countdown.types.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-mini/src/Countdown/index.ts",
+          "type": "registry:ui"
+        }
+      ],
+      "props": [
+        {
+          "name": "value",
+          "type": "number",
+          "default": "0",
+          "desc": "目标时间戳（ms）或剩余毫秒数"
+        },
+        {
+          "name": "format",
+          "type": "string",
+          "default": "'HH:mm:ss'",
+          "desc": "格式化字符串：DD/HH/mm/ss/SSS"
+        },
+        {
+          "name": "onFinish",
+          "type": "()=>void",
+          "desc": "倒计时结束回调"
+        },
+        {
+          "name": "className",
+          "type": "string",
+          "desc": "外层容器类名"
+        }
+      ],
+      "events": [
+        {
+          "name": "onFinish",
+          "type": "() => void",
+          "desc": "倒计时结束回调"
+        }
+      ],
+      "slots": [],
+      "tokens": [
+        "color-text-primary",
+        "color-bg-card",
+        "color-primary-default",
+        "font-size-body-md",
+        "font-size-caption"
+      ],
+      "states": ["normal"],
+      "a11y": "aria-label 提供",
+      "usage": {
+        "do": ["用 Countdown 承载倒计时组件"],
+        "dont": ["不要硬编码颜色/间距"]
+      },
+      "docs": "packages/ui-mini/src/Countdown/README.md",
+      "examples": ["packages/ui-mini/src/Countdown/__examples__/States.tsx"]
+    },
+    {
+      "name": "float-button",
+      "type": "registry:component",
+      "title": "悬浮按钮 FloatButton",
+      "description": "悬浮按钮组件，fixed/absolute 定位按钮，支持图标、提示、形状",
+      "canonical": "FloatButton",
+      "status": "beta",
+      "stack": "mini",
+      "dependencies": ["@kit/core"],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "packages/ui-mini/src/FloatButton/FloatButton.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "packages/ui-mini/src/FloatButton/FloatButton.types.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-mini/src/FloatButton/FloatButton.scss",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-mini/src/FloatButton/index.ts",
+          "type": "registry:ui"
+        }
+      ],
+      "props": [
+        {
+          "name": "icon",
+          "type": "ReactNode",
+          "default": "'+'",
+          "desc": "图标"
+        },
+        {
+          "name": "onClick",
+          "type": "()=>void",
+          "desc": "点击回调"
+        },
+        {
+          "name": "type",
+          "type": "'primary'|'default'",
+          "default": "'primary'",
+          "desc": "类型"
+        },
+        {
+          "name": "shape",
+          "type": "'circle'|'square'",
+          "default": "'circle'",
+          "desc": "形状"
+        },
+        {
+          "name": "tooltip",
+          "type": "string",
+          "desc": "提示文字"
+        },
+        {
+          "name": "bottom",
+          "type": "number",
+          "default": "24",
+          "desc": "距底部距离（px）"
+        },
+        {
+          "name": "right",
+          "type": "number",
+          "default": "24",
+          "desc": "距右侧距离（px）"
+        },
+        {
+          "name": "className",
+          "type": "string",
+          "desc": "外层容器类名"
+        }
+      ],
+      "events": [
+        {
+          "name": "onClick",
+          "type": "() => void",
+          "desc": "点击回调"
+        }
+      ],
+      "slots": [],
+      "tokens": [
+        "color-text-primary",
+        "color-bg-card",
+        "color-primary-default",
+        "font-size-body-md",
+        "font-size-caption"
+      ],
+      "states": ["normal"],
+      "a11y": "aria-label 提供",
+      "usage": {
+        "do": ["用 FloatButton 承载悬浮按钮组件"],
+        "dont": ["不要硬编码颜色/间距"]
+      },
+      "docs": "packages/ui-mini/src/FloatButton/README.md",
+      "examples": ["packages/ui-mini/src/FloatButton/__examples__/States.tsx"]
+    },
+    {
+      "name": "typography",
+      "type": "registry:component",
+      "title": "排版 Typography",
+      "description": "排版组件，统一文字样式，支持 h1-h4/body/caption 变体",
+      "canonical": "Typography",
+      "status": "beta",
+      "stack": "mini",
+      "dependencies": ["@kit/core"],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "packages/ui-mini/src/Typography/Typography.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "packages/ui-mini/src/Typography/Typography.types.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-mini/src/Typography/index.ts",
+          "type": "registry:ui"
+        }
+      ],
+      "props": [
+        {
+          "name": "variant",
+          "type": "'h1'|'h2'|'h3'|'h4'|'body'|'caption'",
+          "default": "'body'",
+          "desc": "变体"
+        },
+        {
+          "name": "color",
+          "type": "string",
+          "desc": "文字颜色"
+        },
+        {
+          "name": "ellipsis",
+          "type": "boolean",
+          "default": "false",
+          "desc": "是否省略（单行）"
+        },
+        {
+          "name": "bold",
+          "type": "boolean",
+          "default": "false",
+          "desc": "是否加粗"
+        },
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "desc": "子元素"
+        },
+        {
+          "name": "className",
+          "type": "string",
+          "desc": "外层容器类名"
+        }
+      ],
+      "events": [],
+      "slots": ["children"],
+      "tokens": [
+        "color-text-primary",
+        "color-bg-card",
+        "color-primary-default",
+        "font-size-body-md",
+        "font-size-caption"
+      ],
+      "states": ["normal"],
+      "a11y": "aria-label 提供",
+      "usage": {
+        "do": ["用 Typography 承载排版组件"],
+        "dont": ["不要硬编码颜色/间距"]
+      },
+      "docs": "packages/ui-mini/src/Typography/README.md",
+      "examples": ["packages/ui-mini/src/Typography/__examples__/States.tsx"]
     }
   ]
 }

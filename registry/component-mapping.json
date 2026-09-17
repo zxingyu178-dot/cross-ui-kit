@@ -1700,6 +1700,120 @@
           "status": "beta"
         }
       }
+    },
+    {
+      "canonical": "Watermark",
+      "category": "other",
+      "sharedProps": {
+        "text": "string",
+        "color": "string",
+        "fontSize": "number",
+        "rotate": "number",
+        "gap": "number",
+        "opacity": "number",
+        "children": "ReactNode"
+      },
+      "eventMap": {},
+      "stacks": {
+        "web": {
+          "item": "@kit/web-watermark",
+          "status": "beta"
+        },
+        "mini": {
+          "item": "@kit/mini-watermark",
+          "status": "beta"
+        },
+        "native": {
+          "item": "@kit/native-watermark",
+          "status": "beta"
+        }
+      }
+    },
+    {
+      "canonical": "Countdown",
+      "category": "data-display",
+      "sharedProps": {
+        "value": "number",
+        "format": "string",
+        "onFinish": "()=>void"
+      },
+      "eventMap": {
+        "web": "onFinish",
+        "mini": "onFinish",
+        "native": "onFinish"
+      },
+      "stacks": {
+        "web": {
+          "item": "@kit/web-countdown",
+          "status": "beta"
+        },
+        "mini": {
+          "item": "@kit/mini-countdown",
+          "status": "beta"
+        },
+        "native": {
+          "item": "@kit/native-countdown",
+          "status": "beta"
+        }
+      }
+    },
+    {
+      "canonical": "FloatButton",
+      "category": "other",
+      "sharedProps": {
+        "icon": "ReactNode",
+        "onClick": "()=>void",
+        "type": "'primary'|'default'",
+        "shape": "'circle'|'square'",
+        "tooltip": "string",
+        "bottom": "number",
+        "right": "number"
+      },
+      "eventMap": {
+        "web": "onClick",
+        "mini": "onClick",
+        "native": "onClick"
+      },
+      "stacks": {
+        "web": {
+          "item": "@kit/web-float-button",
+          "status": "beta"
+        },
+        "mini": {
+          "item": "@kit/mini-float-button",
+          "status": "beta"
+        },
+        "native": {
+          "item": "@kit/native-float-button",
+          "status": "beta"
+        }
+      }
+    },
+    {
+      "canonical": "Typography",
+      "category": "data-display",
+      "sharedProps": {
+        "variant": "'h1'|'h2'|'h3'|'h4'|'body'|'caption'",
+        "color": "string",
+        "ellipsis": "boolean",
+        "bold": "boolean",
+        "children": "ReactNode"
+      },
+      "eventMap": {},
+      "stacks": {
+        "web": {
+          "item": "@kit/web-typography",
+          "status": "beta"
+        },
+        "mini": {
+          "item": "@kit/mini-typography",
+          "status": "beta"
+        },
+        "native": {
+          "item": "@kit/native-typography",
+          "status": "beta"
+        }
+      }
     }
   ]
 }

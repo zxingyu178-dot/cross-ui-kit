@@ -56,6 +56,10 @@ import { States as ColorPickerStates } from '@kit/ui-web/src/ColorPicker/__examp
 import { States as CarouselStates } from '@kit/ui-web/src/Carousel/__examples__/States'
 import { States as TransferStates } from '@kit/ui-web/src/Transfer/__examples__/States'
 import { States as TreeStates } from '@kit/ui-web/src/Tree/__examples__/States'
+import { States as WatermarkStates } from '@kit/ui-web/src/Watermark/__examples__/States'
+import { States as CountdownStates } from '@kit/ui-web/src/Countdown/__examples__/States'
+import { States as FloatButtonStates } from '@kit/ui-web/src/FloatButton/__examples__/States'
+import { States as TypographyStates } from '@kit/ui-web/src/Typography/__examples__/States'
 import { RequestDemo } from './demos/RequestDemo'
 
 /**
@@ -460,6 +464,34 @@ export default function App() {
           Tree · 树形控件（展开/折叠 / 选中 / 禁用 / 多级嵌套）
         </h2>
         <TreeStates />
+      </section>
+
+      <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
+        <h2 className="text-title-sm font-medium text-text-primary">
+          Watermark · 水印（基础 / 自定义颜色角度）
+        </h2>
+        <WatermarkStates />
+      </section>
+
+      <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
+        <h2 className="text-title-sm font-medium text-text-primary">
+          Countdown · 倒计时（基础 / 带天 / 带毫秒）
+        </h2>
+        <CountdownStates />
+      </section>
+
+      <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
+        <h2 className="text-title-sm font-medium text-text-primary">
+          FloatButton · 悬浮按钮（圆形 / 默认 / 方形）
+        </h2>
+        <FloatButtonStates />
+      </section>
+
+      <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
+        <h2 className="text-title-sm font-medium text-text-primary">
+          Typography · 排版（h1-h4 / body / caption / 省略 / 加粗 / 自定义颜色）
+        </h2>
+        <TypographyStates />
       </section>
 
       <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">

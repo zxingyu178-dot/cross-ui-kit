@@ -1,0 +1,22 @@
+/* Watermark（mini）样式。 */
+
+.kit-watermark {
+  position: relative;
+  width: 100%;
+}
+
+.kit-watermark__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 50;
+}
+
+.kit-watermark__item {
+  position: absolute;
+  white-space: nowrap;
+}

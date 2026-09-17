@@ -1,0 +1,38 @@
+/* FloatButton（mini）样式：颜色全走 --kit-* token。 */
+
+.kit-float-button {
+  position: fixed;
+  z-index: 50;
+}
+
+.kit-float-button__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.kit-float-button__btn--circle {
+  border-radius: 50%;
+}
+
+.kit-float-button__btn--square {
+  border-radius: 8px;
+}
+
+.kit-float-button__btn--primary {
+  background: var(--kit-color-primary-default);
+  color: #fff;
+}
+
+.kit-float-button__btn--default {
+  background: var(--kit-color-bg-card);
+  border: 1px solid var(--kit-color-border-default);
+  color: var(--kit-color-text-primary);
+}
+
+.kit-float-button__icon {
+  font-size: 20px;
+}
