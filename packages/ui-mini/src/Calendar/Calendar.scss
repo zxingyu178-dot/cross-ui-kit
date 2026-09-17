@@ -1,0 +1,78 @@
+/* Calendar（mini）样式：颜色全走 --kit-* token。 */
+
+.kit-calendar {
+  width: 288px;
+  padding: 16px;
+  border: 1px solid var(--kit-color-border-default);
+  border-radius: var(--kit-radius-md);
+  background: var(--kit-color-bg-card);
+}
+
+.kit-calendar__header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.kit-calendar__nav {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 18px;
+  color: var(--kit-color-text-secondary);
+}
+
+.kit-calendar__title {
+  font-size: var(--kit-font-size-body-md);
+  font-weight: 500;
+  color: var(--kit-color-text-primary);
+}
+
+.kit-calendar__weekdays {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 4px;
+}
+
+.kit-calendar__weekday {
+  flex: 1;
+  text-align: center;
+  padding: 4px 0;
+  font-size: var(--kit-font-size-caption);
+  color: var(--kit-color-text-tertiary);
+}
+
+.kit-calendar__days {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.kit-calendar__day-cell {
+  width: 14.28%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px 0;
+}
+
+.kit-calendar__day {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: var(--kit-font-size-body-sm);
+  color: var(--kit-color-text-primary);
+}
+
+.kit-calendar__day--selected {
+  background: var(--kit-color-primary-default);
+  color: #fff;
+}

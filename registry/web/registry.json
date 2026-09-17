@@ -4056,6 +4056,104 @@
       },
       "docs": "packages/ui-web/src/BackTop/README.md",
       "examples": ["packages/ui-web/src/BackTop/__examples__/States.tsx"]
+    },
+    {
+      "name": "calendar",
+      "type": "registry:component",
+      "title": "日历 Calendar",
+      "description": "日历组件，支持日期选择、月份切换、受控优先，date/month/year 模式",
+      "canonical": "Calendar",
+      "status": "beta",
+      "stack": "web",
+      "dependencies": ["@kit/core"],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "packages/ui-web/src/Calendar/Calendar.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "packages/ui-web/src/Calendar/Calendar.types.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-web/src/Calendar/index.ts",
+          "type": "registry:ui"
+        }
+      ],
+      "props": [
+        {
+          "name": "value",
+          "type": "Date",
+          "required": false,
+          "desc": "受控选中日期"
+        },
+        {
+          "name": "defaultValue",
+          "type": "Date",
+          "default": "今天",
+          "required": false,
+          "desc": "非受控默认日期"
+        },
+        {
+          "name": "onChange",
+          "type": "(date:Date)=>void",
+          "required": false,
+          "desc": "日期变化回调"
+        },
+        {
+          "name": "mode",
+          "type": "'date'|'month'|'year'",
+          "default": "'date'",
+          "required": false,
+          "desc": "选择模式"
+        },
+        {
+          "name": "fullscreen",
+          "type": "boolean",
+          "default": "false",
+          "required": false,
+          "desc": "是否全屏"
+        },
+        {
+          "name": "className",
+          "type": "string",
+          "required": false,
+          "desc": "外层容器类名"
+        }
+      ],
+      "events": [
+        {
+          "name": "onChange",
+          "type": "(date: Date) => void",
+          "desc": "日期变化回调"
+        }
+      ],
+      "slots": [],
+      "tokens": [
+        "color-primary-default",
+        "color-bg-card",
+        "color-text-primary",
+        "color-text-secondary",
+        "color-text-tertiary",
+        "color-border-default",
+        "radius-md",
+        "font-size-body-md",
+        "font-size-body-sm",
+        "font-size-caption"
+      ],
+      "states": ["normal", "selected"],
+      "a11y": "日期按钮可点击；accessibilityLabel 由日期提供",
+      "usage": {
+        "do": [
+          "受控优先；value + onChange 配合使用",
+          "月份切换通过左右箭头",
+          "date 模式选择具体日期"
+        ],
+        "dont": ["用 Calendar 承载时间选择（用 TimePicker）", "硬编码日期计算逻辑"]
+      },
+      "docs": "packages/ui-web/src/Calendar/README.md",
+      "examples": ["packages/ui-web/src/Calendar/__examples__/States.tsx"]
     }
   ]
 }

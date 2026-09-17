@@ -1301,6 +1301,36 @@
           "status": "beta"
         }
       }
+    },
+    {
+      "canonical": "Calendar",
+      "category": "data-display",
+      "sharedProps": {
+        "value": "Date",
+        "defaultValue": "Date",
+        "onChange": "(date:Date)=>void",
+        "mode": "date|month|year",
+        "fullscreen": "boolean"
+      },
+      "eventMap": {
+        "web": "onChange（点击日期）",
+        "mini": "onChange（点击日期）",
+        "native": "onChange（点击日期）"
+      },
+      "stacks": {
+        "web": {
+          "item": "@kit/web-calendar",
+          "status": "beta"
+        },
+        "mini": {
+          "item": "@kit/mini-calendar",
+          "status": "beta"
+        },
+        "native": {
+          "item": "@kit/native-calendar",
+          "status": "beta"
+        }
+      }
     }
   ]
 }

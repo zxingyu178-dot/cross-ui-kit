@@ -43,6 +43,7 @@ import { States as DrawerStates } from '@kit/ui-web/src/Drawer/__examples__/Stat
 import { States as PopconfirmStates } from '@kit/ui-web/src/Popconfirm/__examples__/States'
 import { States as ImageStates } from '@kit/ui-web/src/Image/__examples__/States'
 import { States as BackTopStates } from '@kit/ui-web/src/BackTop/__examples__/States'
+import { States as CalendarStates } from '@kit/ui-web/src/Calendar/__examples__/States'
 import { RequestDemo } from './demos/RequestDemo'
 
 /**
@@ -356,6 +357,13 @@ export default function App() {
           BackTop · 回到顶部（滚动监听 / 平滑滚动）
         </h2>
         <BackTopStates />
+      </section>
+
+      <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
+        <h2 className="text-title-sm font-medium text-text-primary">
+          Calendar · 日历（日期选择 / 月份切换 / 受控）
+        </h2>
+        <CalendarStates />
       </section>
 
       <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
