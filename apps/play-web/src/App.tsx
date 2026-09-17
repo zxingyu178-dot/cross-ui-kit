@@ -38,6 +38,7 @@ import { States as DropdownMenuStates } from '@kit/ui-web/src/DropdownMenu/__exa
 import { States as PopoverStates } from '@kit/ui-web/src/Popover/__examples__/States'
 import { States as SliderStates } from '@kit/ui-web/src/Slider/__examples__/States'
 import { States as AutoCompleteStates } from '@kit/ui-web/src/AutoComplete/__examples__/States'
+import { States as DescriptionsStates } from '@kit/ui-web/src/Descriptions/__examples__/States'
 import { RequestDemo } from './demos/RequestDemo'
 
 /**
@@ -316,6 +317,13 @@ export default function App() {
           AutoComplete · 自动完成（过滤 / 禁用 / 键盘导航）
         </h2>
         <AutoCompleteStates />
+      </section>
+
+      <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
+        <h2 className="text-title-sm font-medium text-text-primary">
+          Descriptions · 描述列表（列数 / 边框 / span）
+        </h2>
+        <DescriptionsStates />
       </section>
 
       <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">

@@ -1146,6 +1146,36 @@
           "status": "beta"
         }
       }
+    },
+    {
+      "canonical": "Descriptions",
+      "category": "data-display",
+      "sharedProps": {
+        "title": "ReactNode",
+        "items": "DescriptionsItem[]",
+        "column": "number",
+        "bordered": "boolean",
+        "layout": "horizontal|vertical"
+      },
+      "eventMap": {
+        "web": "无（纯展示）",
+        "mini": "无（纯展示）",
+        "native": "无（纯展示）"
+      },
+      "stacks": {
+        "web": {
+          "item": "@kit/web-descriptions",
+          "status": "beta"
+        },
+        "mini": {
+          "item": "@kit/mini-descriptions",
+          "status": "beta"
+        },
+        "native": {
+          "item": "@kit/native-descriptions",
+          "status": "beta"
+        }
+      }
     }
   ]
 }

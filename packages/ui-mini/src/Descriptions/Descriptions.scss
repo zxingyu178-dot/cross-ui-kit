@@ -1,0 +1,50 @@
+/* Descriptions（mini）样式：颜色全走 --kit-* token。 */
+
+.kit-descriptions {
+  width: 100%;
+}
+
+.kit-descriptions__title {
+  display: block;
+  margin-bottom: 12px;
+  font-size: var(--kit-font-size-body-md);
+  font-weight: 500;
+  color: var(--kit-color-text-primary);
+}
+
+.kit-descriptions__body {
+  width: 100%;
+}
+
+.kit-descriptions__body--bordered {
+  border: 1px solid var(--kit-color-border-default);
+  border-radius: var(--kit-radius-md);
+  overflow: hidden;
+}
+
+.kit-descriptions__row {
+  display: flex;
+  flex-direction: row;
+}
+
+.kit-descriptions__item {
+  display: flex;
+  flex-direction: column;
+  padding: 8px 12px;
+  gap: 4px;
+}
+
+.kit-descriptions__item--bordered {
+  border-right: 1px solid var(--kit-color-border-default);
+  border-bottom: 1px solid var(--kit-color-border-default);
+}
+
+.kit-descriptions__label {
+  font-size: var(--kit-font-size-body-sm);
+  color: var(--kit-color-text-tertiary);
+}
+
+.kit-descriptions__value {
+  font-size: var(--kit-font-size-body-sm);
+  color: var(--kit-color-text-primary);
+}
