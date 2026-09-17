@@ -3761,6 +3761,129 @@
       },
       "docs": "packages/ui-web/src/Drawer/README.md",
       "examples": ["packages/ui-web/src/Drawer/__examples__/States.tsx"]
+    },
+    {
+      "name": "popconfirm",
+      "type": "registry:component",
+      "title": "气泡确认 Popconfirm",
+      "description": "气泡确认组件，点击触发弹出确认气泡，包含确认/取消按钮，四方向",
+      "canonical": "Popconfirm",
+      "status": "beta",
+      "stack": "web",
+      "dependencies": ["@kit/core", "@radix-ui/react-popover"],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "packages/ui-web/src/Popconfirm/Popconfirm.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "packages/ui-web/src/Popconfirm/Popconfirm.types.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-web/src/Popconfirm/index.ts",
+          "type": "registry:ui"
+        }
+      ],
+      "props": [
+        {
+          "name": "title",
+          "type": "ReactNode",
+          "required": true,
+          "desc": "确认标题"
+        },
+        {
+          "name": "description",
+          "type": "ReactNode",
+          "required": false,
+          "desc": "确认描述"
+        },
+        {
+          "name": "onConfirm",
+          "type": "()=>void",
+          "required": false,
+          "desc": "确认回调"
+        },
+        {
+          "name": "onCancel",
+          "type": "()=>void",
+          "required": false,
+          "desc": "取消回调"
+        },
+        {
+          "name": "okText",
+          "type": "string",
+          "default": "'确定'",
+          "required": false,
+          "desc": "确认按钮文本"
+        },
+        {
+          "name": "cancelText",
+          "type": "string",
+          "default": "'取消'",
+          "required": false,
+          "desc": "取消按钮文本"
+        },
+        {
+          "name": "trigger",
+          "type": "ReactNode",
+          "required": true,
+          "desc": "触发元素"
+        },
+        {
+          "name": "placement",
+          "type": "'top'|'right'|'bottom'|'left'",
+          "default": "'bottom'",
+          "required": false,
+          "desc": "弹出方向"
+        },
+        {
+          "name": "className",
+          "type": "string",
+          "required": false,
+          "desc": "外层容器类名"
+        }
+      ],
+      "events": [
+        {
+          "name": "onConfirm",
+          "type": "() => void",
+          "desc": "确认回调"
+        },
+        {
+          "name": "onCancel",
+          "type": "() => void",
+          "desc": "取消回调"
+        }
+      ],
+      "slots": ["title", "description", "trigger"],
+      "tokens": [
+        "color-primary-default",
+        "color-bg-card",
+        "color-text-primary",
+        "color-text-secondary",
+        "color-border-default",
+        "radius-md",
+        "radius-sm",
+        "font-size-body-md",
+        "font-size-body-sm"
+      ],
+      "states": ["open", "closed"],
+      "a11y": "Radix Popover 原生无障碍（role=dialog，焦点管理，Esc 关闭）",
+      "usage": {
+        "do": [
+          "用于危险操作前的二次确认（删除、提交等）",
+          "okText/cancelText 自定义按钮文案",
+          "placement 控制弹出方向"
+        ],
+        "dont": [
+          "用 Popconfirm 承载复杂表单（用 Drawer/Dialog）",
+          "用 Popconfirm 承载纯展示内容（用 Popover）"
+        ]
+      },
+      "docs": "packages/ui-web/src/Popconfirm/README.md",
+      "examples": ["packages/ui-web/src/Popconfirm/__examples__/States.tsx"]
     }
   ]
 }

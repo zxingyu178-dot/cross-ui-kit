@@ -40,6 +40,7 @@ import { States as SliderStates } from '@kit/ui-web/src/Slider/__examples__/Stat
 import { States as AutoCompleteStates } from '@kit/ui-web/src/AutoComplete/__examples__/States'
 import { States as DescriptionsStates } from '@kit/ui-web/src/Descriptions/__examples__/States'
 import { States as DrawerStates } from '@kit/ui-web/src/Drawer/__examples__/States'
+import { States as PopconfirmStates } from '@kit/ui-web/src/Popconfirm/__examples__/States'
 import { RequestDemo } from './demos/RequestDemo'
 
 /**
@@ -332,6 +333,13 @@ export default function App() {
           Drawer · 抽屉（四方向 / 遮罩 / 受控）
         </h2>
         <DrawerStates />
+      </section>
+
+      <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
+        <h2 className="text-title-sm font-medium text-text-primary">
+          Popconfirm · 气泡确认（确认/取消/自定义文案）
+        </h2>
+        <PopconfirmStates />
       </section>
 
       <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">

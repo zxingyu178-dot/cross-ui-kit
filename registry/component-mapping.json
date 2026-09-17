@@ -1207,6 +1207,39 @@
           "status": "beta"
         }
       }
+    },
+    {
+      "canonical": "Popconfirm",
+      "category": "overlay",
+      "sharedProps": {
+        "title": "ReactNode",
+        "description": "ReactNode",
+        "onConfirm": "()=>void",
+        "onCancel": "()=>void",
+        "okText": "string",
+        "cancelText": "string",
+        "trigger": "ReactNode",
+        "placement": "top|right|bottom|left"
+      },
+      "eventMap": {
+        "web": "onConfirm/onCancel（Radix Popover）",
+        "mini": "onConfirm/onCancel（点击按钮）",
+        "native": "onConfirm/onCancel（点击按钮）"
+      },
+      "stacks": {
+        "web": {
+          "item": "@kit/web-popconfirm",
+          "status": "beta"
+        },
+        "mini": {
+          "item": "@kit/mini-popconfirm",
+          "status": "beta"
+        },
+        "native": {
+          "item": "@kit/native-popconfirm",
+          "status": "beta"
+        }
+      }
     }
   ]
 }

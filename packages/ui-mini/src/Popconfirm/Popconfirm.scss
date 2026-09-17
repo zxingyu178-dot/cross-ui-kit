@@ -1,0 +1,83 @@
+/* Popconfirm（mini）样式：颜色全走 --kit-* token。 */
+
+.kit-popconfirm {
+  position: relative;
+  display: inline-block;
+}
+
+.kit-popconfirm__trigger {
+  display: inline-flex;
+  align-items: center;
+}
+
+.kit-popconfirm__content {
+  position: absolute;
+  width: 256px;
+  padding: 16px;
+  border: 1px solid var(--kit-color-border-default);
+  border-radius: var(--kit-radius-md);
+  background: var(--kit-color-bg-card);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+}
+
+.kit-popconfirm__content--bottom {
+  top: 100%;
+  margin-top: 4px;
+}
+
+.kit-popconfirm__content--top {
+  bottom: 100%;
+  margin-bottom: 4px;
+}
+
+.kit-popconfirm__content--right {
+  left: 100%;
+  margin-left: 4px;
+  top: 0;
+}
+
+.kit-popconfirm__content--left {
+  right: 100%;
+  margin-right: 4px;
+  top: 0;
+}
+
+.kit-popconfirm__title {
+  display: block;
+  font-size: var(--kit-font-size-body-md);
+  font-weight: 500;
+  color: var(--kit-color-text-primary);
+}
+
+.kit-popconfirm__desc {
+  display: block;
+  margin-top: 4px;
+  font-size: var(--kit-font-size-body-sm);
+  color: var(--kit-color-text-secondary);
+}
+
+.kit-popconfirm__actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.kit-popconfirm__btn {
+  padding: 6px 12px;
+  border-radius: var(--kit-radius-sm);
+  font-size: var(--kit-font-size-body-sm);
+}
+
+.kit-popconfirm__btn--cancel {
+  border: 1px solid var(--kit-color-border-default);
+  background: var(--kit-color-bg-card);
+  color: var(--kit-color-text-secondary);
+}
+
+.kit-popconfirm__btn--ok {
+  background: var(--kit-color-primary-default);
+  color: #fff;
+}
