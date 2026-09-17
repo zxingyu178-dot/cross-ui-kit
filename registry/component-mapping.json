@@ -2040,6 +2040,36 @@
           "status": "beta"
         }
       }
+    },
+    {
+      "canonical": "InputPassword",
+      "category": "form",
+      "sharedProps": {
+        "value": "string",
+        "onChange": "(v:string)=>void",
+        "placeholder": "string",
+        "disabled": "boolean",
+        "visibilityToggle": "boolean"
+      },
+      "eventMap": {
+        "web": "onChange",
+        "mini": "onChange",
+        "native": "onChange"
+      },
+      "stacks": {
+        "web": {
+          "item": "@kit/web-input-password",
+          "status": "beta"
+        },
+        "mini": {
+          "item": "@kit/mini-input-password",
+          "status": "beta"
+        },
+        "native": {
+          "item": "@kit/native-input-password",
+          "status": "beta"
+        }
+      }
     }
   ]
 }

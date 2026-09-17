@@ -6656,6 +6656,106 @@
       },
       "docs": "packages/ui-mini/src/TextArea/README.md",
       "examples": ["packages/ui-mini/src/TextArea/__examples__/States.tsx"]
+    },
+    {
+      "name": "input-password",
+      "type": "registry:component",
+      "title": "密码输入框 InputPassword",
+      "description": "密码输入框组件，支持显示/隐藏切换、禁用状态",
+      "canonical": "InputPassword",
+      "status": "beta",
+      "stack": "mini",
+      "dependencies": ["@kit/core"],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "packages/ui-mini/src/InputPassword/InputPassword.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "packages/ui-mini/src/InputPassword/InputPassword.types.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-mini/src/InputPassword/InputPassword.scss",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-mini/src/InputPassword/index.ts",
+          "type": "registry:ui"
+        }
+      ],
+      "props": [
+        {
+          "name": "value",
+          "type": "string",
+          "required": false,
+          "desc": "输入值"
+        },
+        {
+          "name": "onChange",
+          "type": "(value:string)=>void",
+          "required": false,
+          "desc": "值变化回调"
+        },
+        {
+          "name": "placeholder",
+          "type": "string",
+          "default": "'请输入密码'",
+          "required": false,
+          "desc": "占位文字"
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "default": "false",
+          "required": false,
+          "desc": "是否禁用"
+        },
+        {
+          "name": "visibilityToggle",
+          "type": "boolean",
+          "default": "true",
+          "required": false,
+          "desc": "是否显示切换按钮"
+        },
+        {
+          "name": "className",
+          "type": "string",
+          "required": false,
+          "desc": "外层容器类名"
+        }
+      ],
+      "events": [
+        {
+          "name": "onChange",
+          "type": "(value: string) => void",
+          "desc": "值变化回调"
+        }
+      ],
+      "slots": [],
+      "tokens": [
+        "color-bg-card",
+        "color-text-primary",
+        "color-text-tertiary",
+        "color-border-default",
+        "color-primary-default",
+        "radius-md",
+        "font-size-body-sm",
+        "font-size-caption"
+      ],
+      "states": ["normal", "focus", "disabled", "visible", "hidden"],
+      "a11y": "密码输入框可输入；切换按钮可点击显示/隐藏密码",
+      "usage": {
+        "do": [
+          "用 InputPassword 承载密码输入",
+          "visibilityToggle 控制是否显示切换按钮",
+          "disabled 控制禁用状态"
+        ],
+        "dont": ["用 InputPassword 承载普通文本输入（用 Input）", "在禁用状态下显示切换按钮"]
+      },
+      "docs": "packages/ui-mini/src/InputPassword/README.md",
+      "examples": ["packages/ui-mini/src/InputPassword/__examples__/States.tsx"]
     }
   ]
 }
