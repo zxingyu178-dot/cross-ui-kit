@@ -1,0 +1,75 @@
+/* Divider（mini）样式：颜色/字号全走 --kit-* token。 */
+
+.kit-divider {
+  box-sizing: border-box;
+}
+
+.kit-divider--horizontal {
+  width: 100%;
+  height: 0;
+  border-top: 1px solid var(--kit-color-border-default);
+}
+
+.kit-divider--vertical {
+  height: 100%;
+  width: 0;
+  align-self: stretch;
+  border-left: 1px solid var(--kit-color-border-default);
+}
+
+.kit-divider--dashed {
+  border-top-style: dashed;
+  border-left-style: dashed;
+}
+
+.kit-divider--dotted {
+  border-top-style: dotted;
+  border-left-style: dotted;
+}
+
+/* 带文字 */
+.kit-divider--text {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  gap: 12px;
+}
+
+.kit-divider__line {
+  height: 0;
+  border-top: 1px solid var(--kit-color-border-default);
+}
+
+.kit-divider__line--dashed {
+  border-top-style: dashed;
+}
+
+.kit-divider__line--dotted {
+  border-top-style: dotted;
+}
+
+.kit-divider__line--left {
+  flex: 1;
+}
+
+.kit-divider__line--right {
+  flex: 1;
+}
+
+.kit-divider--text-left .kit-divider__line--left {
+  flex: none;
+  width: 0;
+}
+
+.kit-divider--text-right .kit-divider__line--right {
+  flex: none;
+  width: 0;
+}
+
+.kit-divider__text {
+  font-size: var(--kit-font-size-body-sm);
+  color: var(--kit-color-text-tertiary);
+  white-space: nowrap;
+  flex-shrink: 0;
+}

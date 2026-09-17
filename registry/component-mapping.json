@@ -806,6 +806,35 @@
           "status": "beta"
         }
       }
+    },
+    {
+      "canonical": "Divider",
+      "category": "layout",
+      "sharedProps": {
+        "orientation": "horizontal|vertical",
+        "type": "solid|dashed|dotted",
+        "text": "string",
+        "textPosition": "left|center|right"
+      },
+      "eventMap": {
+        "web": "无（纯展示）",
+        "mini": "无",
+        "native": "无"
+      },
+      "stacks": {
+        "web": {
+          "item": "@kit/web-divider",
+          "status": "beta"
+        },
+        "mini": {
+          "item": "@kit/mini-divider",
+          "status": "beta"
+        },
+        "native": {
+          "item": "@kit/native-divider",
+          "status": "beta"
+        }
+      }
     }
   ]
 }

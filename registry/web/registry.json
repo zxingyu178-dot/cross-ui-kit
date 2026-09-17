@@ -2497,6 +2497,77 @@
       },
       "docs": "packages/ui-web/src/Alert/README.md",
       "examples": ["packages/ui-web/src/Alert/__examples__/States.tsx"]
+    },
+    {
+      "name": "divider",
+      "type": "registry:component",
+      "title": "分割线 Divider",
+      "description": "水平/垂直分割，solid/dashed/dotted 三线型，支持分割线文字（left/center/right）",
+      "canonical": "Divider",
+      "status": "beta",
+      "stack": "web",
+      "dependencies": ["@kit/core"],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "packages/ui-web/src/Divider/Divider.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "packages/ui-web/src/Divider/Divider.types.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-web/src/Divider/index.ts",
+          "type": "registry:ui"
+        }
+      ],
+      "props": [
+        {
+          "name": "orientation",
+          "type": "'horizontal'|'vertical'",
+          "default": "'horizontal'",
+          "required": false,
+          "desc": "方向"
+        },
+        {
+          "name": "type",
+          "type": "'solid'|'dashed'|'dotted'",
+          "default": "'solid'",
+          "required": false,
+          "desc": "线条类型"
+        },
+        {
+          "name": "text",
+          "type": "string",
+          "required": false,
+          "desc": "分割线文字（仅 horizontal）"
+        },
+        {
+          "name": "textPosition",
+          "type": "'left'|'center'|'right'",
+          "default": "'center'",
+          "required": false,
+          "desc": "文字位置"
+        },
+        {
+          "name": "className",
+          "type": "string",
+          "required": false,
+          "desc": "外层容器类名"
+        }
+      ],
+      "events": [],
+      "slots": ["text"],
+      "tokens": ["color-border-default", "color-text-tertiary", "font-size-body-sm"],
+      "states": ["horizontal", "vertical", "with-text"],
+      "a11y": "role=separator + aria-orientation",
+      "usage": {
+        "do": ["垂直方向需父容器有确定高度", "文字走 i18n key"],
+        "dont": ["用 Divider 承载间距（用 gap/spacing token）", "硬编码颜色"]
+      },
+      "docs": "packages/ui-web/src/Divider/README.md",
+      "examples": ["packages/ui-web/src/Divider/__examples__/States.tsx"]
     }
   ]
 }
