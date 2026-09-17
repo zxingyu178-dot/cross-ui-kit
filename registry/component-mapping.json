@@ -1051,6 +1051,35 @@
           "status": "beta"
         }
       }
+    },
+    {
+      "canonical": "Popover",
+      "category": "overlay",
+      "sharedProps": {
+        "trigger": "ReactNode",
+        "content": "ReactNode",
+        "align": "start|center|end",
+        "side": "top|right|bottom|left"
+      },
+      "eventMap": {
+        "web": "无（Radix 内部管理）",
+        "mini": "无（点击触发切换）",
+        "native": "无（点击触发切换）"
+      },
+      "stacks": {
+        "web": {
+          "item": "@kit/web-popover",
+          "status": "beta"
+        },
+        "mini": {
+          "item": "@kit/mini-popover",
+          "status": "beta"
+        },
+        "native": {
+          "item": "@kit/native-popover",
+          "status": "beta"
+        }
+      }
     }
   ]
 }

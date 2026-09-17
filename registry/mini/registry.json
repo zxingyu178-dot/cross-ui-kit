@@ -3308,6 +3308,95 @@
       },
       "docs": "packages/ui-mini/src/DropdownMenu/README.md",
       "examples": ["packages/ui-mini/src/DropdownMenu/__examples__/States.tsx"]
+    },
+    {
+      "name": "popover",
+      "type": "registry:component",
+      "title": "弹出层 Popover",
+      "description": "点击触发弹出内容层，四方向（top/right/bottom/left）+ 三对齐（start/center/end）",
+      "canonical": "Popover",
+      "status": "beta",
+      "stack": "mini",
+      "dependencies": ["@kit/core"],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "packages/ui-mini/src/Popover/Popover.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "packages/ui-mini/src/Popover/Popover.types.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-mini/src/Popover/Popover.scss",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-mini/src/Popover/index.ts",
+          "type": "registry:ui"
+        }
+      ],
+      "props": [
+        {
+          "name": "trigger",
+          "type": "ReactNode",
+          "required": true,
+          "desc": "触发元素（web 需可转发 ref）"
+        },
+        {
+          "name": "content",
+          "type": "ReactNode",
+          "required": true,
+          "desc": "弹出内容"
+        },
+        {
+          "name": "align",
+          "type": "'start'|'center'|'end'",
+          "default": "'center'",
+          "required": false,
+          "desc": "对齐方式"
+        },
+        {
+          "name": "side",
+          "type": "'top'|'right'|'bottom'|'left'",
+          "default": "'bottom'",
+          "required": false,
+          "desc": "弹出方向"
+        },
+        {
+          "name": "className",
+          "type": "string",
+          "required": false,
+          "desc": "外层容器类名"
+        }
+      ],
+      "events": [],
+      "slots": ["trigger", "content"],
+      "tokens": [
+        "color-border-default",
+        "color-bg-card",
+        "color-text-primary",
+        "color-text-secondary",
+        "radius-md",
+        "font-size-body-md",
+        "font-size-body-sm"
+      ],
+      "states": ["open", "closed"],
+      "a11y": "触发可点击；accessibilityLabel 由 trigger 提供",
+      "usage": {
+        "do": [
+          "trigger 需可转发 ref（web 端用 button 等元素）",
+          "内容区放置任意 React 节点",
+          "side 控制弹出方向，align 控制对齐"
+        ],
+        "dont": [
+          "用 Popover 承载菜单列表（用 DropdownMenu）",
+          "用 Popover 承载模态对话框（用 Dialog）"
+        ]
+      },
+      "docs": "packages/ui-mini/src/Popover/README.md",
+      "examples": ["packages/ui-mini/src/Popover/__examples__/States.tsx"]
     }
   ]
 }
