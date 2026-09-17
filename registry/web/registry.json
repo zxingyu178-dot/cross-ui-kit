@@ -3982,6 +3982,80 @@
       },
       "docs": "packages/ui-web/src/Image/README.md",
       "examples": ["packages/ui-web/src/Image/__examples__/States.tsx"]
+    },
+    {
+      "name": "back-top",
+      "type": "registry:component",
+      "title": "回到顶部 BackTop",
+      "description": "回到顶部按钮，固定定位，滚动超过 visibilityHeight 显示，点击平滑滚动到顶部",
+      "canonical": "BackTop",
+      "status": "beta",
+      "stack": "web",
+      "dependencies": ["@kit/core"],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "packages/ui-web/src/BackTop/BackTop.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "packages/ui-web/src/BackTop/BackTop.types.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-web/src/BackTop/index.ts",
+          "type": "registry:ui"
+        }
+      ],
+      "props": [
+        {
+          "name": "visibilityHeight",
+          "type": "number",
+          "default": "400",
+          "required": false,
+          "desc": "滚动超过多少像素显示"
+        },
+        {
+          "name": "onClick",
+          "type": "()=>void",
+          "required": false,
+          "desc": "点击回调"
+        },
+        {
+          "name": "duration",
+          "type": "number",
+          "default": "300",
+          "required": false,
+          "desc": "滚动动画时长（ms）"
+        },
+        {
+          "name": "className",
+          "type": "string",
+          "required": false,
+          "desc": "外层容器类名"
+        }
+      ],
+      "events": [
+        {
+          "name": "onClick",
+          "type": "() => void",
+          "desc": "点击回调"
+        }
+      ],
+      "slots": [],
+      "tokens": ["color-primary-default"],
+      "states": ["visible", "hidden"],
+      "a11y": "aria-label=\"回到顶部\"",
+      "usage": {
+        "do": [
+          "放在页面根部，固定定位",
+          "visibilityHeight 控制显示时机",
+          "onClick 回调中处理滚动逻辑（mini/native）"
+        ],
+        "dont": ["在多个地方重复使用（全局一个即可）", "用 BackTop 承载其他功能"]
+      },
+      "docs": "packages/ui-web/src/BackTop/README.md",
+      "examples": ["packages/ui-web/src/BackTop/__examples__/States.tsx"]
     }
   ]
 }

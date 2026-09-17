@@ -1,0 +1,22 @@
+/* BackTop（mini）样式：颜色全走 --kit-* token。 */
+
+.kit-backtop {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 1000;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--kit-color-primary-default);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.kit-backtop__icon {
+  font-size: 18px;
+  color: #fff;
+  font-weight: bold;
+}

@@ -1273,6 +1273,34 @@
           "status": "beta"
         }
       }
+    },
+    {
+      "canonical": "BackTop",
+      "category": "other",
+      "sharedProps": {
+        "visibilityHeight": "number",
+        "onClick": "()=>void",
+        "duration": "number"
+      },
+      "eventMap": {
+        "web": "onClick（window.scrollTo smooth）",
+        "mini": "onClick（使用方处理滚动）",
+        "native": "onClick（使用方处理滚动）"
+      },
+      "stacks": {
+        "web": {
+          "item": "@kit/web-back-top",
+          "status": "beta"
+        },
+        "mini": {
+          "item": "@kit/mini-back-top",
+          "status": "beta"
+        },
+        "native": {
+          "item": "@kit/native-back-top",
+          "status": "beta"
+        }
+      }
     }
   ]
 }
