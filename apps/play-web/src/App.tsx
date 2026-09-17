@@ -75,6 +75,7 @@ import { States as TimeRangePickerStates } from '@kit/ui-web/src/TimeRangePicker
 import { States as AvatarGroupStates } from '@kit/ui-web/src/AvatarGroup/__examples__/States'
 import { States as TagGroupStates } from '@kit/ui-web/src/TagGroup/__examples__/States'
 import { States as CardGroupStates } from '@kit/ui-web/src/CardGroup/__examples__/States'
+import { States as StatisticCardStates } from '@kit/ui-web/src/StatisticCard/__examples__/States'
 import { RequestDemo } from './demos/RequestDemo'
 
 /**
@@ -612,6 +613,13 @@ export default function App() {
           CardGroup · 卡片组（基础 / 2列 / 带封面）
         </h2>
         <CardGroupStates />
+      </section>
+
+      <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
+        <h2 className="text-title-sm font-medium text-text-primary">
+          StatisticCard · 统计卡片（基础 / 带后缀 / 自定义颜色）
+        </h2>
+        <StatisticCardStates />
       </section>
 
       <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">

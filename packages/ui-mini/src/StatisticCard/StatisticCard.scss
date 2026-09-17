@@ -1,0 +1,48 @@
+/* StatisticCard（mini）样式：颜色全走 --kit-* token。 */
+
+.kit-statistic-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px;
+  border-radius: var(--kit-radius-lg);
+  border: 1px solid var(--kit-color-border-default);
+  background: var(--kit-color-bg-card);
+  box-shadow: var(--kit-shadow-card);
+  box-sizing: border-box;
+}
+
+.kit-statistic-card__title {
+  font-size: var(--kit-font-size-body-sm);
+  color: var(--kit-color-text-secondary);
+}
+
+.kit-statistic-card__value-row {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  gap: 4px;
+}
+
+.kit-statistic-card__prefix {
+  font-size: var(--kit-font-size-body-sm);
+  color: var(--kit-color-text-tertiary);
+}
+
+.kit-statistic-card__value {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.kit-statistic-card__suffix {
+  font-size: var(--kit-font-size-body-sm);
+  color: var(--kit-color-text-tertiary);
+}
+
+.kit-statistic-card__trend {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+  font-size: var(--kit-font-size-caption);
+}

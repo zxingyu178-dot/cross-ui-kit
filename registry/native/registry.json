@@ -7238,6 +7238,110 @@
       },
       "docs": "packages/ui-native/src/CardGroup/README.md",
       "examples": ["packages/ui-native/src/CardGroup/__examples__/States.tsx"]
+    },
+    {
+      "name": "statistic-card",
+      "type": "registry:component",
+      "title": "统计卡片 StatisticCard",
+      "description": "统计卡片组件，卡片 + 统计数字 + 趋势",
+      "canonical": "StatisticCard",
+      "status": "beta",
+      "stack": "native",
+      "dependencies": ["@kit/core"],
+      "registryDependencies": ["statistic", "card"],
+      "files": [
+        {
+          "path": "packages/ui-native/src/StatisticCard/StatisticCard.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "packages/ui-native/src/StatisticCard/StatisticCard.types.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-native/src/StatisticCard/index.ts",
+          "type": "registry:ui"
+        }
+      ],
+      "props": [
+        {
+          "name": "title",
+          "type": "string",
+          "required": true,
+          "desc": "标题"
+        },
+        {
+          "name": "value",
+          "type": "string|number",
+          "required": true,
+          "desc": "数值"
+        },
+        {
+          "name": "prefix",
+          "type": "string",
+          "required": false,
+          "desc": "前缀"
+        },
+        {
+          "name": "suffix",
+          "type": "string",
+          "required": false,
+          "desc": "后缀"
+        },
+        {
+          "name": "trend",
+          "type": "'up'|'down'|'none'",
+          "required": false,
+          "desc": "趋势方向"
+        },
+        {
+          "name": "trendValue",
+          "type": "string",
+          "required": false,
+          "desc": "趋势值（百分比）"
+        },
+        {
+          "name": "valueColor",
+          "type": "string",
+          "required": false,
+          "desc": "数值颜色"
+        },
+        {
+          "name": "style",
+          "type": "ViewStyle",
+          "required": false,
+          "desc": "外层容器样式"
+        }
+      ],
+      "events": [],
+      "slots": ["prefix", "suffix", "children"],
+      "tokens": [
+        "color-bg-card",
+        "color-text-primary",
+        "color-text-secondary",
+        "color-text-tertiary",
+        "color-success-default",
+        "color-danger-default",
+        "color-border-default",
+        "radius-lg",
+        "shadow-card",
+        "font-size-body-sm",
+        "font-size-caption"
+      ],
+      "states": ["normal", "hover"],
+      "a11y": "统计卡片可读；标题与数值可读；趋势方向与数值可读",
+      "usage": {
+        "do": [
+          "用 StatisticCard 承载数据统计展示",
+          "title 描述指标名称",
+          "value 展示数值",
+          "trend + trendValue 展示趋势",
+          "prefix/suffix 展示单位"
+        ],
+        "dont": ["用 StatisticCard 承载非统计数据（用 Card）", "trend 与 trendValue 不匹配"]
+      },
+      "docs": "packages/ui-native/src/StatisticCard/README.md",
+      "examples": ["packages/ui-native/src/StatisticCard/__examples__/States.tsx"]
     }
   ]
 }

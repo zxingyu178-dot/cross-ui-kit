@@ -2279,6 +2279,38 @@
           "status": "beta"
         }
       }
+    },
+    {
+      "canonical": "StatisticCard",
+      "category": "data-display",
+      "sharedProps": {
+        "title": "string",
+        "value": "string|number",
+        "prefix": "string",
+        "suffix": "string",
+        "trend": "'up'|'down'|'none'",
+        "trendValue": "string",
+        "valueColor": "string"
+      },
+      "eventMap": {
+        "web": "",
+        "mini": "",
+        "native": ""
+      },
+      "stacks": {
+        "web": {
+          "item": "@kit/web-statistic-card",
+          "status": "beta"
+        },
+        "mini": {
+          "item": "@kit/mini-statistic-card",
+          "status": "beta"
+        },
+        "native": {
+          "item": "@kit/native-statistic-card",
+          "status": "beta"
+        }
+      }
     }
   ]
 }
