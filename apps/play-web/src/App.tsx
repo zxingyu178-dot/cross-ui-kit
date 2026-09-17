@@ -28,6 +28,7 @@ import { States as DataTableStates } from '@kit/ui-web/src/DataTable/__examples_
 import { States as TooltipStates } from '@kit/ui-web/src/Tooltip/__examples__/States'
 import { States as AlertStates } from '@kit/ui-web/src/Alert/__examples__/States'
 import { States as DividerStates } from '@kit/ui-web/src/Divider/__examples__/States'
+import { States as TimelineStates } from '@kit/ui-web/src/Timeline/__examples__/States'
 import { RequestDemo } from './demos/RequestDemo'
 
 /**
@@ -236,6 +237,13 @@ export default function App() {
           Divider · 分割线（三线型 / 带文字 / 垂直）
         </h2>
         <DividerStates />
+      </section>
+
+      <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
+        <h2 className="text-title-sm font-medium text-text-primary">
+          Timeline · 时间线（语义色圆点 / 倒序）
+        </h2>
+        <TimelineStates />
       </section>
 
       <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">

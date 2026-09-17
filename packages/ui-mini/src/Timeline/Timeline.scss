@@ -1,0 +1,81 @@
+/* Timeline（mini）样式：颜色/字号全走 --kit-* token。 */
+
+.kit-timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.kit-timeline__line {
+  position: absolute;
+  left: 7px;
+  top: 8px;
+  bottom: 8px;
+  width: 1px;
+  background: var(--kit-color-border-default);
+}
+
+.kit-timeline__item {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  padding-bottom: 24px;
+}
+
+.kit-timeline__item:last-child {
+  padding-bottom: 0;
+}
+
+.kit-timeline__dot {
+  position: relative;
+  z-index: 1;
+  flex-shrink: 0;
+  width: 15px;
+  height: 15px;
+  margin-top: 5px;
+  border-radius: 50%;
+  border: 2px solid var(--kit-color-border-default);
+  box-sizing: border-box;
+}
+
+.kit-timeline__dot--solid {
+  /* backgroundColor 由 inline style 覆盖 */
+}
+
+.kit-timeline__dot-custom {
+  position: relative;
+  z-index: 1;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.kit-timeline__content {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.kit-timeline__time {
+  font-size: var(--kit-font-size-caption);
+  color: var(--kit-color-text-tertiary);
+  line-height: 1.4;
+}
+
+.kit-timeline__title {
+  font-size: var(--kit-font-size-body-md);
+  font-weight: var(--kit-font-weight-medium);
+  color: var(--kit-color-text-primary);
+  line-height: 1.4;
+}
+
+.kit-timeline__desc {
+  font-size: var(--kit-font-size-body-sm);
+  color: var(--kit-color-text-secondary);
+  line-height: 1.5;
+  margin-top: 2px;
+}

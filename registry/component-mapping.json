@@ -835,6 +835,33 @@
           "status": "beta"
         }
       }
+    },
+    {
+      "canonical": "Timeline",
+      "category": "data-display",
+      "sharedProps": {
+        "items": "TimelineItem[]",
+        "reverse": "boolean"
+      },
+      "eventMap": {
+        "web": "无（纯展示）",
+        "mini": "无",
+        "native": "无"
+      },
+      "stacks": {
+        "web": {
+          "item": "@kit/web-timeline",
+          "status": "beta"
+        },
+        "mini": {
+          "item": "@kit/mini-timeline",
+          "status": "beta"
+        },
+        "native": {
+          "item": "@kit/native-timeline",
+          "status": "beta"
+        }
+      }
     }
   ]
 }

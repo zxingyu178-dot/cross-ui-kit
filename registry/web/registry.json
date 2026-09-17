@@ -2568,6 +2568,76 @@
       },
       "docs": "packages/ui-web/src/Divider/README.md",
       "examples": ["packages/ui-web/src/Divider/__examples__/States.tsx"]
+    },
+    {
+      "name": "timeline",
+      "type": "registry:component",
+      "title": "时间线 Timeline",
+      "description": "垂直时间轴，语义色圆点（solid/outline）+ 时间 + 标题 + 描述，支持倒序与自定义圆点",
+      "canonical": "Timeline",
+      "status": "beta",
+      "stack": "web",
+      "dependencies": ["@kit/core"],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "packages/ui-web/src/Timeline/Timeline.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "packages/ui-web/src/Timeline/Timeline.types.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-web/src/Timeline/index.ts",
+          "type": "registry:ui"
+        }
+      ],
+      "props": [
+        {
+          "name": "items",
+          "type": "TimelineItem[]",
+          "required": true,
+          "desc": "时间线条目列表（title/description/time/color/dotType/customDot）"
+        },
+        {
+          "name": "reverse",
+          "type": "boolean",
+          "default": "false",
+          "required": false,
+          "desc": "是否倒序"
+        },
+        {
+          "name": "className",
+          "type": "string",
+          "required": false,
+          "desc": "外层容器类名"
+        }
+      ],
+      "events": [],
+      "slots": ["items[].title", "items[].description", "items[].time"],
+      "tokens": [
+        "color-border-default",
+        "color-primary-default",
+        "color-success-default",
+        "color-warning-default",
+        "color-danger-default",
+        "color-info-default",
+        "color-text-primary",
+        "color-text-secondary",
+        "color-text-tertiary",
+        "font-size-body-md",
+        "font-size-body-sm",
+        "font-size-caption"
+      ],
+      "states": ["normal", "reverse"],
+      "a11y": "ol/li 语义化列表；竖线装饰性 aria-hidden",
+      "usage": {
+        "do": ["文案走 i18n key", "圆点语义色与业务状态对应"],
+        "dont": ["在时间线内放复杂交互", "硬编码颜色"]
+      },
+      "docs": "packages/ui-web/src/Timeline/README.md",
+      "examples": ["packages/ui-web/src/Timeline/__examples__/States.tsx"]
     }
   ]
 }
