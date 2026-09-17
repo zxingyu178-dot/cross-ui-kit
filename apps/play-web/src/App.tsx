@@ -66,6 +66,7 @@ import { States as AnchorStates } from '@kit/ui-web/src/Anchor/__examples__/Stat
 import { States as TourStates } from '@kit/ui-web/src/Tour/__examples__/States'
 import { States as MentionsStates } from '@kit/ui-web/src/Mentions/__examples__/States'
 import { States as FormStates } from '@kit/ui-web/src/Form/__examples__/States'
+import { States as TextAreaStates } from '@kit/ui-web/src/TextArea/__examples__/States'
 import { RequestDemo } from './demos/RequestDemo'
 
 /**
@@ -540,6 +541,13 @@ export default function App() {
           Form · 表单（垂直布局 / 水平布局 / 校验 / 提交）
         </h2>
         <FormStates />
+      </section>
+
+      <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
+        <h2 className="text-title-sm font-medium text-text-primary">
+          TextArea · 多行文本框（基础 / 字数统计 / 禁用）
+        </h2>
+        <TextAreaStates />
       </section>
 
       <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">

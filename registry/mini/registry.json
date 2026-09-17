@@ -6536,6 +6536,126 @@
       },
       "docs": "packages/ui-mini/src/Form/README.md",
       "examples": ["packages/ui-mini/src/Form/__examples__/States.tsx"]
+    },
+    {
+      "name": "textarea",
+      "type": "registry:component",
+      "title": "多行文本框 TextArea",
+      "description": "多行文本框组件，支持字数统计、自适应高度、最大长度",
+      "canonical": "TextArea",
+      "status": "beta",
+      "stack": "mini",
+      "dependencies": ["@kit/core"],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "packages/ui-mini/src/TextArea/TextArea.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "packages/ui-mini/src/TextArea/TextArea.types.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-mini/src/TextArea/TextArea.scss",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-mini/src/TextArea/index.ts",
+          "type": "registry:ui"
+        }
+      ],
+      "props": [
+        {
+          "name": "value",
+          "type": "string",
+          "required": false,
+          "desc": "输入值"
+        },
+        {
+          "name": "onChange",
+          "type": "(value:string)=>void",
+          "required": false,
+          "desc": "值变化回调"
+        },
+        {
+          "name": "placeholder",
+          "type": "string",
+          "default": "'请输入'",
+          "required": false,
+          "desc": "占位文字"
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "default": "false",
+          "required": false,
+          "desc": "是否禁用"
+        },
+        {
+          "name": "rows",
+          "type": "number",
+          "default": "3",
+          "required": false,
+          "desc": "行数"
+        },
+        {
+          "name": "maxLength",
+          "type": "number",
+          "required": false,
+          "desc": "最大长度"
+        },
+        {
+          "name": "showCount",
+          "type": "boolean",
+          "default": "false",
+          "required": false,
+          "desc": "是否显示字数统计"
+        },
+        {
+          "name": "autoSize",
+          "type": "boolean",
+          "default": "false",
+          "required": false,
+          "desc": "是否自适应高度"
+        },
+        {
+          "name": "className",
+          "type": "string",
+          "required": false,
+          "desc": "外层容器类名"
+        }
+      ],
+      "events": [
+        {
+          "name": "onChange",
+          "type": "(value: string) => void",
+          "desc": "值变化回调"
+        }
+      ],
+      "slots": [],
+      "tokens": [
+        "color-bg-card",
+        "color-text-primary",
+        "color-text-tertiary",
+        "color-border-default",
+        "color-primary-default",
+        "radius-md",
+        "font-size-body-sm",
+        "font-size-caption"
+      ],
+      "states": ["normal", "focus", "disabled"],
+      "a11y": "文本框可输入；字数统计可读",
+      "usage": {
+        "do": [
+          "用 TextArea 承载多行文本输入",
+          "showCount 配合 maxLength 显示字数统计",
+          "rows 控制默认行数"
+        ],
+        "dont": ["用 TextArea 承载单行输入（用 Input）", "maxLength 与 showCount 不同时使用"]
+      },
+      "docs": "packages/ui-mini/src/TextArea/README.md",
+      "examples": ["packages/ui-mini/src/TextArea/__examples__/States.tsx"]
     }
   ]
 }

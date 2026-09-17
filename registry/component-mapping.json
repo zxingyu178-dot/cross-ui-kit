@@ -2007,6 +2007,39 @@
           "status": "beta"
         }
       }
+    },
+    {
+      "canonical": "TextArea",
+      "category": "form",
+      "sharedProps": {
+        "value": "string",
+        "onChange": "(v:string)=>void",
+        "placeholder": "string",
+        "disabled": "boolean",
+        "rows": "number",
+        "maxLength": "number",
+        "showCount": "boolean",
+        "autoSize": "boolean"
+      },
+      "eventMap": {
+        "web": "onChange",
+        "mini": "onChange",
+        "native": "onChange"
+      },
+      "stacks": {
+        "web": {
+          "item": "@kit/web-textarea",
+          "status": "beta"
+        },
+        "mini": {
+          "item": "@kit/mini-textarea",
+          "status": "beta"
+        },
+        "native": {
+          "item": "@kit/native-textarea",
+          "status": "beta"
+        }
+      }
     }
   ]
 }
