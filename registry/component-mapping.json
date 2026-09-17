@@ -862,6 +862,42 @@
           "status": "beta"
         }
       }
+    },
+    {
+      "canonical": "InputNumber",
+      "category": "form",
+      "sharedProps": {
+        "value": "number|null",
+        "defaultValue": "number|null",
+        "onChange": "(v:number|null)=>void",
+        "min": "number",
+        "max": "number",
+        "step": "number",
+        "precision": "number",
+        "disabled": "boolean",
+        "size": "sm|md|lg",
+        "placeholder": "string",
+        "controls": "boolean"
+      },
+      "eventMap": {
+        "web": "onChange（input onInput + 按钮 onClick）",
+        "mini": "onChange（Input onInput + View onClick）",
+        "native": "onChange（Input onChangeText + XStack onPress）"
+      },
+      "stacks": {
+        "web": {
+          "item": "@kit/web-input-number",
+          "status": "beta"
+        },
+        "mini": {
+          "item": "@kit/mini-input-number",
+          "status": "beta"
+        },
+        "native": {
+          "item": "@kit/native-input-number",
+          "status": "beta"
+        }
+      }
     }
   ]
 }

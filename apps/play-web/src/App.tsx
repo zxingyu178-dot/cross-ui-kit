@@ -29,6 +29,7 @@ import { States as TooltipStates } from '@kit/ui-web/src/Tooltip/__examples__/St
 import { States as AlertStates } from '@kit/ui-web/src/Alert/__examples__/States'
 import { States as DividerStates } from '@kit/ui-web/src/Divider/__examples__/States'
 import { States as TimelineStates } from '@kit/ui-web/src/Timeline/__examples__/States'
+import { States as InputNumberStates } from '@kit/ui-web/src/InputNumber/__examples__/States'
 import { RequestDemo } from './demos/RequestDemo'
 
 /**
@@ -244,6 +245,13 @@ export default function App() {
           Timeline · 时间线（语义色圆点 / 倒序）
         </h2>
         <TimelineStates />
+      </section>
+
+      <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
+        <h2 className="text-title-sm font-medium text-text-primary">
+          InputNumber · 数字输入（min/max/step/precision / 受控）
+        </h2>
+        <InputNumberStates />
       </section>
 
       <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
