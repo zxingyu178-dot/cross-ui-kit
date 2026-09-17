@@ -36,6 +36,7 @@ import { States as RateStates } from '@kit/ui-web/src/Rate/__examples__/States'
 import { States as CollapseStates } from '@kit/ui-web/src/Collapse/__examples__/States'
 import { States as DropdownMenuStates } from '@kit/ui-web/src/DropdownMenu/__examples__/States'
 import { States as PopoverStates } from '@kit/ui-web/src/Popover/__examples__/States'
+import { States as SliderStates } from '@kit/ui-web/src/Slider/__examples__/States'
 import { RequestDemo } from './demos/RequestDemo'
 
 /**
@@ -300,6 +301,13 @@ export default function App() {
           Popover · 弹出层（四方向 / 三对齐）
         </h2>
         <PopoverStates />
+      </section>
+
+      <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
+        <h2 className="text-title-sm font-medium text-text-primary">
+          Slider · 滑块（范围 / 步长 / 垂直 / 禁用）
+        </h2>
+        <SliderStates />
       </section>
 
       <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">

@@ -3397,6 +3397,114 @@
       },
       "docs": "packages/ui-mini/src/Popover/README.md",
       "examples": ["packages/ui-mini/src/Popover/__examples__/States.tsx"]
+    },
+    {
+      "name": "slider",
+      "type": "registry:component",
+      "title": "滑块 Slider",
+      "description": "滑块选择器，受控优先，min/max/step，禁用态，水平/垂直方向",
+      "canonical": "Slider",
+      "status": "beta",
+      "stack": "mini",
+      "dependencies": ["@kit/core"],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "packages/ui-mini/src/Slider/Slider.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "packages/ui-mini/src/Slider/Slider.types.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-mini/src/Slider/index.ts",
+          "type": "registry:ui"
+        }
+      ],
+      "props": [
+        {
+          "name": "value",
+          "type": "number",
+          "required": false,
+          "desc": "受控值"
+        },
+        {
+          "name": "defaultValue",
+          "type": "number",
+          "default": "0",
+          "required": false,
+          "desc": "非受控默认值"
+        },
+        {
+          "name": "onChange",
+          "type": "(value:number)=>void",
+          "required": false,
+          "desc": "值变化回调"
+        },
+        {
+          "name": "min",
+          "type": "number",
+          "default": "0",
+          "required": false,
+          "desc": "最小值"
+        },
+        {
+          "name": "max",
+          "type": "number",
+          "default": "100",
+          "required": false,
+          "desc": "最大值"
+        },
+        {
+          "name": "step",
+          "type": "number",
+          "default": "1",
+          "required": false,
+          "desc": "步长"
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "default": "false",
+          "required": false,
+          "desc": "是否禁用"
+        },
+        {
+          "name": "orientation",
+          "type": "'horizontal'|'vertical'",
+          "default": "'horizontal'",
+          "required": false,
+          "desc": "方向"
+        },
+        {
+          "name": "className",
+          "type": "string",
+          "required": false,
+          "desc": "外层容器类名"
+        }
+      ],
+      "events": [
+        {
+          "name": "onChange",
+          "type": "(value: number) => void",
+          "desc": "值变化回调"
+        }
+      ],
+      "slots": [],
+      "tokens": ["color-primary-default", "color-border-default", "color-bg-card"],
+      "states": ["normal", "disabled", "focus"],
+      "a11y": "可点击轨道；accessibilityLabel 由值提供",
+      "usage": {
+        "do": [
+          "受控优先；非受控时内部维护 value",
+          "step 控制步长，min/max 控制范围",
+          "垂直方向需父容器有确定高度"
+        ],
+        "dont": ["用 Slider 承载精确数值输入（用 InputNumber）", "硬编码颜色/尺寸"]
+      },
+      "docs": "packages/ui-mini/src/Slider/README.md",
+      "examples": ["packages/ui-mini/src/Slider/__examples__/States.tsx"]
     }
   ]
 }

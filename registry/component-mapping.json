@@ -1080,6 +1080,39 @@
           "status": "beta"
         }
       }
+    },
+    {
+      "canonical": "Slider",
+      "category": "form",
+      "sharedProps": {
+        "value": "number",
+        "defaultValue": "number",
+        "onChange": "(v:number)=>void",
+        "min": "number",
+        "max": "number",
+        "step": "number",
+        "disabled": "boolean",
+        "orientation": "horizontal|vertical"
+      },
+      "eventMap": {
+        "web": "onChange（Radix onValueChange）",
+        "mini": "onChange（Taro Slider onChange）",
+        "native": "onChange（XStack onPress 计算位置）"
+      },
+      "stacks": {
+        "web": {
+          "item": "@kit/web-slider",
+          "status": "beta"
+        },
+        "mini": {
+          "item": "@kit/mini-slider",
+          "status": "beta"
+        },
+        "native": {
+          "item": "@kit/native-slider",
+          "status": "beta"
+        }
+      }
     }
   ]
 }
