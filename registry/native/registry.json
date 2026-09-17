@@ -5016,6 +5016,114 @@
       },
       "docs": "packages/ui-native/src/ColorPicker/README.md",
       "examples": ["packages/ui-native/src/ColorPicker/__examples__/States.tsx"]
+    },
+    {
+      "name": "carousel",
+      "type": "registry:component",
+      "title": "轮播图 Carousel",
+      "description": "轮播图组件，滑动切换 + 指示器 + 左右箭头，支持自动播放",
+      "canonical": "Carousel",
+      "status": "beta",
+      "stack": "native",
+      "dependencies": ["@kit/core"],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "packages/ui-native/src/Carousel/Carousel.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "packages/ui-native/src/Carousel/Carousel.types.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-native/src/Carousel/index.ts",
+          "type": "registry:ui"
+        }
+      ],
+      "props": [
+        {
+          "name": "items",
+          "type": "CarouselItem[]",
+          "default": "[]",
+          "required": false,
+          "desc": "轮播项"
+        },
+        {
+          "name": "autoplay",
+          "type": "boolean",
+          "default": "false",
+          "required": false,
+          "desc": "是否自动播放"
+        },
+        {
+          "name": "interval",
+          "type": "number",
+          "default": "3000",
+          "required": false,
+          "desc": "自动播放间隔（ms）"
+        },
+        {
+          "name": "dots",
+          "type": "boolean",
+          "default": "true",
+          "required": false,
+          "desc": "是否显示指示器"
+        },
+        {
+          "name": "arrows",
+          "type": "boolean",
+          "default": "true",
+          "required": false,
+          "desc": "是否显示左右箭头"
+        },
+        {
+          "name": "onChange",
+          "type": "(index:number)=>void",
+          "required": false,
+          "desc": "当前索引变化回调"
+        },
+        {
+          "name": "height",
+          "type": "number",
+          "default": "200",
+          "required": false,
+          "desc": "高度（px）"
+        },
+        {
+          "name": "style",
+          "type": "ViewStyle",
+          "required": false,
+          "desc": "外层容器样式"
+        }
+      ],
+      "events": [
+        {
+          "name": "onChange",
+          "type": "(index: number) => void",
+          "desc": "当前索引变化回调"
+        }
+      ],
+      "slots": ["items[].content"],
+      "tokens": [
+        "color-primary-default",
+        "color-bg-card",
+        "color-bg-muted",
+        "color-text-primary",
+        "radius-md"
+      ],
+      "states": ["normal", "autoplay", "no-dots", "no-arrows"],
+      "a11y": "左右箭头可点击；指示器可点击切换；aria-label 提供",
+      "usage": {
+        "do": [
+          "用 Carousel 承载图片/卡片轮播",
+          "autoplay 开启自动播放",
+          "items 为数组，每项含 key 和 content"
+        ],
+        "dont": ["用 Carousel 承载单个内容（用 Card）", "在轮播项内硬编码高度"]
+      },
+      "docs": "packages/ui-native/src/Carousel/README.md",
+      "examples": ["packages/ui-native/src/Carousel/__examples__/States.tsx"]
     }
   ]
 }

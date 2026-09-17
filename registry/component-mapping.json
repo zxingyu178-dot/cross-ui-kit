@@ -1605,6 +1605,38 @@
           "status": "beta"
         }
       }
+    },
+    {
+      "canonical": "Carousel",
+      "category": "data-display",
+      "sharedProps": {
+        "items": "CarouselItem[]",
+        "autoplay": "boolean",
+        "interval": "number",
+        "dots": "boolean",
+        "arrows": "boolean",
+        "onChange": "(i:number)=>void",
+        "height": "number"
+      },
+      "eventMap": {
+        "web": "onChange（索引变化）",
+        "mini": "onChange（索引变化）",
+        "native": "onChange（索引变化）"
+      },
+      "stacks": {
+        "web": {
+          "item": "@kit/web-carousel",
+          "status": "beta"
+        },
+        "mini": {
+          "item": "@kit/mini-carousel",
+          "status": "beta"
+        },
+        "native": {
+          "item": "@kit/native-carousel",
+          "status": "beta"
+        }
+      }
     }
   ]
 }
