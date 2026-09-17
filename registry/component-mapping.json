@@ -1113,6 +1113,39 @@
           "status": "beta"
         }
       }
+    },
+    {
+      "canonical": "AutoComplete",
+      "category": "form",
+      "sharedProps": {
+        "value": "string",
+        "defaultValue": "string",
+        "onChange": "(v:string)=>void",
+        "onSelect": "(opt)=>void",
+        "options": "AutoCompleteOption[]",
+        "placeholder": "string",
+        "disabled": "boolean",
+        "filterOption": "(input,opt)=>boolean"
+      },
+      "eventMap": {
+        "web": "onChange/onSelect（键盘导航）",
+        "mini": "onChange/onSelect（onInput/onBlur）",
+        "native": "onChange/onSelect（onChangeText/onBlur）"
+      },
+      "stacks": {
+        "web": {
+          "item": "@kit/web-auto-complete",
+          "status": "beta"
+        },
+        "mini": {
+          "item": "@kit/mini-auto-complete",
+          "status": "beta"
+        },
+        "native": {
+          "item": "@kit/native-auto-complete",
+          "status": "beta"
+        }
+      }
     }
   ]
 }

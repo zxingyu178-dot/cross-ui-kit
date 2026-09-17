@@ -3448,6 +3448,124 @@
       },
       "docs": "packages/ui-native/src/Slider/README.md",
       "examples": ["packages/ui-native/src/Slider/__examples__/States.tsx"]
+    },
+    {
+      "name": "auto-complete",
+      "type": "registry:component",
+      "title": "自动完成 AutoComplete",
+      "description": "输入框 + 下拉候选列表，受控优先，自定义过滤，键盘无障碍",
+      "canonical": "AutoComplete",
+      "status": "beta",
+      "stack": "native",
+      "dependencies": ["@kit/core"],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "packages/ui-native/src/AutoComplete/AutoComplete.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "packages/ui-native/src/AutoComplete/AutoComplete.types.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-native/src/AutoComplete/index.ts",
+          "type": "registry:ui"
+        }
+      ],
+      "props": [
+        {
+          "name": "value",
+          "type": "string",
+          "required": false,
+          "desc": "受控值"
+        },
+        {
+          "name": "defaultValue",
+          "type": "string",
+          "default": "''",
+          "required": false,
+          "desc": "非受控默认值"
+        },
+        {
+          "name": "onChange",
+          "type": "(value:string)=>void",
+          "required": false,
+          "desc": "值变化回调"
+        },
+        {
+          "name": "onSelect",
+          "type": "(option:AutoCompleteOption)=>void",
+          "required": false,
+          "desc": "选中选项回调"
+        },
+        {
+          "name": "options",
+          "type": "AutoCompleteOption[]",
+          "required": true,
+          "desc": "选项列表（value/label/disabled）"
+        },
+        {
+          "name": "placeholder",
+          "type": "string",
+          "required": false,
+          "desc": "占位文本"
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "default": "false",
+          "required": false,
+          "desc": "是否禁用"
+        },
+        {
+          "name": "filterOption",
+          "type": "(inputValue,option)=>boolean",
+          "required": false,
+          "desc": "自定义过滤函数（默认模糊匹配）"
+        },
+        {
+          "name": "style",
+          "type": "ViewStyle",
+          "required": false,
+          "desc": "外层容器样式"
+        }
+      ],
+      "events": [
+        {
+          "name": "onChange",
+          "type": "(value: string) => void",
+          "desc": "值变化回调"
+        },
+        {
+          "name": "onSelect",
+          "type": "(option: AutoCompleteOption) => void",
+          "desc": "选中选项回调"
+        }
+      ],
+      "slots": [],
+      "tokens": [
+        "color-border-default",
+        "color-bg-card",
+        "color-text-primary",
+        "color-text-secondary",
+        "color-text-tertiary",
+        "radius-md",
+        "font-size-body-md",
+        "font-size-body-sm"
+      ],
+      "states": ["normal", "focus", "open", "disabled"],
+      "a11y": "可点击选项；accessibilityLabel 由 placeholder 提供",
+      "usage": {
+        "do": [
+          "受控优先；非受控时内部维护 value",
+          "options 必须提供 value 和 label",
+          "自定义 filterOption 实现精确匹配/拼音匹配等"
+        ],
+        "dont": ["用 AutoComplete 承载静态选择（用 Select）", "options 中 value 重复"]
+      },
+      "docs": "packages/ui-native/src/AutoComplete/README.md",
+      "examples": ["packages/ui-native/src/AutoComplete/__examples__/States.tsx"]
     }
   ]
 }
