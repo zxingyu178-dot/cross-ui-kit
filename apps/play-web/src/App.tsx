@@ -52,6 +52,7 @@ import { States as ListStates } from '@kit/ui-web/src/List/__examples__/States'
 import { States as SpaceStates } from '@kit/ui-web/src/Space/__examples__/States'
 import { States as GridStates } from '@kit/ui-web/src/Grid/__examples__/States'
 import { States as AffixStates } from '@kit/ui-web/src/Affix/__examples__/States'
+import { States as ColorPickerStates } from '@kit/ui-web/src/ColorPicker/__examples__/States'
 import { RequestDemo } from './demos/RequestDemo'
 
 /**
@@ -428,6 +429,13 @@ export default function App() {
           Affix · 固钉（顶部/底部固定，滚动查看效果）
         </h2>
         <AffixStates />
+      </section>
+
+      <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
+        <h2 className="text-title-sm font-medium text-text-primary">
+          ColorPicker · 颜色选择器（预设色板 / 自定义颜色 / 禁用）
+        </h2>
+        <ColorPickerStates />
       </section>
 
       <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">

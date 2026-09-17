@@ -1,0 +1,76 @@
+/* ColorPicker（mini）样式：颜色全走 --kit-* token。 */
+
+.kit-colorpicker {
+  position: relative;
+  width: 100%;
+}
+
+.kit-colorpicker__trigger {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  height: 40px;
+  padding: 0 12px;
+  border: 1px solid var(--kit-color-border-default);
+  border-radius: var(--kit-radius-md);
+  background: var(--kit-color-bg-card);
+}
+
+.kit-colorpicker__trigger--open {
+  border-color: var(--kit-color-primary-default);
+}
+
+.kit-colorpicker__trigger--disabled {
+  opacity: 0.5;
+}
+
+.kit-colorpicker__swatch {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  border: 1px solid var(--kit-color-border-default);
+  flex-shrink: 0;
+}
+
+.kit-colorpicker__text {
+  font-size: var(--kit-font-size-body-md);
+  color: var(--kit-color-text-primary);
+}
+
+.kit-colorpicker__placeholder {
+  font-size: var(--kit-font-size-body-md);
+  color: var(--kit-color-text-tertiary);
+}
+
+.kit-colorpicker__panel {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 4px;
+  padding: 12px;
+  border: 1px solid var(--kit-color-border-default);
+  border-radius: var(--kit-radius-md);
+  background: var(--kit-color-bg-card);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+  width: 224px;
+}
+
+.kit-colorpicker__presets {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.kit-colorpicker__preset {
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  border: 2px solid transparent;
+}
+
+.kit-colorpicker__preset--active {
+  border-color: var(--kit-color-primary-default);
+}

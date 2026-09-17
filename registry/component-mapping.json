@@ -1574,6 +1574,37 @@
           "status": "beta"
         }
       }
+    },
+    {
+      "canonical": "ColorPicker",
+      "category": "form",
+      "sharedProps": {
+        "value": "string",
+        "defaultValue": "string",
+        "onChange": "(c:string)=>void",
+        "presetColors": "string[]",
+        "disabled": "boolean",
+        "placeholder": "string"
+      },
+      "eventMap": {
+        "web": "onChange（选择颜色）",
+        "mini": "onChange（选择颜色）",
+        "native": "onChange（选择颜色）"
+      },
+      "stacks": {
+        "web": {
+          "item": "@kit/web-color-picker",
+          "status": "beta"
+        },
+        "mini": {
+          "item": "@kit/mini-color-picker",
+          "status": "beta"
+        },
+        "native": {
+          "item": "@kit/native-color-picker",
+          "status": "beta"
+        }
+      }
     }
   ]
 }
