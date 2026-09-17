@@ -4250,6 +4250,106 @@
       },
       "docs": "packages/ui-web/src/Cascader/README.md",
       "examples": ["packages/ui-web/src/Cascader/__examples__/States.tsx"]
+    },
+    {
+      "name": "time-picker",
+      "type": "registry:component",
+      "title": "时间选择器 TimePicker",
+      "description": "时间选择器，多列时间选择面板（时/分/秒），受控优先，支持 HH:mm:ss / HH:mm 格式",
+      "canonical": "TimePicker",
+      "status": "beta",
+      "stack": "web",
+      "dependencies": ["@kit/core"],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "packages/ui-web/src/TimePicker/TimePicker.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "packages/ui-web/src/TimePicker/TimePicker.types.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-web/src/TimePicker/index.ts",
+          "type": "registry:ui"
+        }
+      ],
+      "props": [
+        {
+          "name": "value",
+          "type": "string",
+          "required": false,
+          "desc": "受控值（HH:mm:ss 或 HH:mm）"
+        },
+        {
+          "name": "defaultValue",
+          "type": "string",
+          "default": "''",
+          "required": false,
+          "desc": "非受控默认值"
+        },
+        {
+          "name": "onChange",
+          "type": "(value:string)=>void",
+          "required": false,
+          "desc": "值变化回调"
+        },
+        {
+          "name": "format",
+          "type": "'HH:mm:ss'|'HH:mm'",
+          "default": "'HH:mm:ss'",
+          "required": false,
+          "desc": "时间格式"
+        },
+        {
+          "name": "placeholder",
+          "type": "string",
+          "default": "'请选择时间'",
+          "required": false,
+          "desc": "占位文本"
+        },
+        {
+          "name": "className",
+          "type": "string",
+          "required": false,
+          "desc": "外层容器类名"
+        }
+      ],
+      "events": [
+        {
+          "name": "onChange",
+          "type": "(value: string) => void",
+          "desc": "值变化回调"
+        }
+      ],
+      "slots": [],
+      "tokens": [
+        "color-primary-default",
+        "color-bg-card",
+        "color-text-primary",
+        "color-text-secondary",
+        "color-text-tertiary",
+        "color-border-default",
+        "radius-md",
+        "font-size-body-md",
+        "font-size-body-sm"
+      ],
+      "states": ["normal", "open", "selected"],
+      "a11y": "时间选项可点击；accessibilityLabel 由值提供",
+      "usage": {
+        "do": [
+          "受控优先；value + onChange 配合使用",
+          "format 控制时间格式（HH:mm:ss / HH:mm）",
+          "时 0-23，分/秒 0-59"
+        ],
+        "dont": [
+          "用 TimePicker 承载日期选择（用 Calendar/DatePicker）",
+          "value 格式与 format 不一致"
+        ]
+      },
+      "docs": "packages/ui-web/src/TimePicker/README.md",
+      "examples": ["packages/ui-web/src/TimePicker/__examples__/States.tsx"]
     }
   ]
 }

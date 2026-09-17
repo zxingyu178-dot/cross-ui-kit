@@ -1361,6 +1361,36 @@
           "status": "beta"
         }
       }
+    },
+    {
+      "canonical": "TimePicker",
+      "category": "form",
+      "sharedProps": {
+        "value": "string",
+        "defaultValue": "string",
+        "onChange": "(v:string)=>void",
+        "format": "HH:mm:ss|HH:mm",
+        "placeholder": "string"
+      },
+      "eventMap": {
+        "web": "onChange（点击时间选项）",
+        "mini": "onChange（点击时间选项）",
+        "native": "onChange（点击时间选项）"
+      },
+      "stacks": {
+        "web": {
+          "item": "@kit/web-time-picker",
+          "status": "beta"
+        },
+        "mini": {
+          "item": "@kit/mini-time-picker",
+          "status": "beta"
+        },
+        "native": {
+          "item": "@kit/native-time-picker",
+          "status": "beta"
+        }
+      }
     }
   ]
 }

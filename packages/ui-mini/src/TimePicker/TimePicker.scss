@@ -1,0 +1,78 @@
+/* TimePicker（mini）样式：颜色全走 --kit-* token。 */
+
+.kit-timepicker {
+  position: relative;
+  width: 100%;
+}
+
+.kit-timepicker__trigger {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 40px;
+  padding: 0 12px;
+  border: 1px solid var(--kit-color-border-default);
+  border-radius: var(--kit-radius-md);
+  background: var(--kit-color-bg-card);
+}
+
+.kit-timepicker__trigger--open {
+  border-color: var(--kit-color-primary-default);
+}
+
+.kit-timepicker__text {
+  font-size: var(--kit-font-size-body-md);
+  color: var(--kit-color-text-primary);
+}
+
+.kit-timepicker__placeholder {
+  font-size: var(--kit-font-size-body-md);
+  color: var(--kit-color-text-tertiary);
+}
+
+.kit-timepicker__arrow {
+  font-size: 12px;
+  color: var(--kit-color-text-tertiary);
+}
+
+.kit-timepicker__panel {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 4px;
+  display: flex;
+  flex-direction: row;
+  max-height: 192px;
+  overflow: hidden;
+  border: 1px solid var(--kit-color-border-default);
+  border-radius: var(--kit-radius-md);
+  background: var(--kit-color-bg-card);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+}
+
+.kit-timepicker__column {
+  min-width: 60px;
+  flex: 1;
+  border-right: 1px solid var(--kit-color-border-default);
+  padding: 4px 0;
+  overflow-y: auto;
+}
+
+.kit-timepicker__column:last-child {
+  border-right: none;
+}
+
+.kit-timepicker__option {
+  padding: 6px 12px;
+  text-align: center;
+  font-size: var(--kit-font-size-body-sm);
+  color: var(--kit-color-text-secondary);
+}
+
+.kit-timepicker__option--active {
+  background: rgba(37, 99, 235, 0.1);
+  color: var(--kit-color-primary-default);
+  font-weight: 500;
+}
