@@ -1,0 +1,29 @@
+/* OtpInput（mini）样式：颜色全走 --kit-* token。 */
+
+.kit-otp-input {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+.kit-otp-input__item {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: var(--kit-font-size-title-sm);
+  font-weight: 500;
+  color: var(--kit-color-text-primary);
+  border: 1px solid var(--kit-color-border-default);
+  border-radius: var(--kit-radius-md);
+  background: var(--kit-color-bg-card);
+  box-sizing: border-box;
+}
+
+.kit-otp-input__item--disabled {
+  background: var(--kit-color-bg-muted);
+  opacity: 0.5;
+}

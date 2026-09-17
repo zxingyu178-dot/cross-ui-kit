@@ -2102,6 +2102,36 @@
           "status": "beta"
         }
       }
+    },
+    {
+      "canonical": "OtpInput",
+      "category": "form",
+      "sharedProps": {
+        "value": "string",
+        "onChange": "(v:string)=>void",
+        "length": "number",
+        "disabled": "boolean",
+        "password": "boolean"
+      },
+      "eventMap": {
+        "web": "onChange",
+        "mini": "onChange",
+        "native": "onChange"
+      },
+      "stacks": {
+        "web": {
+          "item": "@kit/web-otp-input",
+          "status": "beta"
+        },
+        "mini": {
+          "item": "@kit/mini-otp-input",
+          "status": "beta"
+        },
+        "native": {
+          "item": "@kit/native-otp-input",
+          "status": "beta"
+        }
+      }
     }
   ]
 }
