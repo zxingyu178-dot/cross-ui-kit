@@ -60,6 +60,7 @@ import { States as WatermarkStates } from '@kit/ui-web/src/Watermark/__examples_
 import { States as CountdownStates } from '@kit/ui-web/src/Countdown/__examples__/States'
 import { States as FloatButtonStates } from '@kit/ui-web/src/FloatButton/__examples__/States'
 import { States as TypographyStates } from '@kit/ui-web/src/Typography/__examples__/States'
+import { States as TreeSelectStates } from '@kit/ui-web/src/TreeSelect/__examples__/States'
 import { RequestDemo } from './demos/RequestDemo'
 
 /**
@@ -492,6 +493,13 @@ export default function App() {
           Typography · 排版（h1-h4 / body / caption / 省略 / 加粗 / 自定义颜色）
         </h2>
         <TypographyStates />
+      </section>
+
+      <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
+        <h2 className="text-title-sm font-medium text-text-primary">
+          TreeSelect · 树形选择器（基础 / 禁用 / 多级嵌套）
+        </h2>
+        <TreeSelectStates />
       </section>
 
       <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">

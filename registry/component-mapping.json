@@ -1814,6 +1814,37 @@
           "status": "beta"
         }
       }
+    },
+    {
+      "canonical": "TreeSelect",
+      "category": "form",
+      "sharedProps": {
+        "data": "TreeSelectNode[]",
+        "value": "string",
+        "onChange": "(v:string,n:TreeSelectNode|null)=>void",
+        "placeholder": "string",
+        "disabled": "boolean",
+        "allowClear": "boolean"
+      },
+      "eventMap": {
+        "web": "onChange（选中变化）",
+        "mini": "onChange（选中变化）",
+        "native": "onChange（选中变化）"
+      },
+      "stacks": {
+        "web": {
+          "item": "@kit/web-tree-select",
+          "status": "beta"
+        },
+        "mini": {
+          "item": "@kit/mini-tree-select",
+          "status": "beta"
+        },
+        "native": {
+          "item": "@kit/native-tree-select",
+          "status": "beta"
+        }
+      }
     }
   ]
 }
