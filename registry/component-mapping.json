@@ -898,6 +898,37 @@
           "status": "beta"
         }
       }
+    },
+    {
+      "canonical": "Statistic",
+      "category": "data-display",
+      "sharedProps": {
+        "title": "ReactNode",
+        "value": "number|string",
+        "prefix": "ReactNode",
+        "suffix": "ReactNode",
+        "precision": "number",
+        "loading": "boolean"
+      },
+      "eventMap": {
+        "web": "无（纯展示）",
+        "mini": "无",
+        "native": "无"
+      },
+      "stacks": {
+        "web": {
+          "item": "@kit/web-statistic",
+          "status": "beta"
+        },
+        "mini": {
+          "item": "@kit/mini-statistic",
+          "status": "beta"
+        },
+        "native": {
+          "item": "@kit/native-statistic",
+          "status": "beta"
+        }
+      }
     }
   ]
 }

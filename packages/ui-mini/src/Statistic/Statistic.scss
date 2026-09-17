@@ -1,0 +1,51 @@
+/* Statistic（mini）样式：颜色/字号全走 --kit-* token。 */
+
+.kit-statistic {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.kit-statistic__title {
+  font-size: var(--kit-font-size-body-sm);
+  color: var(--kit-color-text-secondary);
+  line-height: 1.4;
+}
+
+.kit-statistic__value-row {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  gap: 4px;
+}
+
+.kit-statistic__value {
+  font-size: var(--kit-font-size-title-sm);
+  font-weight: var(--kit-font-weight-semibold);
+  color: var(--kit-color-text-primary);
+  line-height: 1.2;
+}
+
+.kit-statistic__affix {
+  font-size: var(--kit-font-size-body-md);
+  font-weight: var(--kit-font-weight-medium);
+  color: var(--kit-color-text-primary);
+}
+
+.kit-statistic__skeleton {
+  width: 128px;
+  height: 32px;
+  border-radius: var(--kit-radius-sm);
+  background: var(--kit-color-bg-muted);
+  animation: kit-statistic-pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes kit-statistic-pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}

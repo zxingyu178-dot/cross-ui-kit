@@ -2774,6 +2774,106 @@
       },
       "docs": "packages/ui-web/src/InputNumber/README.md",
       "examples": ["packages/ui-web/src/InputNumber/__examples__/States.tsx"]
+    },
+    {
+      "name": "statistic",
+      "type": "registry:component",
+      "title": "统计数值 Statistic",
+      "description": "标题 + 数值（前缀/后缀），number 自动千分位+precision，loading 骨架",
+      "canonical": "Statistic",
+      "status": "beta",
+      "stack": "web",
+      "dependencies": ["@kit/core"],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "packages/ui-web/src/Statistic/Statistic.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "packages/ui-web/src/Statistic/Statistic.types.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-web/src/Statistic/index.ts",
+          "type": "registry:ui"
+        }
+      ],
+      "props": [
+        {
+          "name": "title",
+          "type": "ReactNode",
+          "required": false,
+          "desc": "标题"
+        },
+        {
+          "name": "value",
+          "type": "number|string",
+          "required": true,
+          "desc": "数值（number 自动千分位）"
+        },
+        {
+          "name": "prefix",
+          "type": "ReactNode",
+          "required": false,
+          "desc": "前缀"
+        },
+        {
+          "name": "suffix",
+          "type": "ReactNode",
+          "required": false,
+          "desc": "后缀"
+        },
+        {
+          "name": "precision",
+          "type": "number",
+          "required": false,
+          "desc": "小数精度"
+        },
+        {
+          "name": "loading",
+          "type": "boolean",
+          "default": "false",
+          "required": false,
+          "desc": "加载中骨架"
+        },
+        {
+          "name": "valueStyle",
+          "type": "CSSProperties",
+          "required": false,
+          "desc": "数值自定义样式"
+        },
+        {
+          "name": "className",
+          "type": "string",
+          "required": false,
+          "desc": "外层容器类名"
+        }
+      ],
+      "events": [],
+      "slots": ["title", "prefix", "suffix"],
+      "tokens": [
+        "color-text-primary",
+        "color-text-secondary",
+        "color-bg-muted",
+        "font-size-title-sm",
+        "font-size-body-md",
+        "font-size-body-sm",
+        "font-weight-semibold",
+        "radius-sm"
+      ],
+      "states": ["normal", "loading"],
+      "a11y": "纯展示组件；数值可由屏幕阅读器读取",
+      "usage": {
+        "do": [
+          "number 类型自动千分位格式化；string 原样展示",
+          "loading 时显示骨架",
+          "前缀/后缀用于货币、单位等"
+        ],
+        "dont": ["用 Statistic 承载复杂交互", "硬编码颜色/字号"]
+      },
+      "docs": "packages/ui-web/src/Statistic/README.md",
+      "examples": ["packages/ui-web/src/Statistic/__examples__/States.tsx"]
     }
   ]
 }
