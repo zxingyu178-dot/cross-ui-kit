@@ -63,6 +63,7 @@ import { States as TypographyStates } from '@kit/ui-web/src/Typography/__example
 import { States as TreeSelectStates } from '@kit/ui-web/src/TreeSelect/__examples__/States'
 import { States as NotificationStates } from '@kit/ui-web/src/Notification/__examples__/States'
 import { States as AnchorStates } from '@kit/ui-web/src/Anchor/__examples__/States'
+import { States as TourStates } from '@kit/ui-web/src/Tour/__examples__/States'
 import { RequestDemo } from './demos/RequestDemo'
 
 /**
@@ -516,6 +517,13 @@ export default function App() {
           Anchor · 锚点（基础 / 固定定位 sticky）
         </h2>
         <AnchorStates />
+      </section>
+
+      <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
+        <h2 className="text-title-sm font-medium text-text-primary">
+          Tour · 引导（遮罩 + 步骤卡片 + 上一步/下一步/跳过/完成）
+        </h2>
+        <TourStates />
       </section>
 
       <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">

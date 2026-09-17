@@ -1908,6 +1908,42 @@
           "status": "beta"
         }
       }
+    },
+    {
+      "canonical": "Tour",
+      "category": "overlay",
+      "sharedProps": {
+        "steps": "TourStep[]",
+        "current": "number",
+        "onChange": "(c:number)=>void",
+        "onFinish": "()=>void",
+        "onClose": "()=>void",
+        "mask": "boolean",
+        "prevText": "string",
+        "nextText": "string",
+        "finishText": "string",
+        "skipText": "string",
+        "showSkip": "boolean"
+      },
+      "eventMap": {
+        "web": "onChange/onFinish/onClose",
+        "mini": "onChange/onFinish/onClose",
+        "native": "onChange/onFinish/onClose"
+      },
+      "stacks": {
+        "web": {
+          "item": "@kit/web-tour",
+          "status": "beta"
+        },
+        "mini": {
+          "item": "@kit/mini-tour",
+          "status": "beta"
+        },
+        "native": {
+          "item": "@kit/native-tour",
+          "status": "beta"
+        }
+      }
     }
   ]
 }
