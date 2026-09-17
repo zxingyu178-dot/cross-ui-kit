@@ -1,0 +1,65 @@
+/* Segmented（mini）样式：颜色全走 --kit-* token。 */
+
+.kit-segmented {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+  padding: 4px;
+  border-radius: var(--kit-radius-lg);
+  background: var(--kit-color-bg-muted);
+  box-sizing: border-box;
+}
+
+.kit-segmented--disabled {
+  opacity: 0.5;
+}
+
+.kit-segmented__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--kit-radius-md);
+  font-weight: var(--kit-font-weight-medium);
+  transition: all 0.15s ease;
+  box-sizing: border-box;
+}
+
+.kit-segmented__item--sm {
+  height: 32px;
+  padding: 0 12px;
+  font-size: var(--kit-font-size-body-sm);
+}
+
+.kit-segmented__item--md {
+  height: 40px;
+  padding: 0 16px;
+  font-size: var(--kit-font-size-body-md);
+}
+
+.kit-segmented__item--lg {
+  height: 48px;
+  padding: 0 20px;
+  font-size: var(--kit-font-size-title-sm);
+}
+
+.kit-segmented__item--active {
+  background: var(--kit-color-bg-card);
+  color: var(--kit-color-text-primary);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+}
+
+.kit-segmented__item:not(.kit-segmented__item--active) {
+  color: var(--kit-color-text-secondary);
+}
+
+.kit-segmented__item--disabled {
+  opacity: 0.4;
+}
+
+.kit-segmented__label {
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+  line-height: 1;
+}

@@ -929,6 +929,37 @@
           "status": "beta"
         }
       }
+    },
+    {
+      "canonical": "Segmented",
+      "category": "form",
+      "sharedProps": {
+        "value": "string",
+        "defaultValue": "string",
+        "onChange": "(v:string)=>void",
+        "options": "SegmentedOption[]",
+        "size": "sm|md|lg",
+        "disabled": "boolean"
+      },
+      "eventMap": {
+        "web": "onChange（button onClick）",
+        "mini": "onChange（View onClick）",
+        "native": "onChange（XStack onPress）"
+      },
+      "stacks": {
+        "web": {
+          "item": "@kit/web-segmented",
+          "status": "beta"
+        },
+        "mini": {
+          "item": "@kit/mini-segmented",
+          "status": "beta"
+        },
+        "native": {
+          "item": "@kit/native-segmented",
+          "status": "beta"
+        }
+      }
     }
   ]
 }

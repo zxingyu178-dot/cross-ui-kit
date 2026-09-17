@@ -31,6 +31,7 @@ import { States as DividerStates } from '@kit/ui-web/src/Divider/__examples__/St
 import { States as TimelineStates } from '@kit/ui-web/src/Timeline/__examples__/States'
 import { States as InputNumberStates } from '@kit/ui-web/src/InputNumber/__examples__/States'
 import { States as StatisticStates } from '@kit/ui-web/src/Statistic/__examples__/States'
+import { States as SegmentedStates } from '@kit/ui-web/src/Segmented/__examples__/States'
 import { RequestDemo } from './demos/RequestDemo'
 
 /**
@@ -260,6 +261,13 @@ export default function App() {
           Statistic · 统计数值（千分位 / 前缀后缀 / 加载骨架）
         </h2>
         <StatisticStates />
+      </section>
+
+      <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
+        <h2 className="text-title-sm font-medium text-text-primary">
+          Segmented · 分段控制器（受控 / 禁用项 / 三尺寸）
+        </h2>
+        <SegmentedStates />
       </section>
 
       <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">

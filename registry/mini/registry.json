@@ -2900,6 +2900,113 @@
       },
       "docs": "packages/ui-mini/src/Statistic/README.md",
       "examples": ["packages/ui-mini/src/Statistic/__examples__/States.tsx"]
+    },
+    {
+      "name": "segmented",
+      "type": "registry:component",
+      "title": "分段控制器 Segmented",
+      "description": "受控优先分段控制器，选项切换，选中态高亮卡片，整体/单项禁用，三尺寸",
+      "canonical": "Segmented",
+      "status": "beta",
+      "stack": "mini",
+      "dependencies": ["@kit/core"],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "packages/ui-mini/src/Segmented/Segmented.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "packages/ui-mini/src/Segmented/Segmented.types.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-mini/src/Segmented/Segmented.scss",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-mini/src/Segmented/index.ts",
+          "type": "registry:ui"
+        }
+      ],
+      "props": [
+        {
+          "name": "value",
+          "type": "string",
+          "required": false,
+          "desc": "受控值"
+        },
+        {
+          "name": "defaultValue",
+          "type": "string",
+          "required": false,
+          "desc": "非受控默认值"
+        },
+        {
+          "name": "onChange",
+          "type": "(value:string)=>void",
+          "required": false,
+          "desc": "值变化回调"
+        },
+        {
+          "name": "options",
+          "type": "SegmentedOption[]",
+          "required": true,
+          "desc": "选项列表（label/value/disabled）"
+        },
+        {
+          "name": "size",
+          "type": "'sm'|'md'|'lg'",
+          "default": "'md'",
+          "required": false,
+          "desc": "尺寸"
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "default": "false",
+          "required": false,
+          "desc": "整体禁用"
+        },
+        {
+          "name": "className",
+          "type": "string",
+          "required": false,
+          "desc": "外层容器类名"
+        }
+      ],
+      "events": [
+        {
+          "name": "onChange",
+          "type": "(value: string) => void",
+          "desc": "值变化回调"
+        }
+      ],
+      "slots": ["options[].label"],
+      "tokens": [
+        "color-bg-muted",
+        "color-bg-card",
+        "color-text-primary",
+        "color-text-secondary",
+        "radius-md",
+        "radius-lg",
+        "font-size-body-md",
+        "font-size-body-sm",
+        "font-size-title-sm",
+        "motion-fast"
+      ],
+      "states": ["normal", "active", "disabled"],
+      "a11y": "选项可点击；accessibilityLabel 由 label 提供",
+      "usage": {
+        "do": [
+          "受控优先；非受控时内部维护 value",
+          "单项 disabled 与整体 disabled 同时生效",
+          "用于 2-5 个互斥选项的切换"
+        ],
+        "dont": ["用 Segmented 承载超过 5 个选项（用 Select）", "硬编码颜色/尺寸"]
+      },
+      "docs": "packages/ui-mini/src/Segmented/README.md",
+      "examples": ["packages/ui-mini/src/Segmented/__examples__/States.tsx"]
     }
   ]
 }
