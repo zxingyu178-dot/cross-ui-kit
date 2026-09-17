@@ -77,6 +77,7 @@ import { States as TagGroupStates } from '@kit/ui-web/src/TagGroup/__examples__/
 import { States as CardGroupStates } from '@kit/ui-web/src/CardGroup/__examples__/States'
 import { States as StatisticCardStates } from '@kit/ui-web/src/StatisticCard/__examples__/States'
 import { States as PasswordStrengthStates } from '@kit/ui-web/src/PasswordStrength/__examples__/States'
+import { States as CaptchaStates } from '@kit/ui-web/src/Captcha/__examples__/States'
 import { RequestDemo } from './demos/RequestDemo'
 
 /**
@@ -628,6 +629,13 @@ export default function App() {
           PasswordStrength · 密码强度指示器（输入测试 / 各等级预览）
         </h2>
         <PasswordStrengthStates />
+      </section>
+
+      <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
+        <h2 className="text-title-sm font-medium text-text-primary">
+          Captcha · 验证码输入框（基础 / 自定义 / 禁用）
+        </h2>
+        <CaptchaStates />
       </section>
 
       <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">

@@ -1,0 +1,45 @@
+/* Captcha（mini）样式：颜色全走 --kit-* token。 */
+
+.kit-captcha {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+}
+
+.kit-captcha__input {
+  flex: 1;
+  height: 36px;
+  padding: 0 12px;
+  border: 1px solid var(--kit-color-border-default);
+  border-radius: var(--kit-radius-md);
+  background: var(--kit-color-bg-card);
+  font-size: var(--kit-font-size-body-sm);
+  color: var(--kit-color-text-primary);
+  box-sizing: border-box;
+}
+
+.kit-captcha__input--disabled {
+  background: var(--kit-color-bg-muted);
+  opacity: 0.5;
+}
+
+.kit-captcha__button {
+  flex-shrink: 0;
+  height: 36px;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--kit-radius-md);
+  background: var(--kit-color-primary-default);
+  font-size: var(--kit-font-size-body-sm);
+  font-weight: 500;
+  color: #fff;
+}
+
+.kit-captcha__button--disabled {
+  background: var(--kit-color-bg-muted);
+  color: var(--kit-color-text-tertiary);
+}

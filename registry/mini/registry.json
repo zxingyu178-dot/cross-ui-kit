@@ -7620,6 +7620,125 @@
       },
       "docs": "packages/ui-mini/src/PasswordStrength/README.md",
       "examples": ["packages/ui-mini/src/PasswordStrength/__examples__/States.tsx"]
+    },
+    {
+      "name": "captcha",
+      "type": "registry:component",
+      "title": "验证码输入框 Captcha",
+      "description": "验证码输入框组件，输入框 + 发送按钮（倒计时）",
+      "canonical": "Captcha",
+      "status": "beta",
+      "stack": "mini",
+      "dependencies": ["@kit/core"],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "packages/ui-mini/src/Captcha/Captcha.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "packages/ui-mini/src/Captcha/Captcha.types.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-mini/src/Captcha/Captcha.scss",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-mini/src/Captcha/index.ts",
+          "type": "registry:ui"
+        }
+      ],
+      "props": [
+        {
+          "name": "value",
+          "type": "string",
+          "required": false,
+          "desc": "验证码值"
+        },
+        {
+          "name": "onChange",
+          "type": "(value:string)=>void",
+          "required": false,
+          "desc": "值变化回调"
+        },
+        {
+          "name": "onSend",
+          "type": "()=>void|Promise<void>",
+          "required": false,
+          "desc": "发送验证码回调"
+        },
+        {
+          "name": "countdown",
+          "type": "number",
+          "default": "60",
+          "required": false,
+          "desc": "倒计时秒数"
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "default": "false",
+          "required": false,
+          "desc": "是否禁用"
+        },
+        {
+          "name": "placeholder",
+          "type": "string",
+          "default": "'请输入验证码'",
+          "required": false,
+          "desc": "占位文字"
+        },
+        {
+          "name": "maxLength",
+          "type": "number",
+          "default": "6",
+          "required": false,
+          "desc": "最大长度"
+        },
+        {
+          "name": "className",
+          "type": "string",
+          "required": false,
+          "desc": "外层容器类名"
+        }
+      ],
+      "events": [
+        {
+          "name": "onChange",
+          "type": "(value: string) => void",
+          "desc": "值变化回调"
+        },
+        {
+          "name": "onSend",
+          "type": "() => void | Promise<void>",
+          "desc": "发送验证码回调"
+        }
+      ],
+      "slots": [],
+      "tokens": [
+        "color-bg-card",
+        "color-bg-muted",
+        "color-text-primary",
+        "color-text-tertiary",
+        "color-border-default",
+        "color-primary-default",
+        "radius-md",
+        "font-size-body-sm"
+      ],
+      "states": ["normal", "counting", "disabled"],
+      "a11y": "验证码输入框可输入；发送按钮有文字说明；倒计时状态可读",
+      "usage": {
+        "do": [
+          "用 Captcha 承载短信/邮箱验证码输入",
+          "onSend 实现发送验证码逻辑",
+          "countdown 控制倒计时秒数",
+          "maxLength 限制验证码长度"
+        ],
+        "dont": ["用 Captcha 承载普通文本输入（用 Input）", "onSend 中不实现实际发送逻辑"]
+      },
+      "docs": "packages/ui-mini/src/Captcha/README.md",
+      "examples": ["packages/ui-mini/src/Captcha/__examples__/States.tsx"]
     }
   ]
 }

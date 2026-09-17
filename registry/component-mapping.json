@@ -2338,6 +2338,38 @@
           "status": "beta"
         }
       }
+    },
+    {
+      "canonical": "Captcha",
+      "category": "form",
+      "sharedProps": {
+        "value": "string",
+        "onChange": "(v:string)=>void",
+        "onSend": "()=>void|Promise<void>",
+        "countdown": "number",
+        "disabled": "boolean",
+        "placeholder": "string",
+        "maxLength": "number"
+      },
+      "eventMap": {
+        "web": "onChange/onSend",
+        "mini": "onChange/onSend",
+        "native": "onChange/onSend"
+      },
+      "stacks": {
+        "web": {
+          "item": "@kit/web-captcha",
+          "status": "beta"
+        },
+        "mini": {
+          "item": "@kit/mini-captcha",
+          "status": "beta"
+        },
+        "native": {
+          "item": "@kit/native-captcha",
+          "status": "beta"
+        }
+      }
     }
   ]
 }
