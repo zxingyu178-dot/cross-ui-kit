@@ -4143,6 +4143,102 @@
       },
       "docs": "packages/ui-native/src/Calendar/README.md",
       "examples": ["packages/ui-native/src/Calendar/__examples__/States.tsx"]
+    },
+    {
+      "name": "cascader",
+      "type": "registry:component",
+      "title": "级联选择 Cascader",
+      "description": "级联选择器，多列级联面板，受控优先，支持任意层级，点击叶子节点确认",
+      "canonical": "Cascader",
+      "status": "beta",
+      "stack": "native",
+      "dependencies": ["@kit/core"],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "packages/ui-native/src/Cascader/Cascader.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "packages/ui-native/src/Cascader/Cascader.types.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-native/src/Cascader/index.ts",
+          "type": "registry:ui"
+        }
+      ],
+      "props": [
+        {
+          "name": "value",
+          "type": "string[]",
+          "required": false,
+          "desc": "受控值（每级选中的 value）"
+        },
+        {
+          "name": "defaultValue",
+          "type": "string[]",
+          "default": "[]",
+          "required": false,
+          "desc": "非受控默认值"
+        },
+        {
+          "name": "onChange",
+          "type": "(value:string[])=>void",
+          "required": false,
+          "desc": "值变化回调"
+        },
+        {
+          "name": "options",
+          "type": "CascaderOption[]",
+          "required": true,
+          "desc": "选项树（value/label/children）"
+        },
+        {
+          "name": "placeholder",
+          "type": "string",
+          "default": "'请选择'",
+          "required": false,
+          "desc": "占位文本"
+        },
+        {
+          "name": "style",
+          "type": "ViewStyle",
+          "required": false,
+          "desc": "外层容器样式"
+        }
+      ],
+      "events": [
+        {
+          "name": "onChange",
+          "type": "(value: string[]) => void",
+          "desc": "值变化回调"
+        }
+      ],
+      "slots": ["options[].label"],
+      "tokens": [
+        "color-primary-default",
+        "color-bg-card",
+        "color-text-primary",
+        "color-text-secondary",
+        "color-text-tertiary",
+        "color-border-default",
+        "radius-md",
+        "font-size-body-md",
+        "font-size-body-sm"
+      ],
+      "states": ["normal", "open", "selected"],
+      "a11y": "选项可点击；accessibilityLabel 由 label 提供",
+      "usage": {
+        "do": [
+          "受控优先；value + onChange 配合使用",
+          "options 为树形结构，支持任意层级",
+          "点击叶子节点确认选择"
+        ],
+        "dont": ["用 Cascader 承载单选（用 Select）", "options 中 value 重复"]
+      },
+      "docs": "packages/ui-native/src/Cascader/README.md",
+      "examples": ["packages/ui-native/src/Cascader/__examples__/States.tsx"]
     }
   ]
 }

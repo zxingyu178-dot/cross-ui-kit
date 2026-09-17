@@ -1331,6 +1331,36 @@
           "status": "beta"
         }
       }
+    },
+    {
+      "canonical": "Cascader",
+      "category": "form",
+      "sharedProps": {
+        "value": "string[]",
+        "defaultValue": "string[]",
+        "onChange": "(v:string[])=>void",
+        "options": "CascaderOption[]",
+        "placeholder": "string"
+      },
+      "eventMap": {
+        "web": "onChange（点击叶子节点）",
+        "mini": "onChange（点击叶子节点）",
+        "native": "onChange（点击叶子节点）"
+      },
+      "stacks": {
+        "web": {
+          "item": "@kit/web-cascader",
+          "status": "beta"
+        },
+        "mini": {
+          "item": "@kit/mini-cascader",
+          "status": "beta"
+        },
+        "native": {
+          "item": "@kit/native-cascader",
+          "status": "beta"
+        }
+      }
     }
   ]
 }

@@ -44,6 +44,7 @@ import { States as PopconfirmStates } from '@kit/ui-web/src/Popconfirm/__example
 import { States as ImageStates } from '@kit/ui-web/src/Image/__examples__/States'
 import { States as BackTopStates } from '@kit/ui-web/src/BackTop/__examples__/States'
 import { States as CalendarStates } from '@kit/ui-web/src/Calendar/__examples__/States'
+import { States as CascaderStates } from '@kit/ui-web/src/Cascader/__examples__/States'
 import { RequestDemo } from './demos/RequestDemo'
 
 /**
@@ -364,6 +365,13 @@ export default function App() {
           Calendar · 日历（日期选择 / 月份切换 / 受控）
         </h2>
         <CalendarStates />
+      </section>
+
+      <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
+        <h2 className="text-title-sm font-medium text-text-primary">
+          Cascader · 级联选择（省市区 / 多列 / 受控）
+        </h2>
+        <CascaderStates />
       </section>
 
       <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
