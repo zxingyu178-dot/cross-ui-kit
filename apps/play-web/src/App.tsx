@@ -32,6 +32,7 @@ import { States as TimelineStates } from '@kit/ui-web/src/Timeline/__examples__/
 import { States as InputNumberStates } from '@kit/ui-web/src/InputNumber/__examples__/States'
 import { States as StatisticStates } from '@kit/ui-web/src/Statistic/__examples__/States'
 import { States as SegmentedStates } from '@kit/ui-web/src/Segmented/__examples__/States'
+import { States as RateStates } from '@kit/ui-web/src/Rate/__examples__/States'
 import { RequestDemo } from './demos/RequestDemo'
 
 /**
@@ -268,6 +269,13 @@ export default function App() {
           Segmented · 分段控制器（受控 / 禁用项 / 三尺寸）
         </h2>
         <SegmentedStates />
+      </section>
+
+      <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
+        <h2 className="text-title-sm font-medium text-text-primary">
+          Rate · 评分（半星 / 自定义字符 / 禁用）
+        </h2>
+        <RateStates />
       </section>
 
       <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">

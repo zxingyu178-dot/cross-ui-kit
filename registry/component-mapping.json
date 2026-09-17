@@ -960,6 +960,39 @@
           "status": "beta"
         }
       }
+    },
+    {
+      "canonical": "Rate",
+      "category": "form",
+      "sharedProps": {
+        "value": "number",
+        "defaultValue": "number",
+        "onChange": "(v:number)=>void",
+        "count": "number",
+        "allowHalf": "boolean",
+        "disabled": "boolean",
+        "size": "sm|md|lg",
+        "character": "ReactNode"
+      },
+      "eventMap": {
+        "web": "onChange（button onClick + hover 预览）",
+        "mini": "onChange（View onClick）",
+        "native": "onChange（XStack onPress）"
+      },
+      "stacks": {
+        "web": {
+          "item": "@kit/web-rate",
+          "status": "beta"
+        },
+        "mini": {
+          "item": "@kit/mini-rate",
+          "status": "beta"
+        },
+        "native": {
+          "item": "@kit/native-rate",
+          "status": "beta"
+        }
+      }
     }
   ]
 }

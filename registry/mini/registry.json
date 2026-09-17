@@ -3007,6 +3007,118 @@
       },
       "docs": "packages/ui-mini/src/Segmented/README.md",
       "examples": ["packages/ui-mini/src/Segmented/__examples__/States.tsx"]
+    },
+    {
+      "name": "rate",
+      "type": "registry:component",
+      "title": "评分 Rate",
+      "description": "受控优先评分组件，星星点击选择，hover 预览（web），allowHalf 半星，禁用态，三尺寸，自定义字符",
+      "canonical": "Rate",
+      "status": "beta",
+      "stack": "mini",
+      "dependencies": ["@kit/core"],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "packages/ui-mini/src/Rate/Rate.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "packages/ui-mini/src/Rate/Rate.types.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-mini/src/Rate/Rate.scss",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-mini/src/Rate/index.ts",
+          "type": "registry:ui"
+        }
+      ],
+      "props": [
+        {
+          "name": "value",
+          "type": "number",
+          "required": false,
+          "desc": "受控值"
+        },
+        {
+          "name": "defaultValue",
+          "type": "number",
+          "default": "0",
+          "required": false,
+          "desc": "非受控默认值"
+        },
+        {
+          "name": "onChange",
+          "type": "(value:number)=>void",
+          "required": false,
+          "desc": "值变化回调"
+        },
+        {
+          "name": "count",
+          "type": "number",
+          "default": "5",
+          "required": false,
+          "desc": "星星总数"
+        },
+        {
+          "name": "allowHalf",
+          "type": "boolean",
+          "default": "false",
+          "required": false,
+          "desc": "是否允许半星"
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "default": "false",
+          "required": false,
+          "desc": "是否禁用"
+        },
+        {
+          "name": "size",
+          "type": "'sm'|'md'|'lg'",
+          "default": "'md'",
+          "required": false,
+          "desc": "尺寸"
+        },
+        {
+          "name": "character",
+          "type": "ReactNode",
+          "default": "'★'",
+          "required": false,
+          "desc": "自定义字符"
+        },
+        {
+          "name": "className",
+          "type": "string",
+          "required": false,
+          "desc": "外层容器类名"
+        }
+      ],
+      "events": [
+        {
+          "name": "onChange",
+          "type": "(value: number) => void",
+          "desc": "值变化回调"
+        }
+      ],
+      "slots": ["character"],
+      "tokens": ["color-primary-default", "color-border-default", "motion-fast"],
+      "states": ["normal", "hover", "half", "disabled"],
+      "a11y": "选项可点击；accessibilityLabel 由值提供",
+      "usage": {
+        "do": [
+          "受控优先；非受控时内部维护 value",
+          "allowHalf 时半星用 opacity 50% 表示",
+          "自定义字符用于心形/点赞等场景"
+        ],
+        "dont": ["用 Rate 承载非评分选择", "硬编码颜色/尺寸"]
+      },
+      "docs": "packages/ui-mini/src/Rate/README.md",
+      "examples": ["packages/ui-mini/src/Rate/__examples__/States.tsx"]
     }
   ]
 }
