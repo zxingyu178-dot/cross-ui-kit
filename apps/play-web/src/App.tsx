@@ -54,6 +54,7 @@ import { States as GridStates } from '@kit/ui-web/src/Grid/__examples__/States'
 import { States as AffixStates } from '@kit/ui-web/src/Affix/__examples__/States'
 import { States as ColorPickerStates } from '@kit/ui-web/src/ColorPicker/__examples__/States'
 import { States as CarouselStates } from '@kit/ui-web/src/Carousel/__examples__/States'
+import { States as TransferStates } from '@kit/ui-web/src/Transfer/__examples__/States'
 import { RequestDemo } from './demos/RequestDemo'
 
 /**
@@ -444,6 +445,13 @@ export default function App() {
           Carousel · 轮播图（基础 / 自动播放 / 无指示器）
         </h2>
         <CarouselStates />
+      </section>
+
+      <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
+        <h2 className="text-title-sm font-medium text-text-primary">
+          Transfer · 穿梭框（左右列表 / 勾选移动 / 自定义标题）
+        </h2>
+        <TransferStates />
       </section>
 
       <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">

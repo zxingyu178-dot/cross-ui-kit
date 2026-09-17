@@ -1637,6 +1637,37 @@
           "status": "beta"
         }
       }
+    },
+    {
+      "canonical": "Transfer",
+      "category": "form",
+      "sharedProps": {
+        "dataSource": "TransferItem[]",
+        "targetKeys": "string[]",
+        "onChange": "(k:string[])=>void",
+        "titles": "[string,string]",
+        "operations": "[string,string]",
+        "disabled": "boolean"
+      },
+      "eventMap": {
+        "web": "onChange（右侧选中变化）",
+        "mini": "onChange（右侧选中变化）",
+        "native": "onChange（右侧选中变化）"
+      },
+      "stacks": {
+        "web": {
+          "item": "@kit/web-transfer",
+          "status": "beta"
+        },
+        "mini": {
+          "item": "@kit/mini-transfer",
+          "status": "beta"
+        },
+        "native": {
+          "item": "@kit/native-transfer",
+          "status": "beta"
+        }
+      }
     }
   ]
 }
