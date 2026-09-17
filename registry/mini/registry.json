@@ -2394,6 +2394,125 @@
       },
       "docs": "packages/ui-mini/src/Tooltip/README.md",
       "examples": ["packages/ui-mini/src/Tooltip/__examples__/States.tsx"]
+    },
+    {
+      "name": "alert",
+      "type": "registry:component",
+      "title": "警告提示 Alert",
+      "description": "页内非阻塞反馈，四语义色（info/success/warning/error）+ 可关闭 + 语义图标 + 操作区，soft 底+语义描边",
+      "canonical": "Alert",
+      "status": "beta",
+      "stack": "mini",
+      "dependencies": ["@kit/core"],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "packages/ui-mini/src/Alert/Alert.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "packages/ui-mini/src/Alert/Alert.types.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-mini/src/Alert/Alert.scss",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-mini/src/Alert/index.ts",
+          "type": "registry:ui"
+        }
+      ],
+      "props": [
+        {
+          "name": "type",
+          "type": "'info'|'success'|'warning'|'error'",
+          "default": "'info'",
+          "required": false,
+          "desc": "语义类型"
+        },
+        {
+          "name": "title",
+          "type": "ReactNode",
+          "required": false,
+          "desc": "标题"
+        },
+        {
+          "name": "description",
+          "type": "ReactNode",
+          "required": false,
+          "desc": "描述文本"
+        },
+        {
+          "name": "closable",
+          "type": "boolean",
+          "default": "false",
+          "required": false,
+          "desc": "是否可关闭"
+        },
+        {
+          "name": "onClose",
+          "type": "()=>void",
+          "required": false,
+          "desc": "关闭回调"
+        },
+        {
+          "name": "showIcon",
+          "type": "boolean",
+          "default": "true",
+          "required": false,
+          "desc": "是否显示语义图标"
+        },
+        {
+          "name": "action",
+          "type": "ReactNode",
+          "required": false,
+          "desc": "自定义操作区"
+        },
+        {
+          "name": "className",
+          "type": "string",
+          "required": false,
+          "desc": "外层容器类名"
+        }
+      ],
+      "events": [
+        {
+          "name": "onClose",
+          "type": "() => void",
+          "desc": "关闭回调"
+        }
+      ],
+      "slots": ["title", "description", "action"],
+      "tokens": [
+        "color-info-bg",
+        "color-info-border",
+        "color-info-default",
+        "color-success-bg",
+        "color-success-border",
+        "color-success-default",
+        "color-warning-bg",
+        "color-warning-border",
+        "color-warning-default",
+        "color-danger-bg",
+        "color-danger-border",
+        "color-danger-default",
+        "radius-md",
+        "font-size-body-md",
+        "font-size-body-sm"
+      ],
+      "states": ["visible", "closed"],
+      "a11y": "关闭可点击；accessibilityLabel 由标题提供",
+      "usage": {
+        "do": [
+          "短反馈用 Alert，需用户决策用 Dialog，自动消失用 Toast",
+          "文案走 i18n key",
+          "关闭为内部非受控状态；受控场景由外部条件渲染"
+        ],
+        "dont": ["用 Alert 承载需用户确认的关键操作", "硬编码语义色", "在 Alert 内写业务请求"]
+      },
+      "docs": "packages/ui-mini/src/Alert/README.md",
+      "examples": ["packages/ui-mini/src/Alert/__examples__/States.tsx"]
     }
   ]
 }

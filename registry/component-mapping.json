@@ -774,6 +774,38 @@
           "status": "beta"
         }
       }
+    },
+    {
+      "canonical": "Alert",
+      "category": "feedback",
+      "sharedProps": {
+        "type": "info|success|warning|error",
+        "title": "ReactNode",
+        "description": "ReactNode",
+        "closable": "boolean",
+        "onClose": "()=>void",
+        "showIcon": "boolean",
+        "action": "ReactNode"
+      },
+      "eventMap": {
+        "web": "onClose（关闭按钮 onClick）",
+        "mini": "onClose（关闭按钮 onClick）",
+        "native": "onClose（关闭 XStack onPress）"
+      },
+      "stacks": {
+        "web": {
+          "item": "@kit/web-alert",
+          "status": "beta"
+        },
+        "mini": {
+          "item": "@kit/mini-alert",
+          "status": "beta"
+        },
+        "native": {
+          "item": "@kit/native-alert",
+          "status": "beta"
+        }
+      }
     }
   ]
 }

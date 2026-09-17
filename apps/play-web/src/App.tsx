@@ -26,6 +26,7 @@ import { States as PaginationStates } from '@kit/ui-web/src/Pagination/__example
 import { States as BreadcrumbStates } from '@kit/ui-web/src/Breadcrumb/__examples__/States'
 import { States as DataTableStates } from '@kit/ui-web/src/DataTable/__examples__/States'
 import { States as TooltipStates } from '@kit/ui-web/src/Tooltip/__examples__/States'
+import { States as AlertStates } from '@kit/ui-web/src/Alert/__examples__/States'
 import { RequestDemo } from './demos/RequestDemo'
 
 /**
@@ -220,6 +221,13 @@ export default function App() {
           Tooltip · 文字提示气泡（四向 placement / 长文本 / 禁用）
         </h2>
         <TooltipStates />
+      </section>
+
+      <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
+        <h2 className="text-title-sm font-medium text-text-primary">
+          Alert · 警告提示条（四语义色 / 可关闭 / 操作区）
+        </h2>
+        <AlertStates />
       </section>
 
       <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
