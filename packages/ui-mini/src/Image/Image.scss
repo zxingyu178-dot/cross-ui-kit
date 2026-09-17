@@ -1,0 +1,28 @@
+/* Image（mini）样式 */
+
+.kit-image {
+  position: relative;
+  overflow: hidden;
+  background: var(--kit-color-bg-muted);
+}
+
+.kit-image__placeholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.kit-image__img {
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+}
+
+.kit-image__img--loading {
+  opacity: 0;
+}

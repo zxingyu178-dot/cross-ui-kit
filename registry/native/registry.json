@@ -3873,6 +3873,104 @@
       },
       "docs": "packages/ui-native/src/Popconfirm/README.md",
       "examples": ["packages/ui-native/src/Popconfirm/__examples__/States.tsx"]
+    },
+    {
+      "name": "image",
+      "type": "registry:component",
+      "title": "图片 Image",
+      "description": "图片组件，支持加载/错误状态、占位、圆角、填充方式（cover/contain/fill/stretch/center）",
+      "canonical": "Image",
+      "status": "beta",
+      "stack": "native",
+      "dependencies": ["@kit/core"],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "packages/ui-native/src/Image/Image.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "packages/ui-native/src/Image/Image.types.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-native/src/Image/index.ts",
+          "type": "registry:ui"
+        }
+      ],
+      "props": [
+        {
+          "name": "src",
+          "type": "string",
+          "required": true,
+          "desc": "图片地址"
+        },
+        {
+          "name": "alt",
+          "type": "string",
+          "default": "''",
+          "required": false,
+          "desc": "替代文本"
+        },
+        {
+          "name": "width",
+          "type": "number|string",
+          "required": false,
+          "desc": "宽度"
+        },
+        {
+          "name": "height",
+          "type": "number|string",
+          "required": false,
+          "desc": "高度"
+        },
+        {
+          "name": "fit",
+          "type": "'cover'|'contain'|'fill'|'stretch'|'center'",
+          "default": "'cover'",
+          "required": false,
+          "desc": "填充方式"
+        },
+        {
+          "name": "radius",
+          "type": "number",
+          "required": false,
+          "desc": "圆角"
+        },
+        {
+          "name": "placeholder",
+          "type": "ReactNode",
+          "required": false,
+          "desc": "加载中占位"
+        },
+        {
+          "name": "fallback",
+          "type": "ReactNode",
+          "required": false,
+          "desc": "加载失败占位"
+        },
+        {
+          "name": "style",
+          "type": "ViewStyle",
+          "required": false,
+          "desc": "外层容器样式"
+        }
+      ],
+      "events": [],
+      "slots": ["placeholder", "fallback"],
+      "tokens": ["color-bg-muted"],
+      "states": ["loading", "loaded", "error"],
+      "a11y": "accessibilityLabel 由 alt 提供",
+      "usage": {
+        "do": [
+          "始终提供 alt 属性",
+          "用 placeholder/fallback 处理加载/失败状态",
+          "fit 控制填充方式"
+        ],
+        "dont": ["用 Image 承载图标（用 Icon）", "硬编码宽高而不考虑响应式"]
+      },
+      "docs": "packages/ui-native/src/Image/README.md",
+      "examples": ["packages/ui-native/src/Image/__examples__/States.tsx"]
     }
   ]
 }

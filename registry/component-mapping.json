@@ -1240,6 +1240,39 @@
           "status": "beta"
         }
       }
+    },
+    {
+      "canonical": "Image",
+      "category": "data-display",
+      "sharedProps": {
+        "src": "string",
+        "alt": "string",
+        "width": "number|string",
+        "height": "number|string",
+        "fit": "cover|contain|fill|stretch|center",
+        "radius": "number",
+        "placeholder": "ReactNode",
+        "fallback": "ReactNode"
+      },
+      "eventMap": {
+        "web": "无（onLoad/onError 内部处理）",
+        "mini": "无（Taro Image onLoad/onError）",
+        "native": "无（Tamagui Image onLoad/onError）"
+      },
+      "stacks": {
+        "web": {
+          "item": "@kit/web-image",
+          "status": "beta"
+        },
+        "mini": {
+          "item": "@kit/mini-image",
+          "status": "beta"
+        },
+        "native": {
+          "item": "@kit/native-image",
+          "status": "beta"
+        }
+      }
     }
   ]
 }

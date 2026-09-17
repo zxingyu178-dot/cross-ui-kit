@@ -41,6 +41,7 @@ import { States as AutoCompleteStates } from '@kit/ui-web/src/AutoComplete/__exa
 import { States as DescriptionsStates } from '@kit/ui-web/src/Descriptions/__examples__/States'
 import { States as DrawerStates } from '@kit/ui-web/src/Drawer/__examples__/States'
 import { States as PopconfirmStates } from '@kit/ui-web/src/Popconfirm/__examples__/States'
+import { States as ImageStates } from '@kit/ui-web/src/Image/__examples__/States'
 import { RequestDemo } from './demos/RequestDemo'
 
 /**
@@ -340,6 +341,13 @@ export default function App() {
           Popconfirm · 气泡确认（确认/取消/自定义文案）
         </h2>
         <PopconfirmStates />
+      </section>
+
+      <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
+        <h2 className="text-title-sm font-medium text-text-primary">
+          Image · 图片（填充 / 圆角 / 加载状态）
+        </h2>
+        <ImageStates />
       </section>
 
       <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
