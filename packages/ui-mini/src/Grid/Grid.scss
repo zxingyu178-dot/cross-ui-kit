@@ -1,0 +1,11 @@
+/* Grid（mini）样式：基础容器，布局通过 inline style 控制。 */
+
+.kit-grid-row {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.kit-grid-col {
+  box-sizing: border-box;
+}

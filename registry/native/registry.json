@@ -4747,6 +4747,92 @@
       },
       "docs": "packages/ui-native/src/Space/README.md",
       "examples": ["packages/ui-native/src/Space/__examples__/States.tsx"]
+    },
+    {
+      "name": "grid",
+      "type": "registry:component",
+      "title": "栅格 Grid",
+      "description": "栅格组件，24 栅格系统，Row + Col，flex 布局，支持间距/对齐/换行/偏移/排序",
+      "canonical": "Grid",
+      "status": "beta",
+      "stack": "native",
+      "dependencies": ["@kit/core"],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "packages/ui-native/src/Grid/Grid.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "packages/ui-native/src/Grid/Grid.types.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-native/src/Grid/index.ts",
+          "type": "registry:ui"
+        }
+      ],
+      "props": [
+        {
+          "name": "Row.gutter",
+          "type": "number|[number,number]",
+          "default": "0",
+          "required": false,
+          "desc": "栅格间距"
+        },
+        {
+          "name": "Row.justify",
+          "type": "'start'|'center'|'end'|'between'|'around'",
+          "default": "'start'",
+          "required": false,
+          "desc": "水平对齐"
+        },
+        {
+          "name": "Row.align",
+          "type": "'top'|'middle'|'bottom'",
+          "default": "'top'",
+          "required": false,
+          "desc": "垂直对齐"
+        },
+        {
+          "name": "Row.wrap",
+          "type": "boolean",
+          "default": "true",
+          "required": false,
+          "desc": "是否换行"
+        },
+        {
+          "name": "Col.span",
+          "type": "number",
+          "default": "24",
+          "required": false,
+          "desc": "栅格占位（1-24）"
+        },
+        {
+          "name": "Col.offset",
+          "type": "number",
+          "default": "0",
+          "required": false,
+          "desc": "栅格偏移（1-24）"
+        },
+        {
+          "name": "Col.order",
+          "type": "number",
+          "required": false,
+          "desc": "排序"
+        }
+      ],
+      "events": [],
+      "slots": ["Row.children", "Col.children"],
+      "tokens": [],
+      "states": ["normal", "gutter", "offset"],
+      "a11y": "纯布局容器，无交互",
+      "usage": {
+        "do": ["用 Row + Col 构建栅格布局", "span 范围 1-24", "gutter 支持水平和垂直间距"],
+        "dont": ["用 Grid 承载列表数据（用 List）", "在 Col 内硬编码 width"]
+      },
+      "docs": "packages/ui-native/src/Grid/README.md",
+      "examples": ["packages/ui-native/src/Grid/__examples__/States.tsx"]
     }
   ]
 }

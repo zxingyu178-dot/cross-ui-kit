@@ -50,6 +50,7 @@ import { States as DatePickerStates } from '@kit/ui-web/src/DatePicker/__example
 import { States as UploadStates } from '@kit/ui-web/src/Upload/__examples__/States'
 import { States as ListStates } from '@kit/ui-web/src/List/__examples__/States'
 import { States as SpaceStates } from '@kit/ui-web/src/Space/__examples__/States'
+import { States as GridStates } from '@kit/ui-web/src/Grid/__examples__/States'
 import { RequestDemo } from './demos/RequestDemo'
 
 /**
@@ -412,6 +413,13 @@ export default function App() {
           Space · 间距（水平/垂直/自定义数值/换行）
         </h2>
         <SpaceStates />
+      </section>
+
+      <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
+        <h2 className="text-title-sm font-medium text-text-primary">
+          Grid · 栅格（24 等分 / 不等分 / 偏移 / 对齐）
+        </h2>
+        <GridStates />
       </section>
 
       <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">

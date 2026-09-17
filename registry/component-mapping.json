@@ -1515,6 +1515,36 @@
           "status": "beta"
         }
       }
+    },
+    {
+      "canonical": "Grid",
+      "category": "layout",
+      "sharedProps": {
+        "Row.gutter": "number|[number,number]",
+        "Row.justify": "start|center|end|between|around",
+        "Row.align": "top|middle|bottom",
+        "Col.span": "number",
+        "Col.offset": "number"
+      },
+      "eventMap": {
+        "web": "无（纯布局）",
+        "mini": "无（纯布局）",
+        "native": "无（纯布局）"
+      },
+      "stacks": {
+        "web": {
+          "item": "@kit/web-grid",
+          "status": "beta"
+        },
+        "mini": {
+          "item": "@kit/mini-grid",
+          "status": "beta"
+        },
+        "native": {
+          "item": "@kit/native-grid",
+          "status": "beta"
+        }
+      }
     }
   ]
 }
