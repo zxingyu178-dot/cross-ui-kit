@@ -7843,6 +7843,98 @@
       },
       "docs": "packages/ui-mini/src/Menu/README.md",
       "examples": ["packages/ui-mini/src/Menu/__examples__/States.tsx"]
+    },
+    {
+      "name": "page-header",
+      "type": "registry:component",
+      "title": "页头 PageHeader",
+      "description": "页头组件，页面顶部的标题、副标题、面包屑和额外操作",
+      "canonical": "PageHeader",
+      "status": "beta",
+      "stack": "mini",
+      "dependencies": ["@kit/core"],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "packages/ui-mini/src/PageHeader/PageHeader.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "packages/ui-mini/src/PageHeader/PageHeader.types.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-mini/src/PageHeader/PageHeader.scss",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-mini/src/PageHeader/index.ts",
+          "type": "registry:ui"
+        }
+      ],
+      "props": [
+        {
+          "name": "title",
+          "type": "string",
+          "required": true,
+          "desc": "标题"
+        },
+        {
+          "name": "subTitle",
+          "type": "string",
+          "required": false,
+          "desc": "副标题"
+        },
+        {
+          "name": "breadcrumb",
+          "type": "string",
+          "required": false,
+          "desc": "面包屑"
+        },
+        {
+          "name": "extra",
+          "type": "string",
+          "required": false,
+          "desc": "额外内容（右侧）"
+        },
+        {
+          "name": "footer",
+          "type": "string",
+          "required": false,
+          "desc": "底部内容"
+        },
+        {
+          "name": "className",
+          "type": "string",
+          "required": false,
+          "desc": "外层容器类名"
+        }
+      ],
+      "events": [],
+      "slots": ["title", "subTitle", "breadcrumb", "extra", "footer"],
+      "tokens": [
+        "color-text-primary",
+        "color-text-secondary",
+        "color-text-tertiary",
+        "color-border-default",
+        "font-size-caption",
+        "font-size-body-sm",
+        "font-size-title-md"
+      ],
+      "states": ["normal"],
+      "a11y": "页头标题可读；面包屑与副标题可读",
+      "usage": {
+        "do": [
+          "用 PageHeader 承载页面顶部信息",
+          "title 设置页面标题",
+          "subTitle 设置页面描述",
+          "breadcrumb 设置面包屑导航",
+          "extra 设置右侧操作按钮"
+        ],
+        "dont": ["用 PageHeader 承载卡片标题（用 Card）", "title 传入非标题内容"]
+      },
+      "docs": "packages/ui-mini/src/PageHeader/README.md",
+      "examples": ["packages/ui-mini/src/PageHeader/__examples__/States.tsx"]
     }
   ]
 }

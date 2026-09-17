@@ -2400,6 +2400,36 @@
           "status": "beta"
         }
       }
+    },
+    {
+      "canonical": "PageHeader",
+      "category": "navigation",
+      "sharedProps": {
+        "title": "string",
+        "subTitle": "string",
+        "breadcrumb": "string",
+        "extra": "string",
+        "footer": "string"
+      },
+      "eventMap": {
+        "web": "",
+        "mini": "",
+        "native": ""
+      },
+      "stacks": {
+        "web": {
+          "item": "@kit/web-page-header",
+          "status": "beta"
+        },
+        "mini": {
+          "item": "@kit/mini-page-header",
+          "status": "beta"
+        },
+        "native": {
+          "item": "@kit/native-page-header",
+          "status": "beta"
+        }
+      }
     }
   ]
 }

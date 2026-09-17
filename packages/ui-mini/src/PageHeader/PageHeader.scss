@@ -1,0 +1,53 @@
+/* PageHeader（mini）样式：颜色全走 --kit-* token。 */
+
+.kit-page-header {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.kit-page-header__breadcrumb {
+  font-size: var(--kit-font-size-caption);
+  color: var(--kit-color-text-tertiary);
+}
+
+.kit-page-header__main {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.kit-page-header__title-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.kit-page-header__title {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--kit-color-text-primary);
+}
+
+.kit-page-header__subtitle {
+  font-size: var(--kit-font-size-body-sm);
+  color: var(--kit-color-text-secondary);
+}
+
+.kit-page-header__extra {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+.kit-page-header__footer {
+  margin-top: 4px;
+  padding-top: 12px;
+  border-top: 1px solid var(--kit-color-border-default);
+  font-size: var(--kit-font-size-caption);
+  color: var(--kit-color-text-tertiary);
+}
