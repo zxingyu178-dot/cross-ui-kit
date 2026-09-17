@@ -1877,6 +1877,37 @@
           "status": "beta"
         }
       }
+    },
+    {
+      "canonical": "Anchor",
+      "category": "navigation",
+      "sharedProps": {
+        "items": "AnchorItem[]",
+        "affix": "boolean",
+        "offsetTop": "number",
+        "activeKey": "string",
+        "onChange": "(k:string)=>void",
+        "onClick": "(k:string,h:string)=>void"
+      },
+      "eventMap": {
+        "web": "onChange/onClick",
+        "mini": "onChange/onClick",
+        "native": "onChange/onClick"
+      },
+      "stacks": {
+        "web": {
+          "item": "@kit/web-anchor",
+          "status": "beta"
+        },
+        "mini": {
+          "item": "@kit/mini-anchor",
+          "status": "beta"
+        },
+        "native": {
+          "item": "@kit/native-anchor",
+          "status": "beta"
+        }
+      }
     }
   ]
 }

@@ -62,6 +62,7 @@ import { States as FloatButtonStates } from '@kit/ui-web/src/FloatButton/__examp
 import { States as TypographyStates } from '@kit/ui-web/src/Typography/__examples__/States'
 import { States as TreeSelectStates } from '@kit/ui-web/src/TreeSelect/__examples__/States'
 import { States as NotificationStates } from '@kit/ui-web/src/Notification/__examples__/States'
+import { States as AnchorStates } from '@kit/ui-web/src/Anchor/__examples__/States'
 import { RequestDemo } from './demos/RequestDemo'
 
 /**
@@ -508,6 +509,13 @@ export default function App() {
           Notification · 通知（success / info / warning / error）
         </h2>
         <NotificationStates />
+      </section>
+
+      <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
+        <h2 className="text-title-sm font-medium text-text-primary">
+          Anchor · 锚点（基础 / 固定定位 sticky）
+        </h2>
+        <AnchorStates />
       </section>
 
       <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">

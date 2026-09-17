@@ -1,0 +1,26 @@
+/* Anchor（mini）样式：颜色全走 --kit-* token。 */
+
+.kit-anchor {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  border-left-width: 2px;
+  border-left-style: solid;
+  border-left-color: var(--kit-color-border-default);
+  padding-left: 12px;
+}
+
+.kit-anchor__item {
+  padding: 6px 0;
+}
+
+.kit-anchor__title {
+  font-size: var(--kit-font-size-body-sm);
+  color: var(--kit-color-text-secondary);
+}
+
+.kit-anchor__item--active .kit-anchor__title,
+.kit-anchor__title--active {
+  font-weight: 500;
+  color: var(--kit-color-primary-default);
+}

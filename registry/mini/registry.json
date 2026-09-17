@@ -6042,6 +6042,114 @@
       },
       "docs": "packages/ui-mini/src/Notification/README.md",
       "examples": ["packages/ui-mini/src/Notification/__examples__/States.tsx"]
+    },
+    {
+      "name": "anchor",
+      "type": "registry:component",
+      "title": "锚点 Anchor",
+      "description": "锚点组件，侧边锚点导航，点击滚动到对应位置，支持滚动监听激活",
+      "canonical": "Anchor",
+      "status": "beta",
+      "stack": "mini",
+      "dependencies": ["@kit/core"],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "packages/ui-mini/src/Anchor/Anchor.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "packages/ui-mini/src/Anchor/Anchor.types.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-mini/src/Anchor/Anchor.scss",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-mini/src/Anchor/index.ts",
+          "type": "registry:ui"
+        }
+      ],
+      "props": [
+        {
+          "name": "items",
+          "type": "AnchorItem[]",
+          "default": "[]",
+          "required": false,
+          "desc": "锚点列表"
+        },
+        {
+          "name": "affix",
+          "type": "boolean",
+          "default": "false",
+          "required": false,
+          "desc": "是否固定定位"
+        },
+        {
+          "name": "offsetTop",
+          "type": "number",
+          "default": "24",
+          "required": false,
+          "desc": "固定时距顶部距离（px）"
+        },
+        {
+          "name": "activeKey",
+          "type": "string",
+          "required": false,
+          "desc": "当前激活的锚点 key（受控）"
+        },
+        {
+          "name": "onChange",
+          "type": "(key:string)=>void",
+          "required": false,
+          "desc": "激活变化回调"
+        },
+        {
+          "name": "onClick",
+          "type": "(key:string,href:string)=>void",
+          "required": false,
+          "desc": "点击锚点回调"
+        },
+        {
+          "name": "className",
+          "type": "string",
+          "required": false,
+          "desc": "外层容器类名"
+        }
+      ],
+      "events": [
+        {
+          "name": "onChange",
+          "type": "(key: string) => void",
+          "desc": "激活变化回调"
+        },
+        {
+          "name": "onClick",
+          "type": "(key: string, href: string) => void",
+          "desc": "点击锚点回调"
+        }
+      ],
+      "slots": ["items[].title"],
+      "tokens": [
+        "color-primary-default",
+        "color-text-primary",
+        "color-text-secondary",
+        "color-border-default",
+        "font-size-body-sm"
+      ],
+      "states": ["normal", "active"],
+      "a11y": "nav 语义化；锚点按钮可点击",
+      "usage": {
+        "do": [
+          "用 Anchor 承载长页面的侧边导航",
+          "items 为锚点列表，每项含 key/title/href",
+          "affix 开启固定定位（sticky）"
+        ],
+        "dont": ["用 Anchor 承载顶部导航（用 Tabs）", "href 指向不存在的元素 id"]
+      },
+      "docs": "packages/ui-mini/src/Anchor/README.md",
+      "examples": ["packages/ui-mini/src/Anchor/__examples__/States.tsx"]
     }
   ]
 }
