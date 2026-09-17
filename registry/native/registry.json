@@ -6980,6 +6980,89 @@
       },
       "docs": "packages/ui-native/src/TimeRangePicker/README.md",
       "examples": ["packages/ui-native/src/TimeRangePicker/__examples__/States.tsx"]
+    },
+    {
+      "name": "avatar-group",
+      "type": "registry:component",
+      "title": "头像组 AvatarGroup",
+      "description": "头像组组件，多个头像堆叠显示，超出显示 +N",
+      "canonical": "AvatarGroup",
+      "status": "beta",
+      "stack": "native",
+      "dependencies": ["@kit/core"],
+      "registryDependencies": ["avatar"],
+      "files": [
+        {
+          "path": "packages/ui-native/src/AvatarGroup/AvatarGroup.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "packages/ui-native/src/AvatarGroup/AvatarGroup.types.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-native/src/AvatarGroup/index.ts",
+          "type": "registry:ui"
+        }
+      ],
+      "props": [
+        {
+          "name": "items",
+          "type": "AvatarGroupItem[]",
+          "default": "[]",
+          "required": false,
+          "desc": "头像列表"
+        },
+        {
+          "name": "max",
+          "type": "number",
+          "default": "5",
+          "required": false,
+          "desc": "最大显示数量（超出显示 +N）"
+        },
+        {
+          "name": "size",
+          "type": "number",
+          "default": "32",
+          "required": false,
+          "desc": "头像大小（px）"
+        },
+        {
+          "name": "shape",
+          "type": "'circle'|'square'",
+          "default": "'circle'",
+          "required": false,
+          "desc": "头像形状"
+        },
+        {
+          "name": "style",
+          "type": "ViewStyle",
+          "required": false,
+          "desc": "外层容器样式"
+        }
+      ],
+      "events": [],
+      "slots": ["items[].src", "items[].text"],
+      "tokens": [
+        "color-bg-card",
+        "color-bg-muted",
+        "color-text-secondary",
+        "color-primary-default",
+        "radius-md"
+      ],
+      "states": ["normal", "overflow"],
+      "a11y": "头像组可读；溢出数量 +N 可读",
+      "usage": {
+        "do": [
+          "用 AvatarGroup 承载多人头像展示",
+          "max 控制最大显示数量",
+          "size 控制头像大小",
+          "shape 控制头像形状"
+        ],
+        "dont": ["用 AvatarGroup 承载单个头像（用 Avatar）", "items 中重复 key"]
+      },
+      "docs": "packages/ui-native/src/AvatarGroup/README.md",
+      "examples": ["packages/ui-native/src/AvatarGroup/__examples__/States.tsx"]
     }
   ]
 }

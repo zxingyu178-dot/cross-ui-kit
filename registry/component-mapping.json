@@ -2192,6 +2192,35 @@
           "status": "beta"
         }
       }
+    },
+    {
+      "canonical": "AvatarGroup",
+      "category": "data-display",
+      "sharedProps": {
+        "items": "AvatarGroupItem[]",
+        "max": "number",
+        "size": "number",
+        "shape": "'circle'|'square'"
+      },
+      "eventMap": {
+        "web": "",
+        "mini": "",
+        "native": ""
+      },
+      "stacks": {
+        "web": {
+          "item": "@kit/web-avatar-group",
+          "status": "beta"
+        },
+        "mini": {
+          "item": "@kit/mini-avatar-group",
+          "status": "beta"
+        },
+        "native": {
+          "item": "@kit/native-avatar-group",
+          "status": "beta"
+        }
+      }
     }
   ]
 }
