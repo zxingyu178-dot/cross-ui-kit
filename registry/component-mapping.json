@@ -2458,6 +2458,37 @@
           "status": "beta"
         }
       }
+    },
+    {
+      "canonical": "CountUp",
+      "category": "data-display",
+      "sharedProps": {
+        "value": "number",
+        "duration": "number",
+        "prefix": "string",
+        "suffix": "string",
+        "decimals": "number",
+        "separator": "boolean"
+      },
+      "eventMap": {
+        "web": "",
+        "mini": "",
+        "native": ""
+      },
+      "stacks": {
+        "web": {
+          "item": "@kit/web-count-up",
+          "status": "beta"
+        },
+        "mini": {
+          "item": "@kit/mini-count-up",
+          "status": "beta"
+        },
+        "native": {
+          "item": "@kit/native-count-up",
+          "status": "beta"
+        }
+      }
     }
   ]
 }

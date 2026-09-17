@@ -7786,6 +7786,98 @@
       },
       "docs": "packages/ui-native/src/Layout/README.md",
       "examples": ["packages/ui-native/src/Layout/__examples__/States.tsx"]
+    },
+    {
+      "name": "count-up",
+      "type": "registry:component",
+      "title": "数字滚动 CountUp",
+      "description": "数字滚动组件，数字从 0 滚动到目标值的动画",
+      "canonical": "CountUp",
+      "status": "beta",
+      "stack": "native",
+      "dependencies": ["@kit/core"],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "packages/ui-native/src/CountUp/CountUp.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "packages/ui-native/src/CountUp/CountUp.types.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-native/src/CountUp/index.ts",
+          "type": "registry:ui"
+        }
+      ],
+      "props": [
+        {
+          "name": "value",
+          "type": "number",
+          "required": true,
+          "desc": "目标数值"
+        },
+        {
+          "name": "duration",
+          "type": "number",
+          "default": "1500",
+          "required": false,
+          "desc": "动画时长（ms）"
+        },
+        {
+          "name": "prefix",
+          "type": "string",
+          "default": "''",
+          "required": false,
+          "desc": "前缀"
+        },
+        {
+          "name": "suffix",
+          "type": "string",
+          "default": "''",
+          "required": false,
+          "desc": "后缀"
+        },
+        {
+          "name": "decimals",
+          "type": "number",
+          "default": "0",
+          "required": false,
+          "desc": "小数位数"
+        },
+        {
+          "name": "separator",
+          "type": "boolean",
+          "default": "true",
+          "required": false,
+          "desc": "是否千分位分隔"
+        },
+        {
+          "name": "style",
+          "type": "TextStyle",
+          "required": false,
+          "desc": "文本样式"
+        }
+      ],
+      "events": [],
+      "slots": ["prefix", "suffix"],
+      "tokens": ["color-text-primary", "color-primary-default", "color-success-default"],
+      "states": ["animating", "done"],
+      "a11y": "数字可读；动画结束后显示最终值",
+      "usage": {
+        "do": [
+          "用 CountUp 承载数字动画展示",
+          "value 设置目标数值",
+          "duration 控制动画时长",
+          "prefix/suffix 设置前后缀",
+          "decimals 设置小数位数",
+          "separator 控制千分位"
+        ],
+        "dont": ["用 CountUp 承载静态数字（用 Text/Typography）", "value 传入非数字"]
+      },
+      "docs": "packages/ui-native/src/CountUp/README.md",
+      "examples": ["packages/ui-native/src/CountUp/__examples__/States.tsx"]
     }
   ]
 }

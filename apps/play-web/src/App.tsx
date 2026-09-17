@@ -81,6 +81,7 @@ import { States as CaptchaStates } from '@kit/ui-web/src/Captcha/__examples__/St
 import { States as MenuStates } from '@kit/ui-web/src/Menu/__examples__/States'
 import { States as PageHeaderStates } from '@kit/ui-web/src/PageHeader/__examples__/States'
 import { States as LayoutStates } from '@kit/ui-web/src/Layout/__examples__/States'
+import { States as CountUpStates } from '@kit/ui-web/src/CountUp/__examples__/States'
 import { RequestDemo } from './demos/RequestDemo'
 
 /**
@@ -660,6 +661,13 @@ export default function App() {
           Layout · 布局（完整布局 / 简单布局）
         </h2>
         <LayoutStates />
+      </section>
+
+      <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
+        <h2 className="text-title-sm font-medium text-text-primary">
+          CountUp · 数字滚动（基础 / 带前缀 / 不同时长）
+        </h2>
+        <CountUpStates />
       </section>
 
       <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
