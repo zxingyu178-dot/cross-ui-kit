@@ -2070,6 +2070,38 @@
           "status": "beta"
         }
       }
+    },
+    {
+      "canonical": "Search",
+      "category": "form",
+      "sharedProps": {
+        "value": "string",
+        "onChange": "(v:string)=>void",
+        "placeholder": "string",
+        "disabled": "boolean",
+        "onSearch": "(v:string)=>void",
+        "enterButton": "boolean",
+        "enterButtonText": "string"
+      },
+      "eventMap": {
+        "web": "onChange/onSearch",
+        "mini": "onChange/onSearch",
+        "native": "onChange/onSearch"
+      },
+      "stacks": {
+        "web": {
+          "item": "@kit/web-search",
+          "status": "beta"
+        },
+        "mini": {
+          "item": "@kit/mini-search",
+          "status": "beta"
+        },
+        "native": {
+          "item": "@kit/native-search",
+          "status": "beta"
+        }
+      }
     }
   ]
 }

@@ -68,6 +68,7 @@ import { States as MentionsStates } from '@kit/ui-web/src/Mentions/__examples__/
 import { States as FormStates } from '@kit/ui-web/src/Form/__examples__/States'
 import { States as TextAreaStates } from '@kit/ui-web/src/TextArea/__examples__/States'
 import { States as InputPasswordStates } from '@kit/ui-web/src/InputPassword/__examples__/States'
+import { States as SearchStates } from '@kit/ui-web/src/Search/__examples__/States'
 import { RequestDemo } from './demos/RequestDemo'
 
 /**
@@ -556,6 +557,13 @@ export default function App() {
           InputPassword · 密码输入框（显示/隐藏切换 / 禁用 / 无切换按钮）
         </h2>
         <InputPasswordStates />
+      </section>
+
+      <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
+        <h2 className="text-title-sm font-medium text-text-primary">
+          Search · 搜索框（基础 / 无按钮 / 禁用）
+        </h2>
+        <SearchStates />
       </section>
 
       <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">

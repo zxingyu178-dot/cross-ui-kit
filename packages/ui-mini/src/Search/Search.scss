@@ -1,0 +1,60 @@
+/* Search（mini）样式：颜色全走 --kit-* token。 */
+
+.kit-search {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+}
+
+.kit-search__input-wrapper {
+  flex: 1;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 36px;
+  padding: 0 12px;
+  padding-left: 36px;
+  border: 1px solid var(--kit-color-border-default);
+  border-radius: var(--kit-radius-md);
+  background: var(--kit-color-bg-card);
+  box-sizing: border-box;
+}
+
+.kit-search__icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+  color: var(--kit-color-text-tertiary);
+}
+
+.kit-search__native {
+  flex: 1;
+  font-size: var(--kit-font-size-body-sm);
+  color: var(--kit-color-text-primary);
+}
+
+.kit-search__button {
+  flex-shrink: 0;
+  height: 36px;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--kit-radius-md);
+  background: var(--kit-color-primary-default);
+}
+
+.kit-search__button--disabled {
+  opacity: 0.5;
+}
+
+.kit-search__button-text {
+  font-size: var(--kit-font-size-body-sm);
+  font-weight: 500;
+  color: #fff;
+}

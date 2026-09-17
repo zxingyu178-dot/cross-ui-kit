@@ -6594,6 +6594,119 @@
       },
       "docs": "packages/ui-web/src/InputPassword/README.md",
       "examples": ["packages/ui-web/src/InputPassword/__examples__/States.tsx"]
+    },
+    {
+      "name": "search",
+      "type": "registry:component",
+      "title": "搜索框 Search",
+      "description": "搜索框组件，input + 搜索按钮，支持回车搜索",
+      "canonical": "Search",
+      "status": "beta",
+      "stack": "web",
+      "dependencies": ["@kit/core"],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "packages/ui-web/src/Search/Search.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "packages/ui-web/src/Search/Search.types.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-web/src/Search/index.ts",
+          "type": "registry:ui"
+        }
+      ],
+      "props": [
+        {
+          "name": "value",
+          "type": "string",
+          "required": false,
+          "desc": "输入值"
+        },
+        {
+          "name": "onChange",
+          "type": "(value:string)=>void",
+          "required": false,
+          "desc": "值变化回调"
+        },
+        {
+          "name": "placeholder",
+          "type": "string",
+          "default": "'请输入搜索关键词'",
+          "required": false,
+          "desc": "占位文字"
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "default": "false",
+          "required": false,
+          "desc": "是否禁用"
+        },
+        {
+          "name": "onSearch",
+          "type": "(value:string)=>void",
+          "required": false,
+          "desc": "搜索回调"
+        },
+        {
+          "name": "enterButton",
+          "type": "boolean",
+          "default": "true",
+          "required": false,
+          "desc": "是否显示搜索按钮"
+        },
+        {
+          "name": "enterButtonText",
+          "type": "string",
+          "default": "'搜索'",
+          "required": false,
+          "desc": "搜索按钮文字"
+        },
+        {
+          "name": "className",
+          "type": "string",
+          "required": false,
+          "desc": "外层容器类名"
+        }
+      ],
+      "events": [
+        {
+          "name": "onChange",
+          "type": "(value: string) => void",
+          "desc": "值变化回调"
+        },
+        {
+          "name": "onSearch",
+          "type": "(value: string) => void",
+          "desc": "搜索回调"
+        }
+      ],
+      "slots": [],
+      "tokens": [
+        "color-bg-card",
+        "color-text-primary",
+        "color-text-tertiary",
+        "color-border-default",
+        "color-primary-default",
+        "radius-md",
+        "font-size-body-sm"
+      ],
+      "states": ["normal", "focus", "disabled"],
+      "a11y": "搜索框可输入；搜索按钮可点击；回车触发搜索",
+      "usage": {
+        "do": [
+          "用 Search 承载搜索输入场景",
+          "onSearch 处理搜索逻辑",
+          "enterButton 控制是否显示搜索按钮"
+        ],
+        "dont": ["用 Search 承载普通文本输入（用 Input）", "在禁用状态下触发搜索"]
+      },
+      "docs": "packages/ui-web/src/Search/README.md",
+      "examples": ["packages/ui-web/src/Search/__examples__/States.tsx"]
     }
   ]
 }
