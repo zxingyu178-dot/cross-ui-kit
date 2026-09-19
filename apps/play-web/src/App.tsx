@@ -102,6 +102,10 @@ import {
   GlassPage,
   MaterialElevationPage,
   TypographyPage,
+  DarkModeShowcase,
+  NeumorphismPage,
+  EmptyStateShowcase,
+  IconGallery,
 } from '@kit/patterns-web'
 import { RequestDemo } from './demos/RequestDemo'
 
@@ -843,6 +847,32 @@ export default function App() {
       <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
         <h2 className="text-title-sm font-medium text-text-primary">材质主题 · Typography 排版</h2>
         <TypographyPage />
+      </section>
+
+      <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
+        <h2 className="text-title-sm font-medium text-text-primary">
+          材质主题 · DarkMode 亮暗对比
+        </h2>
+        <DarkModeShowcase />
+      </section>
+
+      <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
+        <h2 className="text-title-sm font-medium text-text-primary">
+          材质主题 · Neumorphism 新拟态
+        </h2>
+        <NeumorphismPage />
+      </section>
+
+      <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
+        <h2 className="text-title-sm font-medium text-text-primary">
+          状态 · EmptyState 空状态集合
+        </h2>
+        <EmptyStateShowcase />
+      </section>
+
+      <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
+        <h2 className="text-title-sm font-medium text-text-primary">资源 · IconGallery 图标库</h2>
+        <IconGallery />
       </section>
     </main>
   )
