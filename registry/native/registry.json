@@ -9246,6 +9246,57 @@
       },
       "docs": "packages/ui-native/src/Backdrop/README.md",
       "examples": ["packages/ui-native/src/Backdrop/__examples__/States.tsx"]
+    },
+    {
+      "name": "safe-area",
+      "type": "registry:component",
+      "title": "安全区 SafeArea",
+      "description": "适配刘海屏/异形屏安全区",
+      "canonical": "SafeArea",
+      "status": "beta",
+      "stack": "native",
+      "dependencies": ["@kit/core"],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "packages/ui-native/src/SafeArea/SafeArea.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "packages/ui-native/src/SafeArea/SafeArea.types.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-native/src/SafeArea/index.ts",
+          "type": "registry:ui"
+        }
+      ],
+      "props": [
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "required": true,
+          "desc": "内容"
+        },
+        {
+          "name": "position",
+          "type": "'top'|'bottom'|'all'",
+          "default": "'bottom'",
+          "required": false,
+          "desc": "安全区位置"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "tokens": [],
+      "states": ["top", "bottom", "all"],
+      "a11y": "装饰容器",
+      "usage": {
+        "do": ["包裹底部 TabBar / 顶部 NavBar", "用 position 指定方向"],
+        "dont": ["用在普通内容区"]
+      },
+      "docs": "packages/ui-native/src/SafeArea/README.md",
+      "examples": ["packages/ui-native/src/SafeArea/__examples__/States.tsx"]
     }
   ]
 }

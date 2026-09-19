@@ -1,0 +1,18 @@
+/* SafeArea（mini）样式。 */
+
+.kit-safe-area {
+  width: 100%;
+}
+
+.kit-safe-area--top {
+  padding-top: env(safe-area-inset-top);
+}
+
+.kit-safe-area--bottom {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.kit-safe-area--all {
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
+}

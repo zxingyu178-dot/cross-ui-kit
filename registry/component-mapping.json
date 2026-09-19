@@ -2956,6 +2956,28 @@
           "status": "beta"
         }
       }
+    },
+    {
+      "canonical": "SafeArea",
+      "category": "layout",
+      "sharedProps": {
+        "position": "string"
+      },
+      "eventMap": {},
+      "stacks": {
+        "web": {
+          "item": "@kit/web-safe-area",
+          "status": "beta"
+        },
+        "mini": {
+          "item": "@kit/mini-safe-area",
+          "status": "beta"
+        },
+        "native": {
+          "item": "@kit/native-safe-area",
+          "status": "beta"
+        }
+      }
     }
   ]
 }
