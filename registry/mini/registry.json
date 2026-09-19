@@ -9469,6 +9469,80 @@
       },
       "docs": "packages/ui-mini/src/InfiniteScroll/README.md",
       "examples": ["packages/ui-mini/src/InfiniteScroll/__examples__/States.tsx"]
+    },
+    {
+      "name": "backdrop",
+      "type": "registry:component",
+      "title": "遮罩层 Backdrop",
+      "description": "全屏半透明遮罩，点击关闭",
+      "canonical": "Backdrop",
+      "status": "beta",
+      "stack": "mini",
+      "dependencies": ["@kit/core"],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "packages/ui-mini/src/Backdrop/Backdrop.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "packages/ui-mini/src/Backdrop/Backdrop.types.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-mini/src/Backdrop/Backdrop.scss",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-mini/src/Backdrop/index.ts",
+          "type": "registry:ui"
+        }
+      ],
+      "props": [
+        {
+          "name": "open",
+          "type": "boolean",
+          "default": "false",
+          "required": false,
+          "desc": "是否显示"
+        },
+        {
+          "name": "onClose",
+          "type": "() => void",
+          "required": false,
+          "desc": "点击遮罩关闭"
+        },
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "required": false,
+          "desc": "遮罩内容"
+        },
+        {
+          "name": "opacity",
+          "type": "number",
+          "default": "0.5",
+          "required": false,
+          "desc": "遮罩透明度"
+        }
+      ],
+      "events": [
+        {
+          "name": "onClose",
+          "type": "() => void",
+          "desc": "点击遮罩关闭"
+        }
+      ],
+      "slots": [],
+      "tokens": [],
+      "states": ["visible", "hidden"],
+      "a11y": "遮罩层 role=presentation",
+      "usage": {
+        "do": ["弹窗/抽屉底层", "点击空白关闭"],
+        "dont": ["不放可交互内容（用 Dialog）"]
+      },
+      "docs": "packages/ui-mini/src/Backdrop/README.md",
+      "examples": ["packages/ui-mini/src/Backdrop/__examples__/States.tsx"]
     }
   ]
 }

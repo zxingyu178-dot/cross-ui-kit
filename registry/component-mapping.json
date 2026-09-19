@@ -2929,6 +2929,33 @@
           "status": "beta"
         }
       }
+    },
+    {
+      "canonical": "Backdrop",
+      "category": "overlay",
+      "sharedProps": {
+        "open": "boolean",
+        "opacity": "number"
+      },
+      "eventMap": {
+        "web": "onClose",
+        "mini": "onClose",
+        "native": "onClose"
+      },
+      "stacks": {
+        "web": {
+          "item": "@kit/web-backdrop",
+          "status": "beta"
+        },
+        "mini": {
+          "item": "@kit/mini-backdrop",
+          "status": "beta"
+        },
+        "native": {
+          "item": "@kit/native-backdrop",
+          "status": "beta"
+        }
+      }
     }
   ]
 }
