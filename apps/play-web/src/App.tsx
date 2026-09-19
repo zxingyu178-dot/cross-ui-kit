@@ -83,7 +83,18 @@ import { States as PageHeaderStates } from '@kit/ui-web/src/PageHeader/__example
 import { States as LayoutStates } from '@kit/ui-web/src/Layout/__examples__/States'
 import { States as CountUpStates } from '@kit/ui-web/src/CountUp/__examples__/States'
 import { States as AddressStates } from '@kit/ui-web/src/Address/__examples__/States'
-import { LoginPage, ListPage, DetailPage, FormPage } from '@kit/patterns-web'
+import {
+  LoginPage,
+  ListPage,
+  DetailPage,
+  FormPage,
+  DashboardPage,
+  SettingsPage,
+  ProfilePage,
+  OnboardingPage,
+  HeroPage,
+  ErrorPage,
+} from '@kit/patterns-web'
 import { RequestDemo } from './demos/RequestDemo'
 
 /**
@@ -746,6 +757,38 @@ export default function App() {
       <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
         <h2 className="text-title-sm font-medium text-text-primary">页面模板 · FormPage 表单页</h2>
         <FormPage />
+      </section>
+
+      <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
+        <h2 className="text-title-sm font-medium text-text-primary">页面模板 · Dashboard 仪表盘</h2>
+        <DashboardPage />
+      </section>
+
+      <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
+        <h2 className="text-title-sm font-medium text-text-primary">页面模板 · Settings 设置</h2>
+        <SettingsPage />
+      </section>
+
+      <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
+        <h2 className="text-title-sm font-medium text-text-primary">页面模板 · Profile 个人中心</h2>
+        <ProfilePage />
+      </section>
+
+      <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
+        <h2 className="text-title-sm font-medium text-text-primary">
+          页面模板 · Onboarding 引导页
+        </h2>
+        <OnboardingPage />
+      </section>
+
+      <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
+        <h2 className="text-title-sm font-medium text-text-primary">页面模板 · Hero 营销首屏</h2>
+        <HeroPage />
+      </section>
+
+      <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
+        <h2 className="text-title-sm font-medium text-text-primary">页面模板 · Error 错误页</h2>
+        <ErrorPage />
       </section>
     </main>
   )
