@@ -2902,6 +2902,33 @@
           "status": "beta"
         }
       }
+    },
+    {
+      "canonical": "InfiniteScroll",
+      "category": "interaction",
+      "sharedProps": {
+        "hasMore": "boolean",
+        "loadingText": "string"
+      },
+      "eventMap": {
+        "web": "onLoadMore",
+        "mini": "onLoadMore",
+        "native": "onLoadMore"
+      },
+      "stacks": {
+        "web": {
+          "item": "@kit/web-infinite-scroll",
+          "status": "beta"
+        },
+        "mini": {
+          "item": "@kit/mini-infinite-scroll",
+          "status": "beta"
+        },
+        "native": {
+          "item": "@kit/native-infinite-scroll",
+          "status": "beta"
+        }
+      }
     }
   ]
 }

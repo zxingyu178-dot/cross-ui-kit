@@ -9381,6 +9381,94 @@
       },
       "docs": "packages/ui-mini/src/LoadingBar/README.md",
       "examples": ["packages/ui-mini/src/LoadingBar/__examples__/States.tsx"]
+    },
+    {
+      "name": "infinite-scroll",
+      "type": "registry:component",
+      "title": "无限滚动 InfiniteScroll",
+      "description": "滚动到底部自动加载更多",
+      "canonical": "InfiniteScroll",
+      "status": "beta",
+      "stack": "mini",
+      "dependencies": ["@kit/core"],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "packages/ui-mini/src/InfiniteScroll/InfiniteScroll.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "packages/ui-mini/src/InfiniteScroll/InfiniteScroll.types.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-mini/src/InfiniteScroll/InfiniteScroll.scss",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-mini/src/InfiniteScroll/index.ts",
+          "type": "registry:ui"
+        }
+      ],
+      "props": [
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "required": true,
+          "desc": "列表内容"
+        },
+        {
+          "name": "onLoadMore",
+          "type": "() => Promise<void> | void",
+          "required": false,
+          "desc": "加载更多回调"
+        },
+        {
+          "name": "hasMore",
+          "type": "boolean",
+          "default": "true",
+          "required": false,
+          "desc": "是否还有更多"
+        },
+        {
+          "name": "loadingText",
+          "type": "string",
+          "default": "'加载中...'",
+          "required": false,
+          "desc": "加载中文案"
+        },
+        {
+          "name": "noMoreText",
+          "type": "string",
+          "default": "'没有更多了'",
+          "required": false,
+          "desc": "没有更多文案"
+        },
+        {
+          "name": "threshold",
+          "type": "number",
+          "default": "100",
+          "required": false,
+          "desc": "距底部触发距离"
+        }
+      ],
+      "events": [
+        {
+          "name": "onLoadMore",
+          "type": "() => Promise<void> | void",
+          "desc": "加载更多回调"
+        }
+      ],
+      "slots": [],
+      "tokens": ["color-text-tertiary", "font-size-bodySm"],
+      "states": ["loading", "no-more"],
+      "a11y": "列表可滚动加载",
+      "usage": {
+        "do": ["包裹长列表", "hasMore 控制结束"],
+        "dont": ["配合 PullToRefresh 同时用"]
+      },
+      "docs": "packages/ui-mini/src/InfiniteScroll/README.md",
+      "examples": ["packages/ui-mini/src/InfiniteScroll/__examples__/States.tsx"]
     }
   ]
 }

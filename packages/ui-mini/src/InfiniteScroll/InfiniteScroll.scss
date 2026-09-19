@@ -1,0 +1,16 @@
+/* InfiniteScroll（mini）样式。 */
+
+.kit-infinite {
+  height: 600rpx;
+  overflow-y: auto;
+}
+
+.kit-infinite__footer {
+  padding: 24rpx 0;
+  text-align: center;
+}
+
+.kit-infinite__text {
+  font-size: var(--kit-font-size-bodySm);
+  color: var(--kit-color-text-tertiary);
+}
