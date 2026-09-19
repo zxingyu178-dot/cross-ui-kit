@@ -110,6 +110,10 @@ import {
   NotificationCenterPage,
   LoginRegisterPage,
   DataTablePage,
+  SettingsAdvancedPage,
+  OrderListPage,
+  DataDashboardPage,
+  CardWallPage,
 } from '@kit/patterns-web'
 import { RequestDemo } from './demos/RequestDemo'
 
@@ -905,6 +909,32 @@ export default function App() {
           页面模板 · DataTable 高级表格
         </h2>
         <DataTablePage />
+      </section>
+
+      <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
+        <h2 className="text-title-sm font-medium text-text-primary">
+          页面模板 · SettingsAdvanced 高级设置
+        </h2>
+        <SettingsAdvancedPage />
+      </section>
+
+      <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
+        <h2 className="text-title-sm font-medium text-text-primary">
+          页面模板 · OrderList 订单列表
+        </h2>
+        <OrderListPage />
+      </section>
+
+      <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
+        <h2 className="text-title-sm font-medium text-text-primary">
+          页面模板 · DataDashboard 数据大屏
+        </h2>
+        <DataDashboardPage />
+      </section>
+
+      <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
+        <h2 className="text-title-sm font-medium text-text-primary">页面模板 · CardWall 卡片墙</h2>
+        <CardWallPage />
       </section>
     </main>
   )
