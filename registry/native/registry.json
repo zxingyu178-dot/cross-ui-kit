@@ -8969,6 +8969,71 @@
       },
       "docs": "packages/ui-native/src/NoticeBar/README.md",
       "examples": ["packages/ui-native/src/NoticeBar/__examples__/States.tsx"]
+    },
+    {
+      "name": "marquee",
+      "type": "registry:component",
+      "title": "跑马灯 Marquee",
+      "description": "内容无缝横向滚动",
+      "canonical": "Marquee",
+      "status": "beta",
+      "stack": "native",
+      "dependencies": ["@kit/core"],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "packages/ui-native/src/Marquee/Marquee.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "packages/ui-native/src/Marquee/Marquee.types.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-native/src/Marquee/index.ts",
+          "type": "registry:ui"
+        }
+      ],
+      "props": [
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "required": true,
+          "desc": "内容"
+        },
+        {
+          "name": "speed",
+          "type": "number",
+          "default": "50",
+          "required": false,
+          "desc": "滚动速度 px/s"
+        },
+        {
+          "name": "pauseOnHover",
+          "type": "boolean",
+          "default": "true",
+          "required": false,
+          "desc": "hover 暂停"
+        },
+        {
+          "name": "reverse",
+          "type": "boolean",
+          "default": "false",
+          "required": false,
+          "desc": "是否反向"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "tokens": ["color-text-secondary", "font-size-bodySm"],
+      "states": ["normal"],
+      "a11y": "滚动内容 aria-hidden 装饰",
+      "usage": {
+        "do": ["用 Marquee 放公告/活动横幅", "reverse 换方向"],
+        "dont": ["放长正文（用 NoticeBar 或列表）"]
+      },
+      "docs": "packages/ui-native/src/Marquee/README.md",
+      "examples": ["packages/ui-native/src/Marquee/__examples__/States.tsx"]
     }
   ]
 }

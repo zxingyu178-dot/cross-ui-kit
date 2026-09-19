@@ -1,0 +1,30 @@
+/* Marquee（mini）样式。 */
+
+.kit-marquee {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.kit-marquee__inner {
+  display: inline-flex;
+  animation: kit-marquee-scroll 20s linear infinite;
+}
+
+.kit-marquee--reverse .kit-marquee__inner {
+  animation-direction: reverse;
+}
+
+.kit-marquee__text {
+  padding-right: 32rpx;
+  font-size: var(--kit-font-size-bodySm);
+  color: var(--kit-color-text-secondary);
+}
+
+@keyframes kit-marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}

@@ -2856,6 +2856,29 @@
           "status": "beta"
         }
       }
+    },
+    {
+      "canonical": "Marquee",
+      "category": "feedback",
+      "sharedProps": {
+        "speed": "number",
+        "reverse": "boolean"
+      },
+      "eventMap": {},
+      "stacks": {
+        "web": {
+          "item": "@kit/web-marquee",
+          "status": "beta"
+        },
+        "mini": {
+          "item": "@kit/mini-marquee",
+          "status": "beta"
+        },
+        "native": {
+          "item": "@kit/native-marquee",
+          "status": "beta"
+        }
+      }
     }
   ]
 }
