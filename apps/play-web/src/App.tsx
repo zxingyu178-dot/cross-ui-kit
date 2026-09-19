@@ -1,4 +1,4 @@
-﻿import { useLayoutEffect, useState } from 'react'
+import { useLayoutEffect, useState } from 'react'
 import { Button } from '@kit/ui-web'
 // 直接引用库内示例（与 hub/Storybook 同源，保证演示即真实资产）
 import { Variants } from '@kit/ui-web/src/Button/__examples__/Variants'
@@ -94,6 +94,10 @@ import {
   OnboardingPage,
   HeroPage,
   ErrorPage,
+  ChatPage,
+  ProductDetailPage,
+  WorkspacePage,
+  CartPage,
 } from '@kit/patterns-web'
 import { RequestDemo } from './demos/RequestDemo'
 
@@ -789,6 +793,28 @@ export default function App() {
       <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
         <h2 className="text-title-sm font-medium text-text-primary">页面模板 · Error 错误页</h2>
         <ErrorPage />
+      </section>
+
+      <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
+        <h2 className="text-title-sm font-medium text-text-primary">页面模板 · Chat 聊天页</h2>
+        <ChatPage />
+      </section>
+
+      <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
+        <h2 className="text-title-sm font-medium text-text-primary">
+          页面模板 · ProductDetail 商品详情
+        </h2>
+        <ProductDetailPage />
+      </section>
+
+      <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
+        <h2 className="text-title-sm font-medium text-text-primary">页面模板 · Workspace 工作台</h2>
+        <WorkspacePage />
+      </section>
+
+      <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
+        <h2 className="text-title-sm font-medium text-text-primary">页面模板 · Cart 购物车</h2>
+        <CartPage />
       </section>
     </main>
   )

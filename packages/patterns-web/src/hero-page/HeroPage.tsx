@@ -35,10 +35,10 @@ export function HeroPage({
         <Tag variant="primary" tone="solid">
           {badge}
         </Tag>
-        <h1 className="bg-gradient-to-r from-white to-blue-200 bg-clip-text text-4xl font-bold leading-tight text-transparent sm:text-6xl">
+        <h1 className="bg-gradient-to-r from-white via-blue-100 to-purple-200 bg-clip-text text-4xl font-bold leading-tight text-transparent sm:text-6xl">
           {title}
         </h1>
-        <p className="max-w-2xl text-bodyMd text-slate-300">{subtitle}</p>
+        <p className="max-w-2xl text-bodyMd text-slate-100">{subtitle}</p>
         <div className="flex flex-wrap gap-3">
           <Button variant="primary" size="lg" onClick={onPrimary}>
             {primaryCta}
@@ -64,7 +64,7 @@ export function HeroPage({
               <div className="flex flex-col items-center gap-2">
                 <span className="text-3xl">{f.emoji}</span>
                 <h3 className="text-bodyMd font-medium text-white">{f.t}</h3>
-                <p className="text-bodySm text-slate-400">{f.d}</p>
+                <p className="text-bodySm text-slate-200">{f.d}</p>
               </div>
             </Card>
           ))}
