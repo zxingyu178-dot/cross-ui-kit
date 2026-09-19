@@ -2663,6 +2663,34 @@
           "status": "beta"
         }
       }
+    },
+    {
+      "canonical": "TabBar",
+      "category": "navigation",
+      "sharedProps": {
+        "items": "TabItem[]",
+        "activeKey": "string",
+        "defaultActiveKey": "string"
+      },
+      "eventMap": {
+        "web": "onChange",
+        "mini": "onChange",
+        "native": "onChange"
+      },
+      "stacks": {
+        "web": {
+          "item": "@kit/web-tab-bar",
+          "status": "beta"
+        },
+        "mini": {
+          "item": "@kit/mini-tab-bar",
+          "status": "beta"
+        },
+        "native": {
+          "item": "@kit/native-tab-bar",
+          "status": "beta"
+        }
+      }
     }
   ]
 }

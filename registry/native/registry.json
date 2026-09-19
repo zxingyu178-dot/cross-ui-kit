@@ -8361,6 +8361,87 @@
       },
       "docs": "packages/ui-native/src/NavBar/README.md",
       "examples": ["packages/ui-native/src/NavBar/__examples__/States.tsx"]
+    },
+    {
+      "name": "tab-bar",
+      "type": "registry:component",
+      "title": "底部标签栏 TabBar",
+      "description": "底部标签栏组件，受控/非受控，支持图标与角标",
+      "canonical": "TabBar",
+      "status": "beta",
+      "stack": "native",
+      "dependencies": ["@kit/core", "react"],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "packages/ui-native/src/TabBar/TabBar.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "packages/ui-native/src/TabBar/TabBar.types.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-native/src/TabBar/index.ts",
+          "type": "registry:ui"
+        }
+      ],
+      "props": [
+        {
+          "name": "items",
+          "type": "TabItem[]",
+          "required": true,
+          "desc": "标签项（key/label/icon/badge）"
+        },
+        {
+          "name": "activeKey",
+          "type": "string",
+          "required": false,
+          "desc": "受控当前项"
+        },
+        {
+          "name": "defaultActiveKey",
+          "type": "string",
+          "required": false,
+          "desc": "非受控默认项"
+        },
+        {
+          "name": "onChange",
+          "type": "(key: string) => void",
+          "required": false,
+          "desc": "切换回调"
+        },
+        {
+          "name": "style",
+          "type": "ViewStyle",
+          "required": false,
+          "desc": "外层容器样式"
+        }
+      ],
+      "events": [
+        {
+          "name": "onChange",
+          "type": "(key: string) => void",
+          "desc": "切换标签"
+        }
+      ],
+      "slots": ["items[].icon", "items[].badge"],
+      "tokens": [
+        "color-bg-card",
+        "color-border-default",
+        "color-primary-default",
+        "color-text-secondary",
+        "color-danger-default",
+        "font-size-caption"
+      ],
+      "states": ["active", "normal"],
+      "a11y": "可点击标签，当前项高亮",
+      "usage": {
+        "do": ["用 TabBar 作为主 tab 切换", "受控接路由/状态", "badge 放未读数"],
+        "dont": ["用 TabBar 放页面内局部 tab（用 Tabs）"]
+      },
+      "docs": "packages/ui-native/src/TabBar/README.md",
+      "examples": ["packages/ui-native/src/TabBar/__examples__/States.tsx"]
     }
   ]
 }
