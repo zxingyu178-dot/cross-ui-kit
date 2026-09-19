@@ -2606,6 +2606,35 @@
           "status": "beta"
         }
       }
+    },
+    {
+      "canonical": "StatusDot",
+      "category": "data-display",
+      "sharedProps": {
+        "tone": "'success'|'warning'|'danger'|'info'|'neutral'|'primary'",
+        "size": "number",
+        "outlined": "boolean",
+        "text": "string"
+      },
+      "eventMap": {
+        "web": "",
+        "mini": "",
+        "native": ""
+      },
+      "stacks": {
+        "web": {
+          "item": "@kit/web-status-dot",
+          "status": "beta"
+        },
+        "mini": {
+          "item": "@kit/mini-status-dot",
+          "status": "beta"
+        },
+        "native": {
+          "item": "@kit/native-status-dot",
+          "status": "beta"
+        }
+      }
     }
   ]
 }

@@ -8194,6 +8194,86 @@
       },
       "docs": "packages/ui-native/src/QRCode/README.md",
       "examples": ["packages/ui-native/src/QRCode/__examples__/States.tsx"]
+    },
+    {
+      "name": "status-dot",
+      "type": "registry:component",
+      "title": "状态点 StatusDot",
+      "description": "状态点组件，语义色圆点，可选文字与描边",
+      "canonical": "StatusDot",
+      "status": "beta",
+      "stack": "native",
+      "dependencies": ["@kit/core"],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "packages/ui-native/src/StatusDot/StatusDot.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "packages/ui-native/src/StatusDot/StatusDot.types.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-native/src/StatusDot/index.ts",
+          "type": "registry:ui"
+        }
+      ],
+      "props": [
+        {
+          "name": "tone",
+          "type": "'success'|'warning'|'danger'|'info'|'neutral'|'primary'",
+          "default": "'neutral'",
+          "required": false,
+          "desc": "状态语义色"
+        },
+        {
+          "name": "size",
+          "type": "number",
+          "default": "8",
+          "required": false,
+          "desc": "圆点大小"
+        },
+        {
+          "name": "outlined",
+          "type": "boolean",
+          "default": "false",
+          "required": false,
+          "desc": "是否带描边"
+        },
+        {
+          "name": "text",
+          "type": "string",
+          "required": false,
+          "desc": "状态文字"
+        },
+        {
+          "name": "style",
+          "type": "ViewStyle",
+          "required": false,
+          "desc": "外层容器样式"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "tokens": [
+        "color-success-default",
+        "color-warning-default",
+        "color-danger-default",
+        "color-info-default",
+        "color-neutral-default",
+        "color-primary-default",
+        "color-text-secondary",
+        "color-bg-card"
+      ],
+      "states": ["success", "warning", "danger", "info", "neutral", "primary"],
+      "a11y": "圆点+文字组合，文字可读",
+      "usage": {
+        "do": ["用 StatusDot 表示记录/任务状态", "tone 用语义色", "text 补充状态说明"],
+        "dont": ["用 StatusDot 承载可点击操作（用 Button/Tag）"]
+      },
+      "docs": "packages/ui-native/src/StatusDot/README.md",
+      "examples": ["packages/ui-native/src/StatusDot/__examples__/States.tsx"]
     }
   ]
 }

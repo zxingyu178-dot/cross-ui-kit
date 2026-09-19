@@ -1,0 +1,41 @@
+/* StatusDot（mini）样式。 */
+
+.kit-dot {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8rpx;
+}
+
+.kit-dot__circle {
+  display: inline-block;
+  border-radius: 9999rpx;
+}
+
+.kit-dot--success {
+  background: var(--kit-color-success-default);
+}
+.kit-dot--warning {
+  background: var(--kit-color-warning-default);
+}
+.kit-dot--danger {
+  background: var(--kit-color-danger-default);
+}
+.kit-dot--info {
+  background: var(--kit-color-info-default);
+}
+.kit-dot--neutral {
+  background: var(--kit-color-neutral-default);
+}
+.kit-dot--primary {
+  background: var(--kit-color-primary-default);
+}
+
+.kit-dot--outlined {
+  box-shadow: 0 0 0 2rpx var(--kit-color-bg-card);
+}
+
+.kit-dot__text {
+  font-size: var(--kit-font-size-bodySm);
+  color: var(--kit-color-text-secondary);
+}
