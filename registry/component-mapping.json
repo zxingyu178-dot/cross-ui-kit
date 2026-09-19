@@ -2519,6 +2519,35 @@
           "status": "beta"
         }
       }
+    },
+    {
+      "canonical": "Trend",
+      "category": "data-display",
+      "sharedProps": {
+        "direction": "'up'|'down'|'flat'",
+        "value": "string",
+        "inverted": "boolean",
+        "showArrow": "boolean"
+      },
+      "eventMap": {
+        "web": "",
+        "mini": "",
+        "native": ""
+      },
+      "stacks": {
+        "web": {
+          "item": "@kit/web-trend",
+          "status": "beta"
+        },
+        "mini": {
+          "item": "@kit/mini-trend",
+          "status": "beta"
+        },
+        "native": {
+          "item": "@kit/native-trend",
+          "status": "beta"
+        }
+      }
     }
   ]
 }

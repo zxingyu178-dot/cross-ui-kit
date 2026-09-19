@@ -8204,6 +8204,91 @@
       },
       "docs": "packages/ui-mini/src/Address/README.md",
       "examples": ["packages/ui-mini/src/Address/__examples__/States.tsx"]
+    },
+    {
+      "name": "trend",
+      "type": "registry:component",
+      "title": "趋势指示器 Trend",
+      "description": "趋势指示器，涨跌方向 + 数值，带箭头与语义色",
+      "canonical": "Trend",
+      "status": "beta",
+      "stack": "mini",
+      "dependencies": ["@kit/core"],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "packages/ui-mini/src/Trend/Trend.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "packages/ui-mini/src/Trend/Trend.types.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-mini/src/Trend/Trend.scss",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-mini/src/Trend/index.ts",
+          "type": "registry:ui"
+        }
+      ],
+      "props": [
+        {
+          "name": "direction",
+          "type": "'up'|'down'|'flat'",
+          "required": true,
+          "desc": "趋势方向"
+        },
+        {
+          "name": "value",
+          "type": "string",
+          "required": true,
+          "desc": "数值文本"
+        },
+        {
+          "name": "inverted",
+          "type": "boolean",
+          "default": "false",
+          "required": false,
+          "desc": "涨跌颜色反转"
+        },
+        {
+          "name": "showArrow",
+          "type": "boolean",
+          "default": "true",
+          "required": false,
+          "desc": "是否带箭头"
+        },
+        {
+          "name": "className",
+          "type": "string",
+          "required": false,
+          "desc": "外层容器类名"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "tokens": [
+        "color-danger-default",
+        "color-success-default",
+        "color-text-secondary",
+        "color-text-primary",
+        "font-size-bodySm"
+      ],
+      "states": ["up", "down", "flat"],
+      "a11y": "方向与数值文本可读",
+      "usage": {
+        "do": [
+          "用 Trend 承载涨跌趋势展示",
+          "direction 表示方向",
+          "inverted 适配涨绿跌红场景",
+          "showArrow 控制箭头"
+        ],
+        "dont": ["用 Trend 承载普通数字（用 Text/Statistic）"]
+      },
+      "docs": "packages/ui-mini/src/Trend/README.md",
+      "examples": ["packages/ui-mini/src/Trend/__examples__/States.tsx"]
     }
   ]
 }

@@ -1,0 +1,34 @@
+/* Trend（mini）样式：颜色全走 --kit-* token。 */
+
+.kit-trend {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4rpx;
+  font-size: var(--kit-font-size-bodySm);
+  font-weight: 500;
+}
+
+.kit-trend--up {
+  color: var(--kit-color-danger-default);
+}
+
+.kit-trend--down {
+  color: var(--kit-color-success-default);
+}
+
+.kit-trend--flat {
+  color: var(--kit-color-text-secondary);
+}
+
+.kit-trend--up-inverted {
+  color: var(--kit-color-success-default);
+}
+
+.kit-trend--down-inverted {
+  color: var(--kit-color-danger-default);
+}
+
+.kit-trend__arrow {
+  font-size: 10rpx;
+}
