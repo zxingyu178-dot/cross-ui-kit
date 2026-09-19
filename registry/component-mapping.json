@@ -2576,6 +2576,36 @@
           "status": "beta"
         }
       }
+    },
+    {
+      "canonical": "QRCode",
+      "category": "data-display",
+      "sharedProps": {
+        "value": "string",
+        "size": "number",
+        "level": "'L'|'M'|'Q'|'H'",
+        "color": "string",
+        "bgColor": "string"
+      },
+      "eventMap": {
+        "web": "",
+        "mini": "",
+        "native": ""
+      },
+      "stacks": {
+        "web": {
+          "item": "@kit/web-qr-code",
+          "status": "beta"
+        },
+        "mini": {
+          "item": "@kit/mini-qr-code",
+          "status": "beta"
+        },
+        "native": {
+          "item": "@kit/native-qr-code",
+          "status": "beta"
+        }
+      }
     }
   ]
 }

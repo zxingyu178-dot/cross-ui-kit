@@ -1,4 +1,4 @@
-{
+﻿{
   "name": "@kit/ui-web",
   "version": "0.0.1",
   "private": true,
@@ -32,12 +32,14 @@
     "@radix-ui/react-slider": "catalog:web",
     "@radix-ui/react-slot": "catalog:web",
     "class-variance-authority": "catalog:web",
+    "qrcode": "catalog:web",
     "clsx": "catalog:",
     "react": "catalog:",
     "tailwind-merge": "catalog:"
   },
   "devDependencies": {
     "@types/node": "catalog:",
+    "@types/qrcode": "catalog:web",
     "@types/react": "catalog:",
     "@types/react-dom": "catalog:",
     "react-dom": "catalog:",

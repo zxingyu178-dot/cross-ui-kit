@@ -1,4 +1,4 @@
-{
+﻿{
   "name": "@kit/ui-mini",
   "version": "0.0.1",
   "private": true,
@@ -17,6 +17,7 @@
     "@kit/icons": "workspace:*",
     "@kit/tokens": "workspace:*",
     "@nutui/nutui-react-taro": "catalog:mini",
+    "qrcode": "catalog:mini",
     "@tarojs/components": "catalog:mini",
     "@tarojs/taro": "catalog:mini",
     "clsx": "catalog:",
@@ -24,6 +25,7 @@
   },
   "devDependencies": {
     "@types/node": "catalog:",
+    "@types/qrcode": "catalog:mini",
     "@types/react": "catalog:",
     "typescript": "catalog:",
     "vitest": "^3.0.0"

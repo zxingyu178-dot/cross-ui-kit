@@ -1,4 +1,4 @@
-# pnpm workspace 定义：应用壳工程 + 库包
+﻿# pnpm workspace 定义：应用壳工程 + 库包
 packages:
   - 'apps/*'
   - 'packages/*'
@@ -63,12 +63,16 @@ catalogs:
     '@radix-ui/react-popover': ^1.1.0
     '@radix-ui/react-slider': ^1.2.0
     class-variance-authority: ^0.7.0
+    qrcode: ^1.5.4
+    '@types/qrcode': ^1.5.5
   # 小端栈：Taro + NutUI
   mini:
     '@tarojs/taro': ^4.0.0
     '@tarojs/components': ^4.0.0
     '@tarojs/cli': ^4.0.0
     '@nutui/nutui-react-taro': ^3.0.0
+    qrcode: ^1.5.4
+    '@types/qrcode': ^1.5.5
   # 原生栈：Expo SDK 52（RN 0.76 + React 18.3，是唯一 React 18.3 的 SDK；
   # SDK 53+ 已升级 React 19，与 Taro/NutUI 的 React 18.3 上限冲突）
   # Tamagui 锁 1.121.x（与 SDK 52 同期；1.129+/v2 面向 React 19 / RN 0.81+）
@@ -76,3 +80,5 @@ catalogs:
     expo: ~52.0.0
     react-native: ~0.76.0
     tamagui: ~1.121.0
+    qrcode: ^1.5.4
+    '@types/qrcode': ^1.5.5

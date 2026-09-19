@@ -1,4 +1,4 @@
-{
+﻿{
   "name": "@kit/ui-native",
   "version": "0.0.1",
   "private": true,
@@ -17,10 +17,12 @@
     "@kit/icons": "workspace:*",
     "@kit/tokens": "workspace:*",
     "react": "catalog:",
-    "tamagui": "catalog:native"
+    "tamagui": "catalog:native",
+    "qrcode": "catalog:native"
   },
   "devDependencies": {
     "@types/node": "catalog:",
+    "@types/qrcode": "catalog:native",
     "@types/react": "catalog:",
     "@types/react-dom": "catalog:",
     "react-dom": "catalog:",
