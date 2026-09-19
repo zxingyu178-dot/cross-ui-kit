@@ -1,4 +1,4 @@
-{
+﻿{
   "name": "play-web",
   "private": true,
   "version": "0.0.1",
@@ -17,6 +17,7 @@
     "@kit/icons": "workspace:*",
     "@kit/tokens": "workspace:*",
     "@kit/ui-web": "workspace:*",
+    "@kit/patterns-web": "workspace:*",
     "react": "catalog:",
     "react-dom": "catalog:"
   },

@@ -83,6 +83,7 @@ import { States as PageHeaderStates } from '@kit/ui-web/src/PageHeader/__example
 import { States as LayoutStates } from '@kit/ui-web/src/Layout/__examples__/States'
 import { States as CountUpStates } from '@kit/ui-web/src/CountUp/__examples__/States'
 import { States as AddressStates } from '@kit/ui-web/src/Address/__examples__/States'
+import { LoginPage, ListPage, DetailPage, FormPage } from '@kit/patterns-web'
 import { RequestDemo } from './demos/RequestDemo'
 
 /**
@@ -690,6 +691,61 @@ export default function App() {
             重置
           </Button>
         </div>
+      </section>
+
+      <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
+        <h2 className="text-title-sm font-medium text-text-primary">页面模板 · LoginPage 登录页</h2>
+        <div className="rounded-lg border border-border-default overflow-hidden">
+          <LoginPage />
+        </div>
+      </section>
+
+      <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
+        <h2 className="text-title-sm font-medium text-text-primary">页面模板 · ListPage 列表页</h2>
+        <ListPage
+          rows={[
+            {
+              id: '1',
+              name: '示例项目 A',
+              status: 'active',
+              owner: '张三',
+              updatedAt: '2026-09-01',
+            },
+            {
+              id: '2',
+              name: '示例项目 B',
+              status: 'pending',
+              owner: '李四',
+              updatedAt: '2026-09-05',
+            },
+            {
+              id: '3',
+              name: '示例项目 C',
+              status: 'inactive',
+              owner: '王五',
+              updatedAt: '2026-09-10',
+            },
+          ]}
+        />
+      </section>
+
+      <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
+        <h2 className="text-title-sm font-medium text-text-primary">
+          页面模板 · DetailPage 详情页
+        </h2>
+        <DetailPage
+          items={[
+            { label: '名称', value: '示例项目' },
+            { label: '编号', value: 'P-001' },
+            { label: '负责人', value: '张三' },
+            { label: '创建时间', value: '2026-09-01' },
+          ]}
+        />
+      </section>
+
+      <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
+        <h2 className="text-title-sm font-medium text-text-primary">页面模板 · FormPage 表单页</h2>
+        <FormPage />
       </section>
     </main>
   )

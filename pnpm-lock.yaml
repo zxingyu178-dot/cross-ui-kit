@@ -355,6 +355,9 @@ importers:
       '@kit/icons':
         specifier: workspace:*
         version: link:../../packages/icons
+      '@kit/patterns-web':
+        specifier: workspace:*
+        version: link:../../packages/patterns-web
       '@kit/tokens':
         specifier: workspace:*
         version: link:../../packages/tokens
