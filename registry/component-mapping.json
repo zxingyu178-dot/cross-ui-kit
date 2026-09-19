@@ -2635,6 +2635,34 @@
           "status": "beta"
         }
       }
+    },
+    {
+      "canonical": "NavBar",
+      "category": "navigation",
+      "sharedProps": {
+        "title": "ReactNode",
+        "showBack": "boolean"
+      },
+      "eventMap": {
+        "web": "onBack",
+        "mini": "onBack",
+        "native": "onBack"
+      },
+      "stackSlots": ["left", "right"],
+      "stacks": {
+        "web": {
+          "item": "@kit/web-nav-bar",
+          "status": "beta"
+        },
+        "mini": {
+          "item": "@kit/mini-nav-bar",
+          "status": "beta"
+        },
+        "native": {
+          "item": "@kit/native-nav-bar",
+          "status": "beta"
+        }
+      }
     }
   ]
 }

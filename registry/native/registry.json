@@ -8274,6 +8274,93 @@
       },
       "docs": "packages/ui-native/src/StatusDot/README.md",
       "examples": ["packages/ui-native/src/StatusDot/__examples__/States.tsx"]
+    },
+    {
+      "name": "nav-bar",
+      "type": "registry:component",
+      "title": "顶部导航栏 NavBar",
+      "description": "顶部导航栏组件，标题 + 返回 + 右侧操作",
+      "canonical": "NavBar",
+      "status": "beta",
+      "stack": "native",
+      "dependencies": ["@kit/core"],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "packages/ui-native/src/NavBar/NavBar.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "packages/ui-native/src/NavBar/NavBar.types.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-native/src/NavBar/index.ts",
+          "type": "registry:ui"
+        }
+      ],
+      "props": [
+        {
+          "name": "title",
+          "type": "ReactNode",
+          "required": false,
+          "desc": "标题"
+        },
+        {
+          "name": "left",
+          "type": "ReactNode",
+          "required": false,
+          "desc": "左侧内容（覆盖默认返回）"
+        },
+        {
+          "name": "right",
+          "type": "ReactNode",
+          "required": false,
+          "desc": "右侧内容"
+        },
+        {
+          "name": "onBack",
+          "type": "() => void",
+          "required": false,
+          "desc": "点击返回"
+        },
+        {
+          "name": "showBack",
+          "type": "boolean",
+          "default": "true",
+          "required": false,
+          "desc": "是否显示返回按钮"
+        },
+        {
+          "name": "style",
+          "type": "ViewStyle",
+          "required": false,
+          "desc": "外层容器样式"
+        }
+      ],
+      "events": [
+        {
+          "name": "onBack",
+          "type": "() => void",
+          "desc": "点击返回"
+        }
+      ],
+      "slots": ["left", "right"],
+      "tokens": [
+        "color-bg-card",
+        "color-border-default",
+        "color-text-primary",
+        "color-primary-default",
+        "font-size-titleSm"
+      ],
+      "states": ["normal"],
+      "a11y": "返回按钮带 aria-label",
+      "usage": {
+        "do": ["用 NavBar 作为页面顶部导航", "onBack 接路由返回", "right 放操作按钮"],
+        "dont": ["用 NavBar 放主内容（用 Content/Layout）"]
+      },
+      "docs": "packages/ui-native/src/NavBar/README.md",
+      "examples": ["packages/ui-native/src/NavBar/__examples__/States.tsx"]
     }
   ]
 }

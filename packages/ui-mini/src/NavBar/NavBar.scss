@@ -1,0 +1,48 @@
+/* NavBar（mini）样式。 */
+
+.kit-navbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 88rpx;
+  padding: 0 24rpx;
+  background: var(--kit-color-bg-card);
+  border-bottom: 1rpx solid var(--kit-color-border-default);
+}
+
+.kit-navbar__side {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 120rpx;
+}
+
+.kit-navbar__side--right {
+  justify-content: flex-end;
+}
+
+.kit-navbar__back {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8rpx;
+}
+
+.kit-navbar__back-icon {
+  font-size: 44rpx;
+  color: var(--kit-color-text-primary);
+  line-height: 1;
+}
+
+.kit-navbar__title {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.kit-navbar__title-text {
+  font-size: var(--kit-font-size-titleSm);
+  font-weight: 500;
+  color: var(--kit-color-text-primary);
+}
