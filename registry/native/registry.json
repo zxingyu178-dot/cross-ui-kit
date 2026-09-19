@@ -8538,6 +8538,108 @@
       },
       "docs": "packages/ui-native/src/Cell/README.md",
       "examples": ["packages/ui-native/src/Cell/__examples__/States.tsx"]
+    },
+    {
+      "name": "action-sheet",
+      "type": "registry:component",
+      "title": "底部动作面板 ActionSheet",
+      "description": "底部动作面板组件，弹出动作列表，支持危险项与取消",
+      "canonical": "ActionSheet",
+      "status": "beta",
+      "stack": "native",
+      "dependencies": ["@kit/core"],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "packages/ui-native/src/ActionSheet/ActionSheet.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "packages/ui-native/src/ActionSheet/ActionSheet.types.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-native/src/ActionSheet/index.ts",
+          "type": "registry:ui"
+        }
+      ],
+      "props": [
+        {
+          "name": "open",
+          "type": "boolean",
+          "required": true,
+          "desc": "是否打开"
+        },
+        {
+          "name": "actions",
+          "type": "ActionSheetAction[]",
+          "required": true,
+          "desc": "动作列表（key/label/danger/disabled）"
+        },
+        {
+          "name": "title",
+          "type": "ReactNode",
+          "required": false,
+          "desc": "标题"
+        },
+        {
+          "name": "cancelText",
+          "type": "string",
+          "default": "'取消'",
+          "required": false,
+          "desc": "关闭按钮文字"
+        },
+        {
+          "name": "onSelect",
+          "type": "(key: string) => void",
+          "required": false,
+          "desc": "选中动作"
+        },
+        {
+          "name": "onClose",
+          "type": "() => void",
+          "required": false,
+          "desc": "关闭"
+        },
+        {
+          "name": "style",
+          "type": "ViewStyle",
+          "required": false,
+          "desc": "外层容器样式"
+        }
+      ],
+      "events": [
+        {
+          "name": "onSelect",
+          "type": "(key: string) => void",
+          "desc": "选中动作"
+        },
+        {
+          "name": "onClose",
+          "type": "() => void",
+          "desc": "关闭"
+        }
+      ],
+      "slots": ["title"],
+      "tokens": [
+        "color-bg-card",
+        "color-bg-secondary",
+        "color-bg-tertiary",
+        "color-text-primary",
+        "color-text-secondary",
+        "color-text-tertiary",
+        "color-danger-default",
+        "font-size-bodyMd",
+        "font-size-caption"
+      ],
+      "states": ["open", "danger", "disabled"],
+      "a11y": "role=dialog/aria-modal，点遮罩关闭",
+      "usage": {
+        "do": ["用 ActionSheet 做多选项操作", "danger 标危险操作", "onSelect 后自行关闭"],
+        "dont": ["用 ActionSheet 做复杂表单（用 Dialog）"]
+      },
+      "docs": "packages/ui-native/src/ActionSheet/README.md",
+      "examples": ["packages/ui-native/src/ActionSheet/__examples__/States.tsx"]
     }
   ]
 }

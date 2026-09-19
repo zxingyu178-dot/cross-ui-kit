@@ -2720,6 +2720,35 @@
           "status": "beta"
         }
       }
+    },
+    {
+      "canonical": "ActionSheet",
+      "category": "overlay",
+      "sharedProps": {
+        "open": "boolean",
+        "actions": "ActionSheetAction[]",
+        "cancelText": "string"
+      },
+      "eventMap": {
+        "web": "onSelect,onClose",
+        "mini": "onSelect,onClose",
+        "native": "onSelect,onClose"
+      },
+      "stackSlots": ["title"],
+      "stacks": {
+        "web": {
+          "item": "@kit/web-action-sheet",
+          "status": "beta"
+        },
+        "mini": {
+          "item": "@kit/mini-action-sheet",
+          "status": "beta"
+        },
+        "native": {
+          "item": "@kit/native-action-sheet",
+          "status": "beta"
+        }
+      }
     }
   ]
 }

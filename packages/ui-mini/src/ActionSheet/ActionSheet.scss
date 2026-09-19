@@ -1,0 +1,70 @@
+/* ActionSheet（mini）样式。 */
+
+.kit-as {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+}
+
+.kit-as__mask {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.kit-as__panel {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8rpx;
+  padding: 24rpx;
+  padding-bottom: calc(24rpx + env(safe-area-inset-bottom));
+  background: var(--kit-color-bg-card);
+  border-radius: 32rpx 32rpx 0 0;
+}
+
+.kit-as__title {
+  padding: 16rpx 24rpx;
+}
+
+.kit-as__title-text {
+  font-size: var(--kit-font-size-caption);
+  color: var(--kit-color-text-tertiary);
+  text-align: center;
+}
+
+.kit-as__action {
+  padding: 24rpx;
+  background: var(--kit-color-bg-secondary);
+  border-radius: 16rpx;
+}
+
+.kit-as__action-text {
+  font-size: var(--kit-font-size-bodyMd);
+  color: var(--kit-color-text-primary);
+  text-align: center;
+}
+
+.kit-as__action--danger .kit-as__action-text {
+  color: var(--kit-color-danger-default);
+}
+
+.kit-as__action--disabled {
+  opacity: 0.5;
+}
+
+.kit-as__cancel {
+  margin-top: 16rpx;
+  padding: 24rpx;
+  background: var(--kit-color-bg-secondary);
+  border-radius: 16rpx;
+}
+
+.kit-as__cancel-text {
+  font-size: var(--kit-font-size-bodyMd);
+  color: var(--kit-color-text-secondary);
+  text-align: center;
+}
