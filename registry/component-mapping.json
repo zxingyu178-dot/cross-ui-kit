@@ -2801,6 +2801,33 @@
           "status": "beta"
         }
       }
+    },
+    {
+      "canonical": "PullToRefresh",
+      "category": "interaction",
+      "sharedProps": {
+        "refreshing": "boolean",
+        "pullText": "string"
+      },
+      "eventMap": {
+        "web": "onRefresh",
+        "mini": "onRefresh",
+        "native": "onRefresh"
+      },
+      "stacks": {
+        "web": {
+          "item": "@kit/web-pull-to-refresh",
+          "status": "beta"
+        },
+        "mini": {
+          "item": "@kit/mini-pull-to-refresh",
+          "status": "beta"
+        },
+        "native": {
+          "item": "@kit/native-pull-to-refresh",
+          "status": "beta"
+        }
+      }
     }
   ]
 }

@@ -9060,6 +9060,101 @@
       },
       "docs": "packages/ui-mini/src/ProgressRing/README.md",
       "examples": ["packages/ui-mini/src/ProgressRing/__examples__/States.tsx"]
+    },
+    {
+      "name": "pull-to-refresh",
+      "type": "registry:component",
+      "title": "下拉刷新 PullToRefresh",
+      "description": "下拉超过阈值触发 onRefresh",
+      "canonical": "PullToRefresh",
+      "status": "beta",
+      "stack": "mini",
+      "dependencies": ["@kit/core"],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "packages/ui-mini/src/PullToRefresh/PullToRefresh.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "packages/ui-mini/src/PullToRefresh/PullToRefresh.types.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-mini/src/PullToRefresh/PullToRefresh.scss",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-mini/src/PullToRefresh/index.ts",
+          "type": "registry:ui"
+        }
+      ],
+      "props": [
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "required": true,
+          "desc": "列表内容"
+        },
+        {
+          "name": "onRefresh",
+          "type": "() => Promise<void> | void",
+          "required": false,
+          "desc": "刷新回调"
+        },
+        {
+          "name": "refreshing",
+          "type": "boolean",
+          "default": "false",
+          "required": false,
+          "desc": "受控刷新中"
+        },
+        {
+          "name": "pullText",
+          "type": "string",
+          "default": "'下拉刷新'",
+          "required": false,
+          "desc": "下拉中文案"
+        },
+        {
+          "name": "releaseText",
+          "type": "string",
+          "default": "'释放立即刷新'",
+          "required": false,
+          "desc": "超过阈值文案"
+        },
+        {
+          "name": "loadingText",
+          "type": "string",
+          "default": "'加载中...'",
+          "required": false,
+          "desc": "加载中文案"
+        },
+        {
+          "name": "doneText",
+          "type": "string",
+          "default": "'刷新成功'",
+          "required": false,
+          "desc": "完成文案"
+        }
+      ],
+      "events": [
+        {
+          "name": "onRefresh",
+          "type": "() => Promise<void> | void",
+          "desc": "下拉刷新回调"
+        }
+      ],
+      "slots": [],
+      "tokens": ["color-text-tertiary", "font-size-caption"],
+      "states": ["pulling", "releasing", "loading", "done"],
+      "a11y": "下拉刷新指示器可见",
+      "usage": {
+        "do": ["用 PullToRefresh 包裹列表", "onRefresh 返回 Promise 控制状态"],
+        "dont": ["在已滚动的列表顶部嵌套使用"]
+      },
+      "docs": "packages/ui-mini/src/PullToRefresh/README.md",
+      "examples": ["packages/ui-mini/src/PullToRefresh/__examples__/States.tsx"]
     }
   ]
 }

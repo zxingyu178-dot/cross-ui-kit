@@ -1,0 +1,18 @@
+/* PullToRefresh（mini）样式。 */
+
+.kit-refresh {
+  position: relative;
+  overflow: hidden;
+}
+
+.kit-refresh__indicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.kit-refresh__text {
+  font-size: var(--kit-font-size-caption);
+  color: var(--kit-color-text-tertiary);
+}
