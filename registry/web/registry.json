@@ -9052,6 +9052,64 @@
       },
       "docs": "packages/ui-web/src/Marquee/README.md",
       "examples": ["packages/ui-web/src/Marquee/__examples__/States.tsx"]
+    },
+    {
+      "name": "loading-bar",
+      "type": "registry:component",
+      "title": "顶部进度条 LoadingBar",
+      "description": "页面顶部细进度条，类似 nprogress",
+      "canonical": "LoadingBar",
+      "status": "beta",
+      "stack": "web",
+      "dependencies": ["@kit/core"],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "packages/ui-web/src/LoadingBar/LoadingBar.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "packages/ui-web/src/LoadingBar/LoadingBar.types.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-web/src/LoadingBar/index.ts",
+          "type": "registry:ui"
+        }
+      ],
+      "props": [
+        {
+          "name": "progress",
+          "type": "number",
+          "default": "-1",
+          "required": false,
+          "desc": "0-100，-1 为不确定进度"
+        },
+        {
+          "name": "visible",
+          "type": "boolean",
+          "default": "true",
+          "required": false,
+          "desc": "是否可见"
+        },
+        {
+          "name": "color",
+          "type": "string",
+          "required": false,
+          "desc": "自定义颜色"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "tokens": ["color-primary-default", "color-primary-bg"],
+      "states": ["indeterminate", "determinate"],
+      "a11y": "role=progressbar + aria-valuenow",
+      "usage": {
+        "do": ["路由切换/请求时显示", "-1 表示不确定进度"],
+        "dont": ["作为主进度展示（用 Progress）"]
+      },
+      "docs": "packages/ui-web/src/LoadingBar/README.md",
+      "examples": ["packages/ui-web/src/LoadingBar/__examples__/States.tsx"]
     }
   ]
 }

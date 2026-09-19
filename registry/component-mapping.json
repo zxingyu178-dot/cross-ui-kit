@@ -2879,6 +2879,29 @@
           "status": "beta"
         }
       }
+    },
+    {
+      "canonical": "LoadingBar",
+      "category": "feedback",
+      "sharedProps": {
+        "progress": "number",
+        "visible": "boolean"
+      },
+      "eventMap": {},
+      "stacks": {
+        "web": {
+          "item": "@kit/web-loading-bar",
+          "status": "beta"
+        },
+        "mini": {
+          "item": "@kit/mini-loading-bar",
+          "status": "beta"
+        },
+        "native": {
+          "item": "@kit/native-loading-bar",
+          "status": "beta"
+        }
+      }
     }
   ]
 }
