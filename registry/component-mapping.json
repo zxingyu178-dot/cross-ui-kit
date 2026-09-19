@@ -2691,6 +2691,35 @@
           "status": "beta"
         }
       }
+    },
+    {
+      "canonical": "Cell",
+      "category": "data-display",
+      "sharedProps": {
+        "title": "ReactNode",
+        "description": "ReactNode",
+        "clickable": "boolean"
+      },
+      "eventMap": {
+        "web": "onClick",
+        "mini": "onClick",
+        "native": "onClick"
+      },
+      "stackSlots": ["icon", "right"],
+      "stacks": {
+        "web": {
+          "item": "@kit/web-cell",
+          "status": "beta"
+        },
+        "mini": {
+          "item": "@kit/mini-cell",
+          "status": "beta"
+        },
+        "native": {
+          "item": "@kit/native-cell",
+          "status": "beta"
+        }
+      }
     }
   ]
 }

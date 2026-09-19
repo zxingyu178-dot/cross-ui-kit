@@ -8442,6 +8442,102 @@
       },
       "docs": "packages/ui-native/src/TabBar/README.md",
       "examples": ["packages/ui-native/src/TabBar/__examples__/States.tsx"]
+    },
+    {
+      "name": "cell",
+      "type": "registry:component",
+      "title": "列表项 Cell",
+      "description": "列表项组件，标题+描述+图标+右侧内容/箭头",
+      "canonical": "Cell",
+      "status": "beta",
+      "stack": "native",
+      "dependencies": ["@kit/core"],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "packages/ui-native/src/Cell/Cell.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "packages/ui-native/src/Cell/Cell.types.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-native/src/Cell/index.ts",
+          "type": "registry:ui"
+        }
+      ],
+      "props": [
+        {
+          "name": "title",
+          "type": "ReactNode",
+          "required": false,
+          "desc": "标题"
+        },
+        {
+          "name": "description",
+          "type": "ReactNode",
+          "required": false,
+          "desc": "描述/副标题"
+        },
+        {
+          "name": "icon",
+          "type": "ReactNode",
+          "required": false,
+          "desc": "左侧图标"
+        },
+        {
+          "name": "right",
+          "type": "ReactNode",
+          "required": false,
+          "desc": "右侧内容"
+        },
+        {
+          "name": "onClick",
+          "type": "() => void",
+          "required": false,
+          "desc": "点击"
+        },
+        {
+          "name": "clickable",
+          "type": "boolean",
+          "default": "false",
+          "required": false,
+          "desc": "是否可点击（显示右箭头）"
+        },
+        {
+          "name": "style",
+          "type": "ViewStyle",
+          "required": false,
+          "desc": "外层容器样式"
+        }
+      ],
+      "events": [
+        {
+          "name": "onClick",
+          "type": "() => void",
+          "desc": "点击列表项"
+        }
+      ],
+      "slots": ["icon", "right"],
+      "tokens": [
+        "color-bg-card",
+        "color-border-default",
+        "color-text-primary",
+        "color-text-secondary",
+        "color-text-tertiary",
+        "font-size-bodyMd",
+        "font-size-bodySm",
+        "font-size-caption"
+      ],
+      "states": ["normal", "clickable"],
+      "a11y": "可点击项有 hover/active 反馈",
+      "usage": {
+        "do": ["用 Cell 做设置/表单/详情行", "多个 Cell 纵向堆叠成列表", "right 放开关/值/箭头"],
+        "dont": ["用 Cell 放复杂表单控件（用 Form.Item）"]
+      },
+      "docs": "packages/ui-native/src/Cell/README.md",
+      "examples": ["packages/ui-native/src/Cell/__examples__/States.tsx"]
     }
   ]
 }
