@@ -2749,6 +2749,58 @@
           "status": "beta"
         }
       }
+    },
+    {
+      "canonical": "SwipeAction",
+      "category": "interaction",
+      "sharedProps": {
+        "actions": "SwipeActionAction[]",
+        "onAction": "(key: string) => void"
+      },
+      "eventMap": {
+        "web": "onAction",
+        "mini": "onAction",
+        "native": "onAction"
+      },
+      "stacks": {
+        "web": {
+          "item": "@kit/web-swipe-action",
+          "status": "beta"
+        },
+        "mini": {
+          "item": "@kit/mini-swipe-action",
+          "status": "beta"
+        },
+        "native": {
+          "item": "@kit/native-swipe-action",
+          "status": "beta"
+        }
+      }
+    },
+    {
+      "canonical": "ProgressRing",
+      "category": "feedback",
+      "sharedProps": {
+        "size": "number",
+        "strokeWidth": "number",
+        "children": "ReactNode",
+        "tone": "'primary'|'success'|'warning'|'danger'"
+      },
+      "eventMap": {},
+      "stacks": {
+        "web": {
+          "item": "@kit/web-progress-ring",
+          "status": "beta"
+        },
+        "mini": {
+          "item": "@kit/mini-progress-ring",
+          "status": "beta"
+        },
+        "native": {
+          "item": "@kit/native-progress-ring",
+          "status": "beta"
+        }
+      }
     }
   ]
 }

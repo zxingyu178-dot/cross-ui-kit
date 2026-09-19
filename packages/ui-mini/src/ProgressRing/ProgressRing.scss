@@ -1,0 +1,41 @@
+/* ProgressRing（mini）样式。 */
+
+.kit-ring {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.kit-ring__arc {
+  transition: stroke-dashoffset 0.3s ease;
+}
+
+.kit-ring--primary .kit-ring__arc {
+  stroke: var(--kit-color-primary-default);
+}
+
+.kit-ring--success .kit-ring__arc {
+  stroke: var(--kit-color-success-default);
+}
+
+.kit-ring--warning .kit-ring__arc {
+  stroke: var(--kit-color-warning-default);
+}
+
+.kit-ring--danger .kit-ring__arc {
+  stroke: var(--kit-color-danger-default);
+}
+
+.kit-ring__center {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.kit-ring__text {
+  font-size: var(--kit-font-size-bodySm);
+  color: var(--kit-color-text-primary);
+}

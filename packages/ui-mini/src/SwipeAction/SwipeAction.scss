@@ -1,0 +1,37 @@
+/* SwipeAction（mini）样式。 */
+
+.kit-swipe {
+  position: relative;
+  overflow: hidden;
+}
+
+.kit-swipe__inner {
+  display: flex;
+  flex-direction: row;
+  transition: transform 0.2s ease;
+}
+
+.kit-swipe__content {
+  flex: 1;
+  min-width: 0;
+}
+
+.kit-swipe__actions {
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 0;
+}
+
+.kit-swipe__action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--kit-color-bg-tertiary);
+  color: var(--kit-color-text-primary);
+  font-size: var(--kit-font-size-bodySm);
+}
+
+.kit-swipe__action--danger {
+  background: var(--kit-color-danger-default);
+  color: #fff;
+}
