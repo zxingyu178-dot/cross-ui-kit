@@ -2548,6 +2548,34 @@
           "status": "beta"
         }
       }
+    },
+    {
+      "canonical": "CodeBlock",
+      "category": "data-display",
+      "sharedProps": {
+        "code": "string",
+        "language": "string",
+        "showLineNumbers": "boolean"
+      },
+      "eventMap": {
+        "web": "",
+        "mini": "",
+        "native": ""
+      },
+      "stacks": {
+        "web": {
+          "item": "@kit/web-code-block",
+          "status": "beta"
+        },
+        "mini": {
+          "item": "@kit/mini-code-block",
+          "status": "beta"
+        },
+        "native": {
+          "item": "@kit/native-code-block",
+          "status": "beta"
+        }
+      }
     }
   ]
 }

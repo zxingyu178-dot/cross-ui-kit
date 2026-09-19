@@ -8063,6 +8063,77 @@
       },
       "docs": "packages/ui-web/src/Trend/README.md",
       "examples": ["packages/ui-web/src/Trend/__examples__/States.tsx"]
+    },
+    {
+      "name": "code-block",
+      "type": "registry:component",
+      "title": "代码块 CodeBlock",
+      "description": "代码块组件，暗色代码展示，支持语言标签、行号、复制",
+      "canonical": "CodeBlock",
+      "status": "beta",
+      "stack": "web",
+      "dependencies": ["@kit/core"],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "packages/ui-web/src/CodeBlock/CodeBlock.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "packages/ui-web/src/CodeBlock/CodeBlock.types.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-web/src/CodeBlock/index.ts",
+          "type": "registry:ui"
+        }
+      ],
+      "props": [
+        {
+          "name": "code",
+          "type": "string",
+          "required": true,
+          "desc": "代码内容"
+        },
+        {
+          "name": "language",
+          "type": "string",
+          "default": "'text'",
+          "required": false,
+          "desc": "语言标签"
+        },
+        {
+          "name": "showLineNumbers",
+          "type": "boolean",
+          "default": "false",
+          "required": false,
+          "desc": "是否显示行号"
+        },
+        {
+          "name": "copyable",
+          "type": "boolean",
+          "default": "true",
+          "required": false,
+          "desc": "是否可复制"
+        },
+        {
+          "name": "className",
+          "type": "string",
+          "required": false,
+          "desc": "外层容器类名"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "tokens": ["color-border-default", "radius-md", "font-size-caption", "font-size-bodySm"],
+      "states": ["normal"],
+      "a11y": "代码文本可读",
+      "usage": {
+        "do": ["用 CodeBlock 承载代码/配置展示", "language 标注语言", "showLineNumbers 开启行号"],
+        "dont": ["用 CodeBlock 承载普通文本（用 Typography）"]
+      },
+      "docs": "packages/ui-web/src/CodeBlock/README.md",
+      "examples": ["packages/ui-web/src/CodeBlock/__examples__/States.tsx"]
     }
   ]
 }
