@@ -106,6 +106,10 @@ import {
   NeumorphismPage,
   EmptyStateShowcase,
   IconGallery,
+  StepsFlowPage,
+  NotificationCenterPage,
+  LoginRegisterPage,
+  DataTablePage,
 } from '@kit/patterns-web'
 import { RequestDemo } from './demos/RequestDemo'
 
@@ -873,6 +877,34 @@ export default function App() {
       <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
         <h2 className="text-title-sm font-medium text-text-primary">资源 · IconGallery 图标库</h2>
         <IconGallery />
+      </section>
+
+      <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
+        <h2 className="text-title-sm font-medium text-text-primary">
+          页面模板 · StepsFlow 流程向导
+        </h2>
+        <StepsFlowPage />
+      </section>
+
+      <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
+        <h2 className="text-title-sm font-medium text-text-primary">
+          页面模板 · NotificationCenter 通知中心
+        </h2>
+        <NotificationCenterPage />
+      </section>
+
+      <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
+        <h2 className="text-title-sm font-medium text-text-primary">
+          页面模板 · LoginRegister 双栏登录
+        </h2>
+        <LoginRegisterPage />
+      </section>
+
+      <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
+        <h2 className="text-title-sm font-medium text-text-primary">
+          页面模板 · DataTable 高级表格
+        </h2>
+        <DataTablePage />
       </section>
     </main>
   )
