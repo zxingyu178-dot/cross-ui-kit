@@ -1,0 +1,57 @@
+/* NoticeBar（mini）样式。 */
+
+.kit-notice {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16rpx;
+  padding: 16rpx 24rpx;
+  font-size: var(--kit-font-size-bodySm);
+}
+
+.kit-notice--info {
+  background: var(--kit-color-info-bg);
+  color: var(--kit-color-info-default);
+}
+
+.kit-notice--success {
+  background: var(--kit-color-success-bg);
+  color: var(--kit-color-success-default);
+}
+
+.kit-notice--warning {
+  background: var(--kit-color-warning-bg);
+  color: var(--kit-color-warning-default);
+}
+
+.kit-notice--danger {
+  background: var(--kit-color-danger-bg);
+  color: var(--kit-color-danger-default);
+}
+
+.kit-notice__icon {
+  flex-shrink: 0;
+}
+
+.kit-notice__content {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.kit-notice__text {
+  font-size: var(--kit-font-size-bodySm);
+}
+
+.kit-notice__action {
+  flex-shrink: 0;
+}
+
+.kit-notice__close {
+  flex-shrink: 0;
+  padding: 8rpx;
+}
+
+.kit-notice__close-text {
+  font-size: 24rpx;
+}

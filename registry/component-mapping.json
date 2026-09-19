@@ -2828,6 +2828,34 @@
           "status": "beta"
         }
       }
+    },
+    {
+      "canonical": "NoticeBar",
+      "category": "feedback",
+      "sharedProps": {
+        "tone": "string",
+        "scrollable": "boolean"
+      },
+      "eventMap": {
+        "web": "onClose",
+        "mini": "onClose",
+        "native": "onClose"
+      },
+      "stackSlots": ["icon", "action"],
+      "stacks": {
+        "web": {
+          "item": "@kit/web-notice-bar",
+          "status": "beta"
+        },
+        "mini": {
+          "item": "@kit/mini-notice-bar",
+          "status": "beta"
+        },
+        "native": {
+          "item": "@kit/native-notice-bar",
+          "status": "beta"
+        }
+      }
     }
   ]
 }

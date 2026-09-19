@@ -9155,6 +9155,101 @@
       },
       "docs": "packages/ui-mini/src/PullToRefresh/README.md",
       "examples": ["packages/ui-mini/src/PullToRefresh/__examples__/States.tsx"]
+    },
+    {
+      "name": "notice-bar",
+      "type": "registry:component",
+      "title": "通知栏 NoticeBar",
+      "description": "顶部通知条，语义色/图标/操作/关闭",
+      "canonical": "NoticeBar",
+      "status": "beta",
+      "stack": "mini",
+      "dependencies": ["@kit/core"],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "packages/ui-mini/src/NoticeBar/NoticeBar.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "packages/ui-mini/src/NoticeBar/NoticeBar.types.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-mini/src/NoticeBar/NoticeBar.scss",
+          "type": "registry:ui"
+        },
+        {
+          "path": "packages/ui-mini/src/NoticeBar/index.ts",
+          "type": "registry:ui"
+        }
+      ],
+      "props": [
+        {
+          "name": "content",
+          "type": "ReactNode",
+          "required": true,
+          "desc": "内容"
+        },
+        {
+          "name": "icon",
+          "type": "ReactNode",
+          "required": false,
+          "desc": "左侧图标"
+        },
+        {
+          "name": "action",
+          "type": "ReactNode",
+          "required": false,
+          "desc": "右侧操作"
+        },
+        {
+          "name": "onClose",
+          "type": "() => void",
+          "required": false,
+          "desc": "关闭"
+        },
+        {
+          "name": "tone",
+          "type": "'info'|'success'|'warning'|'danger'",
+          "default": "'info'",
+          "required": false,
+          "desc": "语义色"
+        },
+        {
+          "name": "scrollable",
+          "type": "boolean",
+          "default": "false",
+          "required": false,
+          "desc": "是否滚动"
+        }
+      ],
+      "events": [
+        {
+          "name": "onClose",
+          "type": "() => void",
+          "desc": "关闭通知"
+        }
+      ],
+      "slots": ["icon", "action"],
+      "tokens": [
+        "color-info-bg",
+        "color-success-bg",
+        "color-warning-bg",
+        "color-danger-bg",
+        "color-info-default",
+        "color-success-default",
+        "color-warning-default",
+        "color-danger-default"
+      ],
+      "states": ["normal"],
+      "a11y": "通知条 role=status",
+      "usage": {
+        "do": ["用 NoticeBar 放全局通知", "tone 标语义"],
+        "dont": ["放长正文（用 Toast/Dialog）"]
+      },
+      "docs": "packages/ui-mini/src/NoticeBar/README.md",
+      "examples": ["packages/ui-mini/src/NoticeBar/__examples__/States.tsx"]
     }
   ]
 }
