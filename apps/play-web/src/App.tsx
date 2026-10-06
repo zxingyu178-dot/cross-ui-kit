@@ -126,6 +126,10 @@ import {
   CaptchaLoginPage,
   MasonryWallPage,
   InlineEditTablePage,
+  QrCodeLoginPage,
+  MultiTabLayoutPage,
+  DetailDrawerPage,
+  ImportExportPage,
 } from '@kit/patterns-web'
 import { RequestDemo } from './demos/RequestDemo'
 
@@ -1029,6 +1033,34 @@ export default function App() {
           页面模板 · InlineEditTable 行内编辑
         </h2>
         <InlineEditTablePage />
+      </section>
+
+      <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
+        <h2 className="text-title-sm font-medium text-text-primary">
+          页面模板 · QrCodeLogin 扫码登录
+        </h2>
+        <QrCodeLoginPage />
+      </section>
+
+      <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
+        <h2 className="text-title-sm font-medium text-text-primary">
+          页面模板 · MultiTabLayout 多标签布局
+        </h2>
+        <MultiTabLayoutPage />
+      </section>
+
+      <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
+        <h2 className="text-title-sm font-medium text-text-primary">
+          页面模板 · DetailDrawer 详情抽屉
+        </h2>
+        <DetailDrawerPage />
+      </section>
+
+      <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
+        <h2 className="text-title-sm font-medium text-text-primary">
+          页面模板 · ImportExport 导入导出
+        </h2>
+        <ImportExportPage />
       </section>
     </main>
   )
