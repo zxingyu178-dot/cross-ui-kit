@@ -1,5 +1,6 @@
 /**
  * DetailDrawerPage 详情抽屉页（web）—— 列表 + 右侧滑出详情抽屉。
+ * 容器固定高度；抽屉用 flex 布局，内容区 overflow-y-auto、底部按钮在 flex 流中，内容严格约束不溢出。
  */
 import { useState } from 'react'
 import { Card, Button, Tag, Descriptions, Divider } from '@kit/ui-web'
@@ -27,15 +28,15 @@ export function DetailDrawerPage() {
   const [current, setCurrent] = useState(records[0])
 
   return (
-    <div className="relative mx-auto max-w-3xl">
-      <Card>
-        <div className="mb-4 flex items-center justify-between">
+    <div className="relative mx-auto h-[520px] w-full max-w-3xl">
+      <Card className="flex h-full flex-col">
+        <div className="mb-4 flex shrink-0 items-center justify-between">
           <h3 className="text-titleSm font-medium text-text-primary">工单列表</h3>
           <Button variant="primary" size="sm">
             + 新建工单
           </Button>
         </div>
-        <div className="flex flex-col gap-2">
+        <div className="-mr-2 flex-1 space-y-2 overflow-y-auto pr-2">
           {records.map((r) => (
             <div
               key={r.id}
@@ -83,21 +84,23 @@ export function DetailDrawerPage() {
         <div className="absolute inset-0 rounded-lg bg-black/30" onClick={() => setOpen(false)} />
       )}
 
-      {/* 右侧抽屉 */}
-      <div
-        className={`absolute right-0 top-0 h-full w-80 transform bg-bg-card shadow-xl transition-transform ${
+      {/* 右侧抽屉：flex 列布局，内容区滚动，头尾固定 */}
+      <aside
+        className={`absolute inset-y-0 right-0 flex w-80 flex-col bg-bg-card shadow-popover transition-transform duration-300 ${
           open ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
-        <div className="flex items-center justify-between border-b border-border-default p-4">
+        <header className="flex shrink-0 items-center justify-between border-b border-border-default p-4">
           <h3 className="text-titleSm font-medium text-text-primary">工单详情</h3>
           <button onClick={() => setOpen(false)} className="text-text-tertiary">
             ×
           </button>
-        </div>
-        <div className="p-4">
+        </header>
+
+        <div className="flex-1 overflow-y-auto p-4">
           <Descriptions
             column={1}
+            bordered
             items={[
               { label: '工单编号', value: current?.id ?? '' },
               { label: '标题', value: current?.title ?? '' },
@@ -114,15 +117,16 @@ export function DetailDrawerPage() {
             <p>· 等待固件包下发（11:30）</p>
           </div>
         </div>
-        <div className="absolute inset-x-0 bottom-0 flex gap-2 border-t border-border-default p-4">
+
+        <footer className="flex shrink-0 gap-2 border-t border-border-default p-4">
           <Button variant="secondary" block size="sm">
             转派
           </Button>
           <Button variant="primary" block size="sm">
             处理完成
           </Button>
-        </div>
-      </div>
+        </footer>
+      </aside>
     </div>
   )
 }

@@ -47,9 +47,9 @@ export function DataScreenPage() {
         {/* 柱状 */}
         <div className="rounded-lg border border-cyan-500/20 bg-slate-900/60 p-4 lg:col-span-2">
           <h3 className="mb-4 text-bodyMd font-medium text-cyan-300">近 7 日活跃趋势</h3>
-          <div className="flex h-40 items-end justify-around gap-2">
+          <div className="flex h-40 items-stretch justify-around gap-2">
             {bars.map((b, i) => (
-              <div key={i} className="flex flex-1 flex-col items-center gap-1">
+              <div key={i} className="flex h-full flex-1 flex-col items-center justify-end gap-1">
                 <div
                   className="w-full rounded-t bg-gradient-to-t from-cyan-600 to-cyan-300"
                   style={{ height: `${b}%` }}

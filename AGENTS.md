@@ -24,6 +24,7 @@ cross-ui-kit 是一个**跨端 UI/交互模板库**（不是单一业务应用�
    - web 端只能 import `@kit/ui-web`；mini 端只能 import `@kit/ui-mini`；native 端只能 import `@kit/ui-native`；
    - 三个 `ui-*` 包**禁止互相引用**，也禁止引用对方栈的底座（如 mini 包不得 import Radix/DOM API，web 包不得 import `@tarojs/taro`）。
 3. **视觉值禁止硬编码**：颜色、字号、字重、间距、圆角、阴影、动效时长、层级 z-index、断点，**必须**引用 `@kit/tokens` 导出的变量；禁止出现 `#1A73E8`、`margin: 13px` 这类魔法值（临时 demo 也不允许）。
+   - **材质/主题展示页例外**：自带独立配色、不跟随全局主题的材质展示场景（深色数据大屏、流体渐变、3D 悬浮、玻璃拟态、卡片翻转等，目录集中在 `patterns-web` 的 `*-screen/fluid/glass/3d/flip-*`），允许使用 Tailwind **内置标准色板**（slate/cyan/indigo 等）与材质工具类（gradient/blur/perspective/backdrop/columns）；内置色板即统一标准，仍禁止手写十六进制值。业务功能页的功能色（主色/语义色/文本/背景/边框）**必须**引用 token，不适用此例外。
 4. **业务逻辑必须下沉 `@kit/core`**：请求、数据转换、缓存、状态、表单校验规则、权限判断写在 core；视图组件保持"输入 props → 渲染 UI → 抛出事件"，禁止在组件内直接 fetch / 写业务分支。
 5. **同名同义**：三栈承担同一职责的组件必须使用映射表（`registry/component-mapping.json`）中登记的统一命名与一致的 props 语义；新增组件时三栈同步登记（允许分 PR 落地，但映射表必须在首个 PR 建条目并标注实现状态）。
 6. **四态必齐**：任何承载数据的组件/页面必须同时实现 loading（骨架屏优先）、empty、error（含重试入口）、normal 四态；表单必须有提交中、校验失败、防重复提交。

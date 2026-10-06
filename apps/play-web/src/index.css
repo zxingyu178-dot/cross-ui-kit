@@ -5,6 +5,8 @@
 
 /* 让 Tailwind 扫描库包源码（相对本文件：src -> play-web -> apps -> 仓库根），@kit/ui-web 组件内的工具类才会被编译 */
 @source '../../../packages/ui-web/src/**/*.{ts,tsx}';
+/* 页面模板包同样需要扫描，否则 patterns-web 内的内置色板/材质工具类不会生成 CSS */
+@source '../../../packages/patterns-web/src/**/*.{ts,tsx}';
 
 /*
  * Tailwind 主题 → @kit/tokens CSS 变量映射
