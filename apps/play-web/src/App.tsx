@@ -130,6 +130,10 @@ import {
   MultiTabLayoutPage,
   DetailDrawerPage,
   ImportExportPage,
+  ChartDashboardPage,
+  MessageGroupPage,
+  TimelineRecordPage,
+  SplitComparePage,
 } from '@kit/patterns-web'
 import { RequestDemo } from './demos/RequestDemo'
 
@@ -1061,6 +1065,34 @@ export default function App() {
           页面模板 · ImportExport 导入导出
         </h2>
         <ImportExportPage />
+      </section>
+
+      <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
+        <h2 className="text-title-sm font-medium text-text-primary">
+          页面模板 · ChartDashboard 图表看板
+        </h2>
+        <ChartDashboardPage />
+      </section>
+
+      <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
+        <h2 className="text-title-sm font-medium text-text-primary">
+          页面模板 · MessageGroup 消息分组
+        </h2>
+        <MessageGroupPage />
+      </section>
+
+      <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
+        <h2 className="text-title-sm font-medium text-text-primary">
+          页面模板 · TimelineRecord 时间轴记录
+        </h2>
+        <TimelineRecordPage />
+      </section>
+
+      <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
+        <h2 className="text-title-sm font-medium text-text-primary">
+          页面模板 · SplitCompare 分屏对比
+        </h2>
+        <SplitComparePage />
       </section>
     </main>
   )
