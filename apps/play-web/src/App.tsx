@@ -134,6 +134,10 @@ import {
   MessageGroupPage,
   TimelineRecordPage,
   SplitComparePage,
+  Card3DPage,
+  FluidGradientPage,
+  FlipCardPage,
+  DataScreenPage,
 } from '@kit/patterns-web'
 import { RequestDemo } from './demos/RequestDemo'
 
@@ -1093,6 +1097,34 @@ export default function App() {
           页面模板 · SplitCompare 分屏对比
         </h2>
         <SplitComparePage />
+      </section>
+
+      <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
+        <h2 className="text-title-sm font-medium text-text-primary">
+          页面模板 · Card3D 3D 悬浮卡片
+        </h2>
+        <Card3DPage />
+      </section>
+
+      <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
+        <h2 className="text-title-sm font-medium text-text-primary">
+          页面模板 · FluidGradient 渐变流体
+        </h2>
+        <FluidGradientPage />
+      </section>
+
+      <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
+        <h2 className="text-title-sm font-medium text-text-primary">
+          页面模板 · FlipCard 卡片翻转
+        </h2>
+        <FlipCardPage />
+      </section>
+
+      <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
+        <h2 className="text-title-sm font-medium text-text-primary">
+          页面模板 · DataScreen 深色数据大屏
+        </h2>
+        <DataScreenPage />
       </section>
     </main>
   )
