@@ -122,6 +122,10 @@ import {
   PricingCalculatorPage,
   FormValidationPage,
   HighlightGuidePage,
+  KanbanBoardPage,
+  CaptchaLoginPage,
+  MasonryWallPage,
+  InlineEditTablePage,
 } from '@kit/patterns-web'
 import { RequestDemo } from './demos/RequestDemo'
 
@@ -999,6 +1003,32 @@ export default function App() {
           页面模板 · HighlightGuide 功能引导
         </h2>
         <HighlightGuidePage />
+      </section>
+
+      <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
+        <h2 className="text-title-sm font-medium text-text-primary">页面模板 · KanbanBoard 看板</h2>
+        <KanbanBoardPage />
+      </section>
+
+      <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
+        <h2 className="text-title-sm font-medium text-text-primary">
+          页面模板 · CaptchaLogin 验证码登录
+        </h2>
+        <CaptchaLoginPage />
+      </section>
+
+      <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
+        <h2 className="text-title-sm font-medium text-text-primary">
+          页面模板 · MasonryWall 瀑布流
+        </h2>
+        <MasonryWallPage />
+      </section>
+
+      <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
+        <h2 className="text-title-sm font-medium text-text-primary">
+          页面模板 · InlineEditTable 行内编辑
+        </h2>
+        <InlineEditTablePage />
       </section>
     </main>
   )
