@@ -114,6 +114,10 @@ import {
   OrderListPage,
   DataDashboardPage,
   CardWallPage,
+  SearchResultPage,
+  VideoPlayerPage,
+  ProfileOrderPage,
+  SidebarLayoutPage,
 } from '@kit/patterns-web'
 import { RequestDemo } from './demos/RequestDemo'
 
@@ -935,6 +939,34 @@ export default function App() {
       <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
         <h2 className="text-title-sm font-medium text-text-primary">页面模板 · CardWall 卡片墙</h2>
         <CardWallPage />
+      </section>
+
+      <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
+        <h2 className="text-title-sm font-medium text-text-primary">
+          页面模板 · SearchResult 搜索结果
+        </h2>
+        <SearchResultPage />
+      </section>
+
+      <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
+        <h2 className="text-title-sm font-medium text-text-primary">
+          页面模板 · VideoPlayer 视频播放
+        </h2>
+        <VideoPlayerPage />
+      </section>
+
+      <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
+        <h2 className="text-title-sm font-medium text-text-primary">
+          页面模板 · ProfileOrder 个人中心订单
+        </h2>
+        <ProfileOrderPage />
+      </section>
+
+      <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
+        <h2 className="text-title-sm font-medium text-text-primary">
+          页面模板 · SidebarLayout 侧边导航布局
+        </h2>
+        <SidebarLayoutPage />
       </section>
     </main>
   )
