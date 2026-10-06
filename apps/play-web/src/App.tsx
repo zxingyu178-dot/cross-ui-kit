@@ -118,6 +118,10 @@ import {
   VideoPlayerPage,
   ProfileOrderPage,
   SidebarLayoutPage,
+  CalendarPage,
+  PricingCalculatorPage,
+  FormValidationPage,
+  HighlightGuidePage,
 } from '@kit/patterns-web'
 import { RequestDemo } from './demos/RequestDemo'
 
@@ -967,6 +971,34 @@ export default function App() {
           页面模板 · SidebarLayout 侧边导航布局
         </h2>
         <SidebarLayoutPage />
+      </section>
+
+      <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
+        <h2 className="text-title-sm font-medium text-text-primary">
+          页面模板 · Calendar 日历日程
+        </h2>
+        <CalendarPage />
+      </section>
+
+      <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
+        <h2 className="text-title-sm font-medium text-text-primary">
+          页面模板 · PricingCalculator 价格计算器
+        </h2>
+        <PricingCalculatorPage />
+      </section>
+
+      <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
+        <h2 className="text-title-sm font-medium text-text-primary">
+          页面模板 · FormValidation 分步校验
+        </h2>
+        <FormValidationPage />
+      </section>
+
+      <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
+        <h2 className="text-title-sm font-medium text-text-primary">
+          页面模板 · HighlightGuide 功能引导
+        </h2>
+        <HighlightGuidePage />
       </section>
     </main>
   )
