@@ -56,3 +56,11 @@ export * from './card-3d-page/Card3DPage'
 export * from './fluid-gradient-page/FluidGradientPage'
 export * from './flip-card-page/FlipCardPage'
 export * from './data-screen-page/DataScreenPage'
+
+/* 第14批：材质/主题扩展 */
+export * from './claymorphism-page/ClaymorphismPage'
+export * from './aurora-page/AuroraPage'
+export * from './brutalism-page/BrutalismPage'
+export * from './synthwave-page/SynthwavePage'
+export * from './holographic-page/HolographicPage'
+export * from './paper-cut-page/PaperCutPage'

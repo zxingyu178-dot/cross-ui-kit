@@ -138,6 +138,12 @@ import {
   FluidGradientPage,
   FlipCardPage,
   DataScreenPage,
+  ClaymorphismPage,
+  AuroraPage,
+  BrutalismPage,
+  SynthwavePage,
+  HolographicPage,
+  PaperCutPage,
 } from '@kit/patterns-web'
 import { RequestDemo } from './demos/RequestDemo'
 
@@ -1125,6 +1131,46 @@ export default function App() {
           页面模板 · DataScreen 深色数据大屏
         </h2>
         <DataScreenPage />
+      </section>
+
+      <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
+        <h2 className="text-title-sm font-medium text-text-primary">
+          材质主题 · Claymorphism 黏土拟态
+        </h2>
+        <ClaymorphismPage />
+      </section>
+
+      <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
+        <h2 className="text-title-sm font-medium text-text-primary">材质主题 · Aurora 极光</h2>
+        <AuroraPage />
+      </section>
+
+      <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
+        <h2 className="text-title-sm font-medium text-text-primary">
+          材质主题 · Brutalism 新粗野主义
+        </h2>
+        <BrutalismPage />
+      </section>
+
+      <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
+        <h2 className="text-title-sm font-medium text-text-primary">
+          材质主题 · Synthwave 赛博朋克
+        </h2>
+        <SynthwavePage />
+      </section>
+
+      <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
+        <h2 className="text-title-sm font-medium text-text-primary">
+          材质主题 · Holographic 全息镭射
+        </h2>
+        <HolographicPage />
+      </section>
+
+      <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
+        <h2 className="text-title-sm font-medium text-text-primary">
+          材质主题 · PaperCut 剪纸层叠
+        </h2>
+        <PaperCutPage />
       </section>
     </main>
   )

@@ -122,3 +122,35 @@ html[data-theme-switching] *::before,
 html[data-theme-switching] *::after {
   transition: none !important;
 }
+
+/*
+ * 材质/主题展示页动画（仅用于极光、赛博等自带独立配色的材质页，见 AGENTS.md 铁律#3 例外）
+ */
+@keyframes kit-aurora {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(7%, -9%) scale(1.15);
+  }
+  66% {
+    transform: translate(-6%, 7%) scale(0.92);
+  }
+}
+
+@keyframes kit-scan {
+  0% {
+    top: -10%;
+  }
+  100% {
+    top: 110%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [class*='kit-aurora'],
+  [class*='kit-scan'] {
+    animation: none !important;
+  }
+}
