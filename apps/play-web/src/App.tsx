@@ -144,6 +144,10 @@ import {
   SynthwavePage,
   HolographicPage,
   PaperCutPage,
+  MotionShowcase,
+  RechartsDashboard,
+  DndKanban,
+  CommandPalette,
 } from '@kit/patterns-web'
 import { RequestDemo } from './demos/RequestDemo'
 
@@ -1171,6 +1175,32 @@ export default function App() {
           材质主题 · PaperCut 剪纸层叠
         </h2>
         <PaperCutPage />
+      </section>
+
+      <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
+        <h2 className="text-title-sm font-medium text-text-primary">
+          能力集成 · Motion 动画（framer-motion）
+        </h2>
+        <MotionShowcase />
+      </section>
+
+      <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
+        <h2 className="text-title-sm font-medium text-text-primary">
+          能力集成 · Recharts 图表看板
+        </h2>
+        <RechartsDashboard />
+      </section>
+
+      <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
+        <h2 className="text-title-sm font-medium text-text-primary">能力集成 · DnD 拖拽看板</h2>
+        <DndKanban />
+      </section>
+
+      <section className="flex flex-col gap-4 rounded-lg border border-border-default bg-bg-card p-6 shadow-card">
+        <h2 className="text-title-sm font-medium text-text-primary">
+          能力集成 · ⌘K 命令面板（cmdk）
+        </h2>
+        <CommandPalette />
       </section>
     </main>
   )

@@ -14,8 +14,15 @@
   },
   "dependencies": {
     "@kit/core": "workspace:*",
+    "@kit/icons": "workspace:*",
     "@kit/interaction": "workspace:*",
     "@kit/ui-web": "workspace:*",
+    "@dnd-kit/core": "catalog:web",
+    "@dnd-kit/sortable": "catalog:web",
+    "@dnd-kit/utilities": "catalog:web",
+    "cmdk": "catalog:web",
+    "framer-motion": "catalog:web",
+    "recharts": "catalog:web",
     "react": "catalog:"
   },
   "devDependencies": {

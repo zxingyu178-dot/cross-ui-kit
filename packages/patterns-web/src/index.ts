@@ -64,3 +64,9 @@ export * from './brutalism-page/BrutalismPage'
 export * from './synthwave-page/SynthwavePage'
 export * from './holographic-page/HolographicPage'
 export * from './paper-cut-page/PaperCutPage'
+
+/* 第15批：第三方库集成（framer-motion / recharts / dnd-kit / cmdk） */
+export * from './motion-showcase/MotionShowcase'
+export * from './recharts-dashboard/RechartsDashboard'
+export * from './dnd-kanban/DndKanban'
+export * from './command-palette/CommandPalette'
