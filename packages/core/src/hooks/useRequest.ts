@@ -62,16 +62,18 @@ export function useRequest<TData, TParams extends unknown[]>(
         setData(result)
         setStatus('success')
         setLoading(false)
+        // 回调也必须在"仍是最新请求"时才执行：否则失效的旧请求返回后仍会触发
+        // onSuccess，造成状态虽未被覆盖、副作用却已执行（竞态）。
+        optsRef.current.onSuccess?.(result, params)
       }
-      optsRef.current.onSuccess?.(result, params)
       return result
     } catch (e) {
       if (id === countRef.current) {
         setError(e)
         setStatus('error')
         setLoading(false)
+        optsRef.current.onError?.(e, params)
       }
-      optsRef.current.onError?.(e, params)
       return undefined
     }
   }, [])
