@@ -69,7 +69,14 @@ if (mapping?.components) {
   for (const c of mapping.components) {
     if (!c.canonical || !c.stacks)
       fail(`映射表条目缺 canonical/stacks: ${JSON.stringify(c).slice(0, 80)}`)
-    else canonicalIndex.set(c.canonical, c)
+    else {
+      // canonical 必须唯一：重复条目会让 Map 静默覆盖前者（曾导致 DataTable planned 覆盖 beta）
+      if (canonicalIndex.has(c.canonical))
+        fail(
+          `映射表 canonical 重复（必须唯一）："${c.canonical}" 出现多次，请合并条目或删除残留（注意 planned/beta 重复）`,
+        )
+      canonicalIndex.set(c.canonical, c)
+    }
   }
 }
 

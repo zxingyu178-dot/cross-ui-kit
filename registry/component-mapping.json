@@ -468,35 +468,6 @@
       }
     },
     {
-      "canonical": "DataTable",
-      "category": "data",
-      "sharedProps": {
-        "columns": "ColumnDef<T>[]",
-        "data": "T[]",
-        "loading": "boolean",
-        "pagination": "PaginationState"
-      },
-      "eventMap": {
-        "web": "onRowClick",
-        "mini": "onItemClick",
-        "native": "onItemPress"
-      },
-      "stacks": {
-        "web": {
-          "item": "@kit/web-data-table",
-          "status": "planned"
-        },
-        "mini": {
-          "item": "@kit/mini-data-list",
-          "status": "planned"
-        },
-        "native": {
-          "item": "@kit/native-data-list",
-          "status": "planned"
-        }
-      }
-    },
-    {
       "canonical": "StateContainer",
       "category": "feedback",
       "sharedProps": {
