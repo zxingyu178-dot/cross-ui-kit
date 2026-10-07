@@ -1,0 +1,26 @@
+{
+  "batch": 1,
+  "description": "首批 Beta→Stable 毕业候选：最常用、落地最早、story 最完整的 20 个组件",
+  "components": [
+    { "canonical": "Button", "category": "input", "reason": "最高频，交互/状态最完整" },
+    { "canonical": "Input", "category": "input", "reason": "表单基础" },
+    { "canonical": "TextArea", "category": "input", "reason": "多行输入基础" },
+    { "canonical": "Checkbox", "category": "input", "reason": "选择基础" },
+    { "canonical": "RadioGroup", "category": "input", "reason": "单选基础" },
+    { "canonical": "Switch", "category": "input", "reason": "开关基础" },
+    { "canonical": "Select", "category": "input", "reason": "选择器基础" },
+    { "canonical": "Tabs", "category": "navigation", "reason": "分区导航基础" },
+    { "canonical": "Dialog", "category": "overlay", "reason": "模态基础，焦点管理关键" },
+    { "canonical": "Toast", "category": "feedback", "reason": "轻反馈基础" },
+    { "canonical": "Card", "category": "data-display", "reason": "容器基础" },
+    { "canonical": "Tag", "category": "data-display", "reason": "标记基础" },
+    { "canonical": "Avatar", "category": "data-display", "reason": "头像基础" },
+    { "canonical": "Progress", "category": "feedback", "reason": "进度反馈基础" },
+    { "canonical": "Spinner", "category": "feedback", "reason": "加载反馈基础" },
+    { "canonical": "Skeleton", "category": "feedback", "reason": "骨架屏基础" },
+    { "canonical": "Empty", "category": "feedback", "reason": "空态基础" },
+    { "canonical": "Steps", "category": "navigation", "reason": "步骤条，core 推导已测" },
+    { "canonical": "Pagination", "category": "navigation", "reason": "分页，core 逻辑已测" },
+    { "canonical": "DataTable", "category": "data-display", "reason": "数据表，core 排序已测" }
+  ]
+}

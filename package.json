@@ -24,6 +24,9 @@
     "tokens:build": "pnpm --filter @kit/tokens run build",
     "tokens:watch": "pnpm --filter @kit/tokens run watch",
     "registry:validate": "node scripts/validate-registry.mjs",
+    "graduate": "node scripts/graduate.mjs",
+    "graduate:check": "node scripts/graduate.mjs --check",
+    "regress": "node scripts/graduate.mjs --regress",
     "quality": "pnpm run registry:validate && pnpm run format:check && pnpm run lint && pnpm run typecheck && pnpm run test"
   },
   "devDependencies": {
