@@ -45,3 +45,21 @@ function Demo() {
 }
 
 export const Basic: Story = { render: () => <Demo /> }
+
+/** 超长消息：验证 Toast 在超长文本下的换行、截断与布局（同时满足 ≥2 story） */
+function LongDemo() {
+  const [open, setOpen] = useState(false)
+  return (
+    <>
+      <Button onClick={() => setOpen(true)}>超长消息</Button>
+      <Toast
+        open={open}
+        onOpenChange={setOpen}
+        message={'这是一条超长的提示消息，用于验证 Toast 在超长文本下的换行、截断与布局稳定性。'.repeat(
+          2,
+        )}
+      />
+    </>
+  )
+}
+export const LongText: Story = { render: () => <LongDemo /> }

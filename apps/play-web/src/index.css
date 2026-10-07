@@ -42,6 +42,7 @@
 
   /* 主色（primary 按钮等） */
   --color-primary-default: var(--kit-color-primary-default);
+  --color-primary-strong: var(--kit-color-primary-strong);
   --color-primary-hover: var(--kit-color-primary-hover);
   --color-primary-active: var(--kit-color-primary-active);
   --color-primary-disabled: var(--kit-color-primary-disabled);
@@ -50,16 +51,20 @@
 
   /* 语义色 */
   --color-danger-default: var(--kit-color-danger-default);
+  --color-danger-strong: var(--kit-color-danger-strong);
   --color-danger-hover: var(--kit-color-danger-hover);
   --color-danger-bg: var(--kit-color-danger-bg);
   --color-danger-border: var(--kit-color-danger-border);
   --color-success-default: var(--kit-color-success-default);
+  --color-success-strong: var(--kit-color-success-strong);
   --color-success-bg: var(--kit-color-success-bg);
   --color-success-border: var(--kit-color-success-border);
   --color-warning-default: var(--kit-color-warning-default);
+  --color-warning-strong: var(--kit-color-warning-strong);
   --color-warning-bg: var(--kit-color-warning-bg);
   --color-warning-border: var(--kit-color-warning-border);
   --color-info-default: var(--kit-color-info-default);
+  --color-info-strong: var(--kit-color-info-strong);
   --color-info-bg: var(--kit-color-info-bg);
   --color-info-border: var(--kit-color-info-border);
 

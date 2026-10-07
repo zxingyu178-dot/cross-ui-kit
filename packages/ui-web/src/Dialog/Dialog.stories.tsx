@@ -49,3 +49,13 @@ export const Persist: Story = {
     />
   ),
 }
+export const LongText: Story = {
+  render: () => (
+    <WithTrigger
+      title="这是一个超长的弹窗标题，用于验证超长文本下的换行与布局表现"
+      description={'这是一段超长的弹窗描述内容，用于验证弹窗在超长文本下的换行、省略与布局稳定性。'.repeat(
+        3,
+      )}
+    />
+  ),
+}

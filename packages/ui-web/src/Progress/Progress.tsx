@@ -4,6 +4,7 @@
  * 自带 role=progressbar 与 aria-value*（Radix）。
  */
 import * as ProgressPrimitive from '@radix-ui/react-progress'
+import { useId } from 'react'
 import { cn } from '@kit/core'
 import type { ProgressProps, ProgressSize, ProgressTone } from './Progress.types'
 
@@ -25,19 +26,23 @@ export function Progress({
   size = 'md',
   tone = 'primary',
   showLabel = false,
+  label,
   className,
   id,
 }: ProgressProps) {
   const safeMax = max > 0 ? max : 100
   const pct = Math.min(100, Math.max(0, (value / safeMax) * 100))
-  const label = `${Math.round(pct)}%`
+  const valueLabel = `${Math.round(pct)}%`
+  const valueId = useId()
 
   const root = (
     <ProgressPrimitive.Root
       {...(id !== undefined ? { id } : {})}
       value={value}
       max={safeMax}
-      getValueLabel={() => label}
+      getValueLabel={() => valueLabel}
+      {...(label ? { 'aria-label': label } : {})}
+      {...(showLabel ? { 'aria-labelledby': valueId } : {})}
       className={cn(
         'relative overflow-hidden rounded-full bg-bg-active',
         HEIGHT[size],
@@ -60,7 +65,9 @@ export function Progress({
   return (
     <div className="flex w-full items-center gap-2">
       {root}
-      <span className="w-9 shrink-0 text-right text-caption text-text-secondary">{label}</span>
+      <span id={valueId} className="w-9 shrink-0 text-right text-caption text-text-secondary">
+        {valueLabel}
+      </span>
     </div>
   )
 }

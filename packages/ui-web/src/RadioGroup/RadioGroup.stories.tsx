@@ -22,3 +22,14 @@ export const Basic: Story = {}
 export const Horizontal: Story = { args: { direction: 'horizontal' } }
 export const Small: Story = { args: { size: 'sm' } }
 export const GroupDisabled: Story = { args: { disabled: true } }
+export const LongText: Story = {
+  args: {
+    options: [
+      {
+        value: 'a',
+        label: '这是一个超长的单选项标签文本，用于验证换行与对齐表现'.repeat(2),
+      },
+      { value: 'b', label: '选项 B' },
+    ],
+  },
+}

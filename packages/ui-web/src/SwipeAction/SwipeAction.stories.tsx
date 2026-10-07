@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { SwipeAction } from '../SwipeAction'
-import { Cell } from '../../Cell'
+import { Cell } from '../Cell'
 
 const meta: Meta<typeof SwipeAction> = {
   title: 'Interaction/SwipeAction',

@@ -12,11 +12,11 @@ import type { TagProps, TagSize, TagTone, TagVariant } from './Tag.types'
 const TONE_VARIANT: Record<TagTone, Record<TagVariant, string>> = {
   soft: {
     neutral: 'bg-bg-hover text-text-secondary',
-    primary: 'bg-primary-bg text-primary-default',
-    success: 'bg-success-bg text-success-default',
-    warning: 'bg-warning-bg text-warning-default',
-    danger: 'bg-danger-bg text-danger-default',
-    info: 'bg-info-bg text-info-default',
+    primary: 'bg-primary-bg text-primary-strong',
+    success: 'bg-success-bg text-success-strong',
+    warning: 'bg-warning-bg text-warning-strong',
+    danger: 'bg-danger-bg text-danger-strong',
+    info: 'bg-info-bg text-info-strong',
   },
   solid: {
     neutral: 'bg-bg-inverse text-text-inverse',

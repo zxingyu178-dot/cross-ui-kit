@@ -31,3 +31,17 @@ export const ErrorStep: Story = {
     current: 1,
   },
 }
+
+export const LongText: Story = {
+  args: {
+    current: 1,
+    items: [
+      {
+        title: '这是一个超长的步骤标题，用于验证换行与布局对齐表现',
+        description: '这是一段超长的步骤描述文本，用于验证换行表现',
+      },
+      { title: '步骤二' },
+      { title: '步骤三' },
+    ],
+  },
+}

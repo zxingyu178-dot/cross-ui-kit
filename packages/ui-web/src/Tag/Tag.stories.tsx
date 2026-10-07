@@ -43,3 +43,11 @@ export const Selectable: Story = {
 export const Closable: Story = {
   args: { closable: true, tone: 'outline', children: '可关闭' },
 }
+
+export const LongText: Story = {
+  render: () => (
+    <div className="flex max-w-xs flex-wrap gap-2">
+      <Tag>这是一个超长的标签文本，用于验证标签在超长文本下的换行、截断与布局稳定性</Tag>
+    </div>
+  ),
+}

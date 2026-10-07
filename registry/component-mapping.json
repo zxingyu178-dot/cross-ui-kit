@@ -21,15 +21,15 @@
       "stacks": {
         "web": {
           "item": "@kit/web-button",
-          "status": "beta"
+          "status": "stable"
         },
         "mini": {
           "item": "@kit/mini-button",
-          "status": "beta"
+          "status": "stable"
         },
         "native": {
           "item": "@kit/native-button",
-          "status": "beta"
+          "status": "stable"
         }
       }
     },
@@ -57,15 +57,15 @@
       "stacks": {
         "web": {
           "item": "@kit/web-input",
-          "status": "beta"
+          "status": "stable"
         },
         "mini": {
           "item": "@kit/mini-input",
-          "status": "beta"
+          "status": "stable"
         },
         "native": {
           "item": "@kit/native-input",
-          "status": "beta"
+          "status": "stable"
         }
       }
     },
@@ -88,15 +88,15 @@
       "stacks": {
         "web": {
           "item": "@kit/web-checkbox",
-          "status": "beta"
+          "status": "stable"
         },
         "mini": {
           "item": "@kit/mini-checkbox",
-          "status": "beta"
+          "status": "stable"
         },
         "native": {
           "item": "@kit/native-checkbox",
-          "status": "beta"
+          "status": "stable"
         }
       }
     },
@@ -120,15 +120,15 @@
       "stacks": {
         "web": {
           "item": "@kit/web-select",
-          "status": "beta"
+          "status": "stable"
         },
         "mini": {
           "item": "@kit/mini-select",
-          "status": "beta"
+          "status": "stable"
         },
         "native": {
           "item": "@kit/native-select",
-          "status": "beta"
+          "status": "stable"
         }
       }
     },
@@ -155,15 +155,15 @@
       "stacks": {
         "web": {
           "item": "@kit/web-dialog",
-          "status": "beta"
+          "status": "stable"
         },
         "mini": {
           "item": "@kit/mini-dialog",
-          "status": "beta"
+          "status": "stable"
         },
         "native": {
           "item": "@kit/native-dialog",
-          "status": "beta"
+          "status": "stable"
         }
       }
     },
@@ -185,15 +185,15 @@
       "stacks": {
         "web": {
           "item": "@kit/web-toast",
-          "status": "beta"
+          "status": "stable"
         },
         "mini": {
           "item": "@kit/mini-toast",
-          "status": "beta"
+          "status": "stable"
         },
         "native": {
           "item": "@kit/native-toast",
-          "status": "beta"
+          "status": "stable"
         }
       }
     },
@@ -216,15 +216,15 @@
       "stacks": {
         "web": {
           "item": "@kit/web-switch",
-          "status": "beta"
+          "status": "stable"
         },
         "mini": {
           "item": "@kit/mini-switch",
-          "status": "beta"
+          "status": "stable"
         },
         "native": {
           "item": "@kit/native-switch",
-          "status": "beta"
+          "status": "stable"
         }
       }
     },
@@ -247,15 +247,15 @@
       "stacks": {
         "web": {
           "item": "@kit/web-radio-group",
-          "status": "beta"
+          "status": "stable"
         },
         "mini": {
           "item": "@kit/mini-radio-group",
-          "status": "beta"
+          "status": "stable"
         },
         "native": {
           "item": "@kit/native-radio-group",
-          "status": "beta"
+          "status": "stable"
         }
       }
     },
@@ -305,15 +305,15 @@
       "stacks": {
         "web": {
           "item": "@kit/web-tabs",
-          "status": "beta"
+          "status": "stable"
         },
         "mini": {
           "item": "@kit/mini-tabs",
-          "status": "beta"
+          "status": "stable"
         },
         "native": {
           "item": "@kit/native-tabs",
-          "status": "beta"
+          "status": "stable"
         }
       }
     },
@@ -335,15 +335,15 @@
       "stacks": {
         "web": {
           "item": "@kit/web-progress",
-          "status": "beta"
+          "status": "stable"
         },
         "mini": {
           "item": "@kit/mini-progress",
-          "status": "beta"
+          "status": "stable"
         },
         "native": {
           "item": "@kit/native-progress",
-          "status": "beta"
+          "status": "stable"
         }
       }
     },
@@ -365,15 +365,15 @@
       "stacks": {
         "web": {
           "item": "@kit/web-skeleton",
-          "status": "beta"
+          "status": "stable"
         },
         "mini": {
           "item": "@kit/mini-skeleton",
-          "status": "beta"
+          "status": "stable"
         },
         "native": {
           "item": "@kit/native-skeleton",
-          "status": "beta"
+          "status": "stable"
         }
       }
     },
@@ -393,15 +393,15 @@
       "stacks": {
         "web": {
           "item": "@kit/web-spinner",
-          "status": "beta"
+          "status": "stable"
         },
         "mini": {
           "item": "@kit/mini-spinner",
-          "status": "beta"
+          "status": "stable"
         },
         "native": {
           "item": "@kit/native-spinner",
-          "status": "beta"
+          "status": "stable"
         }
       }
     },
@@ -423,15 +423,15 @@
       "stacks": {
         "web": {
           "item": "@kit/web-empty",
-          "status": "beta"
+          "status": "stable"
         },
         "mini": {
           "item": "@kit/mini-empty",
-          "status": "beta"
+          "status": "stable"
         },
         "native": {
           "item": "@kit/native-empty",
-          "status": "beta"
+          "status": "stable"
         }
       }
     },
@@ -517,15 +517,15 @@
       "stacks": {
         "web": {
           "item": "@kit/web-card",
-          "status": "beta"
+          "status": "stable"
         },
         "mini": {
           "item": "@kit/mini-card",
-          "status": "beta"
+          "status": "stable"
         },
         "native": {
           "item": "@kit/native-card",
-          "status": "beta"
+          "status": "stable"
         }
       }
     },
@@ -547,15 +547,15 @@
       "stacks": {
         "web": {
           "item": "@kit/web-avatar",
-          "status": "beta"
+          "status": "stable"
         },
         "mini": {
           "item": "@kit/mini-avatar",
-          "status": "beta"
+          "status": "stable"
         },
         "native": {
           "item": "@kit/native-avatar",
-          "status": "beta"
+          "status": "stable"
         }
       }
     },
@@ -579,15 +579,15 @@
       "stacks": {
         "web": {
           "item": "@kit/web-tag",
-          "status": "beta"
+          "status": "stable"
         },
         "mini": {
           "item": "@kit/mini-tag",
-          "status": "beta"
+          "status": "stable"
         },
         "native": {
           "item": "@kit/native-tag",
-          "status": "beta"
+          "status": "stable"
         }
       }
     },
@@ -608,15 +608,15 @@
       "stacks": {
         "web": {
           "item": "@kit/web-steps",
-          "status": "beta"
+          "status": "stable"
         },
         "mini": {
           "item": "@kit/mini-steps",
-          "status": "beta"
+          "status": "stable"
         },
         "native": {
           "item": "@kit/native-steps",
-          "status": "beta"
+          "status": "stable"
         }
       }
     },
@@ -640,15 +640,15 @@
       "stacks": {
         "web": {
           "item": "@kit/web-pagination",
-          "status": "beta"
+          "status": "stable"
         },
         "mini": {
           "item": "@kit/mini-pagination",
-          "status": "beta"
+          "status": "stable"
         },
         "native": {
           "item": "@kit/native-pagination",
-          "status": "beta"
+          "status": "stable"
         }
       }
     },
@@ -701,15 +701,15 @@
       "stacks": {
         "web": {
           "item": "@kit/web-datatable",
-          "status": "beta"
+          "status": "stable"
         },
         "mini": {
           "item": "@kit/mini-datatable",
-          "status": "beta"
+          "status": "stable"
         },
         "native": {
           "item": "@kit/native-datatable",
-          "status": "beta"
+          "status": "stable"
         }
       }
     },
@@ -2000,15 +2000,15 @@
       "stacks": {
         "web": {
           "item": "@kit/web-textarea",
-          "status": "beta"
+          "status": "stable"
         },
         "mini": {
           "item": "@kit/mini-textarea",
-          "status": "beta"
+          "status": "stable"
         },
         "native": {
           "item": "@kit/native-textarea",
-          "status": "beta"
+          "status": "stable"
         }
       }
     },

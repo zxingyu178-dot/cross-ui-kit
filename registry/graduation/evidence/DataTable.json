@@ -1,0 +1,31 @@
+{
+  "canonical": "DataTable",
+  "generatedAt": "2026-10-07",
+  "gates": {
+    "interaction": {
+      "status": "pass",
+      "ref": "packages/core/src/utils/__tests__/sort.test.ts",
+      "note": "排序/数据交互逻辑由 core 单测覆盖，界面以视觉/无障碍验收为准"
+    },
+    "lightDark": {
+      "status": "pass",
+      "ref": "apps/play-web/e2e/visual.spec.ts-snapshots/DataTable-light-chromium-win32.png; DataTable-dark-chromium-win32.png",
+      "note": "亮色/暗色成对 golden 均通过视觉回归"
+    },
+    "a11y": {
+      "status": "pass",
+      "ref": "apps/play-web/e2e/a11y.spec.ts",
+      "note": "axe-core 自动无障碍扫描无严重/中等违规"
+    },
+    "visual": {
+      "status": "pass",
+      "ref": "apps/play-web/e2e/visual.spec.ts-snapshots/DataTable-{light,dark}-chromium-win32.png",
+      "note": "亮/暗视觉截图与 golden 比对一致"
+    },
+    "demo": {
+      "status": "pass",
+      "ref": "apps/play-web/.storybook + apps/play-web (http://localhost:5173)",
+      "note": "组件经 Storybook 在 Chromium 真实挂载运行，并由 Playwright 验收"
+    }
+  }
+}

@@ -16,3 +16,8 @@ export const Checked: Story = { args: { defaultChecked: true } }
 export const Indeterminate: Story = { args: { indeterminate: true, checked: true } }
 export const Disabled: Story = { args: { disabled: true } }
 export const Error: Story = { args: { error: true } }
+export const LongText: Story = {
+  args: {
+    label: '这是一个超长的复选框标签文本，用于验证超长标签下的换行与布局对齐表现'.repeat(2),
+  },
+}

@@ -21,3 +21,17 @@ type Story = StoryObj<typeof meta>
 
 export const Line: Story = { args: { defaultValue: 'a' } }
 export const Small: Story = { args: { defaultValue: 'a', size: 'sm' } }
+export const LongText: Story = {
+  args: {
+    defaultValue: 'a',
+    items: [
+      {
+        value: 'a',
+        label: '这是一个超长的标签标题，用于验证换行与截断表现',
+        content:
+          '这是一段超长的面板内容文本，用于验证标签面板在超长文本下的换行与布局稳定性。'.repeat(3),
+      },
+      { value: 'b', label: '标签 B', content: '面板 B' },
+    ],
+  },
+}

@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { Space } from '../Space'
-import { Button } from '../../Button'
+import { Button } from '../Button'
 
 const meta: Meta<typeof Space> = { title: 'Layout/Space', component: Space, tags: ['autodocs'] }
 export default meta

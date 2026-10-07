@@ -39,3 +39,5 @@ export const Default: Story = { render: () => <Controlled /> }
 export const Small: Story = { render: () => <Controlled size="sm" /> }
 export const Disabled: Story = { render: () => <Controlled disabled /> }
 export const FewPages: Story = { render: () => <Controlled total={30} /> }
+/** 超长分页：十万条数据、大量页码省略，验证边界布局 */
+export const LongText: Story = { render: () => <Controlled total={100000} pageSize={10} /> }

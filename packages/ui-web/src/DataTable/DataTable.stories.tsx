@@ -61,3 +61,17 @@ export const Loading: Story = {
 export const Empty: Story = {
   render: () => <DataTable columns={COLUMNS} data={[]} />,
 }
+
+export const LongText: Story = {
+  render: () => {
+    const cols: TableColumn<Device & { note: string }>[] = [
+      { key: 'name', title: '物料名称' },
+      { key: 'note', title: '备注（超长文本，验证截断）' },
+    ]
+    const rows: (Device & { note: string })[] = DEVICES.slice(0, 2).map((d) => ({
+      ...d,
+      note: '这是一段超长的单元格备注内容，用于验证表格在超长文本下的换行、截断与布局稳定性表现',
+    }))
+    return <DataTable columns={cols} data={rows} rowKey="name" />
+  },
+}

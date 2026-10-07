@@ -31,3 +31,10 @@ export const Sizes: Story = {
 export const ErrorState: Story = { args: { error: '该字段为必填项', defaultValue: '' } }
 export const Disabled: Story = { args: { disabled: true, defaultValue: '不可编辑' } }
 export const Password: Story = { args: { type: 'password', placeholder: '密码' } }
+export const LongText: Story = {
+  args: {
+    defaultValue: '这是一段超长的输入内容，用于验证输入框在超长文本下的省略与横向滚动表现'.repeat(
+      2,
+    ),
+  },
+}

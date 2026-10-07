@@ -15,6 +15,8 @@ export interface ProgressProps {
   tone?: ProgressTone
   /** 是否在末尾显示百分比文本（默认 false） */
   showLabel?: boolean
+  /** 可访问名（无可见标签时提供 aria-label；showLabel 时优先关联百分比文本） */
+  label?: string
   /** 自定义类名 */
   className?: string
   /** 根节点 id */

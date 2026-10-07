@@ -31,3 +31,7 @@ export const Sizes: Story = {
 }
 
 export const Square: Story = { args: { shape: 'square', name: '周' } }
+
+export const LongText: Story = {
+  args: { name: '这是一个超长的用户名称，用于验证头像文字的缩放与截断表现' },
+}

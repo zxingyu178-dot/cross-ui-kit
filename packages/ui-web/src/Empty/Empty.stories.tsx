@@ -27,3 +27,11 @@ export const WithAction: Story = {
 export const TitleOnly: Story = {
   args: { title: '暂无搜索记录', description: undefined },
 }
+
+export const LongText: Story = {
+  args: {
+    title: '这是一个超长的空态标题，用于验证超长文本下的换行与居中布局表现',
+    description:
+      '这是一段超长的空态描述文本，用于验证空态在超长描述下的换行、省略与布局稳定性。'.repeat(2),
+  },
+}

@@ -37,3 +37,14 @@ export const Inverse: Story = {
     </div>
   ),
 }
+
+export const LongText: Story = {
+  render: () => (
+    <div className="flex items-center gap-2">
+      <Spinner accessibilityLabel="这是一个超长的加载状态描述文本，用于验证可访问名称与布局表现" />
+      <span className="text-body-sm text-text-secondary">
+        这是一段超长的加载提示文本，用于验证换行与布局稳定性。
+      </span>
+    </div>
+  ),
+}

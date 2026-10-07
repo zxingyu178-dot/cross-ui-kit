@@ -88,6 +88,7 @@ export const Select = forwardRef<HTMLButtonElement, SelectProps>(function Select
     size,
     disabled = false,
     error = false,
+    label,
     id,
     className,
     onChange,
@@ -101,6 +102,11 @@ export const Select = forwardRef<HTMLButtonElement, SelectProps>(function Select
 
   return (
     <div className={cn('flex w-full flex-col gap-1.5', className)}>
+      {label ? (
+        <label htmlFor={selectId} className="text-body-sm text-text-primary">
+          {label}
+        </label>
+      ) : null}
       <SelectPrimitive.Root
         {...(value !== undefined ? { value } : {})}
         {...(defaultValue !== undefined ? { defaultValue } : {})}

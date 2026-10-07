@@ -5,7 +5,7 @@ const meta = {
   title: 'Components/Switch',
   component: Switch,
   tags: ['autodocs'],
-  args: { defaultChecked: true },
+  args: { defaultChecked: true, label: '开关' },
 } satisfies Meta<typeof Switch>
 
 export default meta
@@ -17,3 +17,8 @@ export const Small: Story = { args: { size: 'sm' } }
 export const WithLabel: Story = { args: { label: '接收通知' } }
 export const Disabled: Story = { args: { disabled: true } }
 export const Loading: Story = { args: { loading: true } }
+export const LongText: Story = {
+  args: {
+    label: '这是一个超长的开关标签文本，用于验证超长标签下的换行与布局稳定性'.repeat(2),
+  },
+}

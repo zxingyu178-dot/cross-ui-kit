@@ -22,6 +22,8 @@ export interface SelectProps {
   defaultValue?: string
   /** 未选择时的占位文本 */
   placeholder?: string
+  /** 可见标签文本（渲染并通过 htmlFor 关联，提供可访问名） */
+  label?: string
   /** 尺寸 */
   size?: SelectSize
   /** 禁用整个选择器 */

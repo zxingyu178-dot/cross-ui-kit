@@ -50,3 +50,13 @@ export const CardComposition: Story = {
     </div>
   ),
 }
+
+export const LongText: Story = {
+  render: () => (
+    <div className="flex w-80 flex-col gap-4">
+      {/* 超长文章骨架：标题 + 多行正文 */}
+      <Skeleton className="h-5 w-2/3" />
+      <Skeleton variant="text" lines={6} />
+    </div>
+  ),
+}
