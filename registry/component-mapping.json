@@ -25,11 +25,11 @@
         },
         "mini": {
           "item": "@kit/mini-button",
-          "status": "stable"
+          "status": "beta"
         },
         "native": {
           "item": "@kit/native-button",
-          "status": "stable"
+          "status": "beta"
         }
       }
     },
@@ -61,11 +61,11 @@
         },
         "mini": {
           "item": "@kit/mini-input",
-          "status": "stable"
+          "status": "beta"
         },
         "native": {
           "item": "@kit/native-input",
-          "status": "stable"
+          "status": "beta"
         }
       }
     },
@@ -92,11 +92,11 @@
         },
         "mini": {
           "item": "@kit/mini-checkbox",
-          "status": "stable"
+          "status": "beta"
         },
         "native": {
           "item": "@kit/native-checkbox",
-          "status": "stable"
+          "status": "beta"
         }
       }
     },
@@ -124,11 +124,11 @@
         },
         "mini": {
           "item": "@kit/mini-select",
-          "status": "stable"
+          "status": "beta"
         },
         "native": {
           "item": "@kit/native-select",
-          "status": "stable"
+          "status": "beta"
         }
       }
     },
@@ -159,11 +159,11 @@
         },
         "mini": {
           "item": "@kit/mini-dialog",
-          "status": "stable"
+          "status": "beta"
         },
         "native": {
           "item": "@kit/native-dialog",
-          "status": "stable"
+          "status": "beta"
         }
       }
     },
@@ -189,11 +189,11 @@
         },
         "mini": {
           "item": "@kit/mini-toast",
-          "status": "stable"
+          "status": "beta"
         },
         "native": {
           "item": "@kit/native-toast",
-          "status": "stable"
+          "status": "beta"
         }
       }
     },
@@ -220,11 +220,11 @@
         },
         "mini": {
           "item": "@kit/mini-switch",
-          "status": "stable"
+          "status": "beta"
         },
         "native": {
           "item": "@kit/native-switch",
-          "status": "stable"
+          "status": "beta"
         }
       }
     },
@@ -251,11 +251,11 @@
         },
         "mini": {
           "item": "@kit/mini-radio-group",
-          "status": "stable"
+          "status": "beta"
         },
         "native": {
           "item": "@kit/native-radio-group",
-          "status": "stable"
+          "status": "beta"
         }
       }
     },
@@ -309,11 +309,11 @@
         },
         "mini": {
           "item": "@kit/mini-tabs",
-          "status": "stable"
+          "status": "beta"
         },
         "native": {
           "item": "@kit/native-tabs",
-          "status": "stable"
+          "status": "beta"
         }
       }
     },
@@ -339,11 +339,11 @@
         },
         "mini": {
           "item": "@kit/mini-progress",
-          "status": "stable"
+          "status": "beta"
         },
         "native": {
           "item": "@kit/native-progress",
-          "status": "stable"
+          "status": "beta"
         }
       }
     },
@@ -369,11 +369,11 @@
         },
         "mini": {
           "item": "@kit/mini-skeleton",
-          "status": "stable"
+          "status": "beta"
         },
         "native": {
           "item": "@kit/native-skeleton",
-          "status": "stable"
+          "status": "beta"
         }
       }
     },
@@ -397,11 +397,11 @@
         },
         "mini": {
           "item": "@kit/mini-spinner",
-          "status": "stable"
+          "status": "beta"
         },
         "native": {
           "item": "@kit/native-spinner",
-          "status": "stable"
+          "status": "beta"
         }
       }
     },
@@ -427,11 +427,11 @@
         },
         "mini": {
           "item": "@kit/mini-empty",
-          "status": "stable"
+          "status": "beta"
         },
         "native": {
           "item": "@kit/native-empty",
-          "status": "stable"
+          "status": "beta"
         }
       }
     },
@@ -521,11 +521,11 @@
         },
         "mini": {
           "item": "@kit/mini-card",
-          "status": "stable"
+          "status": "beta"
         },
         "native": {
           "item": "@kit/native-card",
-          "status": "stable"
+          "status": "beta"
         }
       }
     },
@@ -551,11 +551,11 @@
         },
         "mini": {
           "item": "@kit/mini-avatar",
-          "status": "stable"
+          "status": "beta"
         },
         "native": {
           "item": "@kit/native-avatar",
-          "status": "stable"
+          "status": "beta"
         }
       }
     },
@@ -583,11 +583,11 @@
         },
         "mini": {
           "item": "@kit/mini-tag",
-          "status": "stable"
+          "status": "beta"
         },
         "native": {
           "item": "@kit/native-tag",
-          "status": "stable"
+          "status": "beta"
         }
       }
     },
@@ -612,11 +612,11 @@
         },
         "mini": {
           "item": "@kit/mini-steps",
-          "status": "stable"
+          "status": "beta"
         },
         "native": {
           "item": "@kit/native-steps",
-          "status": "stable"
+          "status": "beta"
         }
       }
     },
@@ -644,11 +644,11 @@
         },
         "mini": {
           "item": "@kit/mini-pagination",
-          "status": "stable"
+          "status": "beta"
         },
         "native": {
           "item": "@kit/native-pagination",
-          "status": "stable"
+          "status": "beta"
         }
       }
     },
@@ -705,11 +705,11 @@
         },
         "mini": {
           "item": "@kit/mini-datatable",
-          "status": "stable"
+          "status": "beta"
         },
         "native": {
           "item": "@kit/native-datatable",
-          "status": "stable"
+          "status": "beta"
         }
       }
     },
@@ -2004,11 +2004,11 @@
         },
         "mini": {
           "item": "@kit/mini-textarea",
-          "status": "stable"
+          "status": "beta"
         },
         "native": {
           "item": "@kit/native-textarea",
-          "status": "stable"
+          "status": "beta"
         }
       }
     },

@@ -25,9 +25,11 @@
     "tokens:watch": "pnpm --filter @kit/tokens run watch",
     "registry:validate": "node scripts/validate-registry.mjs",
     "graduate": "node scripts/graduate.mjs",
-    "graduate:check": "node scripts/graduate.mjs --check",
+    "graduate:check": "node scripts/graduate.mjs --stack web --check",
     "regress": "node scripts/graduate.mjs --regress",
-    "quality": "pnpm run registry:validate && pnpm run format:check && pnpm run lint && pnpm run typecheck && pnpm run test"
+    "quality:stable": "node scripts/verify-stable.mjs",
+    "test:scripts": "vitest run",
+    "quality": "pnpm run registry:validate && pnpm run format:check && pnpm run lint && pnpm run typecheck && pnpm run test && pnpm run test:scripts"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.6.0",
@@ -41,7 +43,8 @@
     "style-dictionary": "^4.3.0",
     "turbo": "^2.3.3",
     "typescript": "^5.6.3",
-    "typescript-eslint": "^8.18.1"
+    "typescript-eslint": "^8.18.1",
+    "vitest": "^3.0.0"
   },
   "lint-staged": {
     "*.{ts,tsx,js,jsx,mjs,cjs,json,md,css,scss}": [
