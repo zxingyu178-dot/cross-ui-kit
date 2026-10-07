@@ -90,6 +90,7 @@ cross-ui-kit 是一个**跨端 UI/交互模板库**（不是单一业务应用�
 - [ ] 新组件已登记 registry + 映射表 + 文档 + 示例？
 - [ ] 依赖版本走 catalog，许可证宽松？
 - [ ] `pnpm quality` 本地通过？
+- [ ] 本次改动已 commit 并 `git push` 同步到 `origin`（GitHub），`git status -sb` 显示与远程一致（ahead 0）？
 
 ## 8. 常用命令
 
@@ -122,3 +123,13 @@ pnpm quality            # 提交前全量质量门
 - 需求歧义会影响组件 API、目录归属或跨栈契约时：**停下来提问**，不要猜测后大规模生成；
 - 不影响契约的局部实现选择，按本文件与 docs 标准自行决定，并在交付说明里注明；
 - 发现标准本身有缺口或矛盾：在交付说明中明确指出，不擅自绕过。
+
+## 11. 每次开发后必须同步 GitHub（强制）
+
+- 远程：`origin` → `https://github.com/zxingyu178-dot/cross-ui-kit`（默认 private）。
+- 每完成一批可交付开发（一个组件 / 一批模板 / 一次修复），在 `pnpm quality` 通过后**必须立即提交并推送**，不允许只留在本地，除非用户明确说"先别上传"：
+  1. `git add -A`
+  2. `git commit --no-verify -F <message-file>`（本机 husky 钩子找不到 pnpm，质量门已手动跑过，故用 `--no-verify`；message 遵循约定式提交，body 单行 ≤100 字符）
+  3. `git push`（新分支用 `git push -u origin <branch>`；凭据已由 Git Credential Manager 持久化，正常无需再登录）
+- 推送后用 `git status -sb` 核对：本地与 `origin/main` 一致、`ahead 0`；`git push` 失败必须排查并在交付说明里告知，不得假装已同步。
+- 同步是"开发完成"的一部分：未 push 的改动视为未交付。
