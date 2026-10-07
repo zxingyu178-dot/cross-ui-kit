@@ -10,6 +10,7 @@
     "8": { "$type": "dimension", "$value": "32px" },
     "10": { "$type": "dimension", "$value": "40px" },
     "12": { "$type": "dimension", "$value": "48px" },
+    "14": { "$type": "dimension", "$value": "56px" },
     "16": { "$type": "dimension", "$value": "64px" },
     "20": { "$type": "dimension", "$value": "80px" },
     "24": { "$type": "dimension", "$value": "96px" },

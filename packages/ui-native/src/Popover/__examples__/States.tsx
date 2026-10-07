@@ -19,7 +19,7 @@ export function States() {
         }
         content={
           <YStack>
-            <Text fontSize={14} fontWeight="$medium" color="$textPrimary">
+            <Text fontSize={14} fontWeight={500} color="$textPrimary">
               弹出标题
             </Text>
             <Text fontSize={13} color="$textSecondary" marginTop={4}>

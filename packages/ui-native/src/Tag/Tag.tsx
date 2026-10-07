@@ -127,7 +127,7 @@ export function Tag({
       {...(clickable ? { accessibilityRole: 'button' } : {})}
       {...(clickable || selected ? { accessibilityState: { selected, disabled } } : {})}
     >
-      <Text fontSize={s.font} fontWeight="$medium" color={c.color}>
+      <Text fontSize={s.font} fontWeight={500} color={c.color}>
         {children}
       </Text>
       {closable && (

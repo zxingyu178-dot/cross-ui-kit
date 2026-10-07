@@ -94,7 +94,7 @@ export function Button({
       {loading ? <ActivityIndicator size="small" color={textColor} /> : icon}
       {children !== undefined &&
         (typeof children === 'string' || typeof children === 'number' ? (
-          <Text color={textColor} fontSize={SIZE_FONT[size]} fontWeight="$medium">
+          <Text color={textColor} fontSize={SIZE_FONT[size]} fontWeight={500}>
             {children}
           </Text>
         ) : (

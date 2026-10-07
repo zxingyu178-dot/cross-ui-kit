@@ -53,7 +53,7 @@ export function Tabs({
             >
               <Text
                 fontSize={pad.font}
-                fontWeight="$medium"
+                fontWeight={500}
                 color={on ? '$primaryDefault' : disabled ? '$textDisabled' : '$textTertiary'}
               >
                 {it.label}

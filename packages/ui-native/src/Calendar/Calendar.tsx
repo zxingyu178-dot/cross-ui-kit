@@ -66,7 +66,7 @@ export function Calendar({
             ‹
           </Text>
         </XStack>
-        <Text fontSize="$bodyMd" fontWeight="$medium" color="$textPrimary">
+        <Text fontSize="$bodyMd" fontWeight={500} color="$textPrimary">
           {year}年{month + 1}月
         </Text>
         <XStack

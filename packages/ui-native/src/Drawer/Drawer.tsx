@@ -58,7 +58,7 @@ export function Drawer({
             borderBottomWidth={1}
             borderBottomColor="$borderDefault"
           >
-            <Text fontSize="$bodyMd" fontWeight="$medium" color="$textPrimary">
+            <Text fontSize="$bodyMd" fontWeight={500} color="$textPrimary">
               {title}
             </Text>
             <Text

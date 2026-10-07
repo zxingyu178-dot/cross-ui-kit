@@ -28,6 +28,7 @@
     "graduate:check": "node scripts/graduate.mjs --stack web --check",
     "regress": "node scripts/graduate.mjs --regress",
     "quality:stable": "node scripts/verify-stable.mjs",
+    "quality:native": "node scripts/quality-native.mjs",
     "test:scripts": "vitest run",
     "quality": "pnpm run registry:validate && pnpm run format:check && pnpm run lint && pnpm run typecheck && pnpm run test && pnpm run test:scripts"
   },

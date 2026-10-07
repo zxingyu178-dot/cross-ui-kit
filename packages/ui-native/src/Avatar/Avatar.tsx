@@ -41,7 +41,7 @@ export function Avatar({ src, name, size = 'md', shape = 'circle', children }: A
       ) : (
         <Text
           fontSize={SIZE_FONT[size]}
-          fontWeight="medium"
+          fontWeight={500}
           color="$textSecondary"
           accessibilityLabel={name}
         >

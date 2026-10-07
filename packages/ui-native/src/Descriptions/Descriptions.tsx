@@ -36,7 +36,7 @@ export function Descriptions({
   return (
     <YStack width="100%" style={style}>
       {title ? (
-        <Text fontSize="$bodyMd" fontWeight="$medium" color="$textPrimary" marginBottom={12}>
+        <Text fontSize="$bodyMd" fontWeight={500} color="$textPrimary" marginBottom={12}>
           {title}
         </Text>
       ) : null}

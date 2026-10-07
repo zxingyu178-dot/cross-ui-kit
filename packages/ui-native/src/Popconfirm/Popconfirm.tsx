@@ -53,7 +53,7 @@ export function Popconfirm({
           zIndex={100}
           {...placementStyle}
         >
-          <Text fontSize="$bodyMd" fontWeight="$medium" color="$textPrimary">
+          <Text fontSize="$bodyMd" fontWeight={500} color="$textPrimary">
             {title}
           </Text>
           {description ? (

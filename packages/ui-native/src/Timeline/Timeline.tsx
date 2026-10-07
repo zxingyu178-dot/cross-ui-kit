@@ -56,7 +56,7 @@ export function Timeline({ items, reverse = false, style }: TimelineProps) {
                 </Text>
               ) : null}
               {item.title ? (
-                <Text fontSize="$bodyMd" fontWeight="$medium" color="$textPrimary" lineHeight={1.4}>
+                <Text fontSize="$bodyMd" fontWeight={500} color="$textPrimary" lineHeight={1.4}>
                   {item.title}
                 </Text>
               ) : null}

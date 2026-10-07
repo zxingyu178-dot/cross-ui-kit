@@ -42,15 +42,15 @@ export function Statistic({
       ) : (
         <XStack alignItems="baseline" gap={4}>
           {prefix ? (
-            <Text fontSize="$bodyMd" fontWeight="$medium" color="$textPrimary">
+            <Text fontSize="$bodyMd" fontWeight={500} color="$textPrimary">
               {prefix}
             </Text>
           ) : null}
-          <Text fontSize="$titleSm" fontWeight="$semibold" color="$textPrimary" lineHeight={1.2}>
+          <Text fontSize="$titleSm" fontWeight={600} color="$textPrimary" lineHeight={1.2}>
             {formatValue(value, precision)}
           </Text>
           {suffix ? (
-            <Text fontSize="$bodyMd" fontWeight="$medium" color="$textPrimary">
+            <Text fontSize="$bodyMd" fontWeight={500} color="$textPrimary">
               {suffix}
             </Text>
           ) : null}

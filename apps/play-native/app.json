@@ -1,0 +1,33 @@
+{
+  "expo": {
+    "name": "Cross UI Kit · Native",
+    "slug": "cross-ui-kit-play-native",
+    "version": "0.0.1",
+    "orientation": "portrait",
+    "scheme": "crossuikit",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.kit.playnative"
+    },
+    "android": {
+      "package": "com.kit.playnative",
+      "adaptiveIcon": {
+        "backgroundColor": "#2563eb"
+      }
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-system-ui",
+        {
+          "userInterfaceStyle": "automatic"
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": false
+    }
+  }
+}

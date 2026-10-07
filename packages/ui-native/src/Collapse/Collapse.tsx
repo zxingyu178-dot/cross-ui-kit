@@ -57,7 +57,7 @@ export function Collapse({
                 if (!item.disabled) toggle(item.key)
               }}
             >
-              <Text flex={1} fontSize="$bodyMd" fontWeight="$medium" color="$textPrimary">
+              <Text flex={1} fontSize="$bodyMd" fontWeight={500} color="$textPrimary">
                 {item.title}
               </Text>
               <Text
@@ -65,7 +65,6 @@ export function Collapse({
                 color="$textTertiary"
                 marginLeft={8}
                 transform={open ? [{ rotate: '180deg' }] : [{ rotate: '0deg' }]}
-                animation="fast"
               >
                 ▼
               </Text>

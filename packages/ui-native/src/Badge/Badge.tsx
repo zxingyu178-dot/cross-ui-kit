@@ -115,7 +115,7 @@ export function Badge({
       borderColor={c.borderColor}
       color={c.color}
       fontSize={s.font}
-      fontWeight="$medium"
+      fontWeight={500}
       {...(onPress ? { onPress } : {})}
       {...(accessibilityLabel !== undefined ? { accessibilityLabel } : {})}
     >

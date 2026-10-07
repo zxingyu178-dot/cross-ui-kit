@@ -9,3 +9,6 @@ packages/tokens/dist
 pnpm-lock.yaml
 *.md
 .husky
+storybook-static
+playwright-report
+test-results

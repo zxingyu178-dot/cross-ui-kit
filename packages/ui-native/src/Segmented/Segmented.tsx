@@ -54,11 +54,10 @@ export function Segmented({
             backgroundColor={active ? '$bgCard' : 'transparent'}
             opacity={itemDisabled ? 0.4 : 1}
             onPress={() => handleSelect(opt.value)}
-            animation="fast"
           >
             <Text
               fontSize={SIZE_FS[size]}
-              fontWeight="$medium"
+              fontWeight={500}
               color={active ? '$textPrimary' : '$textSecondary'}
             >
               {opt.label}

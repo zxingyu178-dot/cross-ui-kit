@@ -1,0 +1,45 @@
+{
+  "name": "@kit/play-native",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Native 验收壳：Expo SDK52 + Expo Router + Tamagui，真实消费 @kit/ui-native",
+  "main": "expo-router/entry",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo run:android",
+    "ios": "expo run:ios",
+    "web": "expo start --web",
+    "export": "expo export --platform android --output-dir dist",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@babel/runtime": "catalog:native",
+    "@kit/core": "workspace:*",
+    "@kit/icons": "workspace:*",
+    "@kit/tokens": "workspace:*",
+    "@kit/ui-native": "workspace:*",
+    "expo": "catalog:native",
+    "@expo/metro-runtime": "catalog:native",
+    "expo-constants": "catalog:native",
+    "expo-linking": "catalog:native",
+    "expo-router": "catalog:native",
+    "expo-status-bar": "catalog:native",
+    "expo-system-ui": "catalog:native",
+    "react": "catalog:",
+    "react-native": "catalog:native",
+    "react-native-gesture-handler": "catalog:native",
+    "react-native-safe-area-context": "catalog:native",
+    "react-native-screens": "catalog:native",
+    "query-string": "catalog:native",
+    "tamagui": "catalog:native"
+  },
+  "devDependencies": {
+    "@babel/core": "catalog:native",
+    "@expo/metro-config": "catalog:native",
+    "@tamagui/babel-plugin": "catalog:native",
+    "@types/react": "catalog:",
+    "babel-preset-expo": "catalog:native",
+    "typescript": "catalog:"
+  }
+}

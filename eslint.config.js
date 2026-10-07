@@ -14,6 +14,9 @@ export default tseslint.config(
       '**/.turbo/**',
       '**/.taro/**',
       '**/.expo/**',
+      '**/storybook-static/**',
+      '**/playwright-report/**',
+      '**/test-results/**',
       '**/src-tauri/target/**',
       'packages/tokens/dist/**',
     ],
@@ -46,8 +49,11 @@ export default tseslint.config(
   },
   {
     // 配置文件与脚本放宽 Node 环境
-    files: ['*.config.{js,mjs,cjs}', 'scripts/**', '**/eslint.config.js'],
+    files: ['**/*.config.{js,mjs,cjs}', 'scripts/**', '**/eslint.config.js'],
     languageOptions: { globals: { ...globals.node } },
-    rules: { 'no-console': 'off' },
+    rules: {
+      'no-console': 'off',
+      '@typescript-eslint/no-require-imports': 'off', // Metro/构建配置常以 CJS require 加载
+    },
   },
 )
