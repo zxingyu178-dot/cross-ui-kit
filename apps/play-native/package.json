@@ -21,6 +21,7 @@
     "@kit/ui-native": "workspace:*",
     "expo": "catalog:native",
     "@expo/metro-runtime": "catalog:native",
+    "expo-asset": "catalog:native",
     "expo-constants": "catalog:native",
     "expo-linking": "catalog:native",
     "expo-router": "catalog:native",

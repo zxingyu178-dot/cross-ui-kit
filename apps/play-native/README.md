@@ -59,13 +59,21 @@ pnpm lint           # ESLint
 
 Button、Input、TextArea、Checkbox、RadioGroup、Switch、Select、Tabs、Dialog、Toast、Card、Tag、Avatar、Progress、Spinner、Skeleton、Empty、Steps、Pagination、DataTable。
 
-## 当前状态（P1-1）
+## 当前状态（P1-1.1）
 
 - Expo Router 工程真实存在，`expo export`（android，1938 模块）通过。
 - Light / Dark / System 接入统一 Token（`@kit/tokens` native 产物），不维护第二套视觉体系。
-- **Native 组件状态仍为 beta**：尚未建立 Native 独立 Graduation Gate。
-- **Android 运行时验收：pending** —— 本机无 Android SDK / adb / 模拟器，未执行 `pnpm android`，不伪造实机结论。
-  后续在具备 Android 环境的机器上，须真实运行并走完：首页 → Gallery → 20 组件 → 亮暗切换 → 键盘 → Dialog/Toast → 滚动，再走 `pnpm graduate --stack native`。
+- **已产出可安装 APK**：`assembleRelease`（arm64-v8a）成功，`app-release.apk` 约 28 MB（debug 签名，可直接安装）。
+- **Native 组件状态仍为 beta**：尚未通过 Native 独立 Graduation Gate。
+- **Android 运行时验收：pending** —— 本机 CPU 无 VT/EPT，x86_64 模拟器无法加速（已证伪）；暂无 USB 真机，未执行运行时清单，不伪造实机结论。
+  后续接入 Android 真机（USB 调试）后，须真实走完运行时清单（见 `docs/13-native-runtime.md`）、采集截图基线，再走 `pnpm graduate --stack native`。
+
+### P1-1.1 构建期修复（均为环境/接线问题，非组件缺陷）
+
+1. **CXX1210（prefab）**：根因是全局 `JAVA_TOOL_OPTIONS` 被 prefab 子 JVM 继承，其 stderr 额外输出被 AGP 的 catch-all 误判。改为不在构建时设置该变量；UTF-8 编码参数写入 prebuild 生成的 `android/gradle.properties` 的 `org.gradle.jvmargs`（`android/` 为 CNG 产物、不入库）。
+2. **`:app:compileReleaseJavaWithJavac` 找不到 `ExpoModulesPackage`**：pnpm 隔离布局下，expo 自带 config 经 symlink 路径被 require-from-string 加载时无法解析 `expo-modules-autolinking/exports`，静默失败后误用 Gradle namespace `expo.core`，而真实包是 `expo.modules`。
+   已新增**项目级 `apps/play-native/react-native.config.js`** 钉死正确 import（入库、可移植、不改 node_modules）。
+3. release 嵌入 JS bundle 需 `EXPO_NO_METRO_WORKSPACE_ROOT=1`（SDK 52 下旧的 `EXPO_USE_METRO_WORKSPACE_ROOT` 已失效）；pnpm 严格依赖需补 `expo-asset ~11.0.5`。
 
 ## 设计原则
 

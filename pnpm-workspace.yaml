@@ -107,6 +107,7 @@ catalogs:
     tamagui: ~1.121.0
     # --- Expo SDK 52 配套（版本取自 SDK52 bundledNativeVersions，勿擅自升） ---
     expo-router: ~4.0.9
+    expo-asset: ~11.0.5
     expo-constants: ~17.0.3
     expo-linking: ~7.0.3
     expo-status-bar: ~2.0.0
