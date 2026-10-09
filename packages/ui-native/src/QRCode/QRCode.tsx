@@ -2,7 +2,9 @@
  * QRCode 二维码（native：iOS / Android）—— 矩阵渲染为色块网格。
  */
 import { useMemo } from 'react'
-import QRCodeJS from 'qrcode'
+// 直接引用平台无关核心：默认入口会被 Metro 按 browser 字段解析到 canvas 渲染器
+// （引用 document），在 RN 崩溃；core 只产出矩阵，无 DOM/fs 依赖。
+import { create as createQRCode } from 'qrcode/lib/core/qrcode'
 import { View, YStack } from 'tamagui'
 import type { QRCodeProps } from './QRCode.types'
 
@@ -16,7 +18,7 @@ export function QRCode({
 }: QRCodeProps) {
   const matrix = useMemo(() => {
     try {
-      const qr = QRCodeJS.create(value, { errorCorrectionLevel: level })
+      const qr = createQRCode(value, { errorCorrectionLevel: level })
       const msize = qr.modules.size
       const data = qr.modules.data
       const cells: boolean[] = []
